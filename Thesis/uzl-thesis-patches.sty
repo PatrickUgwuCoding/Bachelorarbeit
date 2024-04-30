@@ -1,0 +1,34 @@
+%
+%
+% LaTeX Class file for thesis written
+% at the University of Lübeck
+%
+%
+% This style file was originally designed by Till Tantau
+%
+%
+% The copyright of this file lies with the University of Lübeck. It
+% can (and should) be used by students for their Bachelor and Master
+% theses.
+%
+%
+% Changelog
+%
+% 2022-01-26, Till Tantau
+% - Moved patches to this file
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{uzl-thesis-patches}[2021/01/26 University of Luebeck Thesis Patches Style]
+
+
+\AtBeginDocument{
+  % Unify counters:
+  \let\c@lstlisting\c@figure
+  \let\cl@lstlisting\cl@figure
+  \let\p@lstlisting\p@figure
+  \let\thelstlisting\thefigure
+  \def\ftype@lstlisting{1}
+  \ifuzl@german
+    \def\lstlistingname{Programmtext}
+  \fi
+}

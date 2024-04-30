@@ -1,0 +1,1156 @@
+\documentclass[german,version-2020-11]{uzl-thesis}
+
+
+% Copy this file as a template for your thesis. You will have to take
+% action at all places marked by
+%
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% The first place your action is needed is the first line of this
+% document:
+%
+%
+% Language of the thesis:
+%
+% You must use either 'german' or 'english' above, depending on the
+% language used in the main text. This will automatically setup a lot
+% of things in the background.
+%
+%
+% Version of the class:
+%
+% You must specify which version of the thesis class is to be
+% used. This is important in case the class style changes in later
+% years, but we still want an older thesis to look the same, even when
+% things are changed in the class.
+%
+% Do not change or remove the version-xxxx key.
+%
+%
+% Text encoding:
+%
+% Your thesis *must* be encoded in utf8 (unicode), which is the
+% default in most editors these days. Do *not* change this to latin8.
+
+
+
+%%%
+%
+% Main setup:
+%
+%%%
+%
+% You must use the \UzLThesisSetup command to specify numerous things
+% about your thesis. This includes the entries on the title page, the 
+% abstracts, and the bibliography style. You do so by specifying
+% so-called "values" for so-called "keys". For instance, 
+% for the key "Autor" you must provide your name as the value. You do
+% so by writing 'Autor = {Max Mustermann}', that is, the value is put
+% into curly braces. You can use the \UzLThesisSetup command
+% repeatedly and the order in which you provide the keys is not
+% important. 
+%
+% Everything shown on the title page must be in German -- even
+% if the thesis is written in English! Just insert German text for
+% German keys and English text for English keys (like 'Abstract' needs
+% English text, while 'Zusammenfassung' needs German text).
+
+\UzLThesisSetup{
+  %
+  % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  % !!! Your action is needed here !!!
+  % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  %
+  % First, specify the institut or clinic at which the thesis was
+  % written. You get the logo file from them (make sure it has the
+  % correct size, namely the same as the example). If they do not have
+  % a logo, the university's default logo is used.
+  %
+  % The 'verfasst' gets two arguments. Change the first to {an der}
+  % for clinics, as in 'Verfasst = {an der}{Medizinischen Klinik I}'
+  %
+  Logo-Dateiname        = {uzl-thesis-logo-itcs.pdf},
+  Verfasst              = {am}{Institut für Theoretische Informatik},
+  %
+  % The titles:
+  %
+  Titel auf Deutsch     = {
+    Vorlage für die \LaTeX-Klasse »uzl-thesis« zur Nutzung bei
+    Bachelor-~und Masterarbeiten an der  Universität~zu~Lübeck
+  }, 
+  Titel auf Englisch    = {
+    Template for the \LaTeX\ Class “uzl-thesis” for
+    Bachelor's and Master's Theses Written at the University~of~Lübeck 
+  },
+  %
+  % Author and supervisor:
+  % 
+  % Note that the 'Betreuer' or 'Betreuerin' is the supervisor, that
+  % is, the professor who officially supervises the thesis. If there
+  % is also an assistent of the professor who helped (typically a
+  % lot), use 'Mit Unterstützung von' to thank that person. If the
+  % thesis was mainly written 'externally' at some company or another
+  % institute, point this out using 'Weitere Unterstützung'. 
+  % 
+  % For your own name, do *not* add things like "BSc" or "BSc
+  % cand.". For the supervisor, you should normally include
+  % "Prof. Dr." or "PD Dr." (ask your supervisor, what is
+  % appropriate), but nothing more (so no
+  % "Univ.-Prof. Dr. Dr. h.c. mult." unless your supervisor insists).  
+  %
+  Autor                 = {Patrick Ugwu},
+  Betreuerin            = {Prof. Dr. Javad},
+  % 
+  % Optional: Supporting persons and institutions. The text should be
+  % in German, even for an English thesis.
+  %
+  Mit Unterstützung von = {Harry Hilfreich},
+  % 
+  %   Weitere Unterstützung = {
+  %     Die Arbeit ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
+  %     entstanden.
+  %   },
+  %
+  %
+  % Your Degree Programm (Studiengang)
+  %
+  % Specify 'Bachelorarbeit' or 'Masterarbeit' and the degree
+  % programme. Make sure the name of programme is correct and not
+  % some abbreviation or some incorrect variant. For instance:
+  % 'Medizinische Ingenierwissenschaft', but not 'MIW';
+  % 'Medizinische Informatik', but not 'Medizin-Informatik';
+  % 'Informatik', but not 'Informatik (SSE)'.
+  %
+  % Use German names for German programmes and English names for
+  % English ones, so 'Infection Biology', not 'Infektionsbiologie'. 
+  % For programmes that have a German bachelor and an English master,
+  % use the German name for a bachelor thesis and the English name for
+  % the master thesis.
+  %
+  Bachelorarbeit,
+  Studiengang           = {Robotik und autonome Systeme},
+  %
+  % Date on which the thesis is turned in German, formatted the
+  % traditional German way:
+  %
+  Datum                 = {1. Januar 2024},
+  %
+  % The English abstract. You must always provide abstracts in German
+  % and in English. 
+  %
+  Abstract              = {
+    It is
+  },
+  Zusammenfassung       = {
+    Es ist nicht leicht  
+  },
+  %
+  % Optional: 'Danksagungen' (German) or 'Acknowledgements'
+  % (English). Both keys are optional and both have the same effect of
+  % adding an acknowledgements text after the abstracts and before the
+  % table of contents.
+  %
+  Acknowledgements      = {
+    This is the place 
+  },
+  % Bibliography style: Choose between
+  % 
+  % 'Alphabetische Bibliographie'
+  % for all degree programmes in the natural sciences 
+  % 
+  % 'Numerische Bibliographie'
+  % alternative for all other degree programmes
+  % 
+  % Either will load biblatex and setup the citation methods and the
+  % bibliography styles correctly. You should not mess with them.
+  % 
+  Alphabetische Bibliographie,
+  % Alternatively:
+  % Numerische Bibliographie
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% Styling the thesis
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Creating a visually pleasing layout and choosing fonts is not
+% easy. Furthermore, different people have different preferences. Of
+% course, for the University of Lübeck, the dean of studies could just
+% force everyone to use one specific layout and font, but that seems a
+% bit drastic and, also, it seems nice that thesis by different people
+% have an individual style even though they all stick to the same
+% overall structure.
+%
+% For these reasons, I (Till Tantau) have spend quite some time on
+% designing a flexible layout and styling mechanism for theses.
+%
+% Basically, the overall structure of the thesis is fixed by the
+% thesis class and so are many structural elements. For instance, you
+% cannot change the order in which the abstract and table of contents
+% are shown, you cannot move the bibliography elsewhere, indeed, the
+% bibliography style is also fixed. Likewise, the text on the title
+% page is fixed.
+%
+% Although many things are fixed, you *can* change several other
+% things. For instance, you can change the font used for the main
+% text, you can change which font is used for titles and headings or
+% you can change whether titles and headlines are centered or flushed
+% left.
+%
+% There are many LaTeX packages for changing such things. You are
+% kindly asked *not to use them*. Rather, use (only) the options
+% offered by the thesis class. All possible choices and combinations
+% there have been tested by me and produce nice results; what happens
+% with other packages no one knows and might no longer conform to what
+% is expected by the university. As you will see, you still have a
+% lot of options.
+%
+%
+% Technical note: All styling is done via the command
+%
+% \UzLStyle{...}
+%
+% where ... is a key-value list just as for \UzLThesisSetup. The
+% difference is just that everything having to do with styling as
+% controlled by \UzLStyle, while the more “formal” setup keys are
+% controlled by \UzLThesisSetup.
+%
+%%%
+%
+% Designs
+%
+%
+% A \emph{design} is a whole set of font and layout options bundled
+% together. They have been chosen in such a way that a visually
+% pleasing “overall appearance” results.
+%
+%
+% \UzLStyle{computer modern oldschool design}
+%
+% The look of this design mimics the “classical” way a paper or report
+% created with \LaTeX\ looks like: The Computer Modern font is used,
+% bold face fonts are used for headlines, only black and white are
+% used as colors. This design reminds me of older scientific
+% documents, especially from the computer science community where
+% \LaTeX\ was used very early.
+%
+%
+% \UzLStyle{computer modern basic design}
+%
+% A slightly less “oldschool” version of the previous design. It is
+% still a classic design in the sense that it uses the Computer Modern
+% font and that it still has this “good old \LaTeX” look, but some
+% more modern aspects (like colors!) have been added.
+%
+% Note that this design uses Myriad for the title page (one of the
+% “modern aspect”), which means that his font must be installed.
+%
+%
+% \UzLStyle{computer modern scholary design}
+%
+% In my opinion, this is the ultimate “scholary design”: The thesis
+% will look like it has been typeset by hand some 150 years ago and
+% then printed by a university press. There is really nothing “modern”
+% about it and the word in the name of the design is just part of the
+% name of the “Computer Modern” font.
+%
+%
+% \UzLStyle{pagella basic design}
+%
+% A, well, basic design that uses the Pagella font rather than the
+% Computer Modern font. Especially the bold face version of this font
+% looks nicer than the Computer Modern counterpart. Also, Pagella,
+% while still having a “bookish” look, still feels a bit fresher than
+% Computer Modern. 
+%
+%
+% \UzLStyle{pagella centered design}
+%
+% A variant of the basic Pagella design that centers all
+% headlines. A nice alternative to the basic version.
+%
+%
+% \UzLStyle{pagella contrast design}
+%
+% This design tries to create some visual friction by contrasting the
+% sans serif headline font (in bold!) with the main text. I find it a
+% visually very interesting combination.
+%
+%
+% \UzLStyle{alegrya basic design}
+%
+% The third variant of the basic design, this time using the Alegrya
+% font. 
+%
+%
+% \UzLStyle{alegrya scholary design}
+%
+% The Alegrya version of the previous “scholary” design. Unlike the
+% Computer Modern version, this design does not look old, but more
+% fresh -- while still creating the impression that the text must be
+% about a very scientific subject. 
+%
+%
+% \UzLStyle{alegrya stylish design}
+%
+% The design is quite similar to the scholary version for the Alegrya
+% font, but with even more modern additions. “Stylish” is the word
+% that comes to my mind.
+%
+%
+\UzLStyle{alegrya modern design}
+%
+% A design that uses the sans serif version of the Alegrya font for
+% the headlines. This is a nice modern overall design.
+%
+%%%
+
+
+
+
+%%%%%%%%
+%
+% Now, include the package you need here using \usepackage. 
+%
+% However, many standard packages are already loaded by the class:
+%
+% amsmath, amssymb, amsthm, babel, biblatex, csquotes, etoolbox,
+% filecontents, fontspec, geometry, hyperref, tikz (with libraries
+% arrows.meta, positioning and shapes), varioref, url 
+%
+% Indeed, in many cases you will not need any extra packages.
+%
+%%%%%%%
+
+
+
+
+
+\begin{document}
+
+%
+% The title page and table of contents will be inserted automatically
+% here. 
+%
+
+
+\chapter{Einleitung}
+% In a German thesis write: \chapter{Einleitung}
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace with your own introduction:
+
+
+   
+1. **Einleitung (ca. 10%):**
+
+  - Einführung in das Thema der Schwarmrobotik und die Bedeutung von Simulationen
+      
+      schwarmrobotik (und HRI?)
+        kurze Erklärung
+          was versteht man unter: (schwarm)Robotik, Schwarm, collab,.... kurz!
+          siehe ba preprint..
+        brücke zu simulatoren
+      
+      
+      bedeutung von Simulatoren (gerade in robo, in 2.)):
+        preis ersparnis  testumgebung(underwater), 
+        in 2.)verhindern von schäden durch fehlerhafte software/algos
+        variationen beim testen, mit verschiedenster hardware  
+        quellen erwähnen [],[],...
+
+
+
+      
+
+
+      
+   
+
+
+
+
+
+\section{Motivation}
+
+
+%\begin{description}
+%  \item[Warum dieses thema? + problem/frage?] 
+%  schwarm bietet sich für collab an\\   (old papers [?], schhwierigkeiten der HCI -> control of swarm)
+%  
+%  \item[relevanz]
+%  \begin{itemize}
+%    \item trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
+%    \item pros von sim: ..
+%    \item stand der Simulatoren : nicht effizent + flexibel, keine collab
+%  \end{itemize}
+%  
+%
+%  \item[was will ich lösen/zeigen?]
+%  \begin{itemize}
+%    \item tool to combine collab, flex and effi:\\  argos bringt flex und effi, \\  ich bringe collab
+%    \item hilft colllab?
+%  \end{itemize}
+%
+%\end{description}
+%[3,9]
+
+
+collab überall, im herz der forschung + nutzer? 
+      Kurze Erklärung der Bedeutung von kollaborativem Arbeiten und herkömmlichen Simulatoren in diesem Kontext
+        keine collab sim gefunden, nicht untersucht
+      collab besoonders relevant für schwärme?
+
+
+
+\begin{Code}
+  
+   Warum dieses thema? + problem/frage?:
+    schwarm bietet sich für collab an  (old papers [?], schhwierigkeiten der HCI -> control of swarm)
+    warum ist/könnte kollab in robosim nützlich sein -> kollab vorteile
+  
+  relevanz:
+    trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
+    pros von sim: ..
+    stand der Simulatoren : nicht effizent + flexibel, keine collab
+    
+    [3,9,..]
+  
+  was will ich lösen/zeigen?
+    tool to combine collab, flex and effi:
+      argos bringt flex und effi,
+      ich bringe collab
+
+    hilft colllab?
+
+  
+\end{Code}
+
+
+  
+    
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+\section{Beiträge dieser Arbeit}
+% In a German thesis write: \section{Beiträge dieser Arbeit}
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace with a detailed account of your contributions:
+
+- Formulierung der Forschungsfrage und Zielsetzung deiner Arbeit
+
+      Forschungsfrag: ist collab in sim sinnvoll/potenzial
+
+      Ziel: frage beantworten oder zumindest tendenz zu erschließen
+        überprüfen, ob collab bei sim sinnvoll/ potenzial durch nutzertest
+
+
+Beiträge Ihrer Arbeit zur Forschung oder zum Fachgebiet 
+Hier können Sie auf die neuen Erkenntnisse, methodologischen Innovationen oder praktischen Implikationen Ihrer Arbeit 
+eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemeinschaft hat.
+
+
+\section{Related Work}
+% In a German thesis write: \section{Verwandte Arbeiten}
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace with a detailed account of what other people have already
+% researched concerning your thesis's theme. Even when (indeed,
+% especially when) there has been only little or even no research by
+% other people, you should explain in detail that this is the case and
+% why it is the case. 
+
+2. **Grundlagen der Schwarmrobotik und Simulation (ca. 20%):**
+
+- Zusammenfassung der relevanten Literatur und früheren Arbeiten zum Thema
+beset of [1-..18?]
+
+
+- Identifizierung von Forschungslücken oder Diskussionen in der Literatur   
+collab
+
+
+- Beschreibung verschiedener Simulationsansätze und ihrer Bedeutung für die Robotik
+    ansätze?: spiel - spezific - general - modular ??
+    geschichte der sim- aus spiel zu eigenen sim, aus projektspezifisch zu general
+
+
+- Überblick über die Grundkonzepte der Schwarmrobotik und deren Anwendungen
+    noch relevanter in zukunft
+
+
+- Diskussion über die Herausforderungen und Vorteile von Simulationen in der Schwarmrobotik
+    herausforderungen : user feedback paper, accuracy, performance, ..
+    Vorteile: unbekannt, nicht untersucht ?
+
+
+related work
+
+\section{Aufbau dieser Arbeit}
+% In a German thesis write: \section{Aufbau dieser Arbeit}
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace the following by one or two paragraphs describing the
+% thesis's structure.
+
+structure 
+
+1 introduction
+(2 related work) in 1.??
+3. mein sim
+4. user test
+5. Ergebnisse + evaluation
+6 con
+
+
+
+
+
+
+
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace the whole text chapter with the main text of your thesis! 
+
+\chapter{meinsim}%: Document Setup and Document Structure}
+\label{chapter-use}
+
+
+
+   
+   --reroll-
+   
+   Ja, das ändert definitiv etwas! Bei einem Thema wie der Untersuchung von kollaborativem Arbeiten an einer Simulation 
+   für Schwarmrobotik im Vergleich zu einem herkömmlichen Simulator könnten einige spezifische Abschnitte und Schwerpunkte 
+   relevant sein. Hier ist eine angepasste Struktur mit einer möglichen Gewichtung:
+
+1. **Einleitung (ca. 10%):**
+   - Einführung in das Thema der Schwarmrobotik und die Bedeutung von Simulationen
+   - Problemstellung und Zielsetzung der Untersuchung
+   - Kurze Erklärung der Bedeutung von kollaborativem Arbeiten und herkömmlichen Simulatoren in diesem Kontext
+
+2. **Literaturüberblick (ca. 20%):**
+   - Übersicht über relevante Arbeiten zur Schwarmrobotik und Simulationstechniken
+   - Diskussion über die Vor- und Nachteile von kollaborativem Arbeiten und herkömmlichen Simulatoren
+   - Identifizierung von Forschungslücken in Bezug auf die direkte Vergleichbarkeit von kollaborativem Arbeiten und herkömmlichen Simulatoren in der Schwarmrobotik
+
+3. **Methodik (ca. 15%):**
+   - Beschreibung der Simulationen und Tools, die für die Studie verwendet wurden
+   - Erläuterung der Parameter und Metriken, die zur Bewertung von kollaborativem Arbeiten und herkömmlichen Simulatoren verwendet wurden
+   - Details zur Durchführung der Experimente und zur Datenerfassung
+
+4. **Ergebnisse (ca. 25%):**
+   - Präsentation der quantitativen und qualitativen Ergebnisse der Simulationen
+   - Vergleich der Leistung von kollaborativem Arbeiten und herkömmlichen Simulatoren anhand der definierten Metriken
+   - Grafische Darstellung von Daten und statistische Analysen
+
+5. **Diskussion (ca. 25%):**
+   - Interpretation der Ergebnisse im Hinblick auf die Forschungsfragen und Hypothesen
+   - Diskussion über die praktischen Implikationen der Ergebnisse für die Schwarmrobotik-Forschung und -Entwicklung
+   - Reflexion über die Stärken und Schwächen der durchgeführten Studie und mögliche Verbesserungen
+
+6. **Schlussfolgerung und Ausblick (ca. 5%):**
+   - Zusammenfassung der wichtigsten Erkenntnisse und Schlussfolgerungen
+   - Ausblick auf zukünftige Forschungsrichtungen, die sich aus den Ergebnissen ergeben, und potenzielle Anwendungen von kollaborativem Arbeiten in der Schwarmrobotik
+
+Diese Struktur berücksichtigt die spezifischen Anforderungen und Besonderheiten deines Themas 
+
+
+
+
+
+\chapter{user test} 
+   
+   3. **Vergleich von kollaborativem Arbeiten an einer Simulation und einem herkömmlichen Simulator (ca. 30%):**
+      - Darstellung der Funktionsweise und Merkmale beider Simulationsansätze
+      - Analyse von Fallstudien oder Experimenten, die kollaboratives Arbeiten und herkömmliche Simulationen vergleichen
+      - Bewertung der Vor- und Nachteile jedes Ansatzes im Kontext der Schwarmrobotik
+   
+   4. **Methodik (ca. 15%):**
+      - Beschreibung der Methoden, die du zur Durchführung deiner Untersuchung verwendet hast
+        task in beiden umgebungen + survey
+      
+        - Erläuterung deiner Herangehensweise und Begründung der Methodenwahl 
+      
+      - Erklärung der Kriterien und Metriken, die zur Bewertung der Simulationsansätze herangezogen wurden
+
+      - Erläuterung des experimentellen Aufbaus und der Durchführung der Vergleichsstudie
+      task:
+      wer waren Versuchpersonen
+      erfasste Daten:
+
+
+      \begin{Code}
+        Wie leicht war es, mit anderen Freiwilligen in der Simulation zusammenzuarbeiten?
+        Welche Aspekte der Simulation haben die Kollaboration unterstützt oder behindert?
+        Konnten Sie effektiv mit der Simulationsumgebung interagieren, um die gestellten Aufgaben zu lösen?
+        verbesserungsvorschläge?
+
+        -------------------2.entwurf-------------------------
+        task: 
+        platzieren von hindernissen an bestimmten stellen, -> customisible environment
+        platzieren und anpassen von robos -> customisible robot models
+        robo verhalten erweitern (aus verhalten einen aspekt rauslöschen?) -> testing of control algos
+        
+        Qualitative results - based on responses received from the surveys. 
+          These give a picture of user experience and preference. 
+            
+            pre
+              How often do you use computers? 
+              How would you rate your knowlage about (swarm) robotics?
+              How would you rate your experience in programming robots or robot swarms?
+              How would you rate your experience in simulating robots or robot swarms?
+          
+          
+            post
+              ease
+              Which simulation environment/interface was easier to use? - easier
+              Which simulation environment would you prefer for more frequent use? - Workload  , usable vs ease
+              7. I would imagine that most people would learn to use this system very quickly -ease
+      
+              usability
+              How do you rate the clarity and usability of the simulation? - Usability
+              How do you rate the clarity and usability of the collaboration functions? - Usability, collab gut umgeetzt?
+              8. I found the system very cumbersome to use - implementation of features or just argos???
+              Were you able to form a accurate projection from your mental picture of the environment? - Accuracy
+              5. I found the various functions in this system were well integrated - woran hats gelegen (falls nicht gut)
+              
+              collab
+              2. I found the system/collab functions unnecessarily complex -> war collab unnötig
+              9. I felt very confident using the system - usable/easy to understand, well integrated features
+              10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
+            
+              
+              How would u rate each simulation? - overall + for comparission -> success?
+        
+      
+        Quantitative results - from robot trajectory and related information 
+          These serve as performance metrics that tell us whether there is an actual difference in how well 
+          the participants performed, between interfaces. 
+            recording task completion  
+            recording task completion time
+            (clicks, how many clicks -> much looking around/wondering -> lacking clarity???)
+            .
+            .
+            .
+            and other related data
+      
+      
+      #################------metriken-----------############
+        og
+        Qualitative results - based on responses received from the surveys. 
+          These give a picture of user experience and preference. 
+        Quantitative results - from robot trajectory and related information 
+          (recording task completion time, swarm trajectory, collision count, and other related data)
+          These serve as performance metrics that tell us whether there is an actual difference in how well 
+          the participants performed, between interfaces. 
+          
+      
+      
+        in ba
+        Metrics from two categories will be applied in the evaluation. 
+          The Performance category includes metrics such as effectiveness, accuracy, and response time, 
+            which have a measurable impact on the usability and performance of the respective HSI. 
+          The User Experience category includes metrics such as user-friendliness, immersion, and workload, 
+            which represent a subjective assessment by the participants and have an indirect influence on performance [12].
+      ######################-#-------#-#--#-#-############## 
+      
+      
+      
+      
+      ------------------1.entwurf---------------
+      task: Entwirf einen Raum bestehend aus 3 "Hindernisen" und einem schwarm von 10 (identischen) "Robotern" in Argos und Argos+
+      
+      post
+        Which simulation environment/interface was easier to use?
+        Which simulation environment would you prefer for more frequent use? - Workload  
+        How do you rate the clarity and usability of the simulation? - Usability
+        How do you rate the clarity and usability of the collaboration functions? - Usability
+        Were you able to form a accurate projection from your mental picture of the environment? - Accuracy
+        
+        1. I think that I would like to use this system frequently - usable + ease
+        2. I found the system unnecessarily complex -> war collab unnötig
+        5. I found the various functions in this system were well integrated - woran hats gelegen (falls nicht gut)
+        7. I would imagine that most people would learn to use this system very quickly -ease
+        8. I found the system very cumbersome to use - implementation of features or just argos???
+        9. I felt very confident using the system - usable/easy to understand/well integrated features
+        10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
+      
+        How would u rate each simulation?
+      
+      
+      
+        ------------------literaturr----------------------------------
+      
+          pre
+            experience  
+            computer
+            1. How often do you use computers? 
+      
+            robot interaction ?
+            2. How often do you interact with robots?
+            3. How often do you interact with robot swarms or multi-robot systems? 
+            
+            robot simulation
+            4. How would you rate your experience in simulating robots? 
+            5. How would you rate your experience in simulating robot swarms? 
+      
+      
+          post
+            in og
+            1. Workspace Awareness 
+            2. Robot Awareness 
+            3. Ease of Use 
+            4. Response accuracy 
+            5. Overall Preference 
+            6. Overall Average Rating 
+      
+      
+            in ba
+            8. Which interface gave you a better sense of the mission environment? - Immersion
+            9. Which interface gave you a better sense of the robots? - Immersion
+            10. Which interface was easier to use? - Usability
+            11. Which interface was more accurate in processing your inputs? - Accuracy
+            12. Which interface would you prefer for more frequent use? - Workload
+      
+      
+            in ba, woher?
+              1. Did you feel like part of the swarm? - Immersion
+              2. Were you aware of the swarm’s current goal at all times? - Usability
+              3. Were you able to form a mental picture of the situation based on the information provided? - Immersion
+              4. How do you evaluate the quality of communication regarding the information provided by the swarm? - Usability
+              5. How do you evaluate the quality of communication regarding the instructions you provided to the swarm? - Accuracy
+              6. Were your commands executed in a timely manner or within a relevant timeframe? - Response Time
+            
+              7. How do you rate the clarity and usability of the simulation and collaboration functions? - Usability
+            
+            
+      
+      
+            SUS - System Usability Scale
+            1. I think that I would like to use this system frequently
+            2. I found the system unnecessarily complex
+            3. I thought the system was easy to use
+            4. I think that I would need the support of a technical person to be able to use this system
+            5. I found the various functions in this system were well integrated
+            6. I thought there was too much inconsistency in this system
+            7. I would imagine that most people would learn to use this system very quickly
+            8. I found the system very cumbersome to use
+            9. I felt very confident using the system
+            10. I needed to learn a lot of things before I could get going with this system 
+      
+      \end{Code}
+
+
+    
+\chapter{Ergebnisse und Diskussion}
+      4. **Ergebnisse (ca. 25%):**
+      - Präsentation und Diskussion deiner Forschungsergebnisse
+      - Grafische Darstellung von Daten, wenn nötig
+      - Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage(n)
+   
+   5. **Diskussion (ca. 25%):**
+      - Interpretation deiner Ergebnisse im Kontext der vorhandenen Literatur
+      - Reflexion über mögliche Einschränkungen deiner Studie
+      - Vorschläge für zukünftige Forschung
+      
+      5. **Ergebnisse und Diskussion (ca. 25%):**
+         - Präsentation der Ergebnisse deiner Untersuchung, einschließlich quantitativer Daten und qualitativer Beobachtungen
+         - Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage und Hypothesen
+         - Diskussion der Implikationen deiner Ergebnisse für die Schwarmrobotik und mögliche zukünftige Entwicklungen
+
+
+\chapter{Zusammenfassung und Ausblick}
+% In a German thesis write: \subsection{Zusammenfassung und Ausblick}
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace the following with your conclusion
+
+
+
+
+
+6. **Schlussfolgerung und Ausblick (ca. 5%):**
+   - Zusammenfassung der wichtigsten ergebnisse und Erkenntnisse deiner Arbeit/Schlussfolgerungen, die sich aus deiner Arbeit ergeben
+   lässt sich tendenz erkennen, was sagen die ergebnisse aus
+
+   - Bewertung der Bedeutung deiner Forschungsergebnisse für die Robotik und Simulation
+   urprungsfrage beantworten
+   
+   - Ausblick auf potenzielle weitere Forschungsbereiche und Anwendungsmöglichkeiten/- Ausblick auf mögliche Implikationen und Anwendungsbereiche deiner Forschung
+   erweiterte funktionen?
+   in allen sim sinnvoll?
+
+
+
+\chapter{tex semantik}
+
+\section{Section 1}
+section 1
+
+
+\section{section2}
+section 2
+
+
+Some code:
+\begin{Code}
+print(1+1=3)
+\end{Code}
+
+Hier kommt \\ ein Zeilenumbruch
+
+   eine Aufzählung:
+
+   \begin{enumerate}
+   \item 
+     first
+   \item
+     second...
+   \end{enumerate}
+   
+   andere Aufzählung:
+   
+   \begin{description}
+   \item[Stier] 
+     ist ein tier
+   \item[stein]
+     ist kein tier
+   \end{description}
+   
+   noch eine aüfzählung:
+   
+   \begin{itemize}
+     \item number one....
+     \item
+       number two...
+     \end{itemize}
+   
+   
+   \subsection{Subsection 1}
+   ....
+   Figure
+   
+   \begin{figure}[htbp]
+     \centering
+     \textcolor{black!10}{\vrule width3cm height 3cm}
+     \caption{Figure Discription}
+     \label{fig-ode1}
+   
+   \end{figure}
+   
+   
+   \subsection{Subsection 2}
+   ...
+   
+   For tables:
+   
+   
+   \begin{table}[htpb]
+     \caption{Table description}
+     \label{fig-tab1}
+     \centering
+     \begin{tabular}{lp{5cm}}
+       \uzlhline
+       \uzlemph{Animal} & \uzlemph{Sound} \\ \uzlhline
+       Cat & Meow \\
+       Dog & Wuff or bark\\ \uzlhline
+     \end{tabular}
+   \end{table}
+
+
+
+
+% Normally, the bibliography comes next at this point. Do *not* (try
+% to) include further indices and tables like an index or
+% a list of figures or a list of tables or such things. Nobody
+% actually uses them and they just use up space. 
+%
+% You *can* however include a glossary, if this seems appropriate. It
+% goes here as an unnumbered chapter. Most thesis will *not* need a
+% glossary: a well-written text (re)explains strange words and
+% concepts as necessary. However, there are situations where a
+% glossary may be helpful.
+
+
+
+
+
+
+
+
+%%%
+% 
+% Bibliographies
+%
+%%%
+%
+% The uzl-thesis class will load biblatex for the bibliography
+% management. This is a powerful package, see its documentation for
+% details. The styles will be setup correctly and automatically by
+% choosing one of the two style keys as described earlier.
+%
+% In order for the bibliography to work, run latex in the following
+% order (which is the standard order):
+% 
+% > lualatex thesis-example
+% > bibtex thesis-example
+% > lualatex thesis-example
+% 
+% Add BibTeX files using \addbibresource or use the {bibtex entries}
+% environment (see below).
+%
+%%%
+%
+% Although everyting is normally setup automatically, you can change
+% the options passed to biblatex using the key 'biblatex';
+% for instance,
+%
+%   \UzLThesisSetup{biblatex={firstinits=false}}
+%
+% will switch off shortened first names. Normally, you will not need
+% this key in your preamble. 
+% 
+% Note that the bibtex program is used as the 'backend' of biblatex
+% by default (rather than biber, which is the preferred program of
+% biblatex). This means that you can (and must) run *bibtex* after you
+% have run lualatex on your thesis. If you wish to use biber instead
+% of bibtex, say 'biblatex={backend=biber}'. 
+% 
+%%%
+%
+% The following environment is optional. It allows you to keep the
+% bibtex entries for your thesis right here in the thesis file. What
+% happens is that each time this tex file is processed, the contents
+% of the following environment gets written to the file
+% \jobname-bibtex-entries.bib (this file gets overwritten each
+% time). Independently, \addbibresource{\jobname-bibtex-entries.bib}
+% is always called if the file \jobname-bibtex-entries.bib
+% exists. 
+%
+% In result, you can edit and keep the bibliography's bibtex entries
+% right here. If you change something here, run latex, then bibtex,
+% then latex once more.
+%
+% If you would like to manage the bibtex entries in a separate file,
+% remove the below environment, delete the \jobname-bibtex-entries.bib
+% file and instead write
+%
+% \addbibresource{filename-of-your-bibtex-file.bib}
+%
+% in the preamble.
+%
+%%%
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace following example entries with the ones of your thesis.
+
+\begin{bibtex-entries}
+
+@Book{Knuth1986,
+  author =       {Donald Erwin Knuth},
+  title =        {The \TeX book},
+  publisher =    {Addison-Wesley},
+  year =         {1986},
+}
+
+@Book{Lamport1994,
+  author =       {Leslie Lamport},
+  title =        {\LaTeX: A Document Preparation System},
+  publisher =    {Addison-Wesley},
+  edition =      {Second edition},
+  year =         {1994},
+}
+
+@TechReport{Kernighan1974,
+  author =       {Brian Kernighan},
+  title =        {Programming in C – A Tutorial},
+  institution =  {Bell Laboratories},
+  year =         {1974}
+}
+
+@Manual{Tantau2019,
+  author =       {Till Tantau},
+  title =        {The Ti\emph kZ and PGF Packages: Manual for version 3.1.3},
+  institution =  {Institut für Theoretische Informatik, Universität zu Lübeck},
+  year =         {2019},
+  url =          {https://github.com/pgf-tikz/pgf}
+}
+
+@Book{Alley1996,
+  author =       {Michael Alley},
+  title =        {The Craft of Scientific Writing},
+  publisher =    {Springer},
+  year =         {1996},
+  edition =      {Third Edition},
+}
+
+@Book{DowneyF13,
+  author =       {R. G. Downey and M. R. Fellows},
+  title =        {Fundamentals of Parameterized Complexity},
+  series =       {Texts in Computer Science},
+  publisher =    {Springer},
+  year =         2013,
+  doi =          {10.1007/978-1-4471-5559-1},
+}
+
+@Manual{biblatex,
+  title =        {The \textsc{BibLaTeX} package},
+  subtitle =     {Sophisticated Bibliographies in \LaTeX},
+  author =       {Kime, Philip and Lehman, Philipp},
+  url =          {https://github.com/plk/biblatex},
+  urldate =      {2019-06-11},
+  date =         {2018-10-30},
+  version =      {3.12}
+}
+
+@Manual{varioref,
+  title =        {The \textsc{varioref} package},
+  subtitle =     {Intelligent page references},
+  author =       {Mittelbach, Frank},
+  url =          {http://www.ctan.org/pkg/varioref},
+  urldate =      {2019-06-11},
+  date =         {2016-02-16},
+  version =      {1.5c}
+}
+
+@Manual{hyperref,
+  title =        {The \textsc{hyperref} package},
+  subtitle =     {Extensive support for hypertext in \LaTeX},
+  author =       {Rahtz, Sebastian and Oberdiek, Heiko},
+  url =          {https://github.com/ho-tex/hyperref},
+  urldate =      {2019-06-11},
+  date =         {2018-11-30},
+  version =      {6.88e}
+}
+
+@Manual{babel,
+  title =        {The \textsc{babel} package},
+  subtitle =     {Multilingual support for Plain \TeX\ or \LaTeX},
+  author =       {Braams, Johannes L. and Bezos López, Javier},
+  url =          {http://www.ctan.org/pkg/babel},
+  urldate =      {2019-06-11},
+  date =         {2019-06-03},
+  version =      {3.32}
+}
+
+@Manual{fontspec,
+  title =        {The \textsc{fontspec} package},
+  subtitle =     {Advanced font selection in Xe\LaTeX\ and Lua\LaTeX},
+  author =       {Robertson, Will},
+  url =          {http://www.ctan.org/pkg/fontspec},
+  urldate =      {2019-06-11},
+  version =      {2.7c}
+}
+
+@Manual{url,
+  title =        {The \textsc{url} package},
+  subtitle =     {Verbatim with \textsc{url}-sensitive line breaks},
+  author =       {Arseneau, Donald},
+  url =          {http://www.ctan.org/pkg/url},
+  urldate =      {2019-06-11},
+  date =         {2013-09-16},
+  version =      {3.4}
+}
+
+@Manual{amsmath,
+  title =        {The \textsc{amsmath} package},
+  subtitle =     {\AmS\ mathematical facilities for \LaTeX},
+  author =       {{The \LaTeX\ Team}},
+  url =          {http://www.ams.org/tex/amslatex.html},
+  urldate =      {2019-06-11}, 
+  date =         {2017-09-02},
+  version =      {2.17a}
+}
+
+@Book{Beutelspacher2009,
+  title =        {„Das ist o.\,B.\,d.\,A.\ trivial!“: Tipps und Tricks zur
+                  Formulierung mathematischer Gedanken (Mathematik für
+                  Studienanfänger)},
+  author =       {Albrecht Beutelspacher},
+  year =         {2009},
+  edition =      {Ninth, updated edition},
+  publisher =    {Vieweg+Teubner Verlag},
+  doi =          {10.1007/978-3-8348-9075-7},
+}
+
+\end{bibtex-entries}
+
+
+
+% If you need to have an appendix (I advise against it), insert it
+% here using, first, \appendix and then \chapter and then,
+% possibly, \section. 
+%
+% \appendix
+%
+% \chapter{Technical Appendix}
+%
+% \section{Experimental Parameters} % possibly
+%
+% Again, I advise against using an appendix.
+
+
+\end{document}
+
+%  LocalWords:  LaTeX tex moretexcs Lübeck pdf uzl lualatex bibtex th
+%  LocalWords:  TechReport Kernighan Lamport's Tantau's Tantau cls kZ
+%  LocalWords:  Mustermann emacs oldschool pdflatex texmf utf biber
+%  LocalWords:  biblatex Alphabetische Bibliographie Numerische VIIa
+%  LocalWords:  varioref german Einleitung Beiträge dieser Arbeit xml
+%  LocalWords:  Ergebnisse Verwandte Arbeiten Aufbau nucleotide VIIc
+%  LocalWords:  ensembl amino phylogenetic Alexa Siri decrypt versa
+%  LocalWords:  cryptographic pre nondeterministic deterministically
+%  LocalWords:  Beutelspacher Untersuchungen zum genetischen sep llcc
+%  LocalWords:  Beispiel tikz jpg png Alegrya Kasimir Malewitsch PGF
+%  LocalWords:  Lamport Institut für Theoretische Informatik zu url
+%  LocalWords:  Universität Springer DowneyF Downey Parameterized doi
+%  LocalWords:  BibLaTeX Kime Philipp urldate Mittelbach hyperref Lua
+%  LocalWords:  Rahtz Oberdiek Heiko Braams Bezos López fontspec Das
+%  LocalWords:  Arseneau amsmath ist Tipps und zur Formulierung
+%  LocalWords:  mathematischer Gedanken Mathematik Studienanfänger
+%  LocalWords:  Albrecht Vieweg Teubner Verlag

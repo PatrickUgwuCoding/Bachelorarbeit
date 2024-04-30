@@ -1,0 +1,67 @@
+\babel@toc {english}{}\relax 
+\babel@toc {german}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {german}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {german}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Contributions of this Thesis}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Related Work}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Structure of this Thesis}{3}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Guide to the Thesis Class}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Installing and Setting Up the System}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Running \LaTeX \ and Bib\TeX }{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Specifying the Language and Version}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Specifying the Overall Design}{7}{section.2.4}%
+\contentsline {subsection}{Choosing a Design}{8}{section*.2}%
+\contentsline {subsection}{Notes on Fonts}{9}{section*.3}%
+\contentsline {subsection}{Further Styling}{9}{section*.4}%
+\contentsline {section}{\numberline {2.5}Specifying the Metadata Like Title and Abstract}{9}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Including Default and Optional Packages}{12}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Structuring the Thesis Using Chapters and Sections}{14}{section.2.7}%
+\contentsline {subsection}{Chapters and Sections}{14}{section*.5}%
+\contentsline {subsection}{Subsections}{14}{section*.6}%
+\contentsline {subsection}{Lists of Figures and Tables}{15}{section*.7}%
+\contentsline {subsection}{Appendices}{15}{section*.8}%
+\contentsline {section}{\numberline {2.8}Typesetting Basics}{15}{section.2.8}%
+\contentsline {subsection}{Unicode Characters}{15}{section*.9}%
+\contentsline {subsection}{Enumerate and Itemize}{16}{section*.10}%
+\contentsline {subsection}{Line Breaking}{16}{section*.11}%
+\contentsline {section}{\numberline {2.9}Typesetting Mathematics}{17}{section.2.9}%
+\contentsline {subsection}{Predefined Mathematical Environments}{17}{section*.12}%
+\contentsline {subsection}{“Theorem” or “Satz”?}{19}{section*.13}%
+\contentsline {subsection}{Defining New Theorem Styles}{19}{section*.14}%
+\contentsline {subsection}{Display-Style Mathematical Statements}{19}{section*.15}%
+\contentsline {section}{\numberline {2.10}Typesetting (Pseudo) Code}{20}{section.2.10}%
+\contentsline {subsection}{Language Environments}{20}{section*.16}%
+\contentsline {subsection}{Pseudocode Environment}{22}{section*.17}%
+\contentsline {subsection}{Floating Code}{23}{section*.18}%
+\contentsline {subsection}{Inline Listings}{25}{section*.19}%
+\contentsline {subsection}{Miscellaneous}{25}{section*.20}%
+\contentsline {section}{\numberline {2.11}Creating Figures and Tables}{25}{section.2.11}%
+\contentsline {subsection}{Figures}{26}{section*.21}%
+\contentsline {subsection}{Tables}{26}{section*.22}%
+\contentsline {section}{\numberline {2.12}Creating Graphics}{27}{section.2.12}%
+\contentsline {subsection}{External Graphics}{27}{section*.23}%
+\contentsline {subsection}{Inline Graphics via Ti\emph kZ}{28}{section*.24}%
+\contentsline {subsection}{Predefined Ti\emph kZ Styles}{29}{section*.25}%
+\contentsline {subsection}{Predefined Colors}{31}{section*.26}%
+\contentsline {subsection}{Designs for Ti\emph kZ Graphics}{31}{section*.27}%
+\contentsline {section}{\numberline {2.13}Creating Cross References, Citations and the~Bibliography}{33}{section.2.13}%
+\contentsline {subsection}{Citations}{33}{section*.28}%
+\contentsline {subsection}{Bibliography Entries (Bib\TeX \ Entries or Records)}{33}{section*.29}%
+\contentsline {subsection}{The Bibliography}{34}{section*.30}%
+\contentsline {subsection}{Cross References}{35}{section*.31}%
+\contentsline {chapter}{\numberline {3}Questions~\&~Answers: How~to~Write~a~Thesis~That~Is~a~Pleasure~to~Read}{36}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Q\&A: Thesis Length}{37}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Q\&A: Structuring a Thesis}{38}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Q\&A: Abstract, Introduction and Conclusion}{39}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Q\&A: Writing Scientific Text}{41}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Q\&A: How to Write Mathematical Text}{45}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Q\&A: Language and Spelling}{47}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Q\&A: Creating Figures and Tables}{48}{section.3.7}%
+\contentsline {section}{\numberline {3.8}Q\&A: How to Cite and What to Cite}{49}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Conclusion}{52}{chapter.4}%

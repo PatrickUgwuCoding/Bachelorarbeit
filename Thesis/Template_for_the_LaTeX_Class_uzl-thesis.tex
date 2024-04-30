@@ -1,0 +1,4002 @@
+\documentclass[english,version-2020-11]{uzl-thesis}
+
+
+% Copy this file as a template for your thesis. You will have to take
+% action at all places marked by
+%
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% The first place your action is needed is the first line of this
+% document:
+%
+%
+% Language of the thesis:
+%
+% You must use either 'german' or 'english' above, depending on the
+% language used in the main text. This will automatically setup a lot
+% of things in the background.
+%
+%
+% Version of the class:
+%
+% You must specify which version of the thesis class is to be
+% used. This is important in case the class style changes in later
+% years, but we still want an older thesis to look the same, even when
+% things are changed in the class.
+%
+% Do not change or remove the version-xxxx key.
+%
+%
+% Text encoding:
+%
+% Your thesis *must* be encoded in utf8 (unicode), which is the
+% default in most editors these days. Do *not* change this to latin8.
+
+
+
+%%%
+%
+% Main setup:
+%
+%%%
+%
+% You must use the \UzLThesisSetup command to specify numerous things
+% about your thesis. This includes the entries on the title page, the 
+% abstracts, and the bibliography style. You do so by specifying
+% so-called "values" for so-called "keys". For instance, 
+% for the key "Autor" you must provide your name as the value. You do
+% so by writing 'Autor = {Max Mustermann}', that is, the value is put
+% into curly braces. You can use the \UzLThesisSetup command
+% repeatedly and the order in which you provide the keys is not
+% important. 
+%
+% Everything shown on the title page must be in German -- even
+% if the thesis is written in English! Just insert German text for
+% German keys and English text for English keys (like 'Abstract' needs
+% English text, while 'Zusammenfassung' needs German text).
+
+\UzLThesisSetup{
+  %
+  % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  % !!! Your action is needed here !!!
+  % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  %
+  % First, specify the institut or clinic at which the thesis was
+  % written. You get the logo file from them (make sure it has the
+  % correct size, namely the same as the example). If they do not have
+  % a logo, the university's default logo is used.
+  %
+  % The 'verfasst' gets two arguments. Change the first to {an der}
+  % for clinics, as in 'Verfasst = {an der}{Medizinischen Klinik I}'
+  %
+  Logo-Dateiname        = {uzl-thesis-logo-itcs.pdf},
+  Verfasst              = {am}{Institut für Theoretische Informatik},
+  %
+  % The titles:
+  %
+  Titel auf Deutsch     = {
+    Vorlage für die \LaTeX-Klasse »uzl-thesis« zur Nutzung bei
+    Bachelor-~und Masterarbeiten an der  Universität~zu~Lübeck
+  }, 
+  Titel auf Englisch    = {
+    Template for the \LaTeX\ Class “uzl-thesis” for
+    Bachelor's and Master's Theses Written at the University~of~Lübeck 
+  },
+  %
+  % Author and supervisor:
+  % 
+  % Note that the 'Betreuer' or 'Betreuerin' is the supervisor, that
+  % is, the professor who officially supervises the thesis. If there
+  % is also an assistent of the professor who helped (typically a
+  % lot), use 'Mit Unterstützung von' to thank that person. If the
+  % thesis was mainly written 'externally' at some company or another
+  % institute, point this out using 'Weitere Unterstützung'. 
+  % 
+  % For your own name, do *not* add things like "BSc" or "BSc
+  % cand.". For the supervisor, you should normally include
+  % "Prof. Dr." or "PD Dr." (ask your supervisor, what is
+  % appropriate), but nothing more (so no
+  % "Univ.-Prof. Dr. Dr. h.c. mult." unless your supervisor insists).  
+  %
+  Autor                 = {Patrick Ugwu (alias James Bond)},
+  Betreuerin            = {Prof. Dr. Petra Wichtig-Wichtig},
+  % 
+  % Optional: Supporting persons and institutions. The text should be
+  % in German, even for an English thesis.
+  %
+  Mit Unterstützung von = {Harry Hilfreich},
+  % 
+  %   Weitere Unterstützung = {
+  %     Die Arbeit ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
+  %     entstanden.
+  %   },
+  %
+  %
+  % Your Degree Programm (Studiengang)
+  %
+  % Specify 'Bachelorarbeit' or 'Masterarbeit' and the degree
+  % programme. Make sure the name of programme is correct and not
+  % some abbreviation or some incorrect variant. For instance:
+  % 'Medizinische Ingenierwissenschaft', but not 'MIW';
+  % 'Medizinische Informatik', but not 'Medizin-Informatik';
+  % 'Informatik', but not 'Informatik (SSE)'.
+  %
+  % Use German names for German programmes and English names for
+  % English ones, so 'Infection Biology', not 'Infektionsbiologie'. 
+  % For programmes that have a German bachelor and an English master,
+  % use the German name for a bachelor thesis and the English name for
+  % the master thesis.
+  %
+  Bachelorarbeit,
+  Studiengang           = {Informatik},
+  %
+  % Date on which the thesis is turned in German, formatted the
+  % traditional German way:
+  %
+  Datum                 = {1. Januar 2021},
+  %
+  % The English abstract. You must always provide abstracts in German
+  % and in English. 
+  %
+  Abstract              = {
+    It is not easy to write a thesis that does not only advance
+    science, but that is also a pleasure to read. While the scientific
+    contribution of a thesis is undoubtedly of greater importance, the
+    impact of \emph{writing well} should not be underestimated: If
+    the person who grades a thesis finds no pleasure in the reading,
+    that person are also unlikely to find pleasure in giving outstanding
+    grades. A well-written text uses good German or English phrasing with a clear and correct 
+    sentence structure and language rhythm, there are no spelling
+    mistakes and the author's arguments are presented in a
+    clear, logical and understandable manner using well-chosen
+    examples and explanations. In addition, a nice-to-read font and a
+    pleasing layout are also helpful. The \LaTeX\ class presented in
+    this document helps with the latter: It contains a number of
+    ready-to-use designs and 
+    takes care of many small typographical chores.
+  },
+  Zusammenfassung       = {
+    Es ist nicht leicht, eine Abschlussarbeit so zu schreiben, dass sie
+    nicht nur inhaltlich gut ist, sondern es auch eine Freude ist, sie
+    zu lesen. Diese Freude ist aber wichtig: Wenn die Person, die die 
+    Arbeit benoten soll, wenig Gefallen am Lesen der Arbeit findet,
+    so wird sie auch wenig Gefallen an einer guten Note
+    finden. Glücklicherweise gibt es einige Kniffe, gut lesbare
+    Arbeiten zu schreiben. Am wichtigsten ist zweifelsohne, dass
+    die Arbeit in gutem Deutsch oder Englisch verfasst wurde mit klarem
+    Satzbau und gutem Sprachrhythmus, dass keine Rechtschreib- oder
+    Grammatikfehlern im Text auftauchen und dass die Argumente der
+    Autorin oder des Autors klar, logisch, verständlich und gut
+    veranschaulicht dargestellt werden. Daneben sind aber auch gut
+    lesbare Schriftbilder und ein angenehmes Layout hilfreich. Die Nutzung
+    dieser \LaTeX-Vorlage hilft der Schreiberin oder dem Schreiber
+    dabei zumindest bei Letzterem: Sie umfasst gute, sofort nutzbare
+    Designs und sie kümmert sich um viele typographische
+    Details.  
+  },
+  %
+  % Optional: 'Danksagungen' (German) or 'Acknowledgements'
+  % (English). Both keys are optional and both have the same effect of
+  % adding an acknowledgements text after the abstracts and before the
+  % table of contents.
+  %
+  Acknowledgements      = {
+    This is the place where you can thank people and institutions, do
+    not try to do this on the title page. The only exception is in
+    case you wrote your thesis while working or staying at a company or abroad. Then you
+    should use the \Latex{Weitere Unterstützung} key to provide a text
+    (in German) that acknowledges the company or foreign
+    institute. For instance, you could use texts like »Die Arbeit
+      ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
+      entstanden« or »Die Arbeit ist im Rahmen eines
+      Forschungsaufenthalts beim Institut für Dieses und Jenes an der
+      Universität Entenhausen entstanden«. Do not name and thank
+      individual persons from the company or foreign institute on the
+      title page, do that here. 
+  },
+  % Bibliography style: Choose between
+  % 
+  % 'Alphabetische Bibliographie'
+  % for all degree programmes in the natural sciences 
+  % 
+  % 'Numerische Bibliographie'
+  % alternative for all other degree programmes
+  % 
+  % Either will load biblatex and setup the citation methods and the
+  % bibliography styles correctly. You should not mess with them.
+  % 
+  Alphabetische Bibliographie,
+  % Alternatively:
+  % Numerische Bibliographie
+}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%
+% Styling the thesis
+%
+%%%%%%%%%%%%%%%%%%%%
+%
+% Creating a visually pleasing layout and choosing fonts is not
+% easy. Furthermore, different people have different preferences. Of
+% course, for the University of Lübeck, the dean of studies could just
+% force everyone to use one specific layout and font, but that seems a
+% bit drastic and, also, it seems nice that thesis by different people
+% have an individual style even though they all stick to the same
+% overall structure.
+%
+% For these reasons, I (Till Tantau) have spend quite some time on
+% designing a flexible layout and styling mechanism for theses.
+%
+% Basically, the overall structure of the thesis is fixed by the
+% thesis class and so are many structural elements. For instance, you
+% cannot change the order in which the abstract and table of contents
+% are shown, you cannot move the bibliography elsewhere, indeed, the
+% bibliography style is also fixed. Likewise, the text on the title
+% page is fixed.
+%
+% Although many things are fixed, you *can* change several other
+% things. For instance, you can change the font used for the main
+% text, you can change which font is used for titles and headings or
+% you can change whether titles and headlines are centered or flushed
+% left.
+%
+% There are many LaTeX packages for changing such things. You are
+% kindly asked *not to use them*. Rather, use (only) the options
+% offered by the thesis class. All possible choices and combinations
+% there have been tested by me and produce nice results; what happens
+% with other packages no one knows and might no longer conform to what
+% is expected by the university. As you will see, you still have a
+% lot of options.
+%
+%
+% Technical note: All styling is done via the command
+%
+% \UzLStyle{...}
+%
+% where ... is a key-value list just as for \UzLThesisSetup. The
+% difference is just that everything having to do with styling as
+% controlled by \UzLStyle, while the more “formal” setup keys are
+% controlled by \UzLThesisSetup.
+%
+%%%
+%
+% Designs
+%
+%
+% A \emph{design} is a whole set of font and layout options bundled
+% together. They have been chosen in such a way that a visually
+% pleasing “overall appearance” results.
+%
+%
+% \UzLStyle{computer modern oldschool design}
+%
+% The look of this design mimics the “classical” way a paper or report
+% created with \LaTeX\ looks like: The Computer Modern font is used,
+% bold face fonts are used for headlines, only black and white are
+% used as colors. This design reminds me of older scientific
+% documents, especially from the computer science community where
+% \LaTeX\ was used very early.
+%
+%
+% \UzLStyle{computer modern basic design}
+%
+% A slightly less “oldschool” version of the previous design. It is
+% still a classic design in the sense that it uses the Computer Modern
+% font and that it still has this “good old \LaTeX” look, but some
+% more modern aspects (like colors!) have been added.
+%
+% Note that this design uses Myriad for the title page (one of the
+% “modern aspect”), which means that his font must be installed.
+%
+%
+% \UzLStyle{computer modern scholary design}
+%
+% In my opinion, this is the ultimate “scholary design”: The thesis
+% will look like it has been typeset by hand some 150 years ago and
+% then printed by a university press. There is really nothing “modern”
+% about it and the word in the name of the design is just part of the
+% name of the “Computer Modern” font.
+%
+%
+% \UzLStyle{pagella basic design}
+%
+% A, well, basic design that uses the Pagella font rather than the
+% Computer Modern font. Especially the bold face version of this font
+% looks nicer than the Computer Modern counterpart. Also, Pagella,
+% while still having a “bookish” look, still feels a bit fresher than
+% Computer Modern. 
+%
+%
+% \UzLStyle{pagella centered design}
+%
+% A variant of the basic Pagella design that centers all
+% headlines. A nice alternative to the basic version.
+%
+%
+% \UzLStyle{pagella contrast design}
+%
+% This design tries to create some visual friction by contrasting the
+% sans serif headline font (in bold!) with the main text. I find it a
+% visually very interesting combination.
+%
+%
+% \UzLStyle{alegrya basic design}
+%
+% The third variant of the basic design, this time using the Alegrya
+% font. 
+%
+%
+% \UzLStyle{alegrya scholary design}
+%
+% The Alegrya version of the previous “scholary” design. Unlike the
+% Computer Modern version, this design does not look old, but more
+% fresh -- while still creating the impression that the text must be
+% about a very scientific subject. 
+%
+%
+% \UzLStyle{alegrya stylish design}
+%
+% The design is quite similar to the scholary version for the Alegrya
+% font, but with even more modern additions. “Stylish” is the word
+% that comes to my mind.
+%
+%
+\UzLStyle{alegrya modern design}
+%
+% A design that uses the sans serif version of the Alegrya font for
+% the headlines. This is a nice modern overall design.
+%
+%%%
+
+
+
+
+%%%%%%%%
+%
+% Now, include the package you need here using \usepackage. 
+%
+% However, many standard packages are already loaded by the class:
+%
+% amsmath, amssymb, amsthm, babel, biblatex, csquotes, etoolbox,
+% filecontents, fontspec, geometry, hyperref, tikz (with libraries
+% arrows.meta, positioning and shapes), varioref, url 
+%
+% Indeed, in many cases you will not need any extra packages.
+%
+%%%%%%%
+
+
+
+
+
+\begin{document}
+
+%
+% The title page and table of contents will be inserted automatically
+% here. 
+%
+
+
+\chapter{Introduction}
+% In a German thesis write: \chapter{Einleitung}
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace with your own introduction:
+
+% DELETE the following line for your own thesis - it causes trouble!
+\lstMakeShortInline[style=code,style=inline,language={[LaTeX]tex},moretexcs={chapter}]|
+
+Writing a bachelor's or master's thesis is not easy.\footnote{Neither
+  is writing a PhD thesis, but this document does \emph{not} concern
+  them. It is intended \emph{only} as a template for bachelor's and
+  master's theses written at the University of Lübeck. When you write
+  a PhD thesis, you are invited to find your own style.} You must
+\emph{research} the thesis's topic scientifically 
+-- and you must do 
+this well. You must \emph{describe} your research and the results --
+and you must use not just any words, but those that are used in the
+scientific community. Finally, you must \emph{write} everything
+\emph{down} -- by creating an electronic document that is a pleasure
+to read.
+
+It is the last item where this text may help: It is, first, a
+\emph{template} that you, dear student, can copy and then modify when
+writing your thesis. Of course, you still have to write the text, but
+the template will take care of numerous technical details for you. As
+a teaser, have a look at Listing~\vref{listing-hello-world}, which 
+shows the code for the ``hello world of theses''\footnote{In computer
+  science, a ``Hello World'' program is a minimal program in a given
+  programming language that   just prints these two words.} and which
+already produces a \textsc{pdf} file with five pages of so-called front
+matter (like the title page, the abstract or the table of contents)
+and already four pages of actual content -- not bad for a single page
+of code.
+
+
+\begin{Latex}[
+  float,
+  caption={
+    Minimal \LaTeX\ manuscript that generates a bachelor's thesis using the
+    \textsc{uzl-thesis} class. The manuscript has to be processed twice
+    using \Latex{lualatex}, followed by a run of \Latex{bibtex},
+    followed by a run of \Latex{lualatex} once more. 
+  },
+  label={listing-hello-world}
+  ]
+\documentclass[english, version-2020-11]{uzl-thesis}
+
+\UzLStyle{computer modern oldschool design}
+
+\UzLThesisSetup{
+  Bachelorarbeit,
+  Verfasst = {am}{Institut für tolle Forschung},
+  Titel auf Deutsch = {Hallo Welt},
+  Titel auf Englisch = {Hello World},
+  Autor = {Max Mustermann},
+  Betreuerin = {Prof. Dr. Petra Wichtig-Wichtig},
+  Studiengang = {Irgendwas mit Tieren},
+  Datum = {1. Juli 2020},
+  Abstract = {It is about saying ``hello'' to the world.},
+  Zusammenfassung = {Es geht darum, der Welt »Hallo« zu sagen.},
+  Numerische Bibliographie
+}
+
+\begin{document}
+  \chapter{Introduction}
+  \section{Contributions of this Thesis}
+  This thesis says ``Hello World!'', see also \cite{Kernighan1974}.
+  \section{Related Work}
+  There are many hello world programs.
+  \section{Structure of this Thesis}
+  In Chapter~\vref{chapter-main}, we say hello.
+  
+  \chapter{Main Chapter}
+  \label{chapter-main}
+  Hello World!
+
+  \chapter{Conclusion}
+  Saying hello world is quite easy.
+
+  \begin{bibtex-entries}
+    @TechReport{Kernighan1974,
+      author = {Brian Kernighan},
+      title = {Programming in C – A Tutorial},
+      institution = {Bell Laboratories},
+      year = {1974}
+    }
+  \end{bibtex-entries}
+\end{document}
+\end{Latex}
+
+This template document is a \LaTeX\ document that uses the
+\textsc{uzl-thesis} document class. This means that in order to work with it,
+you need to use Donald Knuth's \TeX\ text processing system
+\cite{Knuth1986}, Leslie Lamport's \LaTeX\ extension of \TeX\
+\cite{Lamport1994} and my
+(that is, Till Tantau's) 
+\textsc{uzl-thesis} document class. In particular, you will need to learn
+\LaTeX\ if you have not already done so (definitely a good idea
+anyway). 
+
+Some students may wonder at this point whether this text
+applies to them at all since they do not intend to (or perhaps even
+may not) use \LaTeX\ for their thesis. However, while these readers
+can safely skip the technical details of how the \textsc{uzl-thesis} class is
+used, I would like to urge them (and, of course, everyone else) to read
+Chapter~\ref{chapter-tips}, starting \vpageref{chapter-tips}: In this
+chapter, I explain my views on 
+``how to write a good thesis'' and try to give as many practical hints
+as possible that anyone attempting to write a thesis will hopefully
+find useful -- independently of which text processing tool they use.
+
+The ``hints'' given in Chapter~\ref{chapter-tips} address many of the
+problems that I see students struggle with when they write their
+thesis. Of course, I cannot give a magic recipe for creating a
+scientific breakthrough. But I \emph{can} give you hints on how to
+put a breakthrough into words that other people understand and will
+like to read -- and, hopefully, will like to reward with good grades.
+
+Please be aware that the views expressed in Chapter~\ref{chapter-tips}
+are \emph{my} views and some of them may not be shared by other
+professors and, more importantly for you, they may not be shared by
+your adviser -- who happens to be the person who will grade your
+thesis. This means that you better \emph{always listen to your
+  adviser} and do what she or he asks you to do.\footnote{If your adviser
+thinks the thesis should be typeset using a typewriter font with
+double line spacing and all headlines should be in pink, then I may
+(very) strongly disagree with that, but you do not have that luxury
+and you just typeset everything in double line spacing pink
+typewriter.} The excuse ``but 
+Professor Tantau writes that\dots'' may be flattering to me, but it
+will not get you high grades.
+
+So, \emph{always listen to your adviser.} You will read this again
+later on. Repeatedly. 
+
+
+\section{Contributions of this Thesis}
+% In a German thesis write: \section{Beiträge dieser Arbeit}
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace with a detailed account of your contributions:
+
+This document is both intended as a template that students can easily
+and conveniently adapt to their own needs and as a trove of tips and
+tricks on how to write a good thesis. The template as well as the
+\textsc{uzl-thesis} class have been written by Till Tantau and
+they reflect -- to a certain degree -- my personal choices and many of
+the recommendations may differ from those by other people. However,
+one recommendation of mine trumps those made by anyone else:
+\emph{Always listen to your adviser!}
+
+
+\section{Related Work}
+% In a German thesis write: \section{Verwandte Arbeiten}
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace with a detailed account of what other people have already
+% researched concerning your thesis's theme. Even when (indeed,
+% especially when) there has been only little or even no research by
+% other people, you should explain in detail that this is the case and
+% why it is the case. 
+
+Concerning the first aspect of this text, namely the fact that it
+serves as a template for bachelor's and master's theses written at the
+University of Lübeck, let me remark that there are several older
+templates and styles. However, this class is the official (new) one
+and should be used rather than any other one.
+
+Concerning the set of recommendations I make on how to write a
+thesis, first note that there are \emph{many} books on,
+well, ``how to write a thesis''. You are \emph{very} cordially invited
+to go to the library and actually read one of them (reading books
+\emph{is} part of being a scientist, by the way). My personal favorite
+is \citetitle{Alley1996} \cite{Alley1996}. Second, note that
+the hints and observations I make are \emph{my} observations and may
+not be shared by everyone. Of course, I can make a very good case on
+why you really should follow the recommendations \emph{I} make -- but
+remember that you should \emph{always listen to your adviser!}
+
+\section{Structure of this Thesis}
+% In a German thesis write: \section{Aufbau dieser Arbeit}
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace the following by one or two paragraphs describing the
+% thesis's structure.
+
+This thesis\footnote{Actually, ``this text'' would be more appropriate
+  since this is obviously not a real thesis. But this is what you
+  would write in a real thesis at this point.} consists of two main
+chapters: Chapter~\ref{chapter-use} describes how the
+\textsc{uzl-thesis} \LaTeX\ class is used on a technical level. This chapter starts with the
+technical details of how you setup the \TeX\ work-flow in conjunction
+with the class (where to install it and which programs to use), but
+the bulk of the chapter is taken up by the different aspects of using
+that class -- like how bibliographies are created or how math text
+should be written. The explanations only try to highlight what is
+important and different when using the \textsc{uzl-thesis} class; they
+are not intended as a complete introduction to \LaTeX. In
+Chapter~\ref{chapter-tips}, I then list the many small and big things
+you should consider and take care of when writing a thesis. I will
+explain how long the different parts should be, I will sketch why the
+abstract, the introduction and the conclusion all summarize the main
+part of the thesis, but still all three need to be written, I will
+explain why you should write ``we will show that'' and not ``I will
+show that'' but ``I believe that'' and not ``we believe that'' and I
+will give recommendations on many other topics. But of course,
+whatever you read in the following, remember that you must
+\emph{always listen to your adviser!}  
+
+
+
+
+
+
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace the whole text chapter with the main text of your thesis! 
+
+\chapter{Guide to the Thesis Class}%: Document Setup and Document Structure}
+\label{chapter-use}
+
+
+In this document, the \emph{thesis class} refers to the \LaTeX\
+document class \textsc{uzl-thesis} (the file |uzl-thesis.cls| to be
+precise), which was written by Till Tantau (that would be me, despite
+the “Max Mustermann” from the title page) to help  
+students of the University of Lübeck when they write their bachelor's
+or master's thesis. In \LaTeX-speak, a \emph{document class} dictates
+the basic appearance of a document and this is exactly what the thesis
+class does: it sets up the appearance of the document in such a way
+that it conforms (perfectly) with the regulations of the University of
+Lübeck.
+
+In addition to just formatting a thesis correctly, the thesis class
+also provides a number of extra commands and includes a number of
+packages that I have decided should be the standard at the
+university. This means that most students will need to load very
+few (typically no) extra packages for their thesis.
+
+In this chapter, I explain all the “public” parts of the thesis class,
+that is, all those aspects and configuration options that students can
+and should use. There are also some internal keys and commands that
+an adventurous student might try to fool around with. Don't. 
+
+
+
+
+\section{Installing and Setting Up the System}
+
+In order to write your thesis using the thesis class, you first need
+to setup things on your system appropriately. With a bit of luck,
+things have already been setup correctly for you, otherwise you will
+need to follow the following steps:
+
+First, since the thesis class is based on \LaTeX, you need a working
+\LaTeX\ installation on the system on which you write your thesis. This
+“system” can be a laptop or one of the university's computers or even
+a cloud-based service; whatever it is, \TeX\ needs to be installed on
+it. This is done using so-called \emph{distributions} and they depend
+on the operating system and the details of your system. With a bit of
+luck, you will already have a full distribution installed, otherwise
+you need to get it from the net and install it. This is usually a
+rather simple process, but it may take a while (a full installation
+needs several gigabytes). I make no recommendation on which \TeX\
+distribution to use, but usually ``simpler is better'' and any
+contribution should be based on a recent version (at least 2015) of
+\TeX live. I have tested the class extensively with the \TeX\
+installation at the university computer labs, with \TeX live 2015 and
+later, with Mik\TeX\ and with Debian-based Linux distributions
+(where you may need to install the additional \TeX\ font package,
+though). 
+
+Second, you will need an editor for writing the text of the thesis
+(sometimes this text is called the \emph{manuscript;} it is the file
+that \TeX\ processes and turns into the final \textsc{pdf} file). This
+editor needs to be a simple editor that is well-suited for handling
+\TeX\ files. Once more, I make no recommendations on which editor you
+should use: I use \textsc{emacs}, but that is somewhat oldschool. Use
+any editor you feel comfortable with.
+
+Third, you will actually have to run \TeX\ on your manuscript. How
+this is done, exactly, will be discussed in the next section, but at
+this point it is important that by ``running \TeX'' I actually mean
+``running the |lualatex| program'': There are several \LaTeX\
+programs out there, such as the original |latex|, the more
+recent |pdflatex| and the even more recent |lualatex|. For the thesis
+class, you \emph{must} use |lualatex|. While this program will almost
+certainly  be already 
+installed as part of the \TeX\ distribution you use, you may have to
+change the settings of the editor you use so that it runs |lualatex|
+rather than |pdflatex|.
+
+It is well worth investing the time for this change, not only because
+of the \textsc{uzl-thesis} class, but you should switch to |lualatex| in
+general if you have not yet done so.   
+
+Fourth and finally, you need a copy of the file |uzl-thesis.cls|
+together with some logo \textsc{pdf} files. Since you are currently
+reading this document, which is part of the directory containing the
+class file, there is a very good chance that you already have all the
+files you need. \emph{But} you may still need to place them somewhere
+where \TeX\ will find them. A good place for this is usually the
+directory that also contains your thesis manuscript (remember, that is
+the file that contains your thesis and ends~“|.tex|”).\footnote{If you
+  are more \TeX\ savvy, you may place the directory with the
+  \Latex{uzl-thesis.cls} in a local \textsc{texmf} tree. However, in the
+  long run, it is advisable to keep all files needed for typesetting
+  you thesis together -- namely in the directory of the manuscript.}
+I have carefully tried to make sure that the number of files needed
+for the thesis class is as small as possible and that it should work
+out-of-the-box on most systems.
+
+Test whether everything works by running Lua\LaTeX\ on this file, that
+is, by running:
+\begin{Code}
+lualatex Template_for_the_LaTeX_Class_uzl-thesis.tex
+\end{Code}
+If there is a problem or error, do not be too shy to ask somebody to
+help you with the setup!  
+
+
+\section{Running \LaTeX\ and Bib\TeX}
+
+With the system up and running, you can start writing the
+manuscript. The work-flow is the following: 
+
+
+\begin{enumerate}
+\item Make a copy of |Template_for_the_LaTeX_Class_uzl-thesis.tex| and
+  rename the copy to 
+  something like, for instance, |mythesis.tex|.\footnote{Note that
+    the file is encoded in \textsc{utf8} encoding (unless you study
+    computer science, you really do not wish to know the details) and
+    that the encoding should stay that way. Fortunately, most editors
+    will use this encoding automatically, so this should not be a
+    problem.} This will be the \emph{manuscript} of your thesis.
+\item
+  Replace all parts of the text (like this one) with your own
+  text. Use your favorite editor for this.
+\item
+  Now run |lualatex| on the manuscript.
+\item
+  If there are \emph{any errors,} then \emph{correct them first.} It
+  is usually a very bad idea to ignore the errors. Ask someone if you
+  do not know how to fix an error! 
+\item
+  After you have successfully run \LaTeX\ at least twice, run |bibtex|. Once
+  more, fix any errors before proceeding.\footnote{There is also the
+    option of using \Latex{biber}, see Section~\vref{section-references} for 
+    details. If you have no idea what \Latex{biber} is, just ignore this
+    remark.} 
+\item
+  Then run |lualatex| once more. 
+\item
+  You should now have a correct \textsc{pdf} file.
+\end{enumerate}
+
+
+Congratulations on creating a first version of your thesis. As you may
+already have noticed when looking at
+Listing~\vref{listing-hello-world}, the thesis manuscript 
+contains a rather prominent block in the preamble where the
+|\UzLThesisSetup| command is used. In the following, we have a closer
+look at this command; but, first, we have a look at the very first
+line of the listing, namely the class options.
+
+
+\section{Specifying the Language and Version}
+
+Your manuscript must start with
+
+\begin{Latex}
+\documentclass[german, version-2020-11]{uzl-thesis}
+\end{Latex}
+%
+or with
+%
+\begin{Latex}
+\documentclass[english, version-2020-11]{uzl-thesis}
+\end{Latex}
+%
+depending, of course, on whether your thesis is written in German or
+in English. Note that no other languages are supported (or allowed)
+and that you \emph{must} specify \emph{exactly} one of the two
+language options\footnote{Do not worry about that fact than an English
+  thesis will contain a German abstract text, which needs special
+  hyphentation -- this is taken care of automatically. As I promised, 
+  the thesis class takes care of many technical details that you may
+  not have thought about.}.
+
+You \emph{must} also provide the class version key\footnote{In
+  computer science parlor, a “key” is a text like \Latex{version-2020-11}
+  that is specified in lists and that causes some configuration to be
+  chosen.} and note that this is the version and date of the thesis
+  \emph{class} and not the date when you turn in \emph{your} thesis. The key ensures  
+that when the thesis class is changed in the coming years, using a
+new version together with your (original) manuscript will still produce
+the same \textsc{pdf} as it did when you wrote your thesis. Just leave
+this class version key as it is. 
+
+\section{Specifying the Overall Design}
+
+\label{section-styling}
+
+The way a thesis looks -- its \emph{style} or \emph{design} -- is a
+matter of taste; but only to a certain degree. While there are many
+things that are “not open to discussion” like the fact that the main
+font should have a certain minimum (and maximum) size and should be
+easy to read, there is no reason why any \emph{particular} font
+\emph{must} be used in a thesis or why a, say, centered layout is
+better than a flushed-left layout.
+
+With the thesis class, you can quite easily change the way the thesis
+looks -- but you are limited to those choices that I have vetted and
+that I know work well together. While this is definitely a better
+approach than the one I see elsewhere (where each student copies
+layout code from someone else, neither understanding what it does nor
+what it is actually for, and then hopes for the best), I restrict your freedom when it
+comes to styling the thesis: Even if you really think that pink
+headlines and a slab serif as main font are way cooler that the
+designs I chose, you will just have to live with the options I
+provide. I guess that 99\% of all students will be more than happy to
+leave the design process to me, but if you are one of the 1\%, you may
+complain fiercely at this point and may then just pick one of the
+styles I chose for you like everyone else.
+
+
+\subsection{Choosing a Design}
+
+To pick a design, you call one command in the preamble (that is
+the part following the |\documentclass| before the actual thesis
+starts with the |{document}| environment):
+\begin{Latex}[style=escapemath]
+\UzLStyle{$\langle \mathit{style}\rangle$}
+\end{Latex}
+where $\langle \mathit{style}\rangle$ is one of the following (all in
+lowercase, as in |\UzLStyle{alegrya basic design}| for instnace):
+\begin{description}
+\item[computer modern oldschool design] 
+  The look of this design mimics the “classical” way a paper or report
+  created with \LaTeX\ looks like: The Computer Modern font is used,
+  bold face fonts are used for headlines, only black and white are
+  used instead of colors. This design reminds me of older scientific
+  documents, especially from the computer science community where
+  \LaTeX\ was used very early.
+\item[computer modern basic design]
+  A slightly less “oldschool” version of the previous design. It is
+  still a classic design in the sense that it uses the Computer Modern
+  font and that it still has this “good old \LaTeX” look, but some
+  more modern aspects (like colors!) have been added.
+  
+  Note that this design uses the Myriad font for the title page (one
+  of the “modern aspects”), which means that this font must be
+  installed. This font is the university's official font, which is why
+  it is appropriate for the title page. However, the font does not otherwise
+  go well with the Computer Modern font, so it is used only on the
+  title page.
+\item[computer modern scholary design]
+  In my opinion, this is the ultimate “scholary design”: The thesis
+  will look like it had been typeset by hand some 150 years ago and
+  then printed by a university press. There is really nothing “modern”
+  about it despite this word being part of the design's name: the word
+  \emph{modern} is just part of the name of the Computer \emph{Modern} font. 
+\item[pagella basic design]
+  A, well, basic design that uses the Pagella font rather than the
+  Computer Modern font. Especially the bold face version of this font
+  looks nicer than the Computer Modern counterpart. Also, Pagella,
+  while still having a “bookish” look, feels a bit fresher than
+  Computer Modern. 
+\item[pagella centered design]
+  A variant of the basic Pagella design that centers all
+  headlines. A nice alternative to the basic version.
+\item[pagella contrast design]
+  This design tries to create some visual friction by contrasting the
+  sans serif headline font (in bold!) with the main text. I find it a
+  visually very interesting combination.
+\item[alegrya basic design]
+  The third variant of the basic design, this time using the Alegrya
+  font. 
+\item[alegrya scholary design]
+  The Alegrya version of the previous “scholary” design. Unlike the
+  Computer Modern version, this design does not look old, but more
+  fresh -- while still creating the impression that the text must be
+  about a very scientific subject. 
+\item[alegrya stylish design]
+  The design is quite similar to the scholary version for the Alegrya
+  font, but with even more modern additions. “Stylish” is the word
+  that comes to my mind. 
+\item[alegrya modern design]
+  A design that uses the sans serif version of the Alegrya font for
+  the headlines. This is a nice modern overall design.
+\end{description}
+
+
+\subsection{Notes on Fonts}
+
+The different designs from which you can choose use three different
+main fonts: Computer Modern, Pagella and Alegrya. Of course, there are
+many more fonts around and even installed on your computer -- but you
+can still use only one of these three. The reason is that there is
+much more to choosing and setting up a font than meets the eye: One
+must ensure that the font works not only for simple text, but also for
+complex mathematical text, that the font sizes fit and are comparable
+to those of other fonts, that the typewriter (the monospace) version
+goes well with the main font, that the small caps version is correctly
+selected and much more.
+
+All of these complex setups have been carefully done for these three
+fonts (the setup for Alegrya alone needs 50 lines of code of the
+thesis class). Since it is almost impossible for a beginner (or even
+an advanced user) to get all of these setups right when choosing
+another font, you are kindly requested to refrain from doing that. Use
+one of the three fonts, which get installed as part of the different
+designs. 
+
+
+\subsection{Further Styling}
+
+The styling mechanism actually allows you finer control over the
+styling of different elements of a thesis, like the font and color
+used for section titles, the layout of the table of contents and many
+more aspects. However, while you find some documentation in the
+comments inside the thesis class file, I do not provide a detailed
+documentation here since, usually, you should not configure these styles
+individually. 
+
+
+\section{Specifying the Metadata Like Title and Abstract}
+
+You \emph{must} use the command |\UzLThesisSetup| (at least) once in the
+preamble. This command is used to configure the so-called
+\emph{metadata} prior to the first chapter of the thesis. The metadata
+is information “about” your thesis (hence the “meta-”) and must be
+provided by this special command. Note that there are normally other
+commands in \LaTeX\ for providing such metadata (like |\author|), but
+you \emph{may not use them} since all metadata is specified using the
+|\UzLThesisSetup| command. The syntax is as follows: 
+\begin{Latex}[style=escapemath]
+\UzLStyle{$\langle \mathit{key}\rangle$ = {$\langle \mathit{value}\rangle$},
+          $\langle \mathit{key}\rangle$ = {$\langle \mathit{value}\rangle$},
+          $\dots$,
+          $\langle \mathit{key}\rangle$ = {$\langle \mathit{value}\rangle$}}
+\end{Latex}
+%
+For some keys, the |= {|$\langle \mathit{value}\rangle$|}| part may be
+missing. You can use the command several times, but all uses must be
+within the preamble and usually you will put everything in a single
+command. There are numerous keys that can be configured with this
+command and most of them are required, that is, they \emph{must} be
+set (exactly once). The order in which you set them is, however, not
+important.
+
+The keys that you \emph{must} set are the following (note that most of
+them are in German; this is to remind you that you \emph{must} provide
+German texts as values for these keys \emph{even in an English thesis}
+since the university's guidelines insist that the text on the title
+page must be in German):
+
+\begin{description}
+\item[Bachelorarbeit / Masterarbeit] You must
+  specify exactly one of these two keys. Note that this thesis class
+  is \emph{not} meant for PhD theses.
+\item[Verfasst] Specify the institute or clinic where you
+  wrote the thesis. Note that this must be the official name of one of
+  the institutes and clinics of the university (sometimes even the
+  supervisors do not seem to know the real name of their own
+  institute\dots). The key takes two arguments as value (it is a
+  rather special key): The first is the word |am| (for institutes) or
+  the words |an der| (for clinics), the second is the name of the
+  institute or clinic. Here are two examples:
+\begin{Latex}
+  Verfasst = {am}{Institut für Theoretische Informatik}
+\end{Latex}
+  or
+\begin{Latex}
+  Verfasst = {an der}{Klinik für Hals-, Nasen- und Ohrenheilkunde}
+\end{Latex}
+  It would be wrong to use “\foreignlanguage{german}{Klinik für HNO}”
+  instead. If in doubt, 
+  consult the “\foreignlanguage{german}{Sat\-zung über die Institute
+    und Kliniken der Universität zu Lübeck}” from the university
+  homepage. It would be \emph{utterly wrong} to write
+  “\foreignlanguage{german}{Universitätsklinikum 
+  Schleswig-Hol\-stein}” here, by the way, since that institution is not
+  part of the university.
+
+  Note that if you have written your thesis externally (like abroad or
+  at a company), you \emph{still} have a supervisor at the University
+  of Lübeck and she or he is \emph{still} affiliated with an institute
+  of the university. It is \emph{that} institute or clinic that must
+  be named here.
+\item[Logo-Dateiname] If the institute has provided you with its own
+  logo as a \textsc{pdf} file, you can specify the file name
+  here. Note that only those logos are allowed here that look like the 
+  university logo (see Figure~\vref{fig-logo}), but with the name of
+  the institute added. Also note that the logo \textsc{pdf} file
+  should have the exact same size and scaling as the normal logo.
+\item[Titel auf Deutsch] Provide the German title here. \emph{Please}
+  try to avoid spelling mistakes at least here. Wrong capitalization 
+  \emph{is} a spelling mistake in German, by the way: Do \emph{not}
+  entitle your thesis “\foreignlanguage{german}{Untersuchungen zur Schnellen Simuluation von
+  Turing Maschinen}” -- that is two spelling mistakes! You must use
+  “\foreignlanguage{german}{Untersuchungen zur schnellen Simulation von Turing-Maschinen}”.  
+\item[Titel auf English] Provide the English title here. Note that
+  there are \emph{also} rules for capitalization in English, but they
+  are a bit more flexible. For more information on when to use
+  uppercase and when to use lowercase in English, see
+  Question~\vref{qu-titles}. 
+\item[Studiengang] Make sure the name of degree programme is
+  correct and not some abbreviation or some incorrect variant. For
+  instance: “\foreignlanguage{german}{Medizinische Ingenieurwissenschaft}”, but not “MIW”;
+  “\foreignlanguage{german}{Medizinische Informatik}”, but not “\foreignlanguage{german}{Medizin-Informatik}”;
+  “Informatik”, but not “Informatik (SSE)”. 
+  
+  Use German names for German programmes and English names for
+  English ones, so “Infection Biology”, not “\foreignlanguage{german}{Infektionsbiologie}” and
+  also neither “Infection-Biology” nor  “Infection biology”. 
+  For programmes that have a German bachelor programme and an English
+  master programme, use the German name for a bachelor's thesis and
+  the English name for the master's thesis.  
+\item[Autor / Autorin] Both keys have exactly the same effect. In
+  either case, that would be you, I sincerely hope. Make sure
+  you spell your own name correctly. It is slightly embarrassing to
+  get it wrong (I saw that on a thesis, once; so, you have been
+  warned). If you have more than one first name, you can include
+  them.
+
+  For your own name, do not add things like “BSc” or “BSc cand.”\
+  (especially the latter is slightly ridiculous). For the adviser,
+  you should normally include “Prof.\ Dr.”\ or “PD Dr.”\ (ask your
+  adviser, what is appropriate), but nothing more (so no
+  “Univ.-Prof.\ Dr.\ Dr.~h.\,c.~mult.”\ unless your adviser insists).  
+\item[Betreuer / Betreuerin] Both keys have exactly
+  the same effect. Note that this key specifies the \emph{adviser,}
+  that is, the professor who officially supervised the thesis. If
+  there is also an assistent of the professor who helped (typically a
+  lot), use the key |Mit Unterstützung von| (see below) to thank that
+  person. If the thesis was mainly written externally at some
+  company or another institute, point this out using
+  |Weitere Unterstützung| -- but note that the adviser will
+  \emph{still} officially be a professor of the University of Lübeck
+  and you must name her or him, here.
+\item[Datum] The date you turn in your thesis. Do \emph{not} be
+  late. Format the data in the “traditional German way“, that is, the
+  first of June 2020 must be formatted as “1. Juni 2020“. Do
+  \emph{not} write any of “01. Juni 2020” or “01. 06. 2020“ or
+  “1.6.2020” or “1. 6. 2020” or “2020-06-01”.
+\item[Abstract] Provide the (whole) English abstract of your thesis
+  here. It may have more than one paragraph, but it should not. You will find
+  more information on how to write an abstract in the answers to
+  Questions \ref{qu-abstract1} and~\vref{qu-abstract2}.
+\item[Zusammenfassung] Provide the German abstract here. It should be
+  a faithful, but not word-to-word translation of the English one (or
+  \emph{vice versa}). 
+\item[Alphabetische Bibliographie /]
+\item[Numerische Bibliographie] You
+  must use exactly one of these two keys. They select which
+  bibliography style is used throughout the thesis. If you write a
+  thesis in a degree programme of the natural sciences (like Molecular
+  Life Science), you \emph{must} use the first key. Otherwise, you can
+  use either one. You can find more information on the bibliographies
+  in Section~\vref{section-bibliographies}.
+\end{description}
+
+In addition to the above keys, all of which are required, there are
+also some optional keys:
+
+\begin{description}
+\item[Mit Unterstützung von] If there has been an assistant that
+  helped the supervisor (a lot), name and thank this person here. Do
+  not list everyone at the institute.
+\item[Weitere Unterstützung] You may (but need not) provide a text (in German)
+  that acknowledges a company or an institute that is not part of the
+  University of Lübeck where the thesis was mainly written. For
+  instance, you could use texts like “\foreignlanguage{german}{Die Arbeit 
+  ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
+  entstanden}” or “\foreignlanguage{german}{Die Arbeit ist im Rahmen eines
+  Forschungsaufenthalts beim Institut für Dieses und Jenes an der
+  Universität Entenhausen entstanden}”. Do not name and thank
+  individual persons from the company or foreign institute on the
+  title page, instead use the |Acknowledgements| key for that.
+\item[Acknowledgements] You can provide a longer paragraph in which
+  you thank all the nice people who helped you with the thesis. This
+  text will not be shown on the title page, but will be shown rather 
+  prominently before the table of contents. It is usually a good idea
+  and a nice touch to name everyone who had even a remote positive
+  influence on your thesis. 
+\end{description}
+
+\section{Including Default and Optional Packages}
+
+Following the |\UzLThesisSetup| command, you can start loading
+additional packages that you may need for typesetting your thesis. For
+instance, you may wish to load special libraries for drawing finite
+automata or you may wish to load a special package for doing fancy
+things with tables. Use \LaTeX's |\usepackage| and Ti\emph kZ's
+|\usetikzlibrary| commands as usual for this. 
+
+However, the \textsc{uzl-thesis} class loads many packages already and sets
+them up in certain ways. This has two effects:
+
+\begin{enumerate}
+\item You often do not need to load additional packages at all for
+  your thesis since for almost all common problems a suitable package
+  will already have been loaded, configured and patched by me.
+\item You cannot load a number of packages, because they clash with
+  the packages loaded by \textsc{uzl-thesis}. For instance, you cannot use
+  the \textsc{pstricks} package since Ti\emph kZ is already loaded,
+  you cannot use \textsc{natbib} since \textsc{biblatex} is loaded and
+  so on. For all cases where this happens, I had a closer look at the
+  alternatives and then explicitly chose the package that is now
+  loaded. Even if you like another package better, you will have to
+  live with the choice I made.\footnote{If you really want to change
+    these choices, finish your studies quickly, finish your PhD
+    quickly, become a postdoc, do amazing research, become a professor
+    at the University of Lübeck and get voted as Dean of Studies. Then
+    you can freely change which packages are preloaded.}
+\end{enumerate}
+
+The following packages are preloaded:
+
+\begin{description}
+\item[amsmath, amssymb and amsthm] These package are all part of the
+  \AmS Math family. In particular, the whole management of
+  theorem environments is built on top of these packages, see
+  Section~\ref{section-math-theorems} for more details. You can use
+  all commands and symbols provided by these packages, see their
+  documentation for more information \cite{amsmath}. Any package
+  that is incompatible with \AmS Math cannot be used.
+\item[babel] This package is loaded and the main and secondary languages
+  are setup based on the class options (|german| or |english|). You
+  can use the commands provided by \textsc{babel}, see its documentation for
+  details \cite{babel}.
+\item[biblatex] This package is used for the whole bibliography
+  management. There are several alternatives, but this one of the
+  places where I made a choice that it not open to
+  discussion. Fortunately, \textsc{biblatex} is very powerful and you can use
+  its powerful commands in your thesis. See its documentation
+  \cite{biblatex}, but 
+  also Section~\ref{section-bibliographies}.
+\item[fontspec] This package is used for the whole font setup in
+  conjunction with Lua\LaTeX\ (and, once more, this is not open to
+  discussion). You can use the powerful commands of this package
+  \emph{but} you will only rarely need to do so. Mostly, the font
+  styling is taken care of via global styling parameters, see
+  Section~\vref{section-styling} for more details.
+\item[geometry] This package is internally used to setup the page
+  layout. \emph{Under no circumstances are you allowed to mess around
+    with the margins.} They are perfect the way they are.
+
+  There is a case to be made that there should be an option for
+  slightly shifting the pages horizontally depending on whether an odd
+  or an even page is printed: When pages printed on both sides
+  (double-sided) are bound as a book, it is desirable that the inner
+  margin -- where the binding is done -- is larger. However, in my 
+  experience, theses are very often read on electronic devices these
+  days and, then, it is distracting when the text “jumps around”
+  from page to page. For this reason, the default is a fixed layout;
+  but you \emph{may} consider doing fancy things for a print version
+  that is to be bound as a book. Normally, however, this will not be
+  necessary since the margins are large enough that binding is still
+  possible without any shifting. 
+\item[hyperref] This is a standard package for creating all the
+  different links inside the thesis. You can also use its facilities
+  for creating links to external material, see the \textsc{hyperref}
+  package's manual \cite{hyperref}.
+
+  Note that I took great care to absolutely ensure that there will be
+  \emph{no} borders in the \textsc{pdf} file around hyperlinks. The
+  default settings of the \textsc{hyperref} package for these borders
+  are among the worst and most ugly pieces of typography I have ever
+  seen. Whoever made them the default should be ashamed of
+  themselves. That means, of course, that \emph{you} should not even
+  think of fiddling around with these settings.
+\item[listings] This is one of several possible packages for creating
+  listings of source code (like the one in
+  Listing~\ref{listing-hello-world}). I have chosen this package and
+  configured it carefully for your use and strongly recommend that you
+  use it (instead of any other package). You will find much more
+  information on it in Section~\vref{section-code}.
+\item[tikz] This is a powerful package for creating graphics right
+  inside the \LaTeX\ document (I happen to be the author, but I do not
+  include it out of vanity but because it \emph{is} the standard
+  package for creating graphics inside \LaTeX\ documents these
+  days). Some Ti\emph kZ libraries are preloaded (|arrows.meta|,
+  |positioning| and |shapes|) and a number of styles are predefined
+  that you should use, whenever possible, see
+  Section~\vref{section-graphics} for more details. 
+\item[url] Another standard package that is included for typesetting
+  \textsc{url}s more nicely. This is mainly useful for the
+  bibliography, where it is used automatically. See its documentation
+  for details \cite{url}.
+\item[varioref] This is a standard package for creating nicer internal
+  cross-references and you can use its facilities freely. See its
+  manual \cite{varioref} and also Section~\ref{section-references}.
+\end{description}
+
+In addition to the above, the packages \textsc{csquotes},
+\textsc{etoolbox} and \textsc{filecontents} are also included, but
+only for internal use. It is unlikely that you will need their 
+facilities. 
+
+
+
+\section{Structuring the Thesis Using Chapters and Sections}
+
+Once you have specified all metadata and loaded all packages that you
+need and like, you start with the so called \emph{body} of your
+thesis. Normally, this would start with commands like |\maketitle| and
+|\tableofcontents| and other commands to create the so called
+\emph{front matter,} which is everything before your actual
+text. However, with the \textsc{uzl-thesis} class, you do \emph{not}
+use any of these commands. Rather, the thesis class will insert all
+necessary front matter automatically at the beginning of the thesis --
+and it will do so in the right order and with the right page numbering
+and so on. This means that you can (and must) directly start the
+|{document}| enivornment with the first chapter, which will be the
+introduction. Symmetrically to the front matter, the thesis class will
+also insert the bibliography automatically at the end. (In particular,
+you cannot have a thesis without a bibliography, but that would not be
+very scientific anyway.) Once more, please consult
+Listing~\vref{listing-hello-world} for an example of how the overall
+structure of the thesis must look like. 
+
+
+\subsection{Chapters and Sections}
+
+The main part of your thesis consists of \emph{chapters}\footnote{In a
+  German thesis, use the word “\foreignlanguage{german}{Kapitel}” to refer to a chapter.} (using
+the |\chapter| command) and those in turn consist of 
+\emph{sections}\footnote{In a  German thesis, use the word “\foreignlanguage{german}{Abschnitt}”
+  to refer to a section.} (using the |\section| command). The commands
+take the usual arguments as in other document classes.
+
+\newbox\uzlfootnotebox
+\setbox\uzlfootnotebox=\hbox{\footnotesize|\setcounter{tocdepth}{2}|}
+
+\subsection{Subsections}
+
+It is also possible to use the |\subsection| command to further
+structure sections, but the text will not be shown in the 
+table of contents. The reason is that it is generally a bad idea to
+nest structures too deeply. Richard Feynman is renown for his 
+\emph{Feynman Lectures} in which he introduces the fundamentals of
+physics in three thick volumes using only chapters and sections. If
+Richard Feynman can explain all of physics using only two levels of
+structural nesting, so can you in a hopefully somewhat shorter
+thesis. So, while is acceptable to use |\subsection| to structure
+sections, do not try to force the titles of the 
+subsections into the table of contents and do not try to reference
+them.\footnote{Having said this: If it is absolutely necessary that
+  you need subsections in the table of contents, try saying
+  \box\uzlfootnotebox\ at the beginning of your document.} Also, do not even think of using |\subsubsection|.
+
+
+\subsection{Lists of Figures and Tables}
+
+In some books you will find lists of all figures and lists of all
+tables as separate lists. Frankly, I have never looked at any of them
+and consider them perfectly superfluous (and a very unscientific
+survey that I conducted shows that all of my colleagues agree). I
+guess they are mainly 
+included in books (and some theses) because \LaTeX\ makes it easy to
+generate them and because they make theses appear longer than they
+actually are.
+
+I strongly recommend that you do \emph{not} include such lists in your
+thesis. However, in case your advisor \emph{really insists,} you can
+say the following (or just one of them, in case you have no figures or
+no tables):
+\begin{Latex}
+\UzLThesisSetup { Abbildungsverzeichnis, Tabellenverzeichnis }
+\end{Latex}
+This will add the named lists after the table of contents. 
+
+
+\subsection{Appendices}
+
+It is possible to add appendices using the |\appendix| command
+followed by a |\chapter| command. The |\appendix| command will
+automatically insert the bibliography first. You will find an example
+in the comments of this template, but I will not explain the details
+further at this point since I would like to discourage appendices:
+In a normal thesis, the main text should explain everything there is
+to explain and should also include and relevant data, tables, listings
+and proofs. An appendix is usually only needed if there is a lot of
+experimental data and the readers is invited to have a closer look at
+that data -- but, again, it is then the job of the author to point out
+the important features in the main text. I believe it is better not
+have an appendix in the thesis and to move all raw data and all source
+code into the \emph{electronic supplementary material,} which is
+turned in along with the thesis text.
+
+Note, however, that the above arguments only apply to your bachelor's
+or master's thesis: Many scientific \emph{papers} actually need an
+appendix for various reasons. 
+
+
+%\chapter{The Thesis Class: Document Text and Document Elements}
+
+
+\section{Typesetting Basics}
+
+The majority of your thesis will of course consist of “normal text”
+like this one. In \LaTeX\ you simply enter this text and the thesis
+class does little to interfere with this process. There are only a few
+things you should keep in mind and be aware of:
+
+\subsection{Unicode Characters}
+
+The version of \LaTeX\ used by the thesis class, Lua\LaTeX, uses
+the Unicode throughout. This means, in particular, that you can and
+should enter your main text using the correct and appropriate
+Unicode characters. This is true, in particular, for quotation
+marks. Supposing you find the characters on your keyboard, you should
+write, for instance, in a German text \Latex{Er sagte, »Hallo!«} where
+you use the correct Unicode characters directly.\footnote{
+  If you are interested, here is a bit of historical context: When
+  Donald Knuth first designed \TeX, the Unicode had not 
+  even been invented yet. However, Knuth already wanted to typeset for
+  instance the German umlaut “Ä” in his texts. His solution was to
+  design a special command (\Latex{\\"}) that puts the umlaut on top of
+  a character, so “Fräulein” would be typeset as
+  \Latex{Fr\\"aulein}. Clearly not an optimal solution for longer
+  German texts, but it was a simple solution for individual words --
+  and you will still see it a lot in \textsc{bibtex} files.
+  
+  These days, you should no longer write things like
+  \Latex{Fr\\"aulein} in your texts, but just write
+  \Latex{Fräulein}. This is not only true for umlauts, but for all
+  kind of symbols for which the Unicode offers individual symbols. For
+  instance, you can and should also use the (correct) symbols for
+  quotation marks -- there are Unicode characters for all of them, see
+  also Question~\vref{qu-quotation-marks}.
+}
+
+\subsection{Enumerate and Itemize}
+
+You can use the |{enumerate}| and |{itemize}| environments as usual,
+but I have changed the vertical spacing compared to the standard
+\LaTeX\ styles (nobody understands why these environments insert 
+enormous vertical spaces between items in standard \LaTeX). Do not
+mess with the spacing.
+
+Note that you can nest the environments, but only up to one level. It
+is generally a bad idea to nest the environments and it is definitely
+a bad idea to nest them repeatedly. Just do not do that.
+
+
+\subsection{Line Breaking}
+
+The lines of a paragraph are automatically broken up by \TeX\ and you
+usually do not have to worry about line breaking and
+hyphenation. I have also changed the way the titles of chapters and
+sections are broken both in the main text and in the table of contents
+compared to standard \LaTeX\ so that they will usually look
+nice. However, there are cases where the line breaks can be improved:
+Consider for instance a chapter title like “Review of the System Setup
+and the Experiment Design” and suppose that the last word of this
+title (“Design”) no 
+longer fits on the line. Then \LaTeX\ will do a line break between
+“Experiment” and “Design” -- but it would be much better to have the
+line break \emph{before} “Experiment” so that the words
+“Experiment Design” stay together. You can achieve this by using a
+tilde instead of a space between the two words: A tilde is used in
+\TeX\ to indicate a “nonbreakable space”, which is exactly what we
+want. Thus, you would write:
+\begin{Latex}
+\chapter{Review of the System Setup and the Experiment~Design}
+\end{Latex}
+The same is also true for the title of the whole thesis: Use the tilde
+in all places of the title where \emph{no} line break should
+occur. For instance, the title of the present document was specified
+as:
+\begin{Latex}
+\UzLThesisSetup { Titel auf Deutsch = {
+  Vorlage für die \LaTeX-Klasse »uzl-thesis« zur Nutzung bei
+  Bachelor-~und Masterarbeiten an der  Universität~zu~Lübeck
+} }
+\end{Latex}
+Here, a nonbreakable space was inserted after “Bachelor-” to ensure
+that no line breaking is done exactly there since because of the
+hyphen a reader might read “Bachelorund”. Two further nonbreakable
+spaces ensure that “Universität zu Lübeck” is always on one line.
+
+
+\section{Typesetting Mathematics}
+
+\TeX\ is great at typesetting mathematics; indeed, it is nowadays the
+gold standard for the correct typesetting of mathematical
+text. However, perfectly mastering \TeX's rules for mathematical text
+is not easy and this document cannot cover them fully; indeed, it cannot
+even give a full introduction and you are kindly requested to read the
+\TeX book \cite{Knuth1986}. The following text only highlights the
+peculiarities of the thesis class with respect to mathematical text.
+
+First, note that the thesis class preloads the \AmS math package, that
+is, the \LaTeX\ packages \textsc{amsmath}, \textsc{amssymb} and
+\textsc{amsthm}. This means that you can and should use the commands
+offered by these packages, if you need them.
+
+
+\subsection{Predefined Mathematical Environments}
+\label{section-math-theorems}
+
+The thesis class predefines a whole set of environments that you
+should use for mathematical statements. A typical way of using them is
+as in the following code:
+\begin{Latex}
+\begin{conjecture}[Goldbach]
+  Every even integer $n \ge 4$ is the sum of two primes.
+\end{conjecture}
+\begin{lemma}
+  Every $n \in \{4,6,8,10\}$ is the sum of two primes.
+\end{lemma}
+\begin{proof}
+  We have $4 = 2+2$, $6=3+3$, $8 = 5+3$ and $10 = 5+5$.
+\end{proof}
+\end{Latex}
+This is then typeset as:
+\begin{conjecture}[Goldbach]
+  Every even integer $n \ge 4$ is the sum of two primes.
+\end{conjecture}
+\begin{lemma}
+  Every $n \in \{4,6,8,10\}$ is the sum of two primes.
+\end{lemma}
+\begin{proof}
+  We have $4 = 2+2$, $6=3+3$, $8 = 5+3$ and $10 = 5+5$.
+\end{proof}
+
+As you can see, the numbering of the environments starts anew with
+each chapter, but is otherwise consectutive. As someone who has to
+read a \emph{lot} of mathemtical texts, I can tell you that this is
+the only sensible way of numbering things -- which is why this
+numbering style is hardcoded into the thesis class. Do not mess with
+it.
+
+The following environments are predefined (in a German thesis, you
+\emph{still} use the following environments, they get translated
+automatically): 
+
+\begin{description}
+\item[theorem] A mathematical statement proved in the
+  context of the thesis. Note that even simple statements can be
+  theorems.
+\item[fact] A mathematical statement that has already been proved in
+  a paper. Always cite where it was proved. 
+\item[lemma] A mathematical statement that is only needed for
+  the proof of another theorem. Just because a statement is not “very
+  important” it is not automatically a lemma, but can still be a
+  theorem. What makes a statement a lemma is the fact that it is not
+  needed outside the context of another theorem. 
+\item[corollary] A theorem that follows very easily from the
+  previous result.
+\item[conjecture] A (mathematical) statement that the author
+  suspects to be true, but does not know how to prove.
+\item[definition] A (mathematical) definition.
+\item[problem] The description of a problem.
+\item[example] A single example. Always try to give (good) examples.
+\item[examples] Use this for multiple examples in a single environment.
+\item[counterexample] For a single counterexample. There is a saying
+  that any good definition should be accompanied by at least one
+  example and at least one counterexample.
+\item[counterexamples] For multiple counterexamples.
+\item[observation] A (mathematical) statement that is so
+  simple that no proof is given and none should be needed.
+\item[remark] Any remark that is so important that needs a number and
+  can be referenced. Normal remarks can just be written as part of the
+  text. 
+\item[proof] Note that this will automatically add an end of
+  proof mark at the end.
+\end{description}
+
+Additionally, for some of the above there are ``starred versions,''
+which are not numbered:
+
+\begin{description}
+\item[example*]
+\item[examples*]
+\item[counterexample*]
+\item[counterexamples*]
+\item[observation*]
+\item[remark*]
+\end{description}
+
+Finally, there is the following environment:
+
+\begin{description}
+\item[claim*] This is an (unnumbered) mathematical statement
+  that is made and proven \emph{inside} the proof of a lemma or
+  theorem. 
+\end{description}
+
+As two further examples of how these environments are used, here is
+another example:
+
+\lstDeleteShortInline|
+
+\begin{Latex}
+\begin{problem}\label{problem-vc}
+  The problem $p$-\textsc{vertex-cover} is the set of all pairs $(G,k)$,
+  where $G = (V,E)$ is a graph, for which there is a set $X
+  \subseteq V$ such that $|X| \le k$ and such that $\{u,v\} \in E$
+  implies $\{u,v\} \cap X \neq \emptyset$.
+\end{problem}
+
+\begin{fact}[\textcite{DowneyF13}]
+  The parameterized problem $p$-\textsc{vertex-cover} from
+  Problem~\ref{problem-vc} is fixed-parameter tractable.
+\end{fact}
+\end{Latex}
+
+This is rendered as:
+
+\begin{problem}\label{problem-vc}
+  The problem $p$-\textsc{vertex-cover} is the set of all pairs $(G,k)$,
+  where $G = (V,E)$ is a graph, for which there is a set $X
+  \subseteq V$ such that $|X| \le k$ and such that $\{u,v\} \in E$
+  implies $\{u,v\} \cap X \neq \emptyset$.
+\end{problem}
+
+\begin{fact}[\textcite{DowneyF13}]
+  The parameterized problem $p$-\textsc{vertex-cover} from
+  Problem~\ref{problem-vc} is fixed-parameter tractable.
+\end{fact}
+
+\lstMakeShortInline[style=code,style=inline,language={[LaTeX]tex},moretexcs={chapter}]|
+
+
+
+\subsection{“Theorem” or “Satz”?}
+
+In German, a ``theorem'' is traditionally called ``Satz'' and a
+``lemma'' is actually a ``\foreignlanguage{german}{Hilfssatz}''. However, many people feel
+that ``Theorem'' sounds more scholary and, thus, use ``Theorem'' and
+``Lemma'' also in German texts. In German text, the thesis class uses
+``Satz'' and ``\foreignlanguage{german}{Hilfssatz}'' (and
+``\foreignlanguage{german}{Folgerung}'' for ``corollary'') by 
+default. If you prefer the Greek words, say
+\begin{Latex}
+\UzLStyle{Greek theorem labels}
+\end{Latex}
+to change the words to ``\foreignlanguage{german}{Theorem}'',
+``\foreignlanguage{german}{Lemma}'' and
+``\foreignlanguage{german}{Korollar}'' in 
+German texts. 
+
+
+\subsection{Defining New Theorem Styles}
+
+You can define additional mathematical environments using the
+facilities of the \textsc{amsthm} pacakge, which is preloaded and
+which is used for the mathematical environments of the
+class. Normally, you will not need this. Nevertheless, if you really
+do, make sure you define things the same way as in the class file 
+(have a look there). For instance, here is how the |{question}| and
+|{answer}| environments are defined, which are used a lot in the
+second part of this document: 
+\begin{Latex}
+\theoremstyle{plain}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{remark}
+\newtheorem*{answer}{Answer}
+\end{Latex}
+
+\theoremstyle{plain}
+\newtheorem{question}[theorem]{Question}
+
+\theoremstyle{remark}
+\newtheorem*{answer}{Answer}
+
+The reason I usually recommend against new environments is that especially
+beginners tend to define many new environments whose semantics are
+somewhat unclear. I have seen texts in which there are theorems,
+lemmas, observations, propositions, facts, corollaries, statements and
+more all mixed together. I sincerely doubt that even the author had an
+idea what the exact difference between a proposition and a theorem
+was supposed to be. Try to stick to the predefined environments, they
+suffice. 
+
+
+\subsection{Display-Style Mathematical Statements}
+
+Mathematical statements can either be given ``inline'' like $a^2+b^2 =
+c^2$ here or they can get their own line as in
+\begin{align}
+  \sin^2 \alpha + \cos^2 \beta = 1
+\end{align}
+
+Note that the equations are flushed left if you use standard
+commands. Indeed, the only command you should \emph{not} use is
+|$$|, see also Question~\vref{qu-math-env} for more details on which
+environments to use.
+
+\section{Typesetting (Pseudo) Code}
+\label{section-code}
+
+Theses from the area of computer science and related disciplines
+sometimes include listings of source code and of pseudo code. The
+thesis class preloads the \textsc{listings} package and configures it
+for you and you are kindly requested to use it for typesetting both
+normal code and pseudo code (that is, algorithms).
+
+Since I reconfigured the \textsc{listings} package quite a bit, let me
+point out what you should and should not do when typesetting code:
+\begin{itemize}
+\item
+  Use one of the environments and commands defined by the thesis class
+  or, if your favorite language is not defined yet, define a new one
+  using the special command |\uzldeflanguageshorthand|.
+  For instance, to typeset C++ code, you write 
+  \begin{Latex}
+\begin{C++}
+void main () { std::cout << "Hi!"; }
+\end{C++}
+  \end{Latex}
+  This has the same effect as
+  \begin{Latex}
+\begin{lstlisting}[language=C++, style=code]
+void main () { std::cout << "Hi!"; }
+\end{lstlisting}
+  \end{Latex}
+  In either case, the result is:
+\begin{C++}
+void main () { std::cout << "Hi!"; }
+\end{C++}
+  The |style=code| sets up the fonts and the correct highlighting. You
+  should always use it, but it is selected automatically by the
+  standard environments, see below.
+\item
+  Environments like |{C++}| take options just like the |{lstlisting}|
+  environment. Use these options as explained in the manual of
+  the \textsc{listings} package to setup floats, captions, label, line
+  numbers, the programming language and so on. However, you should
+  \emph{not} use the options to mess with the typesetting nor to
+  redefined the fonts or other such evil endeavors. 
+\item
+  For pseudo code, use the |{Pseudocode}| environment. It is explained
+  in more detail \vpageref{label-pseudocode}.
+\end{itemize}
+
+
+\subsection{Language Environments}
+\label{label-std-env}
+
+The thesis class defines environments for typesetting a number of
+languages. Each of these environments installs appropriate fonts and
+select a specific programming language for the syntax
+highlighting. Note that all of the environments start with a capital
+letter. The available environments are the following:
+\begin{itemize}
+\item The |{Code}| environment does no special highlighting at
+  all. It is useful for ``plain text'' or code the should \emph{not}
+  be highlighted:
+  \begin{Latex}
+\begin{Code}
+begin the end of the world // end the begin of the world
+\end{Code}
+  \end{Latex}
+  yields
+\begin{Code}
+begin the end of the world // end the begin of the world
+\end{Code}
+\item The |{C}| environment should be used for code in the
+  C~programming language. 
+  \begin{Latex}
+\begin{C}[
+  float,
+  caption = {
+    The first C program from the tutorial in \cite{Kernighan1974}.
+  },
+  label = {lst-hello}
+  ]
+main( ) {
+        printf("hello, world");
+}
+\end{C}
+  \end{Latex}
+  yields Listing~\ref{lst-hello}.
+\begin{C}[float, caption = {The first C program from the tutorial in \cite{Kernighan1974}.},  label = {lst-hello}]
+main( ) {
+        printf("hello, world");
+}
+\end{C}
+\item The |{C++}| or |{Cpp}| environments should be used for C++
+  code. They have the same effect.
+\item Use |{Java}| for Java code.
+\item Use |{Latex}| for \LaTeX\ code (note the spelling of the word
+  |Latex|: A capital L, but otherwise lowercase letters. The command
+  |\LaTeX| yields, in contrast, the word “\LaTeX”).
+\item Use |{Matlab}| for \textsc{matlab} code.
+\item Use |{Pseudocode}| for pseudo code and algorithms, see below for more details.
+\item Use |{Sql}| for \textsc{sql} code (note the spelling once more:
+  A capital S, but otherwise lowercase letters).
+\end{itemize}
+
+The \textsc{listings} package supports a large number of additional
+languages, but I have decided to pre-define only the above. You can
+easily define further languages using the following command:
+
+\begin{Latex}[style=escapemath]
+\uzldeflanguageshorthand{$\langle\mathit{Environment}\rangle$}{style=code,language=$\langle\mathit{language}\rangle$}
+\end{Latex}
+
+Here, $\langle\mathit{Environment}\rangle$ should of course be the
+name of the environment (preferably with a leading capital letter) and
+$\langle\mathit{language}\rangle$ must be a language name that the
+\textsc{listings} package understands. As an example, here is a
+definition for Pascal:
+
+\begin{Latex}
+\uzldeflanguageshorthand{Pascal}{style=code,language=pascal}
+% Now you can say
+\begin{Pascal}
+sum := 0;
+for i := 1 to 100 do
+begin
+  sum := sum + i
+end
+\end{Pascal}
+\end{Latex}
+and get
+\uzldeflanguageshorthand{Pascal}{style=code,language=pascal}
+% Now you can say
+\begin{Pascal}
+sum := 0;
+for i := 1 to 100 do
+begin
+  sum := sum + i
+end
+\end{Pascal}
+
+
+\subsection{Pseudocode Environment}
+\label{label-pseudocode}
+
+
+The |{Pseudocode}| environment is special compared to the other
+languages: A different font is used and the spacing is different. You
+use it as follows:
+
+\begin{itemize}
+\item You write down your pseudo code and algorithms in a “literal”
+  way, which means that you write them down inside the environment
+  more or less the way they should look like later. Here is a simple
+  example:
+\begin{Latex}
+\begin{Pseudocode}
+print ``Please enter a number below 10.''
+input $n$
+if $n > 9$ then
+  print ``Too high!''
+else
+  print ``Thank you!''
+\end{Pseudocode}
+\end{Latex}
+  The output is then:
+\begin{Pseudocode}
+print ``Please enter a number below 10.''
+input $n$
+if $n > 9$ then
+  print ``Too high!''
+else
+  print ``Thank you!''
+\end{Pseudocode}
+\item
+  As can be seen in the example, you can and should put variables and
+  mathematical expressions inside the \LaTeX\ math environment using
+  |$|'s. %$
+  Indeed, the |{Pseudocode}| environment allows you to “escape” to
+  \LaTeX\ math mode at any point. I recommend writing 
+  “|$n > 9$|” rather than “|$n$ > $9$|” or just “|$n$ > 9|” or
+  “|n > 9|” since only the first version will get all the spacing and
+  fonts correct. See also Question~\ref{qu-math-font}.
+\item
+  Use |``| and |''| to start and end strings.
+\item
+  Use |//| to start comments. There are no multi-line comments
+  in pseudo code. The comments will not flush right. If you really,
+  really want this, you can do tricky things with escapes and
+  |\hfill|. I will not tell you how to do this.
+\item
+  Some common keywords are setup and highlighted automatically. See
+  Listing~\vref{listing-merge} for an example of how to add or remove
+  words from the keyword list.
+\item
+  The character sequence “|<-|” is redefined so that it yields a
+  left-pointing arrow (“$\gets$”). This is usual way to typeset
+  assignments in pseudocode: Say
+  \begin{Latex}
+\begin{Pseudocode}
+algorithm compute_sum ($n$)
+   // This function computes the sum of the first $n$ numbers.
+   if $n<0$ then
+      throw ``negative number''
+   $s$ <- $0$
+   foreach $i \in \{1,\dots,n\}$ do 
+      $s$ <- $s + i$
+   return $s$
+\end{Pseudocode}
+\end{Latex}
+  to get
+\begin{Pseudocode}
+algorithm compute_sum ($n$)
+   // This function computes the sum of the first $n$ numbers.
+   if $n<0$ then
+      throw ``negative number''
+   $s$ <- $0$
+   foreach $i \in \{1,\dots,n\}$ do 
+      $s$ <- $s + i$
+   return $s$
+\end{Pseudocode}
+\end{itemize}
+
+\begin{Pseudocode}[caption={A merge implementation in pseudocode. For
+    this example, two additional keywords were added using the option
+    \Latex{morekeywords = \{append, remove\}} while one keyword got
+    deleted using \Latex{deletekeywords = to}. This causes the words
+    ``append'' and ``remove'' to be highlighted, while ``to'' is not
+    highlighted.},
+  float, label=listing-merge, morekeywords={append,remove}, deletekeywords={to}]
+procedure merge($A$, $B$)
+  $C$ <- empty list
+  while $A$ not empty and $B$ not empty do
+  if $A.\mathit{first} < B.\mathit{first}$ then
+      append $A.\mathit{first}$ to $C$
+      remove first from $A$
+    else
+      append $B.\mathit{first}$ to $C$
+      remove first from $B$
+
+  append remaining elements from $A$ and $B$ to $C$
+  return $C$    
+\end{Pseudocode}
+
+
+
+\subsection{Floating Code}
+
+
+In \TeX, “floating“ text is a figure, table or listing that is not
+necessarily inserted at the point where it is in \LaTeX\ source code,
+but at a possibly later point so that it fits nicely on the page. For
+listings, you can use the |float| key to turn the listing into a
+floating listing. For instance, the code
+\begin{Latex}
+\begin{C++}[caption={A ...}, label={lst-1}, float, numbers=left]
+#include <iostream>
+
+void main()  // Where did the arguments go?
+{
+  std::cout << "Hello World!" << std::endl;
+}
+\end{C++}
+\end{Latex}
+%
+yields Listing~\vref{lst-1} which is right behind this paragraph in
+the \LaTeX\ manuscript, but which will not necessarily be right behind 
+this paragraph in the \textsc{pdf} file.
+
+\begin{C++}[caption={A “floating” hello world program in C++. It was
+    typeset using the C++ environment with the key \Latex{caption}
+    set to the text you are reading now, the key \Latex{float} set to
+    make the listing “float” and the key \Latex{numbers = left} to add
+    some line numbers.}, label={lst-1}, float, floatplacement=t, numbers=left]
+#include <iostream>
+
+void main()  // Where did the arguments go?
+{
+  std::cout << "Hello World!" << std::endl;
+}
+\end{C++}
+
+Note that you should always use the |caption| key to provide an
+explaining caption for floating listings. You can also use the key for
+non-floating listings, but I advise against that: better explain
+things in the main text directly before or after the listing.
+
+
+\subsection{Inline Listings}
+
+It is possible to “inline” listings, which just means that code is
+displayed in the middle of a normal paragraph and not in a separate
+block. You use the commands of the same name as the corresponding
+language environments for this: For instance,
+while the environment |{Java}| is used to typeset a block of Java
+code, 
+the command |\Java{int i;}| will typeset the code right inside the
+text, namely like this: \Java{int i;}. Similarly, |\C{int i;}| will
+yield \C{int i;} while |\Code{int i;}| will yield \Code{int i;} and
+|\Pseudocode{int i;}| will yield \Pseudocode{int i;}.
+
+Internally, all of these command just call |\lstinline|. For instance,
+|\Java|$\langle\mathit{text}\rangle$ is mainly a shorthand for
+\begin{Latex}[style=escapemath]
+\lstinline[style=code, language=java, style=inline]$\langle\mathit{text}\rangle$
+\end{Latex}
+Any options passed to command like |\Java| will be passed on to
+|\lstinline|. Note that the |style=inline| is used to setup different
+fonts for inline text. Do not mess with them. Finally, note that
+instead of curly braces you can also use a so called delimiting
+character, see the documentation of the \textsc{listings} package for
+more details.
+
+
+\subsection{Miscellaneous}
+
+There is a special style called |escapemath| that allows you to escape
+to math mode inside a listing using |$|. It is switched on by default for %$
+pseudo code, but not for normal code. It is useful for inserting
+meta-variables into a listing:
+\begin{Latex}
+\begin{C++}[style=escapemath]
+void $\langle \mathit{identifier}\rangle$ (int i)
+{
+  return i == 0 ? 1 : 1 + $\langle \mathit{identifier}\rangle$(i-1);
+}
+\end{C++}    
+\end{Latex}
+yields
+\begin{C++}[style=escapemath]
+void $\langle \mathit{identifier}\rangle$ (int i)
+{
+  return i == 0 ? 1 : 1 + $\langle \mathit{identifier}\rangle$(i-1);
+}
+\end{C++}    
+
+In inline code, spaces are shown by default. You can switch this off
+using the key |showspaces=false| as in |\C[showspaces=false]{int i;}|,
+which yields \C[showspaces=false]{int i;}.
+
+
+\section{Creating Figures and Tables}
+
+With the thesis class, you add figures and tables using the standard
+\texttt{figure} and \texttt{table} environments. You should always add
+a caption to a figure and the caption should be below it, while the
+caption of a table should be above it. You should always label the
+figure and you \emph{must} reference all figures at least once in the
+text. See Question~\vref{qu-captions} for some hints on what to write
+in captions. 
+
+
+\subsection{Figures}
+
+The following code is typical code for creating a figure. See
+Figure~\vref{fig-ode1} for the resulting typeset figure. Note that the
+font size is set to |\small| inside figure (and, also, inside tables).
+
+\begin{Latex}
+\begin{figure}[htbp]
+  \centering
+  \textcolor{black!10}{\vrule width3cm height 3cm}
+  \caption{Ode to Malewitsch.}
+  \label{fig-ode1}
+\end{figure}
+\end{Latex}
+
+\begin{figure}[htbp]
+  \centering
+  \textcolor{black!10}{\vrule width3cm height 3cm}
+  \caption{Ode to Malewitsch.}
+  \label{fig-ode1}
+
+\end{figure}
+
+
+\subsection{Tables}
+
+For tables, I recommend the following:
+\begin{itemize}
+\item Add horizontal lines around the table using the
+  special command |\uzlhline|, see the example below, and possibly
+  after the first line of the table. The exact size
+  and color of the line will depend on the design, but you must insert
+  it “by hand”. Adding these lines will make tables visually
+  consistent with listings and the rest of the thesis. However, you
+  may also leave out the lines.
+\item
+  Do not add any more or other lines. There is a saying in typography:
+  “There is not a single table that cannot be improved by removing all
+  lines.” Lines are distracting and good spacing is a much better way
+  of creating a visually pleasing table.
+\item
+  Use the command |\uzlemph| with the text of column headers and (if
+  needed) row headers. This command, which can also be used elsewhere,
+  will typeset its argument in the same way as headlines are typeset
+  (but in the usual font size). This will cause table heads to be
+  visually consistent with the rest of the thesis design.
+\end{itemize}
+
+As an example, here is the code for Table~\vref{fig-tab1}:
+\begin{Latex}
+\begin{table}[htpb]
+  \caption{Sounds made by different kinds of animals...}
+  \label{fig-tab1}
+  \centering
+  \begin{tabular}{lp{5cm}}
+    \uzlhline
+    \uzlemph{Animal} & \uzlemph{Sound} \\ \uzlhline
+    Cat & Meow \\
+    Dog & Wuff or bark\\ \uzlhline
+  \end{tabular}
+\end{table}
+\end{Latex}
+
+\begin{table}[htpb]
+  \caption{Sounds made by different kinds of animals, based on the
+    reports by children of the age range 5 to~10. While the number~$n$
+    of children asked to report was small ($n=1$) and the results are,
+    thus, not fully representative of the general population, the
+    author would like to point out that the ethics committee approved
+    this survey.}
+  \label{fig-tab1}
+  \centering
+  \begin{tabular}{lp{5cm}}
+    \uzlhline
+    \uzlemph{Animal} & \uzlemph{Sound} \\ \uzlhline
+    Cat & Meow \\
+    Dog & Wuff or bark\\ \uzlhline
+  \end{tabular}
+\end{table}
+
+
+\section{Creating Graphics}
+\label{section-graphics}
+
+\subsection{External Graphics}
+\label{section-external}
+
+Graphics (like plots, images, drawings or other data visualizations)
+can be added to a \LaTeX\ document in two ways: First, you can include
+an \emph{external graphic} like a \textsc{pdf} file or a \textsc{jpg} 
+file. Second, you can use  “describe your graphic using \LaTeX\
+commands”. We discuss external graphics next, internal ones later on.
+
+You include an external graphics using the |\includegraphics| command,
+which is a standard \LaTeX\ command. There is no need to include any
+packages for this, it is available automatically. For instance, you
+could say:
+
+\begin{Latex}
+The university slogan \includegraphics{uzl-thesis-logo-slogan.pdf} in a sentence.
+\end{Latex}
+to get: “The university slogan \includegraphics{uzl-thesis-logo-slogan.pdf} in a
+sentence.” 
+
+As can be seen, the effect of the |\includegraphics| command is to
+directly include the graphic at the very position in the line where
+the command is used. Indeed, from \TeX's point of view, an external
+graphic is indistinguishable from a black rectangle of the same size
+as the graphic.
+
+You will rarely wish to put a graphic in the middle of a sentence
+(although there are applications). Instead, you will usually place it
+inside a |{figure}| environment: Recall that it is the job of the
+environment to creating “floating” text with a caption -- and it is
+then the job of |\includegraphics| to replace the “text” by a
+picture. Here is an example of how you will usually do this:
+
+\begin{Latex}
+\begin{figure}[htpb]
+  \centering
+  \includegraphics{uzl-thesis-logo-uzl.pdf}
+  \caption{The logo of the University of Lübeck. It consists...}
+  \label{fig-logo}
+\end{figure}
+\end{Latex}
+The result is Figure~\vref{fig-logo}.
+\begin{figure}[htpb]
+  \centering
+  \includegraphics{uzl-thesis-logo-uzl.pdf}
+  \caption{The logo of the University of Lübeck. It consists of the
+    university's seal together with the text “Universität zu
+    Lübeck”. The corporate design manual of the university requires
+    this logo to be put at the upper left corner of title pages of
+    university publications.}
+  \label{fig-logo}
+\end{figure}
+
+The |\includegraphics| command takes many options, the most important
+of which are likely |height| and |width|. These allow you to scale the
+graphic to a given height or width. \emph{Avoid these options whenever
+  possible.} The reason is that most graphics have a natural size
+(such as the logo) in which the text and fonts in the graphic are at
+the correct sizes. Any scaling will cause the graphic to become too
+large or too small. \emph{Scaling is evil} and you will find more
+comments on this in Question~\vref{qu-scaling}. All professors I
+know find scaled-down graphics with unintelligible text \emph{among
+  the most irritating things a student could  possibly do.}  
+
+This means that when you \emph{create} graphics with another program,
+make \emph{sure} that any text in the external graphic has the same
+size as normal text in the thesis and that \emph{no} scaling is needed.
+
+\subsection{Inline Graphics via Ti\emph kZ}
+\label{section-tikz}
+
+The alternative to external graphics are \emph{internal}
+graphics. They are created using special \LaTeX\ commands such as the
+following:
+\begin{Latex}
+\tikz \draw [->] (0,0) -- (1cm, 2mm);
+\end{Latex}
+which yields \tikz \draw [->] (0,0) -- (1cm, 2mm); when used in a
+paragraph. A more complex example would be 
+\begin{Latex}
+\tikz [baseline, anchor=base] {
+  \node [block = emph]                             (h) {Hello};
+  \node [small node = emph blue, right = 5mm of h] (w) {Welt};
+  \draw (h) edge[bend left=15, <->] (w);
+}
+\end{Latex}
+which yields
+\tikz [baseline, anchor=base] {
+  \node [block = emph]                              (h) {Hallo};
+  \node [small node  = emph blue, right = 5mm of h] (w) {Welt};
+  \draw (h) edge[bend left=15, <->] (w);
+}.
+
+The Ti\emph kZ package is used for these inline graphics and it is
+loaded automatically -- so \emph{if} you are going to create inline
+graphics, use Ti\emph kZ. If you wish to learn Ti\emph kZ, please read
+the tutorials from the manual \cite[Part I]{Tantau2019}.
+
+The thesis class sets up some styles for Ti\emph kZ that you can
+either explicitly use or that are generally set up. For instance, the
+default arrow tip is setup according to the chosen design as well as
+the standard line width. You usually do not need to worry about these
+automatic settings.
+
+
+
+\subsection{Predefined Ti\emph kZ Styles}
+
+There are several styles that are predefined and that you are
+“invited” to use: 
+
+\begin{description}
+\item[base shape] This is a style on which the styles described next
+  are based. It is to be used with the |\node| command and will, for
+  instance, fill the node with white color and will draw a thick
+  border around it. The color that is used for the border can be
+  passed as an argument, but see below for which colors you should
+  use. Here is a simple example how this style is used:
+  \begin{Latex}
+\tikz \node [base shape, ellipse] {Hello};    
+  \end{Latex}
+  yields
+\tikz [baseline, anchor=base] \node [base shape, ellipse] {Hello};.
+
+  The default color used for shapes is defined by the design (either
+  black or the color |Ozeangruen|, which is the university's corporate
+  design color, depending on the design). 
+\item[small shape] This style can be used in addition to |base shape|
+  and will change the font to a smaller size and will reduce 
+  the inner seperation:
+  \begin{Latex}
+\tikz \node [base shape, small shape, ellipse] {Hello};    
+  \end{Latex}
+  yields
+\tikz [baseline, anchor=base] \node [base shape, small shape, ellipse] {Hello};.
+\item[block] A rectangular node: |\tikz \node [block] {Hello};| yields
+\tikz [baseline, anchor=base] \node [block] {Hello};.
+\item[small block] A smaller version: Saying
+|\tikz \node [small block] {Hello};|
+  will now give
+\tikz [baseline, anchor=base] \node [small block] {Hello};.
+\item[node] A circular node, especially in a graph: |\tikz \node [node] {$n$};|
+  yields
+\tikz [baseline, anchor=base] \node [node] {$n$};.
+\item[small node] Small version: |\tikz \node [small node] {$n$};|
+  yields
+\tikz [baseline, anchor=base] \node [small node] {$n$};.
+\item[tiny node] A small, unnamed circular node: |\tikz \node [tiny node] {};|
+  yields
+  \tikz \node [tiny node] {};.
+\item[paper] This is a special style that installs a “paper-like
+  background” as fill color. I recommend using this style as a
+  background for all cases where you wish to create the impression of
+  showing an “original text” from another paper, that is, where you
+  wish to show that the text or graphic “looks like this in the
+  original”. Consider for instance,
+  \begin{Latex}
+\begin{figure}[htpb]
+  \centering
+  \tikz \node [paper] {\includegraphics{uzl-thesis-logo-uzl.pdf}};    
+  \caption{The logo of the University of Lübeck, but now...}
+  \label{fig-logo-paper}
+\end{figure}
+\end{Latex}
+which yields Figure~\ref{fig-logo-paper}.
+\begin{figure}[htpb]
+  \centering
+  \tikz \node [paper] {\includegraphics{uzl-thesis-logo-uzl.pdf}};    
+  \caption{The logo of the University of Lübeck, but now with a
+    “paper-like background”. Note how, compared to
+    Figure~\ref{fig-logo}, a much stronger impression is created that
+    this figure depicts something printed.}
+  \label{fig-logo-paper}
+\end{figure}
+\end{description}
+
+An example of how many of these styles can be used is shown in
+Figure~\vref{fig-tikz-white}. 
+
+\newcommand\examplepicture{
+
+  \tikzset{anchor=mid,yscale=.85}
+
+  %
+  % Merge sort
+  %
+
+  \node at (0,5.5) {\uzlemph{Merge sort visualization}};
+  
+  \node [block] (input) [minimum width=6cm] at (0,4.25)        { $A_1,\dots,A_n$ };
+  \node [block] (l1)    [minimum width=2.8cm] at (-1.6,3)      { $A_1,\dots,A_{n/2}$ }; 
+  \node [block] (l2)    [minimum width=2.8cm] at (1.6,3)       { $A_{n/2+1},\dots,A_n$ }; 
+
+  \node (l11) at (-2.2,1.75) {$\vdots$};
+  \node (l12) at (-1,1.75) {$\vdots$};
+  \node (l21) at (1,1.75) {$\vdots$};
+  \node (l22) at (2.2,1.75) {$\vdots$};
+
+  \node [small node] (m1)  at (-1.6,1) {$\mu$};
+  \node [small node] (m2)  at (1.6,1) {$\mu$};
+  
+  \node [block=emph] (b1)    [minimum width=2.8cm] at (-1.6,0) { $B_1,\dots,B_{n/2}$ }; 
+  \node [block=emph] (b2)    [minimum width=2.8cm] at (1.6,0)  { $B_{n/2+1},\dots,B_n$ }; 
+
+  \node [small node=emph, label=right:(merge)] (m3)  at (0,-1) {$\mu$};
+  \node [block] (output) [minimum width=6cm] at (0,-2)         { $B_1,\dots,B_n$ };
+  
+  \draw (input)  edge [->] (l1)
+                 edge [->] (l2)
+        (l1)     edge [->] (l11)
+                 edge [->] (l12)
+        (l2)     edge [->] (l21)
+                 edge [->] (l22)
+        (m1)     edge [<-] (l11)
+                 edge [<-] (l12)
+        (m2)     edge [<-] (l21)
+                 edge [<-] (l22)
+        (m1)     edge [->] (b1)
+        (m2)     edge [->] (b2)
+        (m3)     edge [<-] (b1)
+                 edge [<-] (b2)
+                 edge [->] (output);
+
+  \draw [overlay,very thick, structure] (3.5,-3.5) -- (3.5,5);
+
+  % 
+  % The blocks
+  %
+
+  \node at (7,5.5) {\uzlemph{Predefined styles}};
+  
+  \foreach \style [count=\i] in {
+    block,
+    block=emph,
+    block=emph blue,
+    block=emph green,
+    block=emph black,
+    small block,
+    small block=emph,
+    small block=emph green,
+  } {
+    \expandafter\node\expandafter [\style, anchor=mid west] at (4,5.25-\i) {\strut\ttfamily\style};
+  }
+  
+  \foreach \style/\what [count=\i] in {
+    node/$n$,
+    node=emph/$n$,
+    node=emph blue/$n$,
+    node=emph green/$n$,
+    node=emph black/$n$,
+    small node/$n$,
+    small node=emph/$n$,
+    tiny node/,
+  } {
+    \expandafter\node\expandafter [\style, anchor=mid, label=right:\ttfamily\style] at (8.25,5.25-\i) {\what};
+  }  
+}
+
+
+\begin{figure}[htpb]
+  \centering
+  \tikz[thesis outline shapes]{\examplepicture}
+  \caption{An example visualization created with Ti\emph kZ, see the
+    template source for the code details. In the graphic, a number of
+    predefined styles are used (like \Latex{node} or \Latex{small block}), each of which can be passed an optional color. These
+    styles are setup automatically to produce visually pleasing shapes
+    that go well with the overall layout and fonts.}
+  \label{fig-tikz-white}
+\end{figure}
+
+
+
+\subsection{Predefined Colors}
+
+The thesis class defines a number of colors that you should use in
+graphics. You should \emph{not} use colors like |red| or |green|: Pure
+green is a very light color and text in this color is hard to read on
+paper and impossible to read in an electronic document. Instead of
+pure green, a rather dark version of green must be used. In contrast,
+pure blue is already rather dark and only needs to be darkened very
+slightly. The following colors have been setup to provide a uniform
+contrast against a white background:
+
+\begin{description}
+\item[emph]
+  A red color.
+  Used in an outline
+  \tikz[baseline] \draw [thick,emph] (0,-.2ex) rectangle ++(3.2ex,1.6ex);
+  and filled
+  \tikz[baseline] \fill[emph] (0,.5ex) circle[radius=.8ex];
+\item[emph red] This is the same as |emph|.
+\item[emph green]
+  Used in an outline
+  \tikz[baseline] \draw [thick,emph green] (0,-.2ex) rectangle ++(3.2ex,1.6ex);
+  and filled
+  \tikz[baseline] \fill[emph green] (0,.5ex) circle[radius=.8ex];
+\item[emph blue]
+  Used in an outline
+  \tikz[baseline] \draw [thick,emph blue] (0,-.2ex) rectangle ++(3.2ex,1.6ex);
+  and filled
+  \tikz[baseline] \fill[emph blue] (0,.5ex) circle[radius=.8ex];
+\item[emph black] This is just black:
+  Used in an outline
+  \tikz[baseline] \draw [thick,emph black] (0,-.2ex) rectangle ++(3.2ex,1.6ex);
+  and filled
+  \tikz[baseline] \fill[emph black] (0,.5ex) circle[radius=.8ex];
+\end{description}
+
+Looking for more colors? Think carefully whether you really need more:
+It is hard to remember too many colors as a reader. It may be better
+to use a different style (like thicker lines) for
+purposes of further differentiation.
+
+
+
+\subsection{Designs for Ti\emph kZ Graphics}
+
+In addition to the designs for the whole thesis, see
+Section~\ref{section-styling}, there are also three designs for
+graphics. Each of them redefines |base shape|, resulting in a
+different “look”:
+
+
+\begin{description}
+\item[thesis outline shapes] This Ti\emph kZ style defines
+  |base shape| and all styles built on top of it (like |block| and |node|)
+  to a white background and simple thick line around the shape. For
+  instance:
+\begin{Latex}
+\tikzset{thesis outline shapes} % generally set the design
+\tikz \node [block] {Hello};    
+\end{Latex}
+yields
+{%
+\tikzset{thesis outline shapes}% generally set the design
+\tikz[baseline, anchor=base] \node [block] {Hello};%    
+}. See Figure~\vref{fig-tikz-white} for a larger example.
+\item[thesis box shapes] This style defines |base shape| similarly to
+  the outline style, but fills the shapes with a light background:
+\begin{Latex}
+\tikzset{thesis box shapes} % generally set the design
+\tikz \node [block] {Hello};    
+\end{Latex}
+yields
+{%
+\tikzset{thesis box shapes}% generally set the design
+\tikz[baseline, anchor=base] \node [block] {Hello};%    
+}. See Figure~\vref{fig-tikz-box} for an example.
+\item[thesis flat shapes] This style redefines |base shape|
+  differently: The shapes are only filled and no border is 
+  drawn. This creates a stylish “flat” look:
+\begin{Latex}
+\tikzset{thesis flat shapes} % generally set the design
+\tikz \node [block] {Hello};    
+\end{Latex}
+yields
+{%
+\tikzset{thesis flat shapes}% generally set the design
+\tikz[baseline, anchor=base] \node [block] {Hello};%   
+}. See Figure~\vref{fig-tikz-flat} for a larger example.
+\end{description}
+
+
+
+
+\begin{figure}[htpb]
+  \centering
+  \tikz[thesis box shapes]{\examplepicture}
+  \caption{The same visualization as in Figure~\ref{fig-tikz-white},
+    but with the \Latex{thesis box shapes} option set. As can be
+    seen, this option causes the predefined shapes to be filled. It is
+    a matter of taste whether one prefers this over the \Latex{outline}
+    style from Figure~\ref{fig-tikz-white}.}
+  \label{fig-tikz-box}
+\end{figure}
+
+\begin{figure}[htpb]
+  \centering
+  \tikz[thesis flat shapes]{\examplepicture}
+  \caption{Once more, the same visualization as in Figure~\ref{fig-tikz-white},
+    but now with \Latex{thesis flat shapes} option set. This option
+    creates more ``flat'' shapes (without a border). Once more it is a
+    matter of taste what one prefers.}
+  \label{fig-tikz-flat}
+\end{figure}
+
+
+
+\section{Creating Cross References, Citations and the~Bibliography}
+
+\label{section-references}
+\label{section-bibliographies}
+
+“We all stand on the should of giants” is a saying that refers to the
+fact that, in science, you never start from scratch: Your work always
+builds on that of many, many people before you. It is thus not only
+permissible, but actually required that you refer to the work of other 
+people using \emph{citations} -- how this is done with the thesis
+class is explained below. In addition, apart from citing the work
+of other people, you will also often wish to point to different parts
+of your own thesis. The method of creating such \emph{cross
+  references} is also explained in this section.
+
+
+\subsection{Citations}
+
+In your thesis, you will and should use citations. This is done in
+\LaTeX\ using the \Latex{\cite} command: If I wish to say that the
+\TeX\ typesetting system was written by Donald Knuth, I could write
+\begin{Latex}
+The \TeX\ system~\cite{Knuth1986} is due to Donald Knuth.
+\end{Latex}
+and would get “The \TeX\ system~\cite{Knuth1986} is due to Donald
+Knuth.” The |\cite| command looks up the \emph{bibliography key}
+|Knuth1986| in the list of bibliography entries (see below) and then
+inserts the citation into the text and the bibliography entry into the
+bibliography. All of this happens automatically, you just need to
+specify the entry in the list of bibliography entries and you need to
+add the citations at all points where you cite a book or an article in
+the main text.
+
+The thesis class uses the \textsc{biblatex} package for the
+bibliography handling \cite{biblatex}. You can use the different
+commands offered by the package, such as for instance |\citeauthor| to
+just cite the author names. There are a lot of commands, it is a powerful
+package.   
+
+
+\subsection{Bibliography Entries (Bib\TeX\ Entries or Records)}
+
+In order to cite a book or an article, you say |\cite{|$\langle
+  \mathit{key}\rangle$|}| in the text, where $\langle
+\mathit{key}\rangle$ must be an entry in the list of bibliography
+entries. For historic reasons, these entries come in a weird format
+and must be processed using a special program called Bib\TeX.
+
+I have tried to simplify the whole Bib\TeX\ business as much as
+possible for you:
+\begin{itemize}
+\item With the thesis class, you can place the bibliography entries
+  right inside your (\LaTeX) manuscript: At any point in the
+  manuscript (I recommend somewhere near the end), you can use the
+  |{bibtex entries}| environment. Inside this environment, you place
+  all the bibliography entries using the \textsc{bibtex} format (if
+  you are unsure about this format, look up the documentation of
+  \textsc{biblatex}, but the format is fairly
+  self-ex\-pla\-na\-to\-ry). Listing~\ref{listing-bibtex} shows an example of
+  how this works.
+  \begin{Latex}[
+    float,
+    caption = {
+      Typical use of the \Latex{\{bibtex entries\}} environment inside a
+      thesis manu\-script.
+    },
+    label = listing-bibtex]
+\begin{document}
+...
+The \TeX\ system~\cite{Knuth1986} is due to Donald Knuth.
+...
+\begin{bibtex entries}
+@Book{Knuth1986,
+  author = 	 {Donald Erwin Knuth},
+  title = 	 {The \TeX book},
+  publisher = 	 {Addison-Wesley},
+  year = 	 {1986},
+}
+...
+\end{bibtex entries}
+\end{document}
+  \end{Latex}
+\item You will then have to run |lualatex| on your manuscript and then
+  run |bibtex| on the manuscript and then run |lualatex| once
+  more. That should do the trick. (The effect of the
+  |{bibtex entries}| environment is that when \LaTeX\ 
+  is run on your manuscript, the text inside the environment gets
+  written into a special file that is then processed by
+  |bibtex| later on.)
+\item Actually, the “right” program to use with \textsc{biblatex} is
+  not |bibtex|, but |biber|. However, the advantages of |biber| are
+  only slight and setting it up correctly can be nontrivial. If you do
+  wish to use |biber|, you must say 
+  \begin{Latex}
+\UzLThesisSetup{biblatex={backend=biber}}
+  \end{Latex}
+  Do this only if you know what you are doing.
+\item
+  If, for whatever reasons, you do not wish to use the
+  |{bibtex entries}| environment, you can and must use the
+  |\addbibresource| command of the \textsc{biblatex} package. Do this
+  only if you know what you are doing.
+\end{itemize}
+
+
+\subsection{The Bibliography}
+
+The bibliography itself (the “list of references”) is inserted
+automatically at the end of the thesis. Do not mess with this.
+
+The bibliography style (the way the bibliography “looks”) is also not
+up to you, it is dictated by university regulations. You \emph{must} 
+use the citation style of the journal \emph{Cell} for all theses
+written in the area of the natural sciences (like Molecular Life
+Science) and you \emph{can} also use so-called “numbered” citations  
+for the all other subjects (but you can also use the citation style of
+\emph{Cell} for them). The bottom line is that you must say in the
+preamble 
+\begin{Latex}
+\UzLThesisSetup{Alphabetische Bibliographie}
+\end{Latex}
+for a thesis in the area of the natural sciences and you can,
+alternatively, say
+\begin{Latex}
+\UzLThesisSetup{Numerische Bibliographie}
+\end{Latex}
+for all other subjects. These commands will install the correct
+citation modes. Do not mess with them.\footnote{It really took me a
+  \emph{long} time to get them right.}
+
+
+
+\subsection{Cross References}
+
+In scientific texts, you will often wish to reference an element of
+the text itself at some other place: For instance, in the text you
+wish to write something like “As Figure~3.2 shows, there is no
+evidence for\dots“ where “Figure~3.2” is, of course, a figure in your
+thesis. In \LaTeX, you use the commands |\label| and |\ref| for these
+purposes, see the \LaTeX\ manual \cite{Lamport1994} for more details,
+and the \textsc{varioref} package is also automatically loaded. In
+particular, you can use the useful |\vref| command, see
+\cite{varioref} for the documentation. 
+
+
+
+\chapter[Questions~\&~Answers:
+  How~to~Write~a~Thesis~That~Is~a~Pleasure~to~Read] 
+  {Questions~\&~Answers: How~to~Write a Thesis That~Is a
+  Pleasure~to~Read} 
+\label{chapter-tips}
+
+Suppose that, like me (Professor Tantau), you are asked to grade a
+thesis that a hopeful student just turned in. Suppose that, like me,
+you have to grade a \emph{lot} of theses (at least one per month) and
+you start reading 
+it. Certainly, you strive to be as fair and even-minded as humanly
+possible when it comes to grading the thesis. In particular, you have
+the firm intention of determining your final grade based on the
+quality of the scientific contribution that the thesis makes.
+
+As you start reading, you stumble over a number things. It starts with
+the table of contents that seems a bit confusing and after having read
+both the abstract and the one-page introduction you are still not
+quite sure what the author actually achieved and start to wonder
+“What is the point of all of this? And what did the guy actually
+\emph{do} during the six months?” But you read on. 
+
+As you continue reading, your reading flow gets interrupted repeatedly
+by spelling mistakes, each of which 
+makes you cringe a little. At first you think that
+the student might have introduced them during some
+last-minute revision work, but then you stop reading and start marking 
+the spelling and grammar mistakes on five consecutive pages. You are 
+somewhat disappointed when you find that there are about ten mistakes
+per page and the number does not appear to drop significantly as the
+text continues. By multiplying the number of mistakes per page with
+the number of pages, you extrapolate that the total number of mistakes
+must be in the range of 200 to 400 spelling mistakes. This makes you
+pretty sad and even a bit angry since you start to wonder “Why do I
+have to read this? Why couldn't the author be bothered to run a
+spellchecker on this text during the \emph{six months} of working on
+it?” But you read on.
+
+As you have a closer look at the main part of the text, you get
+determined to find out what author's main point actually is. It is a
+struggle since the author sometimes explains trivial stuff over two
+pages but then does not provide a single example with the main
+definition. Nor with any of the later results. But there are some
+tables, although it is a bit unclear what they actually show. Anyway,
+you are a professor and a professor can do anything, so you can also
+understand this text. It turns out that the trick is to quickly read
+the one paper that the student cites a zillion times -- probably the
+only paper the student actually read. With the knowledge of that
+paper, you realize that the thesis actually contains some nice ideas:
+perhaps not terribly deep results, but definitely nice ideas.
+
+Here is the problem you face: How to grade a thesis that is
+literally littered with spelling mistakes, that is a mess
+concerning structure and exposition, that has a terrible
+bibliography, that forces you to read the original literature in order
+to understand what it is all about -- and that contains really nice
+scientific ideas?
+
+Welcome to my world. 
+“Nice scientific ideas” can be graded in almost any way one likes: In
+a review, one can write that “the thesis certainly contains nice
+ideas, but utterly fails to demonstrate their actual relevance” or one
+can write “the thesis certainly contains nice ideas and these are
+likely to open new and interesting future approaches -- a full
+demonstration of the practical relevance of the ideas is of course
+beyond the scope of a thesis”.  My point is that you, dear students,
+\emph{do not want to infuriate 
+  the person who grades your thesis!} You want to turn in a thesis
+that is \emph{a pleasure to read!} This will determine which of the
+two reviews will be written.
+
+Of course, if your thesis proves $\mathrm P \neq \mathrm{NP}$ or
+presents a cure for cancer, you can turn in total gibberish, you can
+use a spelling that would make even your friends cringe when used in a
+chat, you can write your thesis on a napkin and the thesis can 
+have two pages or 1000 pages -- you will still get an outstanding
+grade. The other way round, no matter how stylish your thesis looks,
+how carefully it is phrased and how nicely you have wrapped the
+binding with leather -- if you do not present solid scientific work in
+your thesis, you will still fail.
+
+But in all other cases, you will just need to make an effort to
+create a well-written thesis. In the rest of this chapter, I try to
+give some hints on how to do this and will try to cover most of the famous
+\emph{frequently asked questions} that I am, indeed, frequently
+asked. As with any recommendations, you can ignore them, but you do so
+at your own risk. But above all, remember that you should \emph{always
+  listen to your adviser!} 
+
+
+\section{Q\&A: Thesis Length}
+
+\begin{question}
+  How many pages should my thesis have?
+\end{question}
+
+\begin{answer}
+  There is no fixed length for a thesis, but for a
+  bachelor's thesis the rule of thumb is 20 to 40 pages with 30 being
+  ideal. For a master's thesis, aim for twice that, so 40 to 80 pages
+  with 60 being ideal. The pages include everything following the
+  table of contents (the pages numbered in Arabic in this class).
+  
+  Reviewers do not appreciate theses that are too long or too short: If
+  your thesis is much shorter than the suggested length, reviewers will
+  wonder about the depth of the scientific contribution unless the
+  presented results are absolutely brilliant. If your thesis is much longer
+  than suggested, reviewers will get less and less inclined to continue 
+  reading: part of the difficulty of presenting scientific results is
+  presenting them in a limited amount of words. 
+\end{answer}
+
+
+\begin{question}
+  How long should the different parts of my thesis (abstract,
+  introduction, main text, etc.) be? 
+\end{question}
+
+\begin{answer}
+  The length of the abstract must be around 150 words, independently of
+  what kind of thesis you are writing. The length of the introduction
+  should be around 10\% of the main text. Thus, if a bachelor's thesis
+  has 30 pages, the introduction should have three to four pages (and
+  not just one); a master's thesis can easily have an introduction
+  with six to eight pages. The length of the conclusion should be
+  around 5\% to 10\% of the main text. This leaves around 75\% to 80\%
+  for the main text (because of the bibliography). You will find more
+  information on the abstract, the introduction and the conclusion in 
+  Section~\vref{section-abstract}.
+\end{answer}
+
+
+
+
+\section{Q\&A: Structuring a Thesis}
+
+\begin{question}
+  Which parts should my thesis have? Is there anything that
+  \emph{has} to be there? Are there optional parts?
+\end{question}
+
+\begin{answer}
+  Every thesis \emph{must} follow the same basic structure:
+  \begin{enumerate}
+  \item 
+    Title (page),
+  \item
+    abstract,
+  \item
+    introduction,
+  \item
+    main chapters,
+  \item
+    conclusion and
+  \item
+    bibliography. 
+  \end{enumerate}
+  A thesis that misses any of these parts is not really a thesis. The
+  thesis class, by the way, makes it easy to generate this structure
+  since you only need to make sure that the |{document}| environment
+  contains a |\chapter{Introduction}| command and a corresponding
+  |\chapter{Conclusion}| command -- everything else will be inserted
+  automatically at the right places and the class will give you an error
+  message if anything is missing.
+\end{answer}
+
+
+\begin{question}
+  Which main chapters should my thesis have?
+\end{question}
+
+\begin{answer}
+  While the introduction itself also has a fixed structure, see
+  Question~\ref{qu-intro-stru}, there is no fixed structure for the  
+  main part. The number of chapters and sections really depends on
+  the contents of your thesis. Usually, it is a good idea to have two
+  to five main chapters (in addition to the introduction and the
+  conclusion) and each can have anything between zero and ten
+  sections. However, you should \emph{never} have only a single
+  section in a chapter. In such a case, remove the section command.
+
+  It is customary and useful to establish the structure of the thesis
+  before you write the actual text. That is, use the |\chapter| and
+  |\section| commands to create chapters and  sections without any (or
+  with only little) text, but with the tentative chapter and section
+  titles already in place. Then create a more or less empty thesis and
+  discuss the resulting table of contents with your adviser.
+\end{answer}
+
+
+\begin{question}
+  How important is the table of contents?
+\end{question}
+
+\begin{answer}
+  The table of contents is one of the most important parts of your
+  thesis.  \emph{Have a close look at it, repeatedly!}
+
+  The ideal table of contents tells you what happens in the thesis. It
+  is tough to actually get this information into a table of contents,
+  but this is  what you should strive for: Organize the titles so that
+  the really tell a story all by their own. As an example, consider
+  the table of contents of this document. Even without having read
+  anything, a reader will see immediately see that this text has two parts
+  or aspects: A part that obviously serves as some sort of “user's
+  guide” on the thesis class and a part that contains a lot of
+  “questions and answers” on how to write a thesis. 
+    
+  When you read the table of contents in isolation, you will also
+  easily notice inconsistencies: For instance, it often happens that
+  one section starts with an article (like “The Main Experiment”)
+  while another starts without one (like “Main Results”). Looking at
+  the table of contents makes it easy to spot such inconsistencies
+  (you should, of course, correct them). As an example, consider once
+  more the table of contents of this document. It is, of course, no
+  coincidence that \emph{all} sections in the second part start with
+  “Q\&A”. A less obvious non-coincidence is the fact that all sections
+  of the first part start with the present participle of a verb and
+  that some words get repeated: I adjusted the section names at a
+  relatively late stage when writing this text to ensure this
+  consistency -- after I had had a look at a previous version of the 
+  table of contents. 
+\end{answer}
+
+
+
+\section{Q\&A: Abstract, Introduction and Conclusion}
+\label{section-abstract}
+
+For any beginner, there is a very confusing aspect when it comes to
+\emph{summarizing} the thesis: You have to do it three times! Once in
+the abstract, once in the introduction and once more in the
+conclusion. In the following, we have a look at why this is the case
+and how these three summaries differ.
+
+\begin{question}\label{qu-abstract1}
+  How long should the abstract be? I have heard it should be half a page?
+\end{question}
+
+\begin{answer}
+  The abstract should \emph{always} be exactly one paragraph of 100 to
+  200 words (this is true for \emph{every} abstract, even for a thick
+  book). 
+\end{answer}
+
+
+\begin{question}\label{qu-abstract2}
+  What is the purpose of the abstract?
+\end{question}
+
+\begin{answer}
+ The abstract summarizes and explains everything that happens in the
+ thesis. Its job is to help someone decide ``whether the thesis contains
+ something that I am currently interested in'' by just reading the
+ abstract -- this abstract is often shown for instance on web pages
+ without showing the whole thesis. This means that if after reading the
+ abstract someone thinks ``sounds highly interesting, but I would have
+ to read the thesis to know what, exactly, is shown,'' then the
+ abstract is \emph{bad} since it leaves the reader wondering. If after
+ reading the abstract someone thinks ``I do not need to read the thesis
+ since it does not address the problem I am interest in,'' then the
+ abstract is \emph{good} (provided, of course, that the thesis really
+ does not address the problem\dots).
+ 
+ This means that you must \emph{name your results in the abstract.} Of
+ course, you cannot (indeed, should not) go into any details, but an
+ abstract should not include just a sentence like “In the thesis, new
+ approaches are tried.” Rather, write “In the thesis, three new
+ approaches are tested: the foo-to-bar conversion, the bar-to-foo
+ conversion and the bar-bar method. The evaluation shows that the first
+ two outperform previous methods by up to 5\% on average.” 
+\end{answer}
+
+
+\begin{question}
+  And what is the job of the introduction?
+\end{question}
+
+\begin{answer}  
+  The job of the introduction (“\foreignlanguage{german}{Einleitung}”
+  in German) is to introduce 
+  the reader to the subject, 
+  but also to \emph{explain all results obtained in the thesis.} This
+  means that, after having read the introduction, the reader should
+  \emph{know all major results obtained.} You may wonder what you should
+  then write in the main text -- the answer is, of course, that the main
+  text has the job of ``proving'' that all the results you claim in the
+  introduction actually hold.
+\end{answer}
+
+
+\begin{question}\label{qu-intro-stru}
+  Should the introduction have a special structure?
+\end{question}
+
+\begin{answer}
+  It is customary to start the introduction with a motivation that explains
+  what the subject is and why it is interesting. Put this right at the
+  beginning, usually without a special section title like
+  “Motivation”. Just start explaining. Then, however, there should
+  always be three sections, starting with “Contributions of this
+  Thesis” or “Results of this Thesis” (“Beiträge dieser Arbeit” or
+  “Ergebnisse dieser Arbeit”), then a section on “Related Work”
+  (“Verwandte Arbeiten“) and then “Structure of the Thesis” (“Aufbau
+  dieser Arbeit”). Do not deviate from this structure (unless your
+  adviser explicitly tells you to).
+  
+  The “Contributions of this Thesis“ section should explicitly state all
+  of the main results -- be aware that a very busy professor may
+  actually skip the main text (sadly this does
+  happen) and will \emph{only} be aware of what you did from what is
+  written here. Note that the contributions of a thesis are not always
+  earth-shattering new fundamental breakthroughs. Indeed, they almost never
+  are. Explain in clear words what you did and which scientific
+  contributions you made. This may included:
+  \begin{itemize}
+  \item New results you obtained: This can include new mathematical
+    statements, algorithms, experiment results, setups and more.
+  \item Failed approaches: It is often scientific highly interesting to
+    know that an approach does \emph{not} work, so that other people do not
+    need to repeat the approach once more.
+  \item Literature work: It can be a scientifically nontrivial
+    endeavor to read and then systematically present the relevant
+    literature on a certain topic.
+  \end{itemize}
+  
+  The “Related Work” section is the place where you point out what is
+  already known about the subject and what other approaches have been
+  tried. Here, you explain and cite other people's works. Do not be shy
+  about this, even if you feel other approaches are better -- that does in
+  no way belittle \emph{your} approach.
+  
+  The “Structure of this Thesis” section should explain, usually in one
+  paragraph, how your thesis is structured. There is no need to say
+  things like ``It starts with an introduction'' or ``The thesis
+  concludes with a summary and an outlook'' -- we know and expect
+  this. The interesting question is how the main part is structured. Try
+  to make this text interesting and do not just list the titles of the
+  sections: Why does a certain chapter come first? Can different parts
+  be read independently? Where are the main results to be found?
+\end{answer}
+
+
+
+\begin{question}
+  Why do I have to write a conclusion? I have summarized the text
+  already twice (in the abstract and in the introduction)! Summarizing
+  it again makes no sense!
+\end{question}
+
+\begin{answer}
+  You \emph{always} include a conclusion in the thesis. It can be short
+  (5\% to 10\% of the text), but it should be present. The job of the
+  conclusion is to summarize the main text once more, but the
+  difference to the previous two summaries is that the conclusion is
+  addressed to someone who \emph{has already read the thesis,} which
+  allows you to go into much more detail in the conclusion. Here you
+  can write things like ``The technically most difficult aspect was
+  the proof of sub-case 4 of Lemma 3.1, where\dots'' or ``Especially
+  the experiments IV and VIIa to VIIc proved difficult since\dots,''
+  which would make little sense earlier. The conclusion is the place
+  to describe the highlights and problems encountered in the thesis
+  ``with hindsight'' while the introduction needs to summarize things
+  for someone not yet familiar with the subject.
+
+  Including an outlook is optional, if you do not include it, entitle
+  the section just ``Conclusion'', otherwise “Conclusion and
+  Outlook”. The outlook should really be an 
+  outlook in the sense ``where do we go from here.'' Do \emph{not} use
+  the outlook to list all the things that you wanted to do in your thesis,
+  but did not find the time to do. In these cases, reviewers may get
+  the impression that ``the student seems to have been a bit lazy,
+  considering the many things she or he did not manage to do.'' It is
+  then better not to include an outlook.  
+\end{answer}
+
+
+
+
+\section{Q\&A: Writing Scientific Text}
+
+Writing the main part of your thesis, that is, writing the
+\emph{actual text} can be daunting. Your thesis should be a “scientific
+text”, but what does that mean, exactly? Surely, the text will be
+complicated since science is complicated -- should you actually try to
+write a “complicated text”? Or should you strive to simplify things
+and explain your topic in layman's terms? In the following, we have a
+look at how “scientific text” is written (in particular, in
+Question~\ref{qu-we}, we have a look at why \emph{we} have a look).
+
+
+\begin{question}
+  I have real trouble writing anything: I cannot even write a good
+  first sentence for my text! How will I ever write 30 pages?!
+\end{question}
+
+\begin{answer}
+  The first sentence is often the hardest sentence to write -- so do
+  not start with it! There is no need to start the text from the
+  beginning with the perfect first sentence. Instead, start anywhere
+  where you already know what you would like to say; the important
+  lead sentences can come much later. This leads to an important
+  trick: \emph{Never stop writing at the end of a 
+    chapter or section, always write a few sentences for the next
+    chapter or section before you call it a day.} Once you are in the
+  flow, you will find it relatively easy to write text and also to
+  write the starting sentences of a new chapter. When you continue
+  writing on the next day or the next week, it will be much easier to
+  just add something to text that is already there.
+\end{answer}
+
+
+\begin{question}
+  I still have trouble writing anything: I need hours to write a
+  single good sentence!
+\end{question}
+
+\begin{answer}
+  \emph{Never} try to write “the perfect text”. Good texts do not
+  arise from good writing, but from good revising: You should
+  constantly go over your text and revise it, reformulate things,
+  remove parts and add new ones. At the beginning, a lot of “movement”
+  happens and the text changes constantly, but after some time the
+  text gets better and better and the changes less and less frequent.
+  As a rule of thumb, \emph{no single sentence remains unchanged from
+    when it was first written to the sentence in the final version.}
+
+  Since you should and must revise everything anyway, it is not really
+  important that you get the text right at the beginning. Thus, to
+  overcoming the “writer's block”, simply  write \emph{something,} no
+  matter how bad it is. Once \emph{some} text is there, it is usually
+  much easier to add more to it and to improve it.
+
+  Of course, this means that you will need \emph{time} to go over the
+  text repeatedly and to improve it. Do not assume that you can write
+  a thesis in a week: While it might be physically possible to write
+  down 30 pages in a week, it is \emph{not} possible to do five
+  revisions of these 30 pages in a week. The more time you have for
+  revisions, the better. 
+\end{answer}
+
+
+\begin{question}
+  How should I start my first chapter? 
+\end{question}
+
+\begin{answer}
+  Your whole thesis and each part of it can follow a simple pattern:
+  Always start with a summary, followed by the details, followed by a
+  wrap-up. On the top level, the title of the thesis actually
+  summarizes the whole thesis! -- and it is followed by the thesis
+  text. This means, in particular, that the thesis title should be
+  highly informative and should really tell us what is done in the
+  thesis -- do not try to be too funny or whimsical here. On the next
+  level, the whole text starts with an abstract \emph{and} an
+  introduction, both of which summarize the text, followed by the main
+  text, followed by the conclusion.
+
+  Now in answer to the question: You use the \emph{same} pattern also
+  for each chapter. This means that in each chapter the text before
+  the first section is a summary of what happens in that chapter. This
+  summary should not be a section-by-section account of what comes
+  next, but rather an introduction to the chapters topic with an
+  overview of what we should expect in the chapter.
+
+  You will hopefully no longer be surprised at this point to learn
+  that each \emph{section} in turn should also start with a short
+  introduction and even summary of the section text: Try to make sure
+  that the first paragraph already contains all the punchlines of the
+  section.
+
+  You can actually even apply the pattern to each paragraph, if you
+  want: The first sentence of a paragraph is the most important one
+  and should lead the whole paragraph. This is also a helpful rule
+  when you try to decide where a new paragraph should start: It starts
+  when a new idea is started.
+\end{answer}
+
+
+
+
+\begin{question}
+  Which words and concepts do I have to explain? Does the professor
+  know all this stuff? Should anyone be able to read my text?
+\end{question}
+
+\begin{answer}
+  It is always difficult to decide ``what do I need to explain, what
+  does the reader already know?'' Fortunately, there is a trick that
+  works most of the time: Always address the text ``to yourself, one
+  year ago.'' That means, everything you already knew before you
+  started working on the thesis does not 
+  need to be explained once more: for a thesis in computer science,
+  there is no need to explain what ``a programming language'' is and
+  what ``\textsc{xml}'' means; but when writing a thesis in which you
+  extend a special library that you had never heard of prior to
+  writing the thesis, you \emph{do} need to explain what this library
+  does. In a thesis on biology, you should not start explaining what a
+  cell is or even what an amino acid is, but you should explain what
+  the “parsimony assumption for the evolution of phylogenetic trees”
+  is.
+\end{answer}
+
+
+\begin{question}
+  OK, but what about the introduction and especially the motivation?
+  Surely, there, I should start explaining things from the beginning?
+\end{question}
+
+\begin{answer}
+  Even at the very beginning in the motivation, you should not spend
+  more than one sentence on stuff “that everyone knows”. Starting with
+  a very broad context is known as the “Adam and Eve beginning” since
+  it starts at the, well, beginning. Instead, you should (very)
+  quickly come to the interesting scientific question you address in
+  the thesis.
+
+  As an example, suppose you write a thesis on the question of how
+  secure are speech recognition systems like Alexa or Siri. Then you
+  should not start with something like “The first serious applications
+  of artificial intelligence date back to the 1960's, but people have
+  dreamed about intelligent machines for a very long time.“ This is a
+  nice enough sentence, but has nothing to do with the topic of the
+  thesis. A much better start would be “As more and more people use
+  cloud-based speech recognition in their homes to control
+  their environment, more and more people also give Internet companies
+  access to potentially highly sensitive information.” Note that while
+  this sentence is still fairly easy to understand and not very technical
+  (and thus appropriate for an introduction) it \emph{is} about the
+  subject of the thesis.
+\end{answer}
+
+
+\begin{question}
+  How do I explain what I did? Should I be modest? Or boastful? 
+\end{question}
+
+\begin{answer}
+  You may neither boast about your accomplishments nor should you be
+  overly modest. It is unlikely that you reinvented all of science
+  with your thesis, so do not try to create this impression. However,
+  students also often are so unsure of their own achievements that the
+  reader has trouble determining what the actual contribution of the
+  author was!
+
+  For an example, suppose that for your thesis you were asked to find
+  the longest 
+  nucleotide sequence that is common to the genome of all species in
+  a large genome database (like the \textsc{ensembl}
+  database). Suppose that you found out that the maximal length was 
+  200,123 base pairs. You should \emph{not} write sentences
+  like “This thesis demonstrates that evolution conserves huge
+  quantities of genetic code over evolutionary timescales.” (way too
+  boastful and not really true) nor too-modest ones like “The maximal
+  length of common genomes was studied.” (What was studied, exactly? 
+  And who did it? What is a “common genome”, by the way?).
+  You need to write, clearly, what you did: “Since the genome of
+  different species is related by evolution, all species share parts
+  of their genome. In this thesis, I did a  
+  quantitative study of the amount of sharing by determining the longest
+  primary sequence that is present
+  in the genomes of all species from the public \textsc{ensemble}
+  database. The longest sequence has a length of 200,123 bases pairs
+  and is the coding sequence of a cell wall protein.”\footnote{I made
+    all of this up! I do \emph{not} wish to read something like “As
+    pointed out by (Tantau, 2019), all species share 200,123 base
+    pairs” in future papers\dots}
+\end{answer}
+
+
+\begin{question}
+  I produced no new results! What do I do now?!
+\end{question}
+
+\begin{answer}
+  Already ``writing up things nicely that were already known''
+  can be an important scientific contribution. Likewise, having done an
+  in-depth literature research is important for science. Naturally, if
+  you have made some discoveries, explain them in the introduction and
+  in the main text, but science is as much about known things as it is
+  about new things.
+
+  By the way, it is also important to point out things that did
+  \emph{not} work out. Knowing that a certain approach does not work
+  can be a more important scientific contribution than knowing that
+  something gives a small improvement over previous methods: If you
+  have shown that an approach does not work, other people will not
+  waste time trying this approach again.
+\end{answer}
+
+
+
+
+\begin{question}
+  How do I write “scientifically”? Should I use complex sentences to
+  describe complex topics and simple sentences for simple topics?
+\end{question}
+
+\begin{answer}
+  A good “scientific” text is a text that is easy to understand -- not
+  a text that uses grand words and involved phrase
+  constructions. Indeed, \emph{especially} when a subject is hard to
+  understand, it is \emph{particularly} important to describe it in a
+  \emph{simple} way. This does not mean that one must \emph{simplify}
+  things, but just that the description should be clear and easy to
+  follow -- and, spoiler alert, a simple sentence structure
+  and simple words are easier to understand that a convoluted
+  structure with much technical jargon.
+
+  As an example, suppose you wish to explain the concept of public key
+  cryptography. A seemingly very scientific -- but in fact just bad --
+  explanation might be “Public key cryptography is based on
+  private–public key pairs $(k_e,k_d)$ that encrypt and decrypt plain 
+  and cover text (and \emph{vice versa}) using cryptographic hash
+  functions with back-doors.” While perfectly true, this convoluted
+  sentence sheds almost no light on the question of what public key
+  cryptography is or does or how it works. Do not put such sentences
+  into your thesis.
+
+  What you should do instead is to use plain words in general and the
+  scientific words where needed and where they are
+  appropriate. Likewise, you should split up sentences when they
+  become too long. Here is a much better explanation of public key
+  cryptography: “Public key cryptography allows two persons who have
+  never met to exchange messages over a public 
+  network in the presence of an eavesdropper. It is based on
+  mathematically transforming messages by first \emph{encrypting} them
+  with a \emph{public} key and then later on \emph{decrypting} them
+  with a \emph{private} key.”
+
+  Here are some further some simple hints:
+  \begin{itemize}
+  \item Simple is better than complicated. When in doubt, use the
+    simpler word or simpler structure: Instead of “the addition of the
+    elements in the set~$M$ yield~$10$” write “the sum of~$M$ is
+    $10$”. Instead of “Assuming that $A$ is an influencing 
+    factor for how large the standard deviation of $B$ is, we may
+    conclude that the correlation between $A$ and $B$ is actually
+    based on a causal effect of $A$ on $B$” write “If $A$ affects how
+    strongly $B$ varies, $A$ causes $B$.“
+
+    Especially in German text, avoid too complicated sentences.
+  \item Vary the sentence length. As the previous sentence shows, 
+    short sentence can have a lot of “punch” since the reader can read
+    and understand them at a glance, while longer sentences -- like
+    the present one -- allow you to present longer thoughts. Again, if
+    in doubt, try a short sentence: Instead of “The very last finding
+    in the just-pre\-sen\-ted analysis rather clearly shows that
+    one can no longer support the assumption that the previous
+    findings are correct” write “This is wrong.”
+  \item Use short, simple words, when possible. This is especially
+    true in German texts. This does not mean that you should replace a
+    scientific term by something seemingly simpler (it would be
+    utterly wrong to replace “nondeterministic” by “random”) but that no
+    complex words are introduced where simple ones would do. Instead
+    of “The possibility exists to deterministically simulate the
+    totality of the computational branches done by nondeterministic
+    general Turing machines” write “Nondeterministic Turing machines
+    can be simulated by deterministic ones.”
+  \item Read a book on how to write scientific text, like then one by
+    \textcite{Alley1996}.  
+  \end{itemize}
+\end{answer}
+
+\begin{question}\label{qu-we}
+  In scientific texts, no one uses “I”, it is always “we”. Should I
+  also do this? (Should \emph{we} also do this?)
+\end{question}
+
+\begin{answer}
+  The question “Should we also do this?”\ already shows
+  that it is ridiculous to  always use “we” when “I” is actually
+  meant. No, you should not always use “we”. Rather, the basic rules
+  are as follows:
+  \begin{itemize}
+  \item In a single-author paper (such as your thesis), the word “we”
+    always refers to “the reader and me” (that is, “you and me”). Thus,
+    you write “we will see later on” since you mean “you (and I) will
+    see later on” and certainly not “I will see later on”.
+  \item Since “we” means “you and me”, you cannot use “we” when the
+    reader does not feel addressed. You cannot write “We think that
+    this is a good approach” since you force an opinion on the reader
+    (who may feel that this is a terrible approach). Do not use
+    phrases like “we think”, “we believe”, “we hope” and so on. You
+    also cannot write “we did the following three experiments” since
+    you did the experiments, but not the reader.
+  \item In all of the cases where you cannot write “we”, I recommend
+    writing “I” instead. “I believe that this is a good approach” is a
+    clear statement with which one may or may not agree, but it is
+    correct and perhaps even bold. “I did the following three
+    experiments” is a simple factual statement and there is no reason
+    not to write it.
+
+    Some students (and even professors) fear that too many “I” in the
+    text make the text look narcissistic and there is a certain truth
+    to this. Try to use “I” mainly in the part “Contributions of this
+    Thesis”, where it is your job anyway to make clear what \emph{you}
+    did. In other parts, you can often rephrase things slightly:
+    Instead of “I did three experiments to test whether pigs can fly”
+    you can also write “for this thesis, three experiments were done
+    to test whether pigs can fly“ or “pigs cannot fly according to the
+    three experiments done in the context of this thesis” or “the
+    three pig-flight experiments of this thesis show that pigs do not
+    fly” or one of many other variations.
+
+    However, I recommend that you do \emph{not} write “The author of
+    this thesis has done three experiments” since addressing yourself
+    as a third person is bad style in my opinion. Also, I think it
+    would be really cool to read “I did three experiments to test
+    whether pigs can fly” in a future thesis\dots\footnote{Assuming
+      the ethics committee approved the experiment.}
+  \end{itemize}
+\end{answer}
+
+
+\section{Q\&A: How to Write Mathematical Text}
+
+Writing mathematical text is, unfortunately, as tricky as writing
+normal text: There is the mathematical \emph{language,} the way
+mathematicians phrase things, but there is also the problem of
+typesetting mathematical text and of getting all the symbols
+right. Mastering both -- the phrasing and the typesetting -- is not
+easy and cannot be fully explained in a few paragraphs. But I can, as
+always, give you some hints to get you started.
+
+\begin{question}
+  For mathematical text, should I use as many formulas and symbols as
+  possible? Or should I perhaps try to phrase everything while using
+  as little symbols as possible? Does this matter?
+\end{question}
+
+\begin{answer}
+  There is no “right” amount of mathematical formalism: It really
+  depends on what you describe. Beginners tend to use too much
+  formalism and tend to write things like “Assuming that $A \cap B =
+  \emptyset$, then\dots” instead of “If $A$ and $B$ are disjoint,
+  then\dots”, but sometimes lengthy explanations are much easier to
+  phrase using symbols: Instead of “Let $x$ be the limit for $n$ going
+  to infinity of the series whose $n$th element is $e^{-n}n^2$” write
+  “Let $x = \lim_{n\to \infty} e^{-n}n^2$”. The only general rules you
+  should be aware of are:
+  \begin{itemize}
+  \item Every text in mathematical mode (anything surrounded by |$|'s %$
+    in \TeX) should be a self-contained formula. Never write “let $n$ be
+    $x+$ two divided by $4$”. Write “let $n = (x+2)/4$” or “let $n$ be
+    $(x+2)/4$” or “let $n$ be $x$ plus $2$ and then divided by $4$”
+    (although this is too lengthy).
+  \item Every mathematical text \emph{must} be in mathematical
+    mode. For instance, do not write “|Let n be an integer.|”, but
+    “|Let $n$ be an integer.|”.
+  \item Read the book \foreignlanguage{german}{\citetitle{Beutelspacher2009}} by
+    \textcite{Beutelspacher2009}. 
+  \end{itemize}
+\end{answer}
+
+
+\begin{question}\label{qu-math-env}
+  There are so many environments in \TeX\ for mathematical text! Which
+  one should I use?
+\end{question}
+
+\begin{answer}
+  There are many possible environments for displaying mathematical 
+  text (like |{array}|, |{align}|, |{equation}| and more) on a separate
+  line. I recommend always using |{align*}| and to use |{align}|
+  (the numbered version) when a numbering is really essential. Use
+  other environments only when |{align}| lacks a specific feature.
+  Most of the time, however, you should just inline the mathematical
+  text using~|$|'s. %$
+\end{answer}
+
+
+\begin{question}\label{qu-math-font}
+  Which font should I use for my special mathematical object?
+\end{question}
+
+\begin{answer}
+  The rule is that \emph{anything variable} should be in italics,
+  while everything \emph{constant and fixed} should be upright. For
+  instance, in “$\sin^2 x + \cos^2 x = 1$” the text “sin” is upright
+  since there is “only one sine function” and also the numbers $2$ and
+  $1$ as well as the plus sign and the equality sign are all
+  upright. In contrast, $x$ is in italics since this variable can
+  represent an arbitrary (variable) number.
+
+  Most of the time, \TeX\ will get these things right automatically,
+  but there are cases where you may need to help:
+  \begin{itemize}
+  \item A simple uppercase letter is interpreted as a variable, which
+    is not correct, when the letter is actually part of a name. For
+    instance, if you write |$P = NP$| then \TeX\ thinks “the user
+    wants me to typeset that the variable $P$ equals $N$ multiplied
+    by~$P$; so I will typeset $P$ and $N$ in italics and maybe add a
+    bit of space between $N$ and $P$”, resulting in “$P=NP$”. What was
+    actually meant was “the complexity class $\mathrm P$ equals the complexity
+    class $\mathrm{NP}$” and should have looked like this: “$\mathrm P
+    = \mathrm{NP}$”. The trick is to use the |\mathrm| command, which
+    tells \TeX\ to typeset something in an upright font:
+    \begin{Latex}
+$\mathrm{P} = \mathrm{NP}$
+    \end{Latex}
+  \item In addition to |\mathrm| there is also |\mathit|, which is
+    needed for longer variable names in some fonts: Suppose you have a
+    variable called “fit”. Now, with the Computer Modern fonts, just
+    writing |$fit=1$| makes \TeX\ think “the
+    users wants me to typeset $f$ times $i$ times $t$ equals $1$, so I
+    better add a bit of space between all the letters”. However, this
+    is just \emph{one} name, so we must actually write
+    |$\mathit{fit}=1$| to get “$\mathit{fit}=1$”. 
+  \end{itemize}
+\end{answer}
+
+
+\section{Q\&A: Language and Spelling}
+
+\begin{question}
+  Should I write my thesis in English or in German?
+\end{question}
+
+\begin{answer}
+  If you are a German speaker, write your thesis in English
+  \emph{only} if your English is pretty good. Students sometimes tell
+  me they want to write their thesis in English “in order to
+  practice”. While this seems like a good reason, it is actually a bad
+  idea: Remember the introductory story from the beginning of the
+  chapter? A thesis written in very bad English is a pain to read --
+  and you do not wish to pain the person who grades it.
+
+  There is no reason to write a thesis in English unless you have a
+  good command of the language. If you wish to learn English, go take
+  a course, take a vacation in London or write a shorter paper
+  together with someone who \emph{is} good at English.
+
+  (You should, of course, always try to improve your English whenever 
+  possible since it is the language of science. But you should
+  \emph{not} try to turn your adviser into a language coach.)
+\end{answer}
+
+
+\begin{question}
+  How do I avoid spelling mistakes?
+\end{question}
+
+\begin{answer}
+  Well, use a spell checker. Quite frankly, when I get a thesis with
+  several spelling mistakes that any spell checker would have caught,
+  my pulse actually rises as I think “why the $\langle$beep$\rangle$
+  do I have to read this $\langle$beep$\rangle$ where the author could
+  not be $\langle$beep$\rangle$ bothered to run a spell checker just
+  once?” You will \emph{really} annoy your reviewers with obvious
+  mistakes.
+
+  However, in addition to the mistakes that any spell checker will
+  catch, there are of course many grammatical mistakes that one can
+  make. In English texts, the problem is typically the word order that 
+  Germans get wrong; in German texts, students like to add and remove
+  commas at random places throughout the text. Well, there a rules for
+  all of this. If you could not be bothered in school to learn them,
+  learn them now -- there is no time like the present. You \emph{must}
+  follow them.
+
+  Of course, most of the time students do not make grammatical
+  mistakes because they simply do not know where the comma should go,
+  but because they just make a mistake and do not catch it later
+  on. The trick is to \emph{read, re-read and re-re-read} the text as
+  often as necessary until almost all mistakes are gone.
+
+  It helps to read the text slowly.
+
+  It helps to have someone else read the text.
+
+  It helps to read the text backwards (yes, really: you cannot read
+  quickly in this case).
+
+  Whatever you do, a well-written text should not have more than one
+  spelling mistake every few \emph{pages} -- and not one every few
+  \emph{lines} let alone one every few \emph{words}.
+\end{answer}
+
+
+\begin{question}\label{qu-titles}
+  In English titles most words seem to start with an uppercase
+  letter. Is this normal?
+\end{question}
+
+\begin{answer}
+  In English, it is customary to spell (almost) all words with
+  uppercase letters in titles including chapter and section
+  titles. So, the title of the first section of this text is
+  ``Contributions of this Thesis'' rather than ``Contributions of this
+  thesis''. However, as can be seen, some words like “of” or
+  ``this'' are not capitalized: Usually, conjunctions and prepositions
+  are not capitalized. To a certain degree, you can choose, how many
+  words you capitalize: some people capitalize everything with the sole
+  exceptions of ``a'', ``an'' and ``the'', other people do not to
+  capitalize at all, but this is unusual. Whatever ``amount of
+  capitalization'' you choose, stick with it! It is plain \emph{wrong}
+  to write ``Contributions of this Thesis'' and then ``Structure of This
+  Thesis''. 
+\end{answer}
+
+
+\begin{question}
+  Do I have to also capitalize words in titles in German?
+\end{question}
+
+\begin{answer}
+  In German you have to capitalize according to the German spelling
+  rules. So, you would write ``\foreignlanguage{german}{Untersuchungen
+    zum genetischen Code}'' and not
+  ``\foreignlanguage{german}{Untersuchungen zum Genetischen Code}'',
+  which would be plain wrong -- even in the title of the thesis. 
+\end{answer}
+
+
+
+\begin{question}\label{qu-quotation-marks}
+  Which quotation marks should I use? And how do I enter them?
+\end{question}
+
+\begin{answer}
+  Getting quotation marks right used to be somewhat complex in \LaTeX;
+  these days the main problem is to know which one are the right
+  ones:
+
+  \tikzset{ex/.style={scale=2,inner sep=0pt}}
+  \medskip
+  
+  \begin{tabular}{llcc}
+    \uzlhline
+    \uzlemph{Language} & \uzlemph{Example} &
+    \uzlemph{“Opening Form”} & \uzlemph{“Closing Form”} \\
+    \uzlhline
+    American English & “Example” & 66 & 99 \\ 
+    British English & ‘Example’ & 6 & 9\\ 
+    German first alternative & „Beispiel“ & 99 & 66 \\ 
+    German second alternative & »Beispiel« & »  & « \\
+    \uzlhline
+  \end{tabular}
+
+  Anything else is just wrong.
+
+  I strongly recommend that you find out how you can directly enter
+  the Unicode characters for the quotation marks of your choice and
+  directly enter them in the text.
+\end{answer}
+
+
+\section{Q\&A: Creating Figures and Tables}
+
+\begin{question}
+  How many figures should my thesis have?
+\end{question}
+
+\begin{answer}
+  I once knew a person who complained to me that in her PhD thesis on
+  analytic \emph{geometry} she did not have a single graphic. The
+  reason was that all of her thesis was about infinite dimensional
+  spaces and these are a bit hard to visualize in two dimensions.
+
+  A thesis can have anything between zero and dozens of
+  figures. However, make sure that “each figure counts”: Readers pay
+  special attention to figures and if they do not understand them or
+  cannot read them clearly, they will be much more annoyed than by a
+  poorly phrased paragraph. It also takes rather a lot of time and
+  energy to create a good figure, so think twice before adding a
+  figure. Finally, too many figures tend to create the impression that
+  one is not reading a thesis, but a manual (or, worse, is looking at
+  a picture book): If you have a lot of 
+  figures, it may be better to leave some of them out and to
+  concentrate on the really important ones that best convey the main
+  message. 
+\end{answer}
+
+\begin{question}
+  What program should I use for creating graphics?
+\end{question}
+
+\begin{answer}
+  I recommend not to use a separate program, but to use Ti\emph kZ and to
+  create the graphics right inside the \LaTeX\ manuscript, see
+  Section~\vref{section-tikz}. But this 
+  recommendation may be slightly biased (I programmed Ti\emph kZ\dots). 
+\end{answer}
+
+\begin{question}\label{qu-scaling}
+  Thanks for Ti\emph kZ, but I still wish to include graphics that I
+  produce with my favorite drawing program. Surely, this is no problem?
+\end{question}
+
+\begin{answer}
+  Technically, it is no problem to include \textsc{pdf}, \textsc{jpg}
+  or \textsc{png} files, see Section~\vref{section-external}. However,
+  there is one \emph{big danger: Scaling!} Scaling can be evil for two
+  reasons:
+  \begin{itemize}
+  \item
+    Scaling changes not only the size of a graphic, but also the line
+    widths. If you scale down a vector graphic by a factor of ten to
+    fit it into your thesis, all lines will be so thin that they are
+    almost invisible. The other way round, if you magnify a graphic
+    using scaling, the lines may become so thick that they look almost
+    comical.
+  \item
+    Scaling does even worse things with font sizes. The correct font
+    size for use in figures in a thesis is 10pt. Good luck getting
+    this font size correct when including an external graphic -- text
+    in graphics will almost always be way too small or way too
+    large. Unintelligibly small text \emph{really} annoys reviewers
+    and we see it all the time in tables. Too big text makes the
+    thesis look like a child's book. You do not want your thesis to
+    look like a child's book.
+  \end{itemize}
+  Apart from making it hard to get the font sizes right, getting the
+  fonts \emph{themselves} right is even harder. Good luck creating a
+  graphic with the correct mathematical symbols from the Alegrya font
+  used in it.
+
+  Ideally, only include external pictures and create graphics with
+  text in them  using Ti\emph kZ. If this is not an option, try to
+  setup things so that no scaling is done and that the font size is
+  10pt and the normal line width is 0.4pt to 0.6pt.
+\end{answer}
+
+
+\begin{question}\label{qu-captions}
+  How long should captions (for figures, tables, graphics, etc.)\ be?
+\end{question}
+
+\begin{answer}
+  I recommend using \emph{very long captions} (up to five lines) with
+  figures and tables. The reason is that people look at figures and
+  tables before they look at the main text. Figures
+  should be ``understandable all by themselves'' and the caption has the
+  job of ensuring this. In other words, make figures ``as independent
+  of the main text as possible.'' Naturally, you should still
+  reference all figures in the text; \emph{never} add a figure that is
+  not mentioned in the text. 
+
+  The caption of Figure~\vref{fig-ode1} demonstrates the problem
+  with a short caption: Most readers will have no idea what this is
+  about. A much better caption is the one of Figure~\vref{fig-ode2}.
+\end{answer}
+
+\begin{figure}[htbp]
+
+  \centerline{\textcolor{black!20}{\vrule width3cm height 3cm}}
+
+  \caption{The depicted square is intended as an ``ode'' (that is, as
+    a praising and -- in this case -- slightly ironic reference) to
+    the famous painting \emph{Black 
+      Square} by Kasimir Malewitsch from 1915, which depicts a black
+    square. The above square is clearly not black, but just gray, and
+    is hence intended as a whimsical reference.}
+  \label{fig-ode2}
+
+\end{figure}
+
+
+
+\section{Q\&A: How to Cite and What to Cite}
+
+
+Several well-known politicians recently lost their jobs because of
+some missing or incorrect citations in their PhD theses. Clearly,
+getting these citations right must be something important. Well, there
+is a very simple basic rule that the politicians violated: For every
+word of the text, it must be \emph{crystal-clear who had the idea for that
+  word.} There is nothing wrong, at all, with citing even a whole page
+from another paper -- as long as it is clear that this is text from
+another paper! 
+
+\begin{question}
+  When and where do I have to add citations?
+\end{question}
+
+\begin{answer}
+  In accordance with the basic rule (“for each word of the thesis it
+  must be crystal-clear who had the idea for that word“) whenever an
+  idea or a concept is from someone else, a citation is added. You add
+  these citations next to the point of the idea or the text using the
+  |\cite| command or related commands such as for instance
+  |\citeauthor|, see the \cite{biblatex} manual for more details.
+\end{answer}
+
+\begin{question}
+  Where can I get bibliography records (the Bib\TeX\ entries)?
+\end{question}
+
+\begin{answer}
+  Many servers allow you to download Bib\TeX\ records for books and
+  articles, but \emph{be warned that these very often have very poor
+    quality.} You \emph{must} go over them by hand and often you will
+  have to correct them. Ask your adviser if you are unsure. 
+\end{answer}
+
+
+\begin{question}
+  How many entries should there be in the bibliography?
+\end{question}
+
+\begin{answer}
+  There are no lower or upper bounds, but reviewers use the entries in
+  the bibliography\footnote{Depending on the design used to typeset
+    this text, the word \emph{bibliography} gets hyphenated here in a
+    very strange way: bib-li-og-ra-phy. It turns out, this is the
+    correct English hyphenation, which I find weird since the word is
+    clear composed of \emph{biblio} (book) and \emph{graphy}
+    (writing). Luckily, \TeX's 
+    hyphenation rules are pretty good and get this right.} as a
+  measure of how much literature research has 
+  been done. If there are only one or two (or even zero) scientific
+  articles, one old textbook and a lot of web pages that are cited, I
+  would seriously doubt that a lot (or, for that 
+  matter, \emph{any}) literature research has been done. On the
+  other hand, if there is an endless list of entries in the
+  bibliography, only very seldom did the student actually read all of
+  these papers -- more likely, most entries in the list have just been
+  copied from somewhere else without the student's actually having
+  looked into them. 
+
+  The bottom line is that you should do a solid literature research
+  (you should spend \emph{at least} two \emph{weeks} on
+  that!) and then cite the five to fifteen papers and books that are
+  really relevant and that you have actually read.
+\end{answer}
+
+
+\begin{question}
+  Do I have to read all papers that I cite?
+\end{question}
+
+\begin{answer}
+  Yes, you do -- perhaps not completely, but you must read the part of
+  the text to which you refer in your citation. Resist the temptation
+  to just copy citations from other papers.
+\end{answer}
+
+
+\begin{question}
+  Can I cite Wikipedia? 
+\end{question}
+
+\begin{answer}
+  Yes, you can, but only if there is not a better scientific source
+  available. For example, if you wish to cite the notion of a
+  “Turing machine”, you should not point the reader to the
+  corresponding article in Wikipedia, but to an article in a standard
+  textbook on theoretical computer science. 
+\end{answer}
+
+
+
+\chapter{Conclusion}
+% In a German thesis write: \subsection{Zusammenfassung und Ausblick}
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace the following with your conclusion
+
+
+
+This template document got much longer than I had initially intended
+with more and more hints and comments becoming part of the text. The
+reason is, of course, that writing a thesis is not easy since there
+are a \emph{lot} of things to consider. However, you have six months
+to write your thesis, so you stand a decent chance to get most things 
+right.
+
+Do some great scientific research now and report on it in a thesis
+that is a pleasure to read. 
+
+
+
+
+% Normally, the bibliography comes next at this point. Do *not* (try
+% to) include further indices and tables like an index or
+% a list of figures or a list of tables or such things. Nobody
+% actually uses them and they just use up space. 
+%
+% You *can* however include a glossary, if this seems appropriate. It
+% goes here as an unnumbered chapter. Most thesis will *not* need a
+% glossary: a well-written text (re)explains strange words and
+% concepts as necessary. However, there are situations where a
+% glossary may be helpful.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%
+% 
+% Bibliographies
+%
+%%%
+%
+% The uzl-thesis class will load biblatex for the bibliography
+% management. This is a powerful package, see its documentation for
+% details. The styles will be setup correctly and automatically by
+% choosing one of the two style keys as described earlier.
+%
+% In order for the bibliography to work, run latex in the following
+% order (which is the standard order):
+% 
+% > lualatex thesis-example
+% > bibtex thesis-example
+% > lualatex thesis-example
+% 
+% Add BibTeX files using \addbibresource or use the {bibtex entries}
+% environment (see below).
+%
+%%%
+%
+% Although everyting is normally setup automatically, you can change
+% the options passed to biblatex using the key 'biblatex';
+% for instance,
+%
+%   \UzLThesisSetup{biblatex={firstinits=false}}
+%
+% will switch off shortened first names. Normally, you will not need
+% this key in your preamble. 
+% 
+% Note that the bibtex program is used as the 'backend' of biblatex
+% by default (rather than biber, which is the preferred program of
+% biblatex). This means that you can (and must) run *bibtex* after you
+% have run lualatex on your thesis. If you wish to use biber instead
+% of bibtex, say 'biblatex={backend=biber}'. 
+% 
+%%%
+%
+% The following environment is optional. It allows you to keep the
+% bibtex entries for your thesis right here in the thesis file. What
+% happens is that each time this tex file is processed, the contents
+% of the following environment gets written to the file
+% \jobname-bibtex-entries.bib (this file gets overwritten each
+% time). Independently, \addbibresource{\jobname-bibtex-entries.bib}
+% is always called if the file \jobname-bibtex-entries.bib
+% exists. 
+%
+% In result, you can edit and keep the bibliography's bibtex entries
+% right here. If you change something here, run latex, then bibtex,
+% then latex once more.
+%
+% If you would like to manage the bibtex entries in a separate file,
+% remove the below environment, delete the \jobname-bibtex-entries.bib
+% file and instead write
+%
+% \addbibresource{filename-of-your-bibtex-file.bib}
+%
+% in the preamble.
+%
+%%%
+
+
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% !!! Your action is needed here !!!
+% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%
+% Replace following example entries with the ones of your thesis.
+
+\begin{bibtex-entries}
+
+@Book{Knuth1986,
+  author =       {Donald Erwin Knuth},
+  title =        {The \TeX book},
+  publisher =    {Addison-Wesley},
+  year =         {1986},
+}
+
+@Book{Lamport1994,
+  author =       {Leslie Lamport},
+  title =        {\LaTeX: A Document Preparation System},
+  publisher =    {Addison-Wesley},
+  edition =      {Second edition},
+  year =         {1994},
+}
+
+@TechReport{Kernighan1974,
+  author =       {Brian Kernighan},
+  title =        {Programming in C – A Tutorial},
+  institution =  {Bell Laboratories},
+  year =         {1974}
+}
+
+@Manual{Tantau2019,
+  author =       {Till Tantau},
+  title =        {The Ti\emph kZ and PGF Packages: Manual for version 3.1.3},
+  institution =  {Institut für Theoretische Informatik, Universität zu Lübeck},
+  year =         {2019},
+  url =          {https://github.com/pgf-tikz/pgf}
+}
+
+@Book{Alley1996,
+  author =       {Michael Alley},
+  title =        {The Craft of Scientific Writing},
+  publisher =    {Springer},
+  year =         {1996},
+  edition =      {Third Edition},
+}
+
+@Book{DowneyF13,
+  author =       {R. G. Downey and M. R. Fellows},
+  title =        {Fundamentals of Parameterized Complexity},
+  series =       {Texts in Computer Science},
+  publisher =    {Springer},
+  year =         2013,
+  doi =          {10.1007/978-1-4471-5559-1},
+}
+
+@Manual{biblatex,
+  title =        {The \textsc{BibLaTeX} package},
+  subtitle =     {Sophisticated Bibliographies in \LaTeX},
+  author =       {Kime, Philip and Lehman, Philipp},
+  url =          {https://github.com/plk/biblatex},
+  urldate =      {2019-06-11},
+  date =         {2018-10-30},
+  version =      {3.12}
+}
+
+@Manual{varioref,
+  title =        {The \textsc{varioref} package},
+  subtitle =     {Intelligent page references},
+  author =       {Mittelbach, Frank},
+  url =          {http://www.ctan.org/pkg/varioref},
+  urldate =      {2019-06-11},
+  date =         {2016-02-16},
+  version =      {1.5c}
+}
+
+@Manual{hyperref,
+  title =        {The \textsc{hyperref} package},
+  subtitle =     {Extensive support for hypertext in \LaTeX},
+  author =       {Rahtz, Sebastian and Oberdiek, Heiko},
+  url =          {https://github.com/ho-tex/hyperref},
+  urldate =      {2019-06-11},
+  date =         {2018-11-30},
+  version =      {6.88e}
+}
+
+@Manual{babel,
+  title =        {The \textsc{babel} package},
+  subtitle =     {Multilingual support for Plain \TeX\ or \LaTeX},
+  author =       {Braams, Johannes L. and Bezos López, Javier},
+  url =          {http://www.ctan.org/pkg/babel},
+  urldate =      {2019-06-11},
+  date =         {2019-06-03},
+  version =      {3.32}
+}
+
+@Manual{fontspec,
+  title =        {The \textsc{fontspec} package},
+  subtitle =     {Advanced font selection in Xe\LaTeX\ and Lua\LaTeX},
+  author =       {Robertson, Will},
+  url =          {http://www.ctan.org/pkg/fontspec},
+  urldate =      {2019-06-11},
+  version =      {2.7c}
+}
+
+@Manual{url,
+  title =        {The \textsc{url} package},
+  subtitle =     {Verbatim with \textsc{url}-sensitive line breaks},
+  author =       {Arseneau, Donald},
+  url =          {http://www.ctan.org/pkg/url},
+  urldate =      {2019-06-11},
+  date =         {2013-09-16},
+  version =      {3.4}
+}
+
+@Manual{amsmath,
+  title =        {The \textsc{amsmath} package},
+  subtitle =     {\AmS\ mathematical facilities for \LaTeX},
+  author =       {{The \LaTeX\ Team}},
+  url =          {http://www.ams.org/tex/amslatex.html},
+  urldate =      {2019-06-11}, 
+  date =         {2017-09-02},
+  version =      {2.17a}
+}
+
+@Book{Beutelspacher2009,
+  title =        {„Das ist o.\,B.\,d.\,A.\ trivial!“: Tipps und Tricks zur
+                  Formulierung mathematischer Gedanken (Mathematik für
+                  Studienanfänger)},
+  author =       {Albrecht Beutelspacher},
+  year =         {2009},
+  edition =      {Ninth, updated edition},
+  publisher =    {Vieweg+Teubner Verlag},
+  doi =          {10.1007/978-3-8348-9075-7},
+}
+
+\end{bibtex-entries}
+
+
+
+% If you need to have an appendix (I advise against it), insert it
+% here using, first, \appendix and then \chapter and then,
+% possibly, \section. 
+%
+% \appendix
+%
+% \chapter{Technical Appendix}
+%
+% \section{Experimental Parameters} % possibly
+%
+% Again, I advise against using an appendix.
+
+
+\end{document}
+
+%  LocalWords:  LaTeX tex moretexcs Lübeck pdf uzl lualatex bibtex th
+%  LocalWords:  TechReport Kernighan Lamport's Tantau's Tantau cls kZ
+%  LocalWords:  Mustermann emacs oldschool pdflatex texmf utf biber
+%  LocalWords:  biblatex Alphabetische Bibliographie Numerische VIIa
+%  LocalWords:  varioref german Einleitung Beiträge dieser Arbeit xml
+%  LocalWords:  Ergebnisse Verwandte Arbeiten Aufbau nucleotide VIIc
+%  LocalWords:  ensembl amino phylogenetic Alexa Siri decrypt versa
+%  LocalWords:  cryptographic pre nondeterministic deterministically
+%  LocalWords:  Beutelspacher Untersuchungen zum genetischen sep llcc
+%  LocalWords:  Beispiel tikz jpg png Alegrya Kasimir Malewitsch PGF
+%  LocalWords:  Lamport Institut für Theoretische Informatik zu url
+%  LocalWords:  Universität Springer DowneyF Downey Parameterized doi
+%  LocalWords:  BibLaTeX Kime Philipp urldate Mittelbach hyperref Lua
+%  LocalWords:  Rahtz Oberdiek Heiko Braams Bezos López fontspec Das
+%  LocalWords:  Arseneau amsmath ist Tipps und zur Formulierung
+%  LocalWords:  mathematischer Gedanken Mathematik Studienanfänger
+%  LocalWords:  Albrecht Vieweg Teubner Verlag
