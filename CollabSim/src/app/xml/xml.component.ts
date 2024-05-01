@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, ElementRef, ViewChild } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
 import { WebSocketService } from "../web-socket.service";
 import * as ace from "ace-builds";

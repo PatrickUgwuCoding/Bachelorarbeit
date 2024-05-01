@@ -1,19 +1,8 @@
-body {
-    background-color: darkolivegreen;
-}
-
-.ace-xml {
+.ace-cpp {
     width: 80%; 
     height: 85%;
     position: absolute; 
     top: 8%;
-}
-
-
-ul {
-    position: absolute;
-    bottom: 5%;
-    right: 2%;
 }
 
 button {
@@ -24,5 +13,8 @@ button {
     font-weight: 700;
 }
 
-
-
+ul {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
