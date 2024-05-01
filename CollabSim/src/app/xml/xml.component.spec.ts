@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { XMLComponent } from './xml.component';
+import { XmlComponent } from './xml.component';
 
-describe('XMLComponent', () => {
-  let component: XMLComponent;
-  let fixture: ComponentFixture<XMLComponent>;
+describe('XmlComponent', () => {
+  let component: XmlComponent;
+  let fixture: ComponentFixture<XmlComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [XMLComponent]
+      imports: [XmlComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(XMLComponent);
+    fixture = TestBed.createComponent(XmlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

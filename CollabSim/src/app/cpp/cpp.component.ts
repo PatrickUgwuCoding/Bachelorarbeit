@@ -1,5 +1,5 @@
 import { Component, ElementRef,ViewChild, AfterViewInit } from '@angular/core';
-import { WebSocketService } from '../web-socket.service';
+import { WebSocketService } from '../websocket.service';
 import * as ace from "ace-builds";
 import { Router, RouterLink,RouterLinkActive,RouterOutlet } from "@angular/router";
 import { FormsModule } from '@angular/forms';

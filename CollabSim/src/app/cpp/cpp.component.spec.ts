@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CPPComponent } from './cpp.component';
+import { CppComponent } from './cpp.component';
 
-describe('CPPComponent', () => {
-  let component: CPPComponent;
-  let fixture: ComponentFixture<CPPComponent>;
+describe('CppComponent', () => {
+  let component: CppComponent;
+  let fixture: ComponentFixture<CppComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CPPComponent]
+      imports: [CppComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CPPComponent);
+    fixture = TestBed.createComponent(CppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
