@@ -1,0 +1,28 @@
+body {
+    background-color: darkolivegreen;
+}
+
+.ace-xml {
+    width: 80%; 
+    height: 85%;
+    position: absolute; 
+    top: 8%;
+}
+
+
+ul {
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    font-style: inherit;
+    font-weight: 700;
+}
+
+
+
