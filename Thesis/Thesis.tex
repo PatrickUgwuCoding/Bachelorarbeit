@@ -352,8 +352,7 @@
 % Replace with your own introduction:
 
 
-   
-1. **Einleitung (ca. 10%):**
+
 
   - Einführung in das Thema der Schwarmrobotik und die Bedeutung von Simulationen
       
@@ -370,7 +369,36 @@
         variationen beim testen, mit verschiedenster hardware  
         quellen erwähnen [],[],...
 
+    
+      collab überall, im herz der forschung + nutzer? 
+      Kurze Erklärung der Bedeutung von kollaborativem Arbeiten und herkömmlichen Simulatoren in diesem Kontext
+        keine collab sim gefunden, nicht untersucht
+      collab besoonders relevant für schwärme?
 
+
+
+      \begin{Code}
+
+      Warum dieses thema? + problem/frage?:
+      schwarm bietet sich für collab an  (old papers [?], schhwierigkeiten der HCI -> control of swarm)
+      warum ist/könnte kollab in robosim nützlich sein -> kollab vorteile
+
+      relevanz:
+      trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
+      pros von sim: ..
+      stand der Simulatoren : nicht effizent + flexibel, keine collab
+
+      [3,9,..]
+
+      was will ich lösen/zeigen?
+      tool to combine collab, flex and effi:
+      argos bringt flex und effi,
+      ich bringe collab
+
+      hilft colllab?
+
+
+      \end{Code}
 
       
 
@@ -382,7 +410,7 @@
 
 
 
-\section{Motivation}
+%\section{Motivation}
 
 
 %\begin{description}
@@ -407,35 +435,6 @@
 %[3,9]
 
 
-collab überall, im herz der forschung + nutzer? 
-      Kurze Erklärung der Bedeutung von kollaborativem Arbeiten und herkömmlichen Simulatoren in diesem Kontext
-        keine collab sim gefunden, nicht untersucht
-      collab besoonders relevant für schwärme?
-
-
-
-\begin{Code}
-  
-   Warum dieses thema? + problem/frage?:
-    schwarm bietet sich für collab an  (old papers [?], schhwierigkeiten der HCI -> control of swarm)
-    warum ist/könnte kollab in robosim nützlich sein -> kollab vorteile
-  
-  relevanz:
-    trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
-    pros von sim: ..
-    stand der Simulatoren : nicht effizent + flexibel, keine collab
-    
-    [3,9,..]
-  
-  was will ich lösen/zeigen?
-    tool to combine collab, flex and effi:
-      argos bringt flex und effi,
-      ich bringe collab
-
-    hilft colllab?
-
-  
-\end{Code}
 
 
   
@@ -488,21 +487,40 @@ eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemei
 % other people, you should explain in detail that this is the case and
 % why it is the case. 
 
-2. **Grundlagen der Schwarmrobotik und Simulation (ca. 20%):**
+Grundlagen der Schwarmrobotik und Simulation 
 
 - Zusammenfassung der relevanten Literatur und früheren Arbeiten zum Thema
-beset of [1-..18?]
-[2]: jmeSim: An Open Source, Multi Platform Robotics Simulator (2012)
-essential sim qualities(ideal sim)
-	accurate physics
-	high quality rendering
-	open source
-	multi platform
-	easy with ros
-	=> none archieves them all => jmeSIm
 
-bedeutung von sim in robo
-	computer simulation hat sich bewiesen, anhand
+collab trend[7]
+    The growing trend towards tools that enable collaboration [andere quellen]
+    
+    Since around 2005, interest in collaborative editors has again increased sharply with the advent of Web 2.0, and the first web-based tools appeared (e.g., Wikis and Blogs). Collaborative solutions that allowed shared editing in real-time and were based on web technologies gradually became widespread. Such tools gained a lot of popularity as many of them were free to use
+    
+    is a broad field of research
+    is a hot topic in research and in practice
+
+    bedeutung von robos:[3]
+		
+		prob:Modern farms are expected to produce more yields with higher quality at lower expenses in a sustainable way that is less dependent on the labor force. Implementation of digital farming and site-specific precision management are some of the possible responses to this expectation
+		
+		For example,  instantaneous yield monitoring and estimating the required time for harvesting operation is a labor intensive task, ignored, or is carried out manually
+		Currently, there are no reports of a commercial robotic platform that can simultaneously map the yield parameters on-the-go prior to harvesting
+		ecoming a critical problem with increasing the uncertainties about the future availability of the labor force that is willing to accept tedious jobs in the harsh greenhouse condition
+		manual data sampling implies high costs and low accuracy and is significantly influenced by the interpretation of the person involved
+		
+		lsg:The functionality of robots when combined with data processing, analyzing models, and artificial intelligence will assist farmers to manage their fields and plants more efficiently
+
+
+    [6]sim history:
+      its development has been tightly related to the developments in computing
+      The massification of personal computing during the 90s contributed to the development of several publicly available software tools for robotic manipulator 
+	modeling and simulation. Some of these tools included: XAnimate [8], the Robotics Toolbox for Matlab [9], and the Robotica package for Mathematica [10]. 
+      During the late 90s, the focus of attention shifted towards manipulation, grasping and mobile robots. 
+	This trend led to the development of GraspIt! [5], a simulator for robotic grasping, and numerous tools for simulating and interfacing with various mobile robot platforms. 
+	The list of programming libraries, simulation tools and packages can be quite long, however, among those open-source tools that have achieved some degree of sustained development it is 	possible to mention Carmen [14],ODE [19], OpenRave [22], OpenSim [23], the Player-Stage-Gazebo (PSG) project [16], UsarSim [25]. 
+
+  bedeutung von sim in robo:
+	[2]computer simulation hat sich bewiesen, anhand
 		besonders für mobile autonome robos (inkludiert schwarm)
 		1. robos sind zerbrechlich,potenziel gefährlich, schwer zu testen + entwickel (because of their complexity)
 		fähigkeit vorher software zu testen minimiert(mitigate) die gefahren und kosten
@@ -510,10 +528,8 @@ bedeutung von sim in robo
 			+ robots come from offsite, at large expense??
 		3. ability to test robotic software in situations that are not feasible to create in reality
 		4. ability to run hundreds or thousands of trials for the purposes of learning robot control algorithms, crucial if hand coding is difficult
-
-
-[6]: Introductory Survey to Open-Source Mobile Robot Simulation Software (2010)
-    bedeutung von sim in robo
+	
+	[6] bedeutung von sim in robo
       simulation has been important since the beginning of robotics,
       essential tool in teaching, research, and development  (mit extra quellen => proven)
       to design and test the feasibility of complex systems
@@ -528,53 +544,45 @@ bedeutung von sim in robo
       The role of simulation is also important as teaching and learning the fundamental physics and robotic fundermentals, very hard to grasp without actual experimentation and visualization. 
       
       can be costly => an excellent alternative of doing experiments and testing systems away from the dangers and unpredictability of the physical world.
+	
+      bedeutung von sim:[3]
+      prob:Improvement of robotics for agricultural application however requires experimenting, as well as evaluating, for finding the optimum solution. Experimenting with the physical robots and sensors in an actual field, is not always possible due to the time constraints, unavailability of equipment, and the operation costs
       
-    sim history
-      its development has been tightly related to the developments in computing
-      The massification of personal computing during the 90s contributed to the development of several publicly available software tools for robotic manipulator modeling and simulation. Some of these tools included: XAnimate [8], the Robotics Toolbox for Matlab [9], and the Robotica package for Mathematica [10]. 
-      During the late 90s, the focus of attention shifted towards manipulation, grasping and mobile robots. This trend led to the development of GraspIt! [5], a simulator for robotic grasping, and numerous tools for simulating and interfacing with various mobile robot platforms. The list of programming libraries, simulation tools and packages can be quite long, however, among those open-source tools that have achieved some degree of sustained development it is possible to mention Carmen [14],ODE [19], OpenRave [22], OpenSim [23], the Player-Stage-Gazebo (PSG) project [16], UsarSim [25]. 
-      
-    sim problems/challenges
-      Researchers, developers and educators have a hard time to decide which is the right tool for mobile robot simulation -> solved by surveys
-      some sim have this, some that -> impliziert das keiner alles hat
-      
-    modular and rel time architecture, relevant für mich?
-      In order to compare the different elements of simulation software it is fundamental to consider their underlying software architecture. In particular those aspects which allow the software to be modular and run in real-time
-    
-[10]: An Open Source Tool for Simulation and Supervision of Underwater Intervention Missions (2012)
-      UWSim filling a gap in the underwater domain (where commercial simulators oriented to ROV pilot training predominate)
-      
-      sim is huge here bc
+      lsg:To accelerate this pace, simulation methods can provide an affordable framework for experimenting with different sensing and acting mechanisms in order to verify the performance functionality of the robot in different scenarios
+  
+
+	[10]example?: sim is huge in [10]:
         Experimentation with underwater robots is normally very difficult due to the high number of resources required.
           A water tank –high enough for the systems to be tested– is normally needed, 
             which requires significant space and maintenance. 
           Another possibility is to access to open environments such as lakes or the sea, but this normally involves high costs and requires special logistics. 
           
           very difficult for researchers (operating in the surface) to observe the evolution of the running system
-          
-        daher brauch es sim, der:
-          (i) develop and test the systems before they are deployed, and 
-          (ii) supervise a real underwater task where the developers do not have a direct view of the system
-      bisher meist  projekt spezifisch, obsolet oder commercial
-      
-      fokus bei sim design auf: general, multi platform, realistic rendering, ros
-      
-mit Bezug auf ARGoS:
-[3]: Simulation software and virtual environments for acceleration of agricultural robotics: Features highlights and performance comparison
-[5]: ARGoS: a modular, parallel, multi-engine simulator for multi-robot systems
-[9]: Tools for simulating humanoid robot dynamics: a survey based on user feedback
-      
-über Collaborative Editing:
-[7]: Collaborative Editing in Web Applications
-[8]: The User-centred Iterative Design Of Collaborative Writing Software
-      
-Zusätzlich hier die drei Paper die ich letztens kurz gezeigt habe:
-[11]: Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements
-[12]: Achieving Convergence, Causality Preservation, and Intention Preservation in Real-Time Cooperative Editing Systems
-[13]: CollabAlly: Accessible Collaboration Awareness in Document Editing
-      
-von Javad: preprint…pdf, A survey and comparison of …..pdf
-      
+
+
+
+essential sim qualities(ideal sim)[2]:
+	accurate physics
+	high quality rendering
+	open source
+	multi platform
+	easy with ros
+
+
+  daher brauch es sim, der:[10]
+  (i) develop and test the systems before they are deployed, and 
+  (ii) supervise a real underwater task where the developers do not have a direct view of the system
+bisher meist  projekt spezifisch, obsolet oder commercial
+
+
+[6]sim problems/challenges:
+      Researchers, developers and educators have a hard time to decide which is the right tool for mobile robot simulation -> solved by surveys
+      some sim have this, some that -> impliziert das keiner alles hat
+
+
+
+
+
 
 
 - Identifizierung von Forschungslücken oder Diskussionen in der Literatur   
@@ -595,8 +603,6 @@ collab
     Vorteile: unbekannt, nicht untersucht ?
 
 
-related work
-
 \section{Aufbau dieser Arbeit}
 % In a German thesis write: \section{Aufbau dieser Arbeit}
 
@@ -611,11 +617,11 @@ related work
 structure 
 
 1 introduction
-(2 related work) in 1.??
-3. mein sim
-4. user test
-5. Ergebnisse + evaluation
-6 con
+2. mein sim
+3. user test
+4. Ergebnisse + evaluation
+5 con
+6 bibliography
 
 
 
