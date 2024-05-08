@@ -23,7 +23,9 @@ clientCount = 0
 var1 = 'vari'
 msg = 'mssi'
 aceT = "inital"
-aceC = ''
+
+with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file:    
+            aceC = file.read()
 
 with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file:    
     aceX = file.read()
@@ -191,13 +193,14 @@ def handle_disconnect():
     print('Client disconnected')
     socketio.emit('clientCount', clientCount)
     
-    # clear variables if all clients left (and not saved?)
+    # clear variables if all clients left 
     if (clientCount == 0):
         print("keine Clients anwesend")
         var1 = []
         msg = []
         aceT = []
-        aceC = []
+        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file:    
+            aceC = file.read()
         with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file:    
             aceX = file.read()
 
