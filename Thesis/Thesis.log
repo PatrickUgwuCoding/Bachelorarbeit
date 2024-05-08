@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10) (format=lualatex 2024.1.15)  2 MAY 2024 22:40
+This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10) (format=lualatex 2024.1.15)  8 MAY 2024 12:49
  restricted system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -2835,7 +2835,7 @@ Package biblatex Info: ... file 'Thesis.bbl' not found.
 No file Thesis.bbl.
 Package biblatex Info: Reference section=0 on input line 336.
 Package biblatex Info: Reference segment=0 on input line 336.
-<uzl-thesis-logo-itcs.pdf, id=54, 426.79149pt x 113.8112pt>
+<uzl-thesis-logo-itcs.pdf, id=62, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
 Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 336.
@@ -2859,7 +2859,7 @@ LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
 (Font)              scaled to size 10.77994pt on input line 336.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 336.
-<uzl-thesis-logo-slogan.pdf, id=55, 142.26349pt x 11.38112pt>
+<uzl-thesis-logo-slogan.pdf, id=63, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
 Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 336.
@@ -2902,89 +2902,112 @@ LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 Kapitel 1.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 (Font)              scaled to size 60.0pt on input line 344.
-
-Overfull \hbox (3.77989pt too wide) in paragraph at lines 366--371
-[]\TU/Alegreya(0)/m/n/12 be-deu-tung von Si-mu-la-to-ren (ge-ra-de in ro-bo, in 
-󰋇.)): preis er-spar-nis test-um-ge-bung(un-
- []
-
 LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
-(Font)              scaled to size 12.29993pt on input line 380.
+(Font)              scaled to size 12.29993pt on input line 395.
 LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
-(Font)              scaled to size 11.17242pt on input line 380.
+(Font)              scaled to size 11.17242pt on input line 395.
 [1
 
 
-]
-Overfull \hbox (7.61743pt too wide) in paragraph at lines 494--496
-[]\TU/Alegreya(0)/m/n/12 col-lab trend[󰋌] The gro-wing trend towards tools th
-at enable col-la-bo-ra-ti-on [Avi󰋇󰋆, Che󰋇󰋆,
- []
-
+] [2]
 ! Text line contains an invalid character.
-l.497 ... appeared (e.g., Wikis and Blogs). Collabo^^B
+l.536 ... appeared (e.g., Wikis and Blogs). Collabo^^B
                                                   rative solutions that allo...
 ? 
-[2] [3]
-Overfull \hbox (23.07274pt too wide) in paragraph at lines 601--604
+[3]
+Overfull \hbox (23.07274pt too wide) in paragraph at lines 571--576
 []\TU/Alegreya(0)/m/n/12 - Dis-kus-si-on über die Her-aus-for-de-run-gen und Vo
 r-tei-le von Si-mu-la-tio-nen in der Schwarm-
+ []
+
+
+Overfull \hbox (4.23988pt too wide) in paragraph at lines 571--576
+\TU/Alegreya(0)/m/n/12 blem-s/chal-lenges: Re-se-ar-chers, de-ve-lo-pers and edu
+-ca-tors have a hard time to de-ci-de which
  []
 
 [4]
 Kapitel 2.
 
-Overfull \hbox (5.3342pt too wide) in paragraph at lines 672--676
-[]\TU/Alegreya(0)/m/n/12 󰋊. **Dis-kus-si-on (ca. 󰋇󰋊- In-ter-pre-ta-ti-o
-n der Er-geb-nis-se im Hin-blick auf die For-schungs-
+Overfull \hbox (17.8471pt too wide) in paragraph at lines 635--639
+\TU/Alegreya(0)/m/n/12 THe web-ser-ver, wri-ten in py-thon, hand-les all cum-mu-
+ni-ca-ti-on bet-ween the Front-end, backend
  []
 
 [5
 
 ]
-Kapitel 3.
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 10.9pt on input line 727.
-[6
+LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
+(Font)              scaled to size 13.0pt on input line 642.
 
-] [7] [8] [9] [10]
-Kapitel 4.
-[11
+Overfull \hbox (0.37743pt too wide) in paragraph at lines 661--663
+\TU/Alegreya(0)/m/n/12 schnel-le kom-mu-ni-ka-ti-on zu er-mög-li-chen. an-de-re
+ kom-mu-ni-ka-ti-ons-ar-ten sind meist lang-
+ []
+
+[6] [7]
+Kapitel 3.
+
+Overfull \hbox (10.94466pt too wide) in paragraph at lines 736--741
+[]\TU/Alegreya(0)/m/n/12 pre How of-ten do you use com-pu-ters? How would you ra
+-te your know-la-ge about (swarm)
+ []
+
+[8
 
 ]
-Kapitel 5.
+Overfull \hbox (3.20482pt too wide) in paragraph at lines 788--795
+\TU/Alegreya(0)/m/n/12 which re-pre-sent a sub-jec-ti-ve as-sess-ment by the par
+-ti-ci-pan-ts and have an in-di-rect in-󰀎luence
+ []
 
-Overfull \hbox (16.01675pt too wide) in paragraph at lines 909--912
+[9]
+Kapitel 4.
+
+Overfull \hbox (5.98616pt too wide) in paragraph at lines 830--833
+\TU/Alegreya(0)/m/n/12 󰋋. **Schluss-fol-ge-rung und Aus-blick (ca. 󰋊-
+󰋆󰋅- Zu-sam-men-fas-sung der wich-tig-sten Er-kennt-
+ []
+
+
+Overfull \hbox (16.01675pt too wide) in paragraph at lines 844--847
 []\TU/Alegreya(0)/m/n/12 - Aus-blick auf po-ten-zi-el-le wei-te-re For-schungs-b
 e-rei-che und Anwendungsmöglichkeiten/-
  []
 
-[12
+[10
 
 ]
-Kapitel 6.
+Kapitel 5.
+
+Overfull \hbox (1.09679pt too wide) in paragraph at lines 880--881
+[]\TU/Alegreya(0)/m/n/12 ist ein tierkm-fekm󰀎kem-fekfmekfmekfmekgjeng-jnrg gn
+e jgn-en-ge ng-jeg-ne geg egen-
+ []
+
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 953.
-LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 959.
-LaTeX Font Info:    Calculating math sizes for size <10.9> on input line 982.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 11.99005pt on input line 982.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.39299pt on input line 982.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 5.99503pt on input line 982.
-[13
+(Font)              scaled to size 12.0pt on input line 888.
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
+(Font)              scaled to size 10.9pt on input line 898.
+[11
 
 ]
+LaTeX Font Info:    Calculating math sizes for size <10.9> on input line 917.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 11.99005pt on input line 917.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 8.39299pt on input line 917.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 5.99503pt on input line 917.
+
 
 LaTeX Info: File `Thesis-bibtex-entries.bib' already exists on the system.
             Not generating it from this source.
 
 
-LaTeX Warning: Empty bibliography on input line 1227.
+LaTeX Warning: Empty bibliography on input line 1162.
 
-[14] (./Thesis.aux)
+[12] (./Thesis.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -2999,26 +3022,24 @@ Package rerunfilecheck Warning: File `Thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: 61F5A926E8B14DF655909AE57E653985;1700
-(rerunfilecheck)             After:  DCE30CB6594E2A9E98C6D407808AB03F;1572.
+(rerunfilecheck)             Before: 576BB78E8F29D3E0AEF5C533054A9DD7;1952
+(rerunfilecheck)             After:  33063504A022EB0315F12C3D02971433;2374.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
 \openout1 = Thesis.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 42471 strings out of 477259
- 244186,2373549 words of node,token memory allocated
+ 42318 strings out of 477259
+ 125007,2373549 words of node,token memory allocated
  624 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 14 attribute, 69 glue_spec
 , 9 attribute_list, 2 write nodes
-   avail lists: 1:6,2:5521,3:270,4:1120,5:4968,6:85,7:11486,8:1,9:11338,10:15,11
-:1011
- 62600 multiletter control sequences out of 65536+600000
- 284 fonts using 86403695 bytes
+   avail lists: 1:3,2:1695,3:174,4:318,5:1602,6:48,7:8390,8:3,9:2994,10:14,11:99
+2
+ 62602 multiletter control sequences out of 65536+600000
+ 284 fonts using 86403239 bytes
  102i,10n,124p,1852b,2944s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-warning  (pdf backend): unreferenced destination with name 'section.1.4'
 <C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Ale
 greya-Bold.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/publ
 ic/lm/lmmono12-regular.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/o
@@ -3028,9 +3049,9 @@ pData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/AlegreyaSans-Bold.otf
 ><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Al
 egreyaSans-Italic.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/openty
 pe/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on Thesis.pdf (20 pages, 169293 bytes).
+Output written on Thesis.pdf (18 pages, 147558 bytes).
 
-PDF statistics: 403 PDF objects out of 1000 (max. 8388607)
- 219 named destinations out of 1000 (max. 131072)
- 112 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 245 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 131072)
+ 128 words of extra memory for PDF output out of 10000 (max. 100000000)
 
