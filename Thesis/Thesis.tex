@@ -350,104 +350,82 @@
 % !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %
 % Replace with your own introduction:
+(ca. 10%)
 
 
-   
-1. **Einleitung (ca. 10%):**
+
 
   - Einführung in das Thema der Schwarmrobotik und die Bedeutung von Simulationen
+zeitlich??
+include HRI?? collab besoonders relevant für schwärme?
+
+Kollaboration ist seit vielen ..
+collab überall, im herz der forschung + nutzer
+auch im kontext schwarm?
+Robotik ..
+Schwarmrobotik ..
+  - Überblick über die Grundkonzepte der Schwarmrobotik und deren Anwendungen
+  bedeutung von robos:[3](anhand von beispiel)
       
-      schwarmrobotik (und HRI?)
-        kurze Erklärung
-          was versteht man unter: (schwarm)Robotik, Schwarm, collab,.... kurz!
-          siehe ba preprint..
-        brücke zu simulatoren
+  prob:Modern farms are expected to produce more yields with higher quality at lower expenses in a sustainable way that is less dependent on the labor force. Implementation of digital farming and site-specific precision management are some of the possible responses to this expectation
+
+  For example,  instantaneous yield monitoring and estimating the required time for harvesting operation is a labor intensive task, ignored, or is carried out manually
+  Currently, there are no reports of a commercial robotic platform that can simultaneously map the yield parameters on-the-go prior to harvesting
+  ecoming a critical problem with increasing the uncertainties about the future availability of the labor force that is willing to accept tedious jobs in the harsh greenhouse condition
+  manual data sampling implies high costs and low accuracy and is significantly influenced by the interpretation of the person involved
+
+  lsg:The functionality of robots when combined with data processing, analyzing models, and artificial intelligence will assist farmers to manage their fields and plants more efficiently
+
+
+
+Simulation überall aber besonders in Robotik + aufbau von simulationen (xml,physics engin, viz, ..)
+alles zusammen-keine collab sim gefunden, nicht untersucht
+
+essential sim qualities(ideal sim)[2]:
+	accurate physics
+	high quality rendering
+	open source
+	multi platform
+	easy with ros
+[ba preprint]
+
+
+
+
+
       
       
-      bedeutung von Simulatoren (gerade in robo, in 2.)):
+      pros, bedeutung von Simulatoren (gerade in robo, in 2.)):
         preis ersparnis  testumgebung(underwater), 
         in 2.)verhindern von schäden durch fehlerhafte software/algos
         variationen beim testen, mit verschiedenster hardware  
         quellen erwähnen [],[],...
 
-
-
+    
       
 
 
-      
-   
 
+      \begin{Code}
 
+      warum collab mit schwarm und nicht algemein?????
+        Warum dieses thema? + problem/frage?:
+      schwarm bietet sich für collab an  (old papers [?], schhwierigkeiten der HCI -> control of swarm)
+      warum ist/könnte kollab in robosim nützlich sein -> kollab vorteile
 
+      relevanz:
+      trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
+      pros von sim: ..
+      stand der Simulatoren : nicht effizent + flexibel, keine collab
 
+      [3,9,..]
 
-\section{Motivation}
-
-
-%\begin{description}
-%  \item[Warum dieses thema? + problem/frage?] 
-%  schwarm bietet sich für collab an\\   (old papers [?], schhwierigkeiten der HCI -> control of swarm)
-%  
-%  \item[relevanz]
-%  \begin{itemize}
-%    \item trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
-%    \item pros von sim: ..
-%    \item stand der Simulatoren : nicht effizent + flexibel, keine collab
-%  \end{itemize}
-%  
-%
-%  \item[was will ich lösen/zeigen?]
-%  \begin{itemize}
-%    \item tool to combine collab, flex and effi:\\  argos bringt flex und effi, \\  ich bringe collab
-%    \item hilft colllab?
-%  \end{itemize}
-%
-%\end{description}
-%[3,9]
-
-
-collab überall, im herz der forschung + nutzer? 
-      Kurze Erklärung der Bedeutung von kollaborativem Arbeiten und herkömmlichen Simulatoren in diesem Kontext
-        keine collab sim gefunden, nicht untersucht
-      collab besoonders relevant für schwärme?
-
-
-
-\begin{Code}
-  
-   Warum dieses thema? + problem/frage?:
-    schwarm bietet sich für collab an  (old papers [?], schhwierigkeiten der HCI -> control of swarm)
-    warum ist/könnte kollab in robosim nützlich sein -> kollab vorteile
-  
-  relevanz:
-    trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
-    pros von sim: ..
-    stand der Simulatoren : nicht effizent + flexibel, keine collab
-    
-    [3,9,..]
-  
-  was will ich lösen/zeigen?
-    tool to combine collab, flex and effi:
-      argos bringt flex und effi,
-      ich bringe collab
-
-    hilft colllab?
-
-  
-\end{Code}
-
-
-  
     
 
 
+      \end{Code}
 
-  
 
-  
-
-  
 
 
 
@@ -462,17 +440,25 @@ collab überall, im herz der forschung + nutzer?
 %
 % Replace with a detailed account of your contributions:
 
-- Formulierung der Forschungsfrage und Zielsetzung deiner Arbeit
+- Formulierung der Forschungsfrage und Zielsetzung deiner Arbeit / Problemstellung und Zielsetzung
 
-      Forschungsfrag: ist collab in sim sinnvoll/potenzial
+was will ich lösen/zeigen?
+tool to combine collab, flex and effi:
+argos bringt flex und effi,
+ich bringe collab
+-> schwarm daher nutzung von argos naheliegend
+
+hilft colllab?
+
+      Forschungsfrage: ist collab in schwarm sim sinnvoll/potenzial ?
 
       Ziel: frage beantworten oder zumindest tendenz zu erschließen
         überprüfen, ob collab bei sim sinnvoll/ potenzial durch nutzertest
 
 
-Beiträge Ihrer Arbeit zur Forschung oder zum Fachgebiet 
+(Beiträge Ihrer Arbeit zur Forschung oder zum Fachgebiet 
 Hier können Sie auf die neuen Erkenntnisse, methodologischen Innovationen oder praktischen Implikationen Ihrer Arbeit 
-eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemeinschaft hat.
+eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemeinschaft hat.)
 
 
 \section{Related Work}
@@ -488,114 +474,106 @@ eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemei
 % other people, you should explain in detail that this is the case and
 % why it is the case. 
 
-2. **Grundlagen der Schwarmrobotik und Simulation (ca. 20%):**
-
+Grundlagen der Schwarmrobotik und Simulation 
 - Zusammenfassung der relevanten Literatur und früheren Arbeiten zum Thema
-beset of [1-..18?]
-[2]: jmeSim: An Open Source, Multi Platform Robotics Simulator (2012)
-essential sim qualities(ideal sim)
-	accurate physics
-	high quality rendering
-	open source
-	multi platform
-	easy with ros
-	=> none archieves them all => jmeSIm
+simulation:
+\subsection{simulatoren, stand}
 
-bedeutung von sim in robo
-	computer simulation hat sich bewiesen, anhand
-		besonders für mobile autonome robos (inkludiert schwarm)
-		1. robos sind zerbrechlich,potenziel gefährlich, schwer zu testen + entwickel (because of their complexity)
-		fähigkeit vorher software zu testen minimiert(mitigate) die gefahren und kosten
-		2. development + research of software possiable without the hardware/robots
-			+ robots come from offsite, at large expense??
-		3. ability to test robotic software in situations that are not feasible to create in reality
-		4. ability to run hundreds or thousands of trials for the purposes of learning robot control algorithms, crucial if hand coding is difficult
-
-
-[6]: Introductory Survey to Open-Source Mobile Robot Simulation Software (2010)
-    bedeutung von sim in robo
-      simulation has been important since the beginning of robotics,
-      essential tool in teaching, research, and development  (mit extra quellen => proven)
-      to design and test the feasibility of complex systems
-      explore design options, 
-      
-      (use cases:)
-      assist in off-line programming of robot systems ??,
-       evaluate the performance of robotic cells,
-      develop virtual environments for operator training or teleoperation, 
-      nor test advanced robot control algorithms .
-      
-      The role of simulation is also important as teaching and learning the fundamental physics and robotic fundermentals, very hard to grasp without actual experimentation and visualization. 
-      
-      can be costly => an excellent alternative of doing experiments and testing systems away from the dangers and unpredictability of the physical world.
-      
-    sim history
-      its development has been tightly related to the developments in computing
-      The massification of personal computing during the 90s contributed to the development of several publicly available software tools for robotic manipulator modeling and simulation. Some of these tools included: XAnimate [8], the Robotics Toolbox for Matlab [9], and the Robotica package for Mathematica [10]. 
-      During the late 90s, the focus of attention shifted towards manipulation, grasping and mobile robots. This trend led to the development of GraspIt! [5], a simulator for robotic grasping, and numerous tools for simulating and interfacing with various mobile robot platforms. The list of programming libraries, simulation tools and packages can be quite long, however, among those open-source tools that have achieved some degree of sustained development it is possible to mention Carmen [14],ODE [19], OpenRave [22], OpenSim [23], the Player-Stage-Gazebo (PSG) project [16], UsarSim [25]. 
-      
-    sim problems/challenges
-      Researchers, developers and educators have a hard time to decide which is the right tool for mobile robot simulation -> solved by surveys
-      some sim have this, some that -> impliziert das keiner alles hat
-      
-    modular and rel time architecture, relevant für mich?
-      In order to compare the different elements of simulation software it is fundamental to consider their underlying software architecture. In particular those aspects which allow the software to be modular and run in real-time
-    
-[10]: An Open Source Tool for Simulation and Supervision of Underwater Intervention Missions (2012)
-      UWSim filling a gap in the underwater domain (where commercial simulators oriented to ROV pilot training predominate)
-      
-      sim is huge here bc
-        Experimentation with underwater robots is normally very difficult due to the high number of resources required.
-          A water tank –high enough for the systems to be tested– is normally needed, 
-            which requires significant space and maintenance. 
-          Another possibility is to access to open environments such as lakes or the sea, but this normally involves high costs and requires special logistics. 
-          
-          very difficult for researchers (operating in the surface) to observe the evolution of the running system
-          
-        daher brauch es sim, der:
-          (i) develop and test the systems before they are deployed, and 
-          (ii) supervise a real underwater task where the developers do not have a direct view of the system
-      bisher meist  projekt spezifisch, obsolet oder commercial
-      
-      fokus bei sim design auf: general, multi platform, realistic rendering, ros
-      
-mit Bezug auf ARGoS:
-[3]: Simulation software and virtual environments for acceleration of agricultural robotics: Features highlights and performance comparison
-[5]: ARGoS: a modular, parallel, multi-engine simulator for multi-robot systems
-[9]: Tools for simulating humanoid robot dynamics: a survey based on user feedback
-      
-über Collaborative Editing:
-[7]: Collaborative Editing in Web Applications
-[8]: The User-centred Iterative Design Of Collaborative Writing Software
-      
-Zusätzlich hier die drei Paper die ich letztens kurz gezeigt habe:
-[11]: Operational Transformation in Real-Time Group Editors: Issues, Algorithms, and Achievements
-[12]: Achieving Convergence, Causality Preservation, and Intention Preservation in Real-Time Cooperative Editing Systems
-[13]: CollabAlly: Accessible Collaboration Awareness in Document Editing
-      
-von Javad: preprint…pdf, A survey and comparison of …..pdf
-      
-
-
-- Identifizierung von Forschungslücken oder Diskussionen in der Literatur   
-collab
-
-
+----relevant?-----
 - Beschreibung verschiedener Simulationsansätze und ihrer Bedeutung für die Robotik
-    ansätze?: spiel - spezific - general - modular ??
+    ansätze: spiel -> spezific -> general -> modular ?
+      architekturen, fokus?, ..
+
     geschichte der sim- aus spiel zu eigenen sim, aus projektspezifisch zu general
 
 
-- Überblick über die Grundkonzepte der Schwarmrobotik und deren Anwendungen
-    noch relevanter in zukunft
+    [6]sim history:
+      its development has been tightly related to the developments in computing
+      The massification of personal computing during the 90s contributed to the development of several publicly available software tools for robotic manipulator modeling and simulation.
+      During the late 90s, the focus of attention shifted towards manipulation, grasping and mobile robots. 
+	    The list of programming libraries, simulation tools and packages can be quite long, however, among those open-source tools that have 
+      achieved some degree of sustained development it is 	possible to mention Carmen [14],ODE [19], OpenRave [22], OpenSim [23], 
+      the Player-Stage-Gazebo (PSG) project [16], UsarSim [25]. 
+---------------
 
 
+bedeutung von sim in robo:
+[2]computer simulation hat sich bewiesen, anhand
+  besonders für mobile autonome robos (inkludiert schwarm)
+  1. robos sind zerbrechlich,potenziel gefährlich, schwer zu testen + entwickel (because of their complexity)
+  fähigkeit vorher software zu testen minimiert(mitigate) die gefahren und kosten
+  2. development + research of software possiable without the hardware/robots
+    + robots come from offsite, at large expense??
+  3. ability to test robotic software in situations that are not feasible to create in reality
+  4. ability to run hundreds or thousands of trials for the purposes of learning robot control algorithms, crucial if hand coding is difficult
+
+[6] bedeutung von sim in robo
+    simulation has been important since the beginning of robotics,
+    essential tool in teaching, research, and development  (mit extra quellen => proven)
+    to design and test the feasibility of complex systems
+    explore design options, 
+    
+    (use cases:)
+    assist in off-line programming of robot systems ??,
+     evaluate the performance of robotic cells,
+    develop virtual environments for operator training or teleoperation, 
+    nor test advanced robot control algorithms .
+    
+    The role of simulation is also important as teaching and learning the fundamental physics and robotic fundermentals, very hard to grasp without actual experimentation and visualization. 
+    
+    can be costly => an excellent alternative of doing experiments and testing systems away from the dangers and unpredictability of the physical world.
+
+    bedeutung von sim:[3]
+    prob:Improvement of robotics for agricultural application however requires experimenting, as well as evaluating, for finding the optimum solution. Experimenting with the physical robots and sensors in an actual field, is not always possible due to the time constraints, unavailability of equipment, and the operation costs
+    
+    lsg:To accelerate this pace, simulation methods can provide an affordable framework for experimenting with different sensing and acting mechanisms in order to verify the performance functionality of the robot in different scenarios
+
+
+[10]example?: sim is huge in [10]:
+      Experimentation with underwater robots is normally very difficult due to the high number of resources required.
+        A water tank -high enough for the systems to be tested - is normally needed, 
+          which requires significant space and maintenance. 
+        Another possibility is to access to open environments such as lakes or the sea, but this normally involves high costs and requires special logistics. 
+        
+        very difficult for researchers (operating in the surface) to observe the evolution of the running system
+
+  daher brauch es sim, der:[10]
+    (i) develop and test the systems before they are deployed, and 
+    (ii) supervise a real underwater task where the developers do not have a direct view of the system
+  bisher meist  projekt spezifisch, obsolet oder commercial
+
+  
+\subsection{Kollaboration, stand}
+collab trend[7]
+    The growing trend towards tools that enable collaboration [andere quellen]
+    
+    Since around 2005, interest in collaborative editors has again increased sharply with the advent of Web 2.0, and the first web-based tools appeared (e.g., Wikis and Blogs). Collaborative solutions that allowed shared editing in real-time and were based on web technologies gradually became widespread. Such tools gained a lot of popularity as many of them were free to use
+    
+    is a broad field of research
+    is a hot topic in research and in practice
+
+    
+\subsection{forschungslücken und diskussion}
+
+- Identifizierung von Forschungslücken oder Diskussionen in der Literatur in Bezug auf die direkte Vergleichbarkeit 
+von kollaborativem Arbeiten und herkömmlichen Simulatoren in der Schwarmrobotik
+
+forschunglücke: (literatür über) collab in robo sim 
+
+
+
+- Diskussion über die Vor- und Nachteile von kollaborativem Arbeiten und herkömmlichen Simulatoren
 - Diskussion über die Herausforderungen und Vorteile von Simulationen in der Schwarmrobotik
     herausforderungen : user feedback paper, accuracy, performance, ..
-    Vorteile: unbekannt, nicht untersucht ?
+    [6]sim problems/challenges:
+      Researchers, developers and educators have a hard time to decide which is the right tool for mobile robot simulation -> solved by surveys
+      some sim have this, some that -> impliziert das keiner alles hat
+
+      kann collab einige probleme lösen? (forschungsfrage?)
 
 
-related work
+    Vorteile: ....
+
 
 \section{Aufbau dieser Arbeit}
 % In a German thesis write: \section{Aufbau dieser Arbeit}
@@ -610,15 +588,14 @@ related work
 
 structure 
 
-1 introduction
-(2 related work) in 1.??
-3. mein sim
-4. user test
-5. Ergebnisse + evaluation
-6 con
-
-
-
+1 introduction 10% 3S
+2. mein sim 25% = 7-8 seiten
+dia, erklärung der einzelnen komponenten je komponente eine section (codebeispiele??)
+3. user test 25% 7-8S
+3.1 methodik 3.2 ergebnisse 3.3 auswertung/Diskussion
+4. Ergebnisse + evaluation 30% 9S
+5 con 5-10% 2-3S
+6 bibliography
 
 
 
@@ -631,132 +608,96 @@ structure
 %
 % Replace the whole text chapter with the main text of your thesis! 
 
-\chapter{meinsim}%: Document Setup and Document Structure}
+\chapter{CollabSim}%: Document Setup and Document Structure}
 \label{chapter-use}
+- Beschreibung der verwendeten Simulationen und Tools
+
+CollabSim ist das für diese Arbeit entwickelte Simulationswerkzeug, welches kollaborative Funktionen mit dem weit verbreiteten Simulator ARGoS verbindet. 
+In Fig. x ist die grundlegende Struktur von CollabSim dargestellt
+
+
+\section{overview}
+backend, für die Übertragung aller daten, wobei als zentralle instanz der kommunikation fungiert. 
+einerseits leitet er die bearbeiteten, für die simulation erforderlichen dateien zu einer virtuellen Maschiene weiter und koordiniert die ausführung der dort benötigten befehle. 
+andererseits sorgt er für die Echtzeitsynchronisation aller im frontend entwickelten dateien um die kollaboration zwischen allennutzern zu ermöglichen.
+
+frontend, Angular
+Angular got introduced for a frontend development
+
+\section{Webserver}
+THe webserver, writen in python, handles all cummunication between the Frontend, backend and the virtual machine running ARGoS. 
+The server is launched using the two python software packages Flask, a -- and socketio, a --.
+The bulk of the code provides the communication between front- and backend utilising a websocket. 
+The websocket is build using socketio and contains x events for realtime synchrionisation of all written text.
+
+\section{VM}
+ARGoS requires a Unix (or Macc?) operating systems only, therefor such a sytem is needed for running the simulation. To 
+Da ARGoS nur unter Unix betriebssystemen läuft, wird ein solches system für dei simulation den schwarms und der umgebung benötigt. Daher wurde eine virtuelle
+\subsection{ARGoS}
+  ARGoS ist einer der wenigen Simulatoren, die Effizienz und Flexibilität in einem, für die Schwarmrobotik erforderlichem Maße umsetzt, 
+  um die Echtzeitsimulation von Tausenden von Robotern zu ermöglichen.
+ Therefore, it is a suitable and well-established simulator in the field of swarm robotics.
+  In CollabSim, Argos is utilized to simulate all aspects of the simulation, including ..
+  \subsection{webviz}
+  Webviz is a plugin devolped for argos, enabling the visualization of the simulatet environment through the web. 
+  It hosts a websocket using the available information from argos and builds a application to view and control the simulation. 
+  THis enables all users to see the same simulation running while visiting the site, which is essential for collaborative work on this simulation.
+
+  \subsection{zusätzliches}
+  zusätzliche programme innerhalb der vm, py und bash skript
 
 
 
-   
-   --reroll-
-   
-   Ja, das ändert definitiv etwas! Bei einem Thema wie der Untersuchung von kollaborativem Arbeiten an einer Simulation 
-   für Schwarmrobotik im Vergleich zu einem herkömmlichen Simulator könnten einige spezifische Abschnitte und Schwerpunkte 
-   relevant sein. Hier ist eine angepasste Struktur mit einer möglichen Gewichtung:
 
-1. **Einleitung (ca. 10%):**
-   - Einführung in das Thema der Schwarmrobotik und die Bedeutung von Simulationen
-   - Problemstellung und Zielsetzung der Untersuchung
-   - Kurze Erklärung der Bedeutung von kollaborativem Arbeiten und herkömmlichen Simulatoren in diesem Kontext
+\section{websocket}
+Der datenaustausch aller komponente ist durch websockets verwirklicht, eine möglichst schnelle kommunikation zu ermöglichen. 
+andere kommunikationsarten sind meist langsamer und damit für echtzeitanwendungen weniger gut geeignet
 
-2. **Literaturüberblick (ca. 20%):**
-   - Übersicht über relevante Arbeiten zur Schwarmrobotik und Simulationstechniken
-   - Diskussion über die Vor- und Nachteile von kollaborativem Arbeiten und herkömmlichen Simulatoren
-   - Identifizierung von Forschungslücken in Bezug auf die direkte Vergleichbarkeit von kollaborativem Arbeiten und herkömmlichen Simulatoren in der Schwarmrobotik
+der austausch wurde im webserver Mittels SocketIO umgesetzt. einem Python softwarepacket,
+\section{ace}
+The --- editor Ace is used as a base for all code editing of the application.
+There are two instances where code is being edited. Firstly the configuration file for argos, written in the -- language Xml and secondly a controller file, written in C++.   
 
-3. **Methodik (ca. 15%):**
-   - Beschreibung der Simulationen und Tools, die für die Studie verwendet wurden
-   - Erläuterung der Parameter und Metriken, die zur Bewertung von kollaborativem Arbeiten und herkömmlichen Simulatoren verwendet wurden
-   - Details zur Durchführung der Experimente und zur Datenerfassung
+\subsection{Xml} 
+     eine xml datei ist für die konfiguration der szene verantwortlich
+\subsection{Cpp}
+      eine cpp datei sorgt zusätzlich für den kontrollalgorithmus der von den vorhandenen robotern genutzt wurde.
 
-4. **Ergebnisse (ca. 25%):**
-   - Präsentation der quantitativen und qualitativen Ergebnisse der Simulationen
-   - Vergleich der Leistung von kollaborativem Arbeiten und herkömmlichen Simulatoren anhand der definierten Metriken
-   - Grafische Darstellung von Daten und statistische Analysen
 
-5. **Diskussion (ca. 25%):**
-   - Interpretation der Ergebnisse im Hinblick auf die Forschungsfragen und Hypothesen
-   - Diskussion über die praktischen Implikationen der Ergebnisse für die Schwarmrobotik-Forschung und -Entwicklung
-   - Reflexion über die Stärken und Schwächen der durchgeführten Studie und mögliche Verbesserungen
+\section{IFrame}
+Ein Iframe ist -- und ermöglicht das darstellen des inhaltes einer bestehenden internetseite. 
+Daher ist er ideal um die, durch webviz erstellte webanwendung, in CollabSim zu integrieren.
+Das erstellen eines eigenen clients wäre ebfalls eine option zur Darstellung der simulation. 
+jedoch kann dies sehr umfangreich werden und ist, für die Erforschung des möglichen einflusses von 
+kollaborativen Arbeiten im bereich der robitksimulation, von geringem interesse.
 
-6. **Schlussfolgerung und Ausblick (ca. 5%):**
-   - Zusammenfassung der wichtigsten Erkenntnisse und Schlussfolgerungen
-   - Ausblick auf zukünftige Forschungsrichtungen, die sich aus den Ergebnissen ergeben, und potenzielle Anwendungen von kollaborativem Arbeiten in der Schwarmrobotik
 
-Diese Struktur berücksichtigt die spezifischen Anforderungen und Besonderheiten deines Themas 
 
 
 
 
 
 \chapter{user test} 
-   
-   3. **Vergleich von kollaborativem Arbeiten an einer Simulation und einem herkömmlichen Simulator (ca. 30%):**
-      - Darstellung der Funktionsweise und Merkmale beider Simulationsansätze
-      - Analyse von Fallstudien oder Experimenten, die kollaboratives Arbeiten und herkömmliche Simulationen vergleichen
-      - Bewertung der Vor- und Nachteile jedes Ansatzes im Kontext der Schwarmrobotik
-   
-   4. **Methodik (ca. 15%):**
-      - Beschreibung der Methoden, die du zur Durchführung deiner Untersuchung verwendet hast
-        task in beiden umgebungen + survey
-      
-        - Erläuterung deiner Herangehensweise und Begründung der Methodenwahl 
-      
-      - Erklärung der Kriterien und Metriken, die zur Bewertung der Simulationsansätze herangezogen wurden
+- Darstellung der Funktionsweise und Merkmale beider Simulationsansätze + Bewertung der Vor- und Nachteile jedes Ansatzes
+solo vs group
 
-      - Erläuterung des experimentellen Aufbaus und der Durchführung der Vergleichsstudie
-      task:
-      wer waren Versuchpersonen
-      erfasste Daten:
+\section{Methodik}
 
 
-      \begin{Code}
-        Wie leicht war es, mit anderen Freiwilligen in der Simulation zusammenzuarbeiten?
-        Welche Aspekte der Simulation haben die Kollaboration unterstützt oder behindert?
-        Konnten Sie effektiv mit der Simulationsumgebung interagieren, um die gestellten Aufgaben zu lösen?
-        verbesserungsvorschläge?
+- Beschreibung der Methoden, die du zur Durchführung deiner Untersuchung verwendet hast 
+wer waren Versuchpersonen        
+probanden machen aufgabe allein oder im team 
+survey
+      
 
-        -------------------2.entwurf-------------------------
-        task: 
-        platzieren von hindernissen an bestimmten stellen, -> customisible environment
-        platzieren und anpassen von robos -> customisible robot models
-        robo verhalten erweitern (aus verhalten einen aspekt rauslöschen?) -> testing of control algos
-        
-        Qualitative results - based on responses received from the surveys. 
-          These give a picture of user experience and preference. 
-            
-            pre
-              How often do you use computers? 
-              How would you rate your knowlage about (swarm) robotics?
-              How would you rate your experience in programming robots or robot swarms?
-              How would you rate your experience in simulating robots or robot swarms?
-          
-          
-            post
-              ease
-              Which simulation environment/interface was easier to use? - easier
-              Which simulation environment would you prefer for more frequent use? - Workload  , usable vs ease
-              7. I would imagine that most people would learn to use this system very quickly -ease
       
-              usability
-              How do you rate the clarity and usability of the simulation? - Usability
-              How do you rate the clarity and usability of the collaboration functions? - Usability, collab gut umgeetzt?
-              8. I found the system very cumbersome to use - implementation of features or just argos???
-              Were you able to form a accurate projection from your mental picture of the environment? - Accuracy
-              5. I found the various functions in this system were well integrated - woran hats gelegen (falls nicht gut)
-              
-              collab
-              2. I found the system/collab functions unnecessarily complex -> war collab unnötig
-              9. I felt very confident using the system - usable/easy to understand, well integrated features
-              10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
-            
-              
-              How would u rate each simulation? - overall + for comparission -> success?
-        
+- Erläuterung deiner Herangehensweise und Begründung der Methodenwahl 
+da keine voranstehende Arbeit
+da begrenzt zeit im rahmen einer ba arbeit
       
-        Quantitative results - from robot trajectory and related information 
-          These serve as performance metrics that tell us whether there is an actual difference in how well 
-          the participants performed, between interfaces. 
-            recording task completion  
-            recording task completion time
-            (clicks, how many clicks -> much looking around/wondering -> lacking clarity???)
-            .
-            .
-            .
-            and other related data
-      
-      
-      #################------metriken-----------############
-        og
+- Erklärung der Kriterien und Metriken, die zur Bewertung der Simulationsansätze herangezogen wurden
+metriken
+og
         Qualitative results - based on responses received from the surveys. 
           These give a picture of user experience and preference. 
         Quantitative results - from robot trajectory and related information 
@@ -772,112 +713,92 @@ Diese Struktur berücksichtigt die spezifischen Anforderungen und Besonderheiten
             which have a measurable impact on the usability and performance of the respective HSI. 
           The User Experience category includes metrics such as user-friendliness, immersion, and workload, 
             which represent a subjective assessment by the participants and have an indirect influence on performance [12].
-      ######################-#-------#-#--#-#-############## 
+
+- Erläuterung des experimentellen Aufbaus und der Durchführung 
+task: 
+platzieren von hindernissen an bestimmten stellen, -> customisible environment
+platzieren und anpassen von robos -> customisible robot models
+robo verhalten erweitern (aus verhalten einen aspekt rauslöschen?) -> testing of control algos
+
+
+Qualitative results - based on responses received from the surveys. 
+  These give a picture of user experience and preference. 
+
+survey:
+    
+    pre
+      How often do you use computers? 
+      How would you rate your knowlage about (swarm) robotics?
+      How would you rate your experience in programming robots or robot swarms?
+      How would you rate your experience in simulating robots or robot swarms?
+  
+  
+    post
+      (teamwork)
+      Wie wichtig war die Kommunikation und Koordination mit Ihrem Partner für den Erfolg der Aufgabe?
+      Wie leicht war es, mit Ihrem Partner an der Simulation zusammenzuarbeiten?
+      Welche Aspekte der Simulation haben die Kollaboration unterstützt oder behindert?
+      Konnten Sie effektiv mit der Simulationsumgebung interagieren, um die gestellten Aufgaben zu lösen?
+      Ich empfand die zussamenarbeit mit einem partner, bei der bearbeitung der  aufgaben, hilfreich
+      Sie haben viel zeit investiert, um mit Ihrem Partner zu interagieren
+
+      ease
+      1. I think that I would like to use this system frequently - usable + ease
+      7. I would imagine that most people would learn to use this system very quickly -ease
+
+      usability
+      How do you rate the clarity and usability of the simulation? - Usability
+      How do you rate the clarity and usability of the collaboration functions? - Usability, collab gut umgeetzt?
+      8. I found the system very cumbersome to use - implementation of features or just argos???
+      Were you able to form a accurate projection from your mental picture of the environment? - Accuracy
+      5. I found the various functions in this system were well integrated - woran hats gelegen (falls nicht gut)
       
+      collab
+      2. I found the system/collab functions unnecessarily complex -> war collab unnötig
+      9. I felt very confident using the system - usable/easy to understand, well integrated features
+      10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
+    
       
-      
-      
-      ------------------1.entwurf---------------
-      task: Entwirf einen Raum bestehend aus 3 "Hindernisen" und einem schwarm von 10 (identischen) "Robotern" in Argos und Argos+
-      
-      post
-        Which simulation environment/interface was easier to use?
-        Which simulation environment would you prefer for more frequent use? - Workload  
-        How do you rate the clarity and usability of the simulation? - Usability
-        How do you rate the clarity and usability of the collaboration functions? - Usability
-        Were you able to form a accurate projection from your mental picture of the environment? - Accuracy
+      How would u rate the simulation? - overall + for comparission -> success? 
+
+
         
-        1. I think that I would like to use this system frequently - usable + ease
-        2. I found the system unnecessarily complex -> war collab unnötig
-        5. I found the various functions in this system were well integrated - woran hats gelegen (falls nicht gut)
-        7. I would imagine that most people would learn to use this system very quickly -ease
-        8. I found the system very cumbersome to use - implementation of features or just argos???
-        9. I felt very confident using the system - usable/easy to understand/well integrated features
-        10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
-      
-        How would u rate each simulation?
-      
-      
-      
-        ------------------literaturr----------------------------------
-      
-          pre
-            experience  
-            computer
-            1. How often do you use computers? 
-      
-            robot interaction ?
-            2. How often do you interact with robots?
-            3. How often do you interact with robot swarms or multi-robot systems? 
-            
-            robot simulation
-            4. How would you rate your experience in simulating robots? 
-            5. How would you rate your experience in simulating robot swarms? 
-      
-      
-          post
-            in og
-            1. Workspace Awareness 
-            2. Robot Awareness 
-            3. Ease of Use 
-            4. Response accuracy 
-            5. Overall Preference 
-            6. Overall Average Rating 
-      
-      
-            in ba
-            8. Which interface gave you a better sense of the mission environment? - Immersion
-            9. Which interface gave you a better sense of the robots? - Immersion
-            10. Which interface was easier to use? - Usability
-            11. Which interface was more accurate in processing your inputs? - Accuracy
-            12. Which interface would you prefer for more frequent use? - Workload
-      
-      
-            in ba, woher?
-              1. Did you feel like part of the swarm? - Immersion
-              2. Were you aware of the swarm’s current goal at all times? - Usability
-              3. Were you able to form a mental picture of the situation based on the information provided? - Immersion
-              4. How do you evaluate the quality of communication regarding the information provided by the swarm? - Usability
-              5. How do you evaluate the quality of communication regarding the instructions you provided to the swarm? - Accuracy
-              6. Were your commands executed in a timely manner or within a relevant timeframe? - Response Time
-            
-              7. How do you rate the clarity and usability of the simulation and collaboration functions? - Usability
+        
+Quantitative results - from robot trajectory and related information 
+  These serve as performance metrics that tell us whether there is an actual difference in how well the participants performed
+
+        task completion  
+        task completion time
+        (clicks, how many clicks -> much looking around/wondering -> lacking clarity???)
+        wurden die aufgaben aufgeteilt y/n
+        wie viel zeit wurde für die kommunikation verwendet? (je mehr desto besser?)
+        wie häufig wurden kommunikationsmöglichkeiten genutzt
+        anzahl gemeinsamer interaktionen? anzahl nachrichten im chat
+
+        
             
             
       
-      
-            SUS - System Usability Scale
-            1. I think that I would like to use this system frequently
-            2. I found the system unnecessarily complex
-            3. I thought the system was easy to use
-            4. I think that I would need the support of a technical person to be able to use this system
-            5. I found the various functions in this system were well integrated
-            6. I thought there was too much inconsistency in this system
-            7. I would imagine that most people would learn to use this system very quickly
-            8. I found the system very cumbersome to use
-            9. I felt very confident using the system
-            10. I needed to learn a lot of things before I could get going with this system 
-      
-      \end{Code}
+
 
 
     
-\chapter{Ergebnisse und Diskussion}
-      4. **Ergebnisse (ca. 25%):**
+\section{Ergebnisse und Diskussion}
+
+
+
+Ergebnisse
       - Präsentation und Diskussion deiner Forschungsergebnisse
-      - Grafische Darstellung von Daten, wenn nötig
-      - Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage(n)
+      - Grafische Darstellung von Daten und statistische Analysen
+      - Vergleich der Leistung von kollaborativem Arbeiten und herkömmlichen Simulatoren anhand der definierten Metriken
+      - Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage(n) und Hypothesen
    
-   5. **Diskussion (ca. 25%):**
-      - Interpretation deiner Ergebnisse im Kontext der vorhandenen Literatur
-      - Reflexion über mögliche Einschränkungen deiner Studie
+Diskussion 
+      - Interpretation deiner Ergebnisse im Kontext der vorhandenen Literatur 
+      - Reflexion über mögliche Einschränkungen deiner Studie / Reflexion über die Stärken und Schwächen der durchgeführten Studie und mögliche Verbesserungen
+      - Diskussion über die praktischen Implikationen der Ergebnisse für die Schwarmrobotik-Forschung und -Entwicklung
       - Vorschläge für zukünftige Forschung
       
-      5. **Ergebnisse und Diskussion (ca. 25%):**
-         - Präsentation der Ergebnisse deiner Untersuchung, einschließlich quantitativer Daten und qualitativer Beobachtungen
-         - Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage und Hypothesen
-         - Diskussion der Implikationen deiner Ergebnisse für die Schwarmrobotik und mögliche zukünftige Entwicklungen
-
 
 \chapter{Zusammenfassung und Ausblick}
 % In a German thesis write: \subsection{Zusammenfassung und Ausblick}
@@ -889,20 +810,24 @@ Diese Struktur berücksichtigt die spezifischen Anforderungen und Besonderheiten
 %
 % Replace the following with your conclusion
 
+5-10% 2-3S
 
 
+   - Zusammenfassung der wichtigsten Erkenntnisse und Schlussfolgerungen
+   lässt sich tendenz erkennen?
+   was sagen die ergebnisse aus?
 
 
-6. **Schlussfolgerung und Ausblick (ca. 5%):**
-   - Zusammenfassung der wichtigsten ergebnisse und Erkenntnisse deiner Arbeit/Schlussfolgerungen, die sich aus deiner Arbeit ergeben
-   lässt sich tendenz erkennen, was sagen die ergebnisse aus
-
+   - Ausblick auf zukünftige Forschungsrichtungen, die sich aus den Ergebnissen ergeben
+   - potenzielle Anwendungen von kollaborativem Arbeiten in der Schwarmrobotik 
    - Bewertung der Bedeutung deiner Forschungsergebnisse für die Robotik und Simulation
-   urprungsfrage beantworten
-   
-   - Ausblick auf potenzielle weitere Forschungsbereiche und Anwendungsmöglichkeiten/- Ausblick auf mögliche Implikationen und Anwendungsbereiche deiner Forschung
+
+   urprungsfrage beantwortet?
    erweiterte funktionen?
    in allen sim sinnvoll?
+
+
+
 
 
 
@@ -936,7 +861,7 @@ Hier kommt \\ ein Zeilenumbruch
    
    \begin{description}
    \item[Stier] 
-     ist ein tier
+     ist ein tier kmfekmfkemfekfmekfmekfmekgjengjnrg gne jgnenge ngjegne geg egengen g g jegeigjeigei gj eg gjie gje igje gie geigjeig  egje g jegiejgi egi egi geigjeig
    \item[stein]
      ist kein tier
    \end{description}
