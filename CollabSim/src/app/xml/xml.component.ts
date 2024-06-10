@@ -27,6 +27,7 @@ export class XMLComponent implements AfterViewInit{
   ignoreChanges: boolean = false; // flag for timing updates
   debounceTimer: any; // timer for timing updates
   currentXml: string = ''; // to see if changes where made
+  currentCpp: string = ''; // to see if changes where made
 
   constructor(
     private webSocketService: WebSocketService,
@@ -48,7 +49,7 @@ export class XMLComponent implements AfterViewInit{
   }
 
   reloadSim(){
-    if (this.currentXml !== this.aceXml) {
+    if (this.currentXml !== this.aceXml && this.currentCpp !== this.aceCode) {
     }
       console.log("reloading..");
       this.webSocketService.reloadSim();
@@ -60,11 +61,12 @@ export class XMLComponent implements AfterViewInit{
     }, 1000);
   }
 
-  saveXml(){
+  save(){
     this.currentXml = this.aceXml;
     this.webSocketService.saveXml(this.aceXml);
+    this.currentCpp = this.aceCode;
+    this.webSocketService.saveCpp(this.aceCode);
   }
-
 
 
   // HTTP REquest
@@ -79,6 +81,8 @@ export class XMLComponent implements AfterViewInit{
   
   // ACE Editor
   @ViewChild("editorXML") public editorXML!: ElementRef<HTMLElement>;  
+  @ViewChild("editorCPP") public editorCPP!: ElementRef<HTMLElement>;  
+  
   
   ngAfterViewInit(): void {
     
@@ -91,6 +95,13 @@ export class XMLComponent implements AfterViewInit{
           console.log("in constructor")
           this.ignoreChanges = true;
           aceEditorXML.session.setValue(msg[1]);
+        }
+      }
+      else if (msg[0]=='aceC' ){
+        if (this.aceCode !== msg[1]) {
+          console.log("in constructor")
+          this.ignoreChanges = true;
+          aceEditorCPP.session.setValue(msg[1]);
         }
       }
   });
@@ -118,6 +129,24 @@ export class XMLComponent implements AfterViewInit{
           console.log("on change");
           this.aceXml = aceEditorXML.getValue();
           this.sendMessage('aceX', this.aceXml); 
+        }
+        else {
+          this.ignoreChanges = false;
+        }
+      }, 100);
+    });
+
+    var aceEditorCPP = ace.edit(this.editorCPP.nativeElement);
+    aceEditorCPP.session.setValue(this.aceCode);
+    aceEditorCPP.setTheme("ace/theme/monokai");
+    aceEditorCPP.session.setMode("ace/mode/c_cpp");
+    aceEditorCPP.on("change", () => {
+      clearTimeout(this.debounceTimer); // Timer zurücksetzen
+      this.debounceTimer = setTimeout(() => {
+        if (this.aceCode!==aceEditorCPP.session.getValue() && !this.ignoreChanges) {
+          console.log("on change");
+          this.aceCode = aceEditorCPP.getValue();
+          this.sendMessage('aceC', this.aceCode); 
         }
         else {
           this.ignoreChanges = false;

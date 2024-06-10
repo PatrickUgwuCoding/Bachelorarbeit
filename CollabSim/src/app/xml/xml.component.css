@@ -1,18 +1,25 @@
 body {
-    background-color: darkolivegreen;
+    
 }
 
 .ace-xml {
-    width: 80%; 
-    height: 85%;
+    width: 45%; 
+    height: 75%;
     position: absolute; 
-    top: 8%;
+    bottom: 8%;
 }
 
+.ace-cpp {
+    width: 45%; 
+    height: 75%;
+    position: absolute; 
+    bottom: 8%;
+    left: 54%;
+}
 
 ul {
     position: absolute;
-    bottom: 5%;
+    bottom: 1px;
     right: 2%;
 }
 

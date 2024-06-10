@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 
 export const routes: Routes = [
     {path:'Sim',component: SimulationComponent},
-    {path:'Xml',component: XMLComponent},
+    {path:'Edit',component: XMLComponent},
     {path:'Cpp',component: CPPComponent},
     {path:'App',component: AppComponent},
-    {path:'', redirectTo: 'Xml', pathMatch: 'full'}
+    {path:'', redirectTo: 'Edit', pathMatch: 'full'}
 ];

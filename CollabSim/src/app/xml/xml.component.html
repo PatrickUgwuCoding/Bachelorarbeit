@@ -1,16 +1,29 @@
 <body>
+  <div>
+    <h2 style="display: flex; justify-content: space-between; padding: 15px 18%;">
+      <span>Config(Xml)</span>
+      <span>Control(C++)</span>
+    </h2>
 
+  </div>
+  
+  <div
+    class="ace-xml"
+    #editorXML
+  ></div>
+    
     <div
-      class="ace-xml"
-      #editorXML
+      class="ace-cpp"
+      #editorCPP
     ></div>
   
     <div>
       <ul>
-        <button (click)="saveXml()" >save</button>
+        <button (click)="save()" >save</button>
         <button (click)="reloadSim()" style="background-color: rgb(53, 172, 53);">run</button>
       </ul>
     </div>
+
   
   </body>
   
