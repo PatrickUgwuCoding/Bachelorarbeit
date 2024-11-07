@@ -1,6 +1,6 @@
-This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10) (format=lualatex 2024.1.15)  20 MAR 2024 08:04
+This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10) (format=lualatex 2024.1.15)  28 JUN 2024 17:05
  restricted system commands enabled.
-**Template_for_the_LaTeX_Class_uzl-thesis.tex
+**./Template_for_the_LaTeX_Class_uzl-thesis.tex
 (./Template_for_the_LaTeX_Class_uzl-thesis.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
@@ -2715,9 +2715,9 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-No file Template_for_the_LaTeX_Class_uzl-thesis.aux.
-
+(./Template_for_the_LaTeX_Class_uzl-thesis.aux)
 \openout1 = Template_for_the_LaTeX_Class_uzl-thesis.aux
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 377.
 LaTeX Font Info:    ... okay on input line 377.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 377.
@@ -2801,6 +2801,8 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 377.
+(./Template_for_the_LaTeX_Class_uzl-thesis.out)
+(./Template_for_the_LaTeX_Class_uzl-thesis.out)
 \@outlinefile=\write5
 
 \openout5 = Template_for_the_LaTeX_Class_uzl-thesis.out
@@ -2829,13 +2831,12 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 \openout4 = Template_for_the_LaTeX_Class_uzl-thesis-blx.bib
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Template_for_the_LaTeX_Class_uzl-thesis.bbl' n
-ot found.
-
-No file Template_for_the_LaTeX_Class_uzl-thesis.bbl.
+Package biblatex Info: ... file 'Template_for_the_LaTeX_Class_uzl-thesis.bbl' f
+ound.
+ (./Template_for_the_LaTeX_Class_uzl-thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 377.
 Package biblatex Info: Reference segment=0 on input line 377.
-<uzl-thesis-logo-itcs.pdf, id=6, 426.79149pt x 113.8112pt>
+<uzl-thesis-logo-itcs.pdf, id=122, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
 Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 377.
@@ -2859,12 +2860,12 @@ LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
 (Font)              scaled to size 10.77994pt on input line 377.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 377.
-<uzl-thesis-logo-slogan.pdf, id=7, 142.26349pt x 11.38112pt>
+<uzl-thesis-logo-slogan.pdf, id=123, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
 Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 377.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
-[1
+ [1
 
 {C:/Users/patri/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}<./uzl-thesis-l
 ogo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
@@ -2921,12 +2922,11 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 (Font)              scaled to size 22.0pt on input line 377.
-
-No file Template_for_the_LaTeX_Class_uzl-thesis.toc.
+ (./Template_for_the_LaTeX_Class_uzl-thesis.toc)
 \tf@toc=\write6
 
 \openout6 = Template_for_the_LaTeX_Class_uzl-thesis.toc
-[5
+ [5
 
 
 ] [6
@@ -2949,20 +2949,6 @@ LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 402.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 402.
-
-LaTeX Warning: Hyper reference `listing-hello-world' on page 1 undefined on inp
-ut line 415.
-
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 415.
-
-LaTeX Warning: Reference `listing-hello-world' on page 1 undefined on input lin
-e 415.
-
-
-LaTeX Warning: Reference `listing-hello-world' on page 1 undefined on input lin
-e 415.
-
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/sc' will be
 (Font)              scaled to size 12.0pt on input line 419.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
@@ -2971,78 +2957,17 @@ LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
 (Font)              scaled to size 12.29993pt on input line 434.
 LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
 (Font)              scaled to size 11.17242pt on input line 434.
-
-LaTeX Warning: Citation 'Knuth1986' on page 1 undefined on input line 483.
-
-
-LaTeX Warning: Citation 'Lamport1994' on page 1 undefined on input line 484.
-
-
-LaTeX Warning: Reference `chapter-tips' on page 1 undefined on input line 495.
-
-
-LaTeX Warning: Reference `chapter-tips' on page 1 undefined on input line 495.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 501.
-
-
 [1
 
 
-] [2]
-
-Package hyperref Warning: Suppressing link with empty target on input line 508.
-
-
-
-LaTeX Warning: Citation 'Alley1996' on page 3 undefined on input line 569.
-
-
-LaTeX Warning: Citation 'Alley1996' on page 3 undefined on input line 569.
-
-
-LaTeX Warning: Reference `chapter-use' on page 3 undefined on input line 589.
-
-
-Package hyperref Warning: Suppressing link with empty target on input line 598.
-
-
-[3] [4]
+] [2] [3] [4]
 Chapter 2.
 [5
 
 ]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/sc' will be
 (Font)              scaled to size 10.0pt on input line 711.
- [6]
-
-LaTeX Warning: Hyper reference `section-references' on page 7 undefined on inpu
-t line 754.
-
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 754.
-
-LaTeX Warning: Reference `section-references' on page 7 undefined on input line
- 754.
-
-
-LaTeX Warning: Reference `section-references' on page 7 undefined on input line
- 754.
-
-
-LaTeX Warning: Hyper reference `listing-hello-world' on page 7 undefined on inp
-ut line 764.
-
-
-LaTeX Warning: Reference `listing-hello-world' on page 7 undefined on input lin
-e 764.
-
-
-LaTeX Warning: Reference `listing-hello-world' on page 7 undefined on input lin
-e 764.
-
-[7]
+ [6] [7]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
 (Font)              scaled to size 13.0pt on input line 831.
 LaTeX Font Info:    Calculating math sizes for size <10.9> on input line 837.
@@ -3064,57 +2989,7 @@ LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 839.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/it' will be
 (Font)              scaled to size 6.0pt on input line 839.
- [8] [9]
-
-LaTeX Warning: Hyper reference `fig-logo' on page 10 undefined on input line 99
-8.
-
-
-LaTeX Warning: Reference `fig-logo' on page 10 undefined on input line 998.
-
-
-LaTeX Warning: Reference `fig-logo' on page 10 undefined on input line 998.
-
-[10]
-
-LaTeX Warning: Hyper reference `qu-titles' on page 11 undefined on input line 1
-011.
-
-
-LaTeX Warning: Reference `qu-titles' on page 11 undefined on input line 1011.
-
-
-LaTeX Warning: Reference `qu-titles' on page 11 undefined on input line 1011.
-
-
-LaTeX Warning: Reference `qu-abstract1' on page 11 undefined on input line 1054
-.
-
-
-LaTeX Warning: Hyper reference `qu-abstract2' on page 11 undefined on input lin
-e 1054.
-
-
-LaTeX Warning: Reference `qu-abstract2' on page 11 undefined on input line 1054
-.
-
-
-LaTeX Warning: Reference `qu-abstract2' on page 11 undefined on input line 1054
-.
-
-
-LaTeX Warning: Hyper reference `section-bibliographies' on page 11 undefined on
- input line 1065.
-
-
-LaTeX Warning: Reference `section-bibliographies' on page 11 undefined on input
- line 1065.
-
-
-LaTeX Warning: Reference `section-bibliographies' on page 11 undefined on input
- line 1065.
-
-[11]
+ [8] [9] [10] [11]
 Overfull \hbox (6.70717pt too wide) in paragraph at lines 1075--1085
 \TU/Alegreya(0)/m/n/12 the com-pany or for-eign in-sti-tute on the ti-tle page, in-stead use the [][][]
  []
@@ -3127,90 +3002,7 @@ LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/it' will be
 (Font)              scaled to size 5.0pt on input line 1120.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(1)/m/n' will be
 (Font)              scaled to size 13.20007pt on input line 1127.
-
-LaTeX Warning: Reference `section-math-theorems' on page 12 undefined on input 
-line 1129.
-
-
-LaTeX Warning: Citation 'amsmath' on page 12 undefined on input line 1131.
-
-[12]
-
-LaTeX Warning: Citation 'babel' on page 13 undefined on input line 1136.
-
-
-LaTeX Warning: Citation 'biblatex' on page 13 undefined on input line 1142.
-
-
-LaTeX Warning: Reference `section-bibliographies' on page 13 undefined on input
- line 1143.
-
-
-LaTeX Warning: Hyper reference `section-styling' on page 13 undefined on input 
-line 1149.
-
-
-LaTeX Warning: Reference `section-styling' on page 13 undefined on input line 1
-149.
-
-
-LaTeX Warning: Reference `section-styling' on page 13 undefined on input line 1
-149.
-
-
-LaTeX Warning: Citation 'hyperref' on page 13 undefined on input line 1169.
-
-
-LaTeX Warning: Reference `listing-hello-world' on page 13 undefined on input li
-ne 1180.
-
-
-LaTeX Warning: Hyper reference `section-code' on page 13 undefined on input lin
-e 1183.
-
-
-LaTeX Warning: Reference `section-code' on page 13 undefined on input line 1183
-.
-
-
-LaTeX Warning: Reference `section-code' on page 13 undefined on input line 1183
-.
-
-
-LaTeX Warning: Hyper reference `section-graphics' on page 13 undefined on input
- line 1191.
-
-
-LaTeX Warning: Reference `section-graphics' on page 13 undefined on input line 
-1191.
-
-
-LaTeX Warning: Reference `section-graphics' on page 13 undefined on input line 
-1191.
-
-
-LaTeX Warning: Citation 'url' on page 13 undefined on input line 1195.
-
-[13]
-
-LaTeX Warning: Citation 'varioref' on page 14 undefined on input line 1198.
-
-
-LaTeX Warning: Reference `section-references' on page 14 undefined on input lin
-e 1198.
-
-
-LaTeX Warning: Hyper reference `listing-hello-world' on page 14 undefined on in
-put line 1225.
-
-
-LaTeX Warning: Reference `listing-hello-world' on page 14 undefined on input li
-ne 1225.
-
-
-LaTeX Warning: Reference `listing-hello-world' on page 14 undefined on input li
-ne 1225.
-
+[12] [13]
 \uzlfootnotebox=\box88
 
 Overfull \hbox (2.96472pt too wide) in paragraph at lines 1261--1269
@@ -3219,39 +3011,15 @@ ts of all ta-bles as sep-a-rate lists. Frankly,
  []
 
 [14]
-
-LaTeX Warning: Hyper reference `qu-quotation-marks' on page 15 undefined on inp
-ut line 1338.
-
-
-LaTeX Warning: Reference `qu-quotation-marks' on page 15 undefined on input lin
-e 1338.
-
-
-LaTeX Warning: Reference `qu-quotation-marks' on page 15 undefined on input lin
-e 1338.
-
-
 Overfull \hbox (0.17032pt too wide) in paragraph at lines 1342--1347
 \TU/Alegreya(0)/m/n/12 the ver-ti-cal spac-ing com-pared to the stan-dard L[]T[
 ]X styles (no-body un-der-stands why these
  []
 
-[15]
-
-LaTeX Warning: Citation 'Knuth1986' on page 16 undefined on input line 1397.
-
-[16] [17]
+[15] [16] [17]
 Package Listings Info: Deleted | as a short reference for \lstinline on input l
 ine 1500.
-
-
-LaTeX Warning: Citation 'DowneyF13' on page 18 undefined on input line 1525.
-
-
-LaTeX Warning: Reference `problem-vc' on page 18 undefined on input line 1527.
-
-[18]
+ [18]
 Package Listings Info: Made | a short reference for \lstinline on input line 15
 30.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
@@ -3260,20 +3028,10 @@ LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 1592.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 1592.
+ [19]
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 1612.
 
-
-LaTeX Warning: Hyper reference `qu-math-env' on page 19 undefined on input line
- 1596.
-
-
-LaTeX Warning: Reference `qu-math-env' on page 19 undefined on input line 1596.
-
-
-
-LaTeX Warning: Reference `qu-math-env' on page 19 undefined on input line 1596.
-
-
-[19]
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
@@ -3283,25 +3041,14 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-
-LaTeX Warning: Reference `label-pseudocode' on page 20 undefined on input line 
-1643.
-
 [20]
-
-LaTeX Warning: Reference `lst-hello' on page 21 undefined on input line 1683.
-
-
-LaTeX Warning: Citation 'Kernighan1974' on page 21 undefined on input line 1684
-.
-
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 10.9pt on input line 1706.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 7.62996pt on input line 1706.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 5.45pt on input line 1706.
-[21]
+ [21]
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
@@ -3310,114 +3057,32 @@ LaTeX Font Info:    Font shape `TU/Alegreya(2)/m/n' will be
 LaTeX Font Info:    Font shape `TU/Alegreya(2)/m/it' will be
 (Font)              scaled to size 12.0pt on input line 1763.
 
-
-LaTeX Warning: Reference `qu-math-font' on page 22 undefined on input line 1778
-.
-
 [22]
-
-LaTeX Warning: Hyper reference `listing-merge' on page 23 undefined on input li
-ne 1788.
-
-
-LaTeX Warning: Reference `listing-merge' on page 23 undefined on input line 178
-8.
-
-
-LaTeX Warning: Reference `listing-merge' on page 23 undefined on input line 178
-8.
-
 LaTeX Font Info:    Font shape `TU/Alegreya(2)/m/n' will be
 (Font)              scaled to size 10.9pt on input line 1809.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
 (Font)              scaled to size 10.9pt on input line 1857.
-[23]
-
-LaTeX Warning: Hyper reference `lst-1' on page 24 undefined on input line 1861.
-
-
-
-LaTeX Warning: Reference `lst-1' on page 24 undefined on input line 1861.
-
-
-LaTeX Warning: Reference `lst-1' on page 24 undefined on input line 1861.
-
+ [23]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
 (Font)              scaled to size 9.25pt on input line 1870.
+
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-[24]
-
-LaTeX Warning: Hyper reference `qu-captions' on page 25 undefined on input line
- 1944.
-
-
-LaTeX Warning: Reference `qu-captions' on page 25 undefined on input line 1944.
-
-
-
-LaTeX Warning: Reference `qu-captions' on page 25 undefined on input line 1944.
-
-
-
-LaTeX Warning: Hyper reference `fig-ode1' on page 25 undefined on input line 19
-51.
-
-
-LaTeX Warning: Reference `fig-ode1' on page 25 undefined on input line 1951.
-
-
-LaTeX Warning: Reference `fig-ode1' on page 25 undefined on input line 1951.
-
-[25]
-
-LaTeX Warning: Hyper reference `fig-tab1' on page 26 undefined on input line 19
-96.
-
-
-LaTeX Warning: Reference `fig-tab1' on page 26 undefined on input line 1996.
-
-
-LaTeX Warning: Reference `fig-tab1' on page 26 undefined on input line 1996.
-
-[26]
+[24] [25] [26]
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
 Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 2049.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
  [27]
-
-LaTeX Warning: Hyper reference `fig-logo' on page 28 undefined on input line 20
-73.
-
-
-LaTeX Warning: Reference `fig-logo' on page 28 undefined on input line 2073.
-
-
-LaTeX Warning: Reference `fig-logo' on page 28 undefined on input line 2073.
-
-<uzl-thesis-logo-uzl.pdf, id=511, 265.67645pt x 112.84207pt>
+<uzl-thesis-logo-uzl.pdf, id=720, 265.67645pt x 112.84207pt>
 File: uzl-thesis-logo-uzl.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-uzl.pdf>
 Package luatex.def Info: uzl-thesis-logo-uzl.pdf  used on input line 2076.
 (luatex.def)             Requested size: 265.6758pt x 112.84178pt.
-
-LaTeX Warning: Hyper reference `qu-scaling' on page 28 undefined on input line 
-2092.
-
-
-LaTeX Warning: Reference `qu-scaling' on page 28 undefined on input line 2092.
-
-
-LaTeX Warning: Reference `qu-scaling' on page 28 undefined on input line 2092.
-
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
 (Font)              scaled to size 13.0pt on input line 2100.
-
-LaTeX Warning: Citation 'Tantau2019' on page 28 undefined on input line 2128.
-
-[28<./uzl-thesis-logo-uzl.pdf>]
+ [28<./uzl-thesis-logo-uzl.pdf>]
 LaTeX Font Info:    Calculating math sizes for size <9.25> on input line 2178.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 9.25pt on input line 2178.
@@ -3437,117 +3102,14 @@ LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
 (Font)              scaled to size 7.12248pt on input line 2178.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
 (Font)              scaled to size 5.08752pt on input line 2178.
-
-
-LaTeX Warning: Reference `fig-logo-paper' on page 29 undefined on input line 21
-96.
-
 File: uzl-thesis-logo-uzl.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-uzl.pdf>
 Package luatex.def Info: uzl-thesis-logo-uzl.pdf  used on input line 2199.
 (luatex.def)             Requested size: 265.6758pt x 112.84178pt.
-
-LaTeX Warning: Reference `fig-logo' on page 29 undefined on input line 2203.
-
-
-LaTeX Warning: Reference `fig-logo' on page 29 undefined on input line 2203.
-
-
-LaTeX Warning: Hyper reference `fig-tikz-white' on page 29 undefined on input l
-ine 2209.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 29 undefined on input line 22
-09.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 29 undefined on input line 22
-09.
-
+ [29]
 LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
 (Font)              scaled to size 9.48119pt on input line 2293.
-[29] [30]
-
-LaTeX Warning: Reference `section-styling' on page 31 undefined on input line 2
-350.
-
-
-LaTeX Warning: Hyper reference `fig-tikz-white' on page 31 undefined on input l
-ine 2368.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 23
-68.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 23
-68.
-
-
-LaTeX Warning: Hyper reference `fig-tikz-box' on page 31 undefined on input lin
-e 2379.
-
-
-LaTeX Warning: Reference `fig-tikz-box' on page 31 undefined on input line 2379
-.
-
-
-LaTeX Warning: Reference `fig-tikz-box' on page 31 undefined on input line 2379
-.
-
-
-LaTeX Warning: Hyper reference `fig-tikz-flat' on page 31 undefined on input li
-ne 2391.
-
-
-LaTeX Warning: Reference `fig-tikz-flat' on page 31 undefined on input line 239
-1.
-
-
-LaTeX Warning: Reference `fig-tikz-flat' on page 31 undefined on input line 239
-1.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 24
-04.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 24
-04.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 24
-04.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 24
-04.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 24
-14.
-
-
-LaTeX Warning: Reference `fig-tikz-white' on page 31 undefined on input line 24
-14.
-
-[31] [32]
-
-LaTeX Warning: Citation 'Knuth1986' on page 33 undefined on input line 2444.
-
-
-LaTeX Warning: Citation 'biblatex' on page 33 undefined on input line 2454.
-
-
-Overfull \hbox (16.27516pt too wide) in paragraph at lines 2453--2458
-\TU/Alegreya(2)/m/n/12 You can use the dif-fer-ent com-mands of-fered by the pac
-k-age, such as for in-stance [][][][]
- []
-
-
-LaTeX Warning: Reference `listing-bibtex' on page 33 undefined on input line 24
-78.
-
+ [30] [31] [32]
 [33]
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 2548.
@@ -3555,34 +3117,14 @@ LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 2548.
 LaTeX Font Info:    Font shape `TU/Alegreya(1)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 2548.
-
-
-LaTeX Warning: Citation 'Lamport1994' on page 34 undefined on input line 2559.
-
-
-LaTeX Warning: Citation 'varioref' on page 34 undefined on input line 2562.
-
-[34] [35]
+ [34] [35]
 Chapter 3.
 [36
 
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
 (Font)              scaled to size 12.0pt on input line 2663.
-
-
-LaTeX Warning: Hyper reference `section-abstract' on page 37 undefined on input
- line 2694.
-
-
-LaTeX Warning: Reference `section-abstract' on page 37 undefined on input line 
-2694.
-
-
-LaTeX Warning: Reference `section-abstract' on page 37 undefined on input line 
-2694.
-
-[37]
+ [37]
 Overfull \hbox (22.29684pt too wide) in paragraph at lines 2723--2730
 \TU/Alegreya(2)/m/n/12 makes it easy to gen-er-ate this struc-ture since you onl
 y need to make sure that the [][][][][]
@@ -3594,131 +3136,50 @@ Overfull \hbox (89.94069pt too wide) in paragraph at lines 2723--2730
 d a cor-re-spond-ing [][][][][][][][][]
  []
 
-
-LaTeX Warning: Reference `qu-intro-stru' on page 38 undefined on input line 273
-9.
-
 [38] [39]
 Overfull \hbox (5.47116pt too wide) in paragraph at lines 2882--2884
 []\TU/Alegreya(2)/m/n/12 New re-sults you ob-tained: This can in-clude new math-
 e-mat-i-cal state-ments, al-go-rithms,
  []
 
-[40]
-
-LaTeX Warning: Reference `qu-we' on page 41 undefined on input line 2954.
-
-[41] [42] [43] [44]
-
-LaTeX Warning: Citation 'Alley1996' on page 45 undefined on input line 3226.
-
-[45]
-
-LaTeX Warning: Citation 'Beutelspacher2009' on page 46 undefined on input line 
-3316.
-
-
-LaTeX Warning: Citation 'Beutelspacher2009' on page 46 undefined on input line 
-3317.
-
-
+[40] [41] [42] [43] [44] [45]
 Overfull \hbox (21.40068pt too wide) in paragraph at lines 3328--3335
 [][]\TU/AlegreyaSans(2)/m/it/12 An-swer. [][]\TU/Alegreya(2)/m/n/12 There are ma
 ny pos-si-ble en-vi-ron-ments for dis-play-ing math-e-mat-i-cal text (like [][]
 [][][],
  []
 
-[46] [47]
-
-LaTeX Warning: Hyper reference `section-tikz' on page 48 undefined on input lin
-e 3547.
-
-
-LaTeX Warning: Reference `section-tikz' on page 48 undefined on input line 3547
-.
-
-
-LaTeX Warning: Reference `section-tikz' on page 48 undefined on input line 3547
-.
-
-[48]
-
-LaTeX Warning: Hyper reference `section-external' on page 49 undefined on input
- line 3558.
-
-
-LaTeX Warning: Reference `section-external' on page 49 undefined on input line 
-3558.
-
-
-LaTeX Warning: Reference `section-external' on page 49 undefined on input line 
-3558.
-
-
-LaTeX Warning: Hyper reference `fig-ode1' on page 49 undefined on input line 36
-05.
-
-
-LaTeX Warning: Reference `fig-ode1' on page 49 undefined on input line 3605.
-
-
-LaTeX Warning: Reference `fig-ode1' on page 49 undefined on input line 3605.
-
-
-LaTeX Warning: Hyper reference `fig-ode2' on page 49 undefined on input line 36
-07.
-
-
-LaTeX Warning: Reference `fig-ode2' on page 49 undefined on input line 3607.
-
-
-LaTeX Warning: Reference `fig-ode2' on page 49 undefined on input line 3607.
-
-[49]
-
-LaTeX Warning: Citation 'biblatex' on page 50 undefined on input line 3648.
-
-[50] [51]
+[46] [47] [48] [49] [50] [51]
 Chapter 4.
 
-LaTeX Info: Writing file `./Template_for_the_LaTeX_Class_uzl-thesis-bibtex-entr
-ies.bib'.
-
-
-\openout127 = Template_for_the_LaTeX_Class_uzl-thesis-bibtex-entries.bib
-
-
-LaTeX Warning: Empty bibliography on input line 3984.
+LaTeX Info: File `Template_for_the_LaTeX_Class_uzl-thesis-bibtex-entries.bib' a
+lready exists on the system.
+            Not generating it from this source.
 
 [52
+
+]
+
+Package biblatex Warning: Name format 'last-first' deprecated.
+(biblatex)                Please use 'family-given' instead.
+(biblatex)                Using 'family-given' now.
+
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/scit' will be
+(Font)              scaled to size 12.0pt on input line 3991.
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/it' will be
+(Font)              scaled to size 8.0pt on input line 3991.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(1)/m/it' will be
+(Font)              scaled to size 13.20007pt on input line 3991.
+[53
 
 ] (./Template_for_the_LaTeX_Class_uzl-thesis.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Template_for_the_LaTeX_Class_uzl-thesis.o
-ut' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Template_for_the_LaTeX_Class_uzl-th
-esis.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  80655E53CA4A0438CFBA36D96E0F8D56;6678.
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                Template_for_the_LaTeX_Class_uzl-thesis
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `Template_for_the_LaTeX_Class_uzl-thesis.out'
+ has not changed.
+(rerunfilecheck)             Checksum: AC2E5D2C9DF6D4D88A7B98A02924A4DB;6784.
 Package logreq Info: Writing requests to 'Template_for_the_LaTeX_Class_uzl-thes
 is.run.xml'.
 
@@ -3726,29 +3187,29 @@ is.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 45965 strings out of 477259
- 195334,2373549 words of node,token memory allocated
- 852 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 21 glue, 4 kern, 1 glyph, 53 attribute, 69 glue_spe
-c, 28 attribute_list, 2 write nodes
-   avail lists: 1:3,2:11713,3:3384,4:822,5:2775,6:94,7:11155,8:17,9:6494,10:25,1
-1:544
- 65740 multiletter control sequences out of 65536+600000
- 396 fonts using 123055375 bytes
- 102i,11n,135p,1885b,2944s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 46156 strings out of 477259
+ 244177,2373549 words of node,token memory allocated
+ 924 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 21 glue, 4 kern, 1 glyph, 65 attribute, 69 glue_spe
+c, 34 attribute_list, 2 write, 6 pdf_action nodes
+   avail lists: 1:5,2:14826,3:3726,4:822,5:2778,6:100,7:11273,8:36,9:6496,10:25,
+11:545
+ 65892 multiletter control sequences out of 65536+600000
+ 397 fonts using 123399671 bytes
+ 102i,11n,135p,1887b,2944s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmmono9-r
 egular.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/public/t
 ex-gyre-math/texgyrepagella-math.otf><C:/Users/patri/AppData/Local/Programs/MiKT
-eX/fonts/opentype/huerta/alegreya/Alegreya-Regular.otf><C:/Users/patri/AppData/L
-ocal/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Regular.otf><C:/Use
-rs/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-I
-talic.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/public/te
-x-gyre/texgyrechorus-mediumitalic.otf><C:/Users/patri/AppData/Local/Programs/MiK
-TeX/fonts/opentype/huerta/alegreya/Alegreya-Italic.otf><C:/Users/patri/AppData/L
-ocal/Programs/MiKTeX/fonts/opentype/public/tex-gyre-math/texgyrepagella-math.otf
-><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmmono12
--regular.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta
-/alegreya/Alegreya-Bold.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/
+eX/fonts/opentype/huerta/alegreya/Alegreya-Bold.otf><C:/Users/patri/AppData/Loca
+l/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Regular.otf><C:/Users/
+patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Regu
+lar.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/aleg
+reya/Alegreya-Italic.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/ope
+ntype/public/tex-gyre/texgyrechorus-mediumitalic.otf><C:/Users/patri/AppData/Loc
+al/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Italic.otf><C:/Users/
+patri/AppData/Local/Programs/MiKTeX/fonts/opentype/public/tex-gyre-math/texgyrep
+agella-math.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/pub
+lic/lm/lmmono12-regular.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/
 opentype/public/lm/lmmonoprop10-regular.otf><C:/Users/patri/AppData/Local/Progra
 ms/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Regular.otf><C:/Users/patri/Ap
 pData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Italic.otf><
@@ -3758,10 +3219,10 @@ uerta/alegreya/AlegreyaSans-Italic.otf><C:/Users/patri/AppData/Local/Programs/Mi
 KTeX/fonts/opentype/huerta/alegreya/AlegreyaSans-Regular.otf><C:/Users/patri/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/p
 atri/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Template_for_the_LaTeX_Class_uzl-thesis.pdf (58 pages, 495542
+Output written on Template_for_the_LaTeX_Class_uzl-thesis.pdf (59 pages, 536723
  bytes).
 
-PDF statistics: 879 PDF objects out of 1000 (max. 8388607)
- 510 named destinations out of 1000 (max. 131072)
- 16 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1133 PDF objects out of 1200 (max. 8388607)
+ 525 named destinations out of 1000 (max. 131072)
+ 248 words of extra memory for PDF output out of 10000 (max. 100000000)
 

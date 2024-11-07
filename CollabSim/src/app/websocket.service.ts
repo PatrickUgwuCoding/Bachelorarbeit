@@ -48,5 +48,9 @@ export class WebSocketService {
     this.socket.emit('saveCpp', cpp)
   }
 
+  save(xml:any,cpp: any) {
+    this.socket.emit('save', [xml,cpp])
+  }
+
    
 }

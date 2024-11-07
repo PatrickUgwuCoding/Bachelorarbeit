@@ -1,24 +1,32 @@
 body {
-    background-color: darkolivegreen;
+    
 }
 
 .ace-xml {
-    width: 80%; 
-    height: 85%;
+    width: 45%; 
+    height: 70%;
     position: absolute; 
-    top: 8%;
+    bottom: 8%;
 }
 
+.ace-cpp {
+    width: 45%; 
+    height: 70%;
+    position: absolute; 
+    bottom: 8%;
+    left: 54%;
+}
 
 ul {
     position: absolute;
-    bottom: 5%;
+    width: 15%;
+    bottom: 1px;
     right: 2%;
 }
 
 button {
-    width: 100px;
-    height: 40px;
+    width: 50%;
+    height: 50%;
     font-size: 20px;
     font-style: inherit;
     font-weight: 700;

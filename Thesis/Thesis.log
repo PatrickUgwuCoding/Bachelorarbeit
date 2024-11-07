@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10) (format=lualatex 2024.1.15)  21 MAY 2024 12:08
+This is LuaHBTeX, Version 1.17.0 (MiKTeX 23.10) (format=lualatex 2024.1.15)  3 JUL 2024 12:30
  restricted system commands enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -1254,7 +1254,7 @@ Package biblatex Info: ... and expl3
 .sty
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
 ))
-Package biblatex Info: Redefining '\cite' on input line 172.
+Package biblatex Info: Redefining '\cite' on input line 182.
 
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/unicode-math/unicode-ma
 th.sty
@@ -2193,11 +2193,11 @@ language=dflt;"
 
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
 (Font)                  OT1/cmtt/m/n --> TU/LatinModernMono(1)/m/n on input lin
-e 308.
+e 318.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/LatinModernMono(1)/b/n on input lin
-e 308.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 308.
+e 318.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 318.
 
 Package fontspec Info: Could not resolve font "TeXGyrePagellaMath/B" (it
 (fontspec)             probably doesn't exist).
@@ -2242,16 +2242,16 @@ base;script=math;language=dflt;mathfontdimen=xetex;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 308.
+(Font)              `operators' in the math version `normal' on input line 318.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TeXGyrePagellaMath(1)/m/n on input l
-ine 308.
+ine 318.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 308.
+(Font)              `operators' in the math version `bold' on input line 318.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/cmr/bx/n --> TU/TeXGyrePagellaMath(1)/b/n on input 
-line 308.
+line 318.
 
 Package fontspec Info: Could not resolve font "TeXGyrePagellaMath/B" (it
 (fontspec)             probably doesn't exist).
@@ -2279,15 +2279,15 @@ men=xetex;mathfontdimen=tex2;+ssty=1;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 308.
+(Font)              `symbols' in the math version `normal' on input line 318.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/cmsy/m/n --> TU/TeXGyrePagellaMath(2)/m/n on input 
-line 308.
+line 318.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 308.
+(Font)              `symbols' in the math version `bold' on input line 318.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> TU/TeXGyrePagellaMath(2)/b/n on input 
-line 308.
+line 318.
 
 Package fontspec Info: Could not resolve font "TeXGyrePagellaMath/B" (it
 (fontspec)             probably doesn't exist).
@@ -2316,22 +2316,22 @@ men=xetex;mathfontdimen=tex3;+ssty=1;"
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 3
-08.
+18.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> TU/TeXGyrePagellaMath(3)/m/n on input 
-line 308.
+line 318.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 308
+(Font)              `largesymbols' in the math version `bold' on input line 318
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> TU/TeXGyrePagellaMath(3)/b/n on input 
-line 308.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 308
+line 318.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 318
 .
  (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 308
+LaTeX Font Info:    Trying to load font information for U+msb on input line 318
 .
 
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
@@ -2381,18 +2381,18 @@ se;script=latn;language=dflt;mathfontdimen=xetex;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 12.10007pt on input line 308.
+(Font)              scaled to size 12.10007pt on input line 318.
 \sym__um_fam1=\mathgroup6
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `normal'
 (Font)                  TU/TeXGyreChorus(0)/m/n --> TU/TeXGyreChorus(0)/m/n on 
-input line 308.
+input line 318.
 LaTeX Font Info:    Overwriting symbol font `__um_fam1' in version `bold'
 (Font)                  TU/TeXGyreChorus(0)/m/n --> TU/TeXGyreChorus(0)/b/n on 
-input line 308.
+input line 318.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.95404pt on input line 308.
+(Font)              scaled to size 8.95404pt on input line 318.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 6.65503pt on input line 308.
+(Font)              scaled to size 6.65503pt on input line 318.
 luaotfload | aux : font no 121 (nil) defines no feature for script math
 
 Package fontspec Warning: Font "Alegreya" does not contain requested Script
@@ -2437,10 +2437,10 @@ ontdimen=xetex;+lnum;"
 \sym__um_fam2=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `normal'
 (Font)                  TU/Alegreya(10)/m/n --> TU/Alegreya(10)/m/n on input li
-ne 308.
+ne 318.
 LaTeX Font Info:    Overwriting symbol font `__um_fam2' in version `bold'
 (Font)                  TU/Alegreya(10)/m/n --> TU/Alegreya(10)/b/n on input li
-ne 308.
+ne 318.
 luaotfload | aux : font no 130 (nil) defines no feature for script math
 
 Package fontspec Warning: Font "AlegreyaItalic" does not contain requested
@@ -2486,10 +2486,10 @@ ipt=latn;language=dflt;mathfontdimen=xetex;+lnum;"
 \sym__um_fam3=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `normal'
 (Font)                  TU/AlegreyaItalic(0)/m/n --> TU/AlegreyaItalic(0)/m/n o
-n input line 308.
+n input line 318.
 LaTeX Font Info:    Overwriting symbol font `__um_fam3' in version `bold'
 (Font)                  TU/AlegreyaItalic(0)/m/n --> TU/AlegreyaItalic(0)/b/n o
-n input line 308.
+n input line 318.
 
 Package unicode-math Warning: I am trying to set up alphabet"it/num" but there
 (unicode-math)                are no configuration settings for it. (See
@@ -2541,10 +2541,10 @@ tn;language=dflt;mathfontdimen=xetex;+lnum;"
 \sym__um_fam4=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `__um_fam4' in version `normal'
 (Font)                  TU/AlegreyaBold(0)/m/n --> TU/AlegreyaBold(0)/m/n on in
-put line 308.
+put line 318.
 LaTeX Font Info:    Overwriting symbol font `__um_fam4' in version `bold'
 (Font)                  TU/AlegreyaBold(0)/m/n --> TU/AlegreyaBold(0)/b/n on in
-put line 308.
+put line 318.
 luaotfload | aux : font no 142 (nil) defines no feature for script math
 
 Package fontspec Warning: Font "AlegreyaBoldItalic" does not contain requested
@@ -2592,10 +2592,10 @@ ode=base;script=latn;language=dflt;mathfontdimen=xetex;+lnum;"
 \sym__um_fam5=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `__um_fam5' in version `normal'
 (Font)                  TU/AlegreyaBoldItalic(0)/m/n --> TU/AlegreyaBoldItalic(
-0)/m/n on input line 308.
+0)/m/n on input line 318.
 LaTeX Font Info:    Overwriting symbol font `__um_fam5' in version `bold'
 (Font)                  TU/AlegreyaBoldItalic(0)/m/n --> TU/AlegreyaBoldItalic(
-0)/b/n on input line 308.
+0)/b/n on input line 318.
 
 Package unicode-math Warning: I am trying to set up alphabet"bfit/num" but
 (unicode-math)                there are no configuration settings for it. (See
@@ -2646,10 +2646,10 @@ ontdimen=xetex;"
 \sym__um_fam6=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `__um_fam6' in version `normal'
 (Font)                  TU/Alegreya(11)/m/n --> TU/Alegreya(11)/m/n on input li
-ne 308.
+ne 318.
 LaTeX Font Info:    Overwriting symbol font `__um_fam6' in version `bold'
 (Font)                  TU/Alegreya(11)/m/n --> TU/Alegreya(11)/b/n on input li
-ne 308.
+ne 318.
 
 Package fontspec Info: Could not resolve font "LatinModernMonoProp/BI" (it
 (fontspec)             probably doesn't exist).
@@ -2711,50 +2711,78 @@ dflt;"
 dflt;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
 
+
+(C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2023/09/26 version 6.1.0 text color boxes
+(C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/tools/verbatim.sty
+Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks47
+\verbatim@line=\toks48
+\verbatim@in@stream=\read5
+)
+(C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/trimspaces/trimspaces.s
+ty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box87
+\tcb@upperbox=\box88
+\tcb@lowerbox=\box89
+\tcb@phantombox=\box90
+\c@tcbbreakpart=\count462
+\c@tcblayer=\count463
+\c@tcolorbox@number=\count464
+\tcb@temp=\box91
+\tcb@temp=\box92
+\tcb@temp=\box93
+\tcb@temp=\box94
+)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'german'.
-(./Thesis.aux)
+ (./Thesis.aux)
 \openout1 = Thesis.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 336.
-LaTeX Font Info:    ... okay on input line 336.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 348.
+LaTeX Font Info:    ... okay on input line 348.
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 336.
+(Font)              scaled to size 12.0pt on input line 348.
 
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count462
+\scratchcounter=\count465
 \scratchdimen=\dimen292
-\scratchbox=\box87
-\nofMPsegments=\count463
-\nofMParguments=\count464
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count465
+\scratchbox=\box95
+\nofMPsegments=\count466
+\nofMParguments=\count467
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count468
 \MPscratchDim=\dimen293
-\MPnumerator=\count466
-\makeMPintoPDFobject=\count467
-\everyMPtoPDFconversion=\toks48
+\MPnumerator=\count469
+\makeMPintoPDFobject=\count470
+\everyMPtoPDFconversion=\toks50
 )
 (C:/Users/patri/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
@@ -2800,12 +2828,12 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 336.
+Package hyperref Info: Link coloring OFF on input line 348.
 (./Thesis.out) (./Thesis.out)
 \@outlinefile=\write5
 
 \openout5 = Thesis.out
-\c@lstlisting=\count468
+\c@lstlisting=\count471
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
 
@@ -2830,207 +2858,427 @@ Package biblatex Info: Data encoding 'utf8' specified.
 
 \openout4 = Thesis-blx.bib
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Thesis.bbl' not found.
-
-No file Thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 336.
-Package biblatex Info: Reference segment=0 on input line 336.
-<uzl-thesis-logo-itcs.pdf, id=78, 426.79149pt x 113.8112pt>
+Package biblatex Info: ... file 'Thesis.bbl' found.
+ (./Thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 348.
+Package biblatex Info: Reference segment=0 on input line 348.
+<uzl-thesis-logo-itcs.pdf, id=102, 426.79149pt x 113.8112pt>
 File: uzl-thesis-logo-itcs.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-itcs.pdf>
-Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 336.
+Package luatex.def Info: uzl-thesis-logo-itcs.pdf  used on input line 348.
 (luatex.def)             Requested size: 426.79045pt x 113.81091pt.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 336.
+(Font)              scaled to size 12.0pt on input line 348.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 15.4pt on input line 336.
-LaTeX Font Info:    Calculating math sizes for size <15.4> on input line 336.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 16.94008pt on input line 336.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 11.85799pt on input line 336.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.47003pt on input line 336.
-LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.77994pt on input line 336.
+(Font)              scaled to size 15.4pt on input line 348.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 15.4pt on input line 336.
-LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/it' will be
-(Font)              scaled to size 10.77994pt on input line 336.
+(Font)              scaled to size 15.4pt on input line 348.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 336.
-<uzl-thesis-logo-slogan.pdf, id=79, 142.26349pt x 11.38112pt>
+(Font)              scaled to size 12.0pt on input line 348.
+<uzl-thesis-logo-slogan.pdf, id=103, 142.26349pt x 11.38112pt>
 File: uzl-thesis-logo-slogan.pdf Graphic file (type pdf)
 <use uzl-thesis-logo-slogan.pdf>
-Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 336.
+Package luatex.def Info: uzl-thesis-logo-slogan.pdf  used on input line 348.
 (luatex.def)             Requested size: 142.26312pt x 11.38107pt.
-[1
+ [1
 
 {C:/Users/patri/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}<./uzl-thesis-l
 ogo-itcs.pdf><./uzl-thesis-logo-slogan.pdf>]
 LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 336.
+(Font)              scaled to size 12.0pt on input line 348.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 10.9pt on input line 336.
+(Font)              scaled to size 10.9pt on input line 348.
  [2
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 13.20007pt on input line 336.
+(Font)              scaled to size 13.20007pt on input line 348.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.80005pt on input line 336.
+(Font)              scaled to size 8.80005pt on input line 348.
 LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 6.60004pt on input line 336.
+(Font)              scaled to size 6.60004pt on input line 348.
  [3
-
-] [4
 
 ]
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 22.0pt on input line 336.
- (./Thesis.toc)
+(Font)              scaled to size 22.0pt on input line 348.
+
+(./Thesis.toc)
 \tf@toc=\write6
 
 \openout6 = Thesis.toc
+ [4
 
-[5
-
-
-] [6
 
 ]
 Kapitel 1.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 60.0pt on input line 344.
-LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
-(Font)              scaled to size 12.29993pt on input line 409.
-LaTeX Font Info:    Font shape `TU/LatinModernMono(0)/m/n' will be
-(Font)              scaled to size 11.17242pt on input line 409.
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
-(Font)              scaled to size 10.9pt on input line 414.
+(Font)              scaled to size 60.0pt on input line 356.
 [1
 
 
 ]
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 434.
 LaTeX Font Info:    Font shape `TU/AlegreyaSans(2)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 480.
+(Font)              scaled to size 13.0pt on input line 457.
  [2]
-! Text line contains an invalid character.
-l.550 ... appeared (e.g., Wikis and Blogs). Collabo^^B
-                                                  rative solutions that allo...
-? 
-[3] [4]
+Overfull \hbox (2.28545pt too wide) in paragraph at lines 466--470
+\TU/Alegreya(0)/m/n/12 Computergrafik-Community. Vie-le Si-mu-la-to-ren ba-sie-r
+en auf Spielen-gi-nes zur gra-fi-schen
+ []
+
+[3]
+Overfull \hbox (11.30626pt too wide) in paragraph at lines 529--535
+\TU/Alegreya(0)/m/n/12 der Pra-xis ha-ben Pro-gram-me, wel-che Kol-la-bo-ra-ti-o
+n er-mög-li-chen, ei-nen wach-sen-den Trend.
+ []
+
+[4]
+Overfull \hbox (4.7775pt too wide) in paragraph at lines 551--556
+\TU/Alegreya(0)/m/n/12 Pro-ble-me, die mit der Nut-zung von Si-mu-la-ti-ons-um-g
+e-bun-gen für Ro-bo-ter ver-bun-den sind,
+ []
+
+[5]
 Kapitel 2.
 
-Overfull \hbox (17.8471pt too wide) in paragraph at lines 628--632
-\TU/Alegreya(0)/m/n/12 THe web-ser-ver, wri-ten in py-thon, hand-les all cum-mu-
-ni-ca-ti-on bet-ween the Front-end, backend
+Overfull \hbox (1.30634pt too wide) in paragraph at lines 592--593
+[]\TU/Alegreya(0)/m/n/12 Die Sze-nen-be-schrei-bung er-folgt o󰀖t mit-tels XML
+-Dateien, wel-che die Geo-me-trie, Ma-
  []
 
-[5
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/n' will be
+(Font)              scaled to size 10.9pt on input line 605.
+<figures/argos_architecture.png, id=208, 486.01575pt x 268.6035pt>
+File: figures/argos_architecture.png Graphic file (type png)
+<use figures/argos_architecture.png>
+Package luatex.def Info: figures/argos_architecture.png  used on input line 607
+.
+(luatex.def)             Requested size: 437.41013pt x 241.7409pt.
+
+Overfull \hbox (10.61877pt too wide) in paragraph at lines 607--608
+ [][] 
+ []
+
+[6
 
 ]
-Overfull \hbox (0.37743pt too wide) in paragraph at lines 653--655
-\TU/Alegreya(0)/m/n/12 schnel-le kom-mu-ni-ka-ti-on zu er-mög-li-chen. an-de-re
- kom-mu-ni-ka-ti-ons-ar-ten sind meist lang-
+warning  (file figures/test8.drawio.pdf) (pdf inclusion): PDF inclusion: found P
+DF version '1.7', but at most version '1.5' allowed
+<figures/test8.drawio.pdf, id=219, 429.52467pt x 493.845pt>
+File: figures/test8.drawio.pdf Graphic file (type pdf)
+<use figures/test8.drawio.pdf>
+Package luatex.def Info: figures/test8.drawio.pdf  used on input line 630.
+(luatex.def)             Requested size: 429.52362pt x 493.84378pt.
+
+Overfull \hbox (2.73227pt too wide) in paragraph at lines 630--631
+ [][] 
  []
 
-[6] [7]
+[7<./figures/argos_architecture.png>] [8<./figures/test8.drawio.pdf>]
+Overfull \hbox (22.54953pt too wide) in paragraph at lines 642--648
+\TU/Alegreya(0)/m/n/12 ein-schließ-lich der Be-we-gungs-steue-rung der Ro-bo-te
+r, der Sensor- und Aktuator-Interaktionen
+ []
+
+[9] [10] [11]
 Kapitel 3.
-
-Overfull \hbox (3.20482pt too wide) in paragraph at lines 710--716
-\TU/Alegreya(0)/m/n/12 which re-pre-sent a sub-jec-ti-ve as-sess-ment by the par
--ti-ci-pan-ts and have an in-di-rect in-󰀎luence
- []
-
-
-Overfull \hbox (10.94466pt too wide) in paragraph at lines 729--734
-[]\TU/Alegreya(0)/m/n/12 pre How of-ten do you use com-pu-ters? How would you ra
--te your know-la-ge about (swarm)
- []
-
-[8
+[12
 
 ]
-Overfull \hbox (4.32948pt too wide) in paragraph at lines 770--777
-[]\TU/Alegreya(0)/m/n/12 task com-ple-ti-on task com-ple-ti-on time (clicks, how
- ma-ny clicks -> much loo-king aroun-
+Overfull \hbox (2.58076pt too wide) in paragraph at lines 758--760
+\TU/Alegreya(0)/m/n/12 Das Ex-pe-ri-ment zur Eva-lua-ti-on des ent-wickel-ten Si
+-mu-la-ti-ons-werk-zeugs wur-de mit 󰋋 Teil-
  []
 
-[9]
+[13]
+<figures/Lösung xml.png, id=293, 453.49425pt x 329.43076pt>
+File: figures/Lösung xml.png Graphic file (type png)
+<use figures/Lösung xml.png>
+Package luatex.def Info: figures/Lösung xml.png  used on input line 794.
+(luatex.def)             Requested size: 453.49313pt x 329.42995pt.
+
+Overfull \hbox (26.70178pt too wide) in paragraph at lines 794--795
+ [][] 
+ []
+
+[14<./figures/Lösung xml.png>] [15]
 Kapitel 4.
-[10
+<figures/pre-question1.png, id=322, 308.352pt x 163.20975pt>
+File: figures/pre-question1.png Graphic file (type png)
+<use figures/pre-question1.png>
+Package luatex.def Info: figures/pre-question1.png  used on input line 906.
+(luatex.def)             Requested size: 308.35124pt x 163.20934pt.
+[16
 
 ]
+<figures/pre_question2.png, id=330, 317.988pt x 151.767pt>
+File: figures/pre_question2.png Graphic file (type png)
+<use figures/pre_question2.png>
+Package luatex.def Info: figures/pre_question2.png  used on input line 920.
+(luatex.def)             Requested size: 317.98721pt x 151.76662pt.
+<figures/pre_question3.png, id=333, 524.55975pt x 180.675pt>
+File: figures/pre_question3.png Graphic file (type png)
+<use figures/pre_question3.png>
+Package luatex.def Info: figures/pre_question3.png  used on input line 935.
+(luatex.def)             Requested size: 419.64836pt x 144.54018pt.
+<figures/pre_question4.png, id=334, 527.571pt x 169.8345pt>
+File: figures/pre_question4.png Graphic file (type png)
+<use figures/pre_question4.png>
+Package luatex.def Info: figures/pre_question4.png  used on input line 943.
+(luatex.def)             Requested size: 422.05737pt x 135.86777pt.
+<figures/pre_question5.png, id=335, 524.55975pt x 166.82326pt>
+File: figures/pre_question5.png Graphic file (type png)
+<use figures/pre_question5.png>
+Package luatex.def Info: figures/pre_question5.png  used on input line 951.
+(luatex.def)             Requested size: 419.64836pt x 133.45877pt.
+ [17<./figures/pre-question1.png><./figures/pre_question2.png>] [18<./figures/pr
+e_question3.png><./figures/pre_question4.png><./figures/pre_question5.png>]
+<figures/post_question1.png, id=356, 520.94624pt x 166.221pt>
+File: figures/post_question1.png Graphic file (type png)
+<use figures/post_question1.png>
+Package luatex.def Info: figures/post_question1.png  used on input line 963.
+(luatex.def)             Requested size: 416.75757pt x 132.97696pt.
+<figures/post_question5.png, id=357, 537.207pt x 169.8345pt>
+File: figures/post_question5.png Graphic file (type png)
+<use figures/post_question5.png>
+Package luatex.def Info: figures/post_question5.png  used on input line 971.
+(luatex.def)             Requested size: 429.76619pt x 135.86777pt.
+
+Overfull \hbox (2.97484pt too wide) in paragraph at lines 971--972
+ [][] 
+ []
+
+<figures/post_question6.png, id=358, 521.5485pt x 169.8345pt>
+File: figures/post_question6.png Graphic file (type png)
+<use figures/post_question6.png>
+Package luatex.def Info: figures/post_question6.png  used on input line 978.
+(luatex.def)             Requested size: 417.23935pt x 135.86777pt.
+LaTeX Font Info:    Calculating math sizes for size <10.9> on input line 987.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 11.99005pt on input line 987.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 8.39299pt on input line 987.
+LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
+(Font)              scaled to size 5.99503pt on input line 987.
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--989
+[][]\TU/AlegreyaSans(2)/m/n/10.9 Mit-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--989
+\TU/AlegreyaSans(2)/m/n/10.9 tel-
+ []
+
+
+Overfull \hbox (6.11427pt too wide) in paragraph at lines 996--999
+\TU/Alegreya(0)/m/n/12 Ex-pe-ri-ence, die maß-geb-lich über den Er-folg ei-nes
+ Pro-dukts ent-schei-det. Um die-sen Aspekt
+ []
+
+<figures/post_question3.png, id=362, 519.74174pt x 171.64125pt>
+File: figures/post_question3.png Graphic file (type png)
+<use figures/post_question3.png>
+Package luatex.def Info: figures/post_question3.png  used on input line 1011.
+(luatex.def)             Requested size: 415.79396pt x 137.31316pt.
+[19<./figures/post_question1.png><./figures/post_question5.png>]
+<figures/post_question4.png, id=374, 524.55975pt x 164.41425pt>
+File: figures/post_question4.png Graphic file (type png)
+<use figures/post_question4.png>
+Package luatex.def Info: figures/post_question4.png  used on input line 1018.
+(luatex.def)             Requested size: 419.64836pt x 131.53156pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
+[][]\TU/AlegreyaSans(2)/m/n/10.9 Mit-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1030--1030
+\TU/AlegreyaSans(2)/m/n/10.9 tel-
+ []
+
+[20<./figures/post_question6.png>] [21<./figures/post_question3.png><./figures/p
+ost_question4.png>]
+<figures/post_question7.png, id=399, 522.15076pt x 167.4255pt>
+File: figures/post_question7.png Graphic file (type png)
+<use figures/post_question7.png>
+Package luatex.def Info: figures/post_question7.png  used on input line 1060.
+(luatex.def)             Requested size: 417.72118pt x 133.94057pt.
+<figures/post_question8.png, id=400, 521.5485pt x 170.43675pt>
+File: figures/post_question8.png Graphic file (type png)
+<use figures/post_question8.png>
+Package luatex.def Info: figures/post_question8.png  used on input line 1067.
+(luatex.def)             Requested size: 417.23935pt x 136.34956pt.
+<figures/post_question9.png, id=403, 522.15076pt x 174.6525pt>
+File: figures/post_question9.png Graphic file (type png)
+<use figures/post_question9.png>
+Package luatex.def Info: figures/post_question9.png  used on input line 1078.
+(luatex.def)             Requested size: 417.72118pt x 139.72218pt.
+<figures/post_question10.png, id=404, 519.74174pt x 166.82326pt>
+File: figures/post_question10.png Graphic file (type png)
+<use figures/post_question10.png>
+Package luatex.def Info: figures/post_question10.png  used on input line 1085.
+(luatex.def)             Requested size: 415.79396pt x 133.45877pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1096
+[][]\TU/AlegreyaSans(2)/m/n/10.9 Mit-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1096
+\TU/AlegreyaSans(2)/m/n/10.9 tel-
+ []
+
+[22<./figures/post_question7.png><./figures/post_question8.png>] [23<./figures/p
+ost_question9.png><./figures/post_question10.png>]
+<figures/post_question2.png, id=424, 525.162pt x 166.221pt>
+File: figures/post_question2.png Graphic file (type png)
+<use figures/post_question2.png>
+Package luatex.def Info: figures/post_question2.png  used on input line 1123.
+(luatex.def)             Requested size: 420.13017pt x 132.97696pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1134
+[][]\TU/AlegreyaSans(2)/m/n/10.9 Mit-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1134
+\TU/AlegreyaSans(2)/m/n/10.9 tel-
+ []
+
+<figures/group1.png, id=427, 1130.2225pt x 501.875pt>
+File: figures/group1.png Graphic file (type png)
+<use figures/group1.png>
+Package luatex.def Info: figures/group1.png  used on input line 1146.
+(luatex.def)             Requested size: 452.081pt x 200.74643pt.
+
+Overfull \hbox (25.28964pt too wide) in paragraph at lines 1146--1148
+ [][] 
+ []
+
+[24<./figures/post_question2.png>]
+<figures/group2.png, id=436, 1130.2225pt x 501.875pt>
+File: figures/group2.png Graphic file (type png)
+<use figures/group2.png>
+Package luatex.def Info: figures/group2.png  used on input line 1154.
+(luatex.def)             Requested size: 452.081pt x 200.74643pt.
+
+Overfull \hbox (25.28964pt too wide) in paragraph at lines 1154--1156
+ [][] 
+ []
+
+<figures/group3.png, id=437, 1130.2225pt x 501.875pt>
+File: figures/group3.png Graphic file (type png)
+<use figures/group3.png>
+Package luatex.def Info: figures/group3.png  used on input line 1162.
+(luatex.def)             Requested size: 452.081pt x 200.74643pt.
+
+Overfull \hbox (25.28964pt too wide) in paragraph at lines 1162--1164
+ [][] 
+ []
+
+<figures/group4.png, id=438, 1130.2225pt x 501.875pt>
+File: figures/group4.png Graphic file (type png)
+<use figures/group4.png>
+Package luatex.def Info: figures/group4.png  used on input line 1170.
+(luatex.def)             Requested size: 452.081pt x 200.74643pt.
+
+Overfull \hbox (25.28964pt too wide) in paragraph at lines 1170--1172
+ [][] 
+ []
+
+<figures/group5.png, id=439, 1130.2225pt x 501.875pt>
+File: figures/group5.png Graphic file (type png)
+<use figures/group5.png>
+Package luatex.def Info: figures/group5.png  used on input line 1178.
+(luatex.def)             Requested size: 452.081pt x 200.74643pt.
+
+Overfull \hbox (25.28964pt too wide) in paragraph at lines 1178--1180
+ [][] 
+ []
+
+<figures/group6.png, id=440, 1130.2225pt x 501.875pt>
+File: figures/group6.png Graphic file (type png)
+<use figures/group6.png>
+Package luatex.def Info: figures/group6.png  used on input line 1186.
+(luatex.def)             Requested size: 452.081pt x 200.74643pt.
+
+Overfull \hbox (25.28964pt too wide) in paragraph at lines 1186--1188
+ [][] 
+ []
+
+[25<./figures/group1.png>] [26<./figures/group2.png><./figures/group3.png>]
+[27<./figures/group4.png><./figures/group5.png>] [28<./figures/group6.png>]
 Kapitel 5.
 
-Overfull \hbox (2.68079pt too wide) in paragraph at lines 864--865
-[]\TU/Alegreya(0)/m/n/12 ist ein tier km-fekm󰀎kem-fekfmekfmekfmekgjeng-jnrg 
-gne jgn-en-ge ng-jeg-ne geg egen-
+Overfull \hbox (1.39836pt too wide) in paragraph at lines 1245--1251
+\TU/Alegreya(0)/m/n/12 die Re-le-vanz ent-spre-chen-der Kennt-nis-se un-ter-stre
+icht. Die-se Er-geb-nis-se le-gen na-he, dass
  []
 
-LaTeX Font Info:    Font shape `TU/Alegreya(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 872.
-[11
 
-]
-LaTeX Font Info:    Calculating math sizes for size <10.9> on input line 901.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 11.99005pt on input line 901.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 8.39299pt on input line 901.
-LaTeX Font Info:    Font shape `TU/TeXGyreChorus(0)/m/n' will be
-(Font)              scaled to size 5.99503pt on input line 901.
+Overfull \hbox (7.52475pt too wide) in paragraph at lines 1245--1251
+\TU/Alegreya(0)/m/n/12 kol-la-bo-ra-ti-ve Online-Simulatoren wie Coll-abS-im nic
+ht nur die Be-nut-zer-zu-frie-den-heit stei-
+ []
 
 
 LaTeX Info: File `Thesis-bibtex-entries.bib' already exists on the system.
             Not generating it from this source.
 
+[29
 
-LaTeX Warning: Empty bibliography on input line 1146.
+]
 
-[12] (./Thesis.aux)
+Package biblatex Warning: Name format 'last-first' deprecated.
+(biblatex)                Please use 'family-given' instead.
+(biblatex)                Using 'family-given' now.
+
+LaTeX Font Info:    Font shape `TU/Alegreya(0)/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 1495.
+[30
+
+] (./Thesis.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-08-29>
  ***********
 
 
-Package rerunfilecheck Warning: File `Thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: 120FD059B1AF8836747DA85218A0A375;2392
-(rerunfilecheck)             After:  33063504A022EB0315F12C3D02971433;2374.
+Package rerunfilecheck Info: File `Thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 9CF0AF1AD86802CD11BAE9A8787A67F5;3829.
 Package logreq Info: Writing requests to 'Thesis.run.xml'.
 
 \openout1 = Thesis.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 42325 strings out of 477259
- 125007,2373549 words of node,token memory allocated
- 624 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 14 attribute, 69 glue_spec
-, 9 attribute_list, 2 write nodes
-   avail lists: 1:5,2:1404,3:214,4:261,5:1401,6:58,7:8027,8:2,9:2439,10:15,11:95
-9
- 62606 multiletter control sequences out of 65536+600000
- 284 fonts using 86403847 bytes
- 102i,10n,124p,1852b,2944s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Ale
-greya-Bold.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/publ
-ic/lm/lmmono12-regular.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/o
-pentype/huerta/alegreya/Alegreya-Regular.otf><C:/Users/patri/AppData/Local/Progr
-ams/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Italic.otf><C:/Users/patri/Ap
-pData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/AlegreyaSans-Bold.otf
-><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/Al
-egreyaSans-Italic.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/openty
-pe/huerta/alegreya/AlegreyaSans-Regular.otf>
-Output written on Thesis.pdf (18 pages, 149187 bytes).
+ 44940 strings out of 477259
+ 100000,2373549 words of node,token memory allocated
+ 672 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 glue, 4 kern, 1 glyph, 22 attribute, 69 glue_spec
+, 13 attribute_list, 2 write, 4 pdf_action nodes
+   avail lists: 1:1,2:925,3:330,4:188,5:827,6:74,7:8059,8:40,9:355,10:24,11:1098
 
-PDF statistics: 265 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 131072)
- 160 words of extra memory for PDF output out of 10000 (max. 100000000)
+ 65064 multiletter control sequences out of 65536+600000
+ 246 fonts using 73746723 bytes
+ 102i,10n,124p,1852b,2944s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/public/lm/lmmonopro
+p10-regular.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/hue
+rta/alegreya/Alegreya-Bold.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fon
+ts/opentype/huerta/alegreya/Alegreya-Regular.otf><C:/Users/patri/AppData/Local/P
+rograms/MiKTeX/fonts/opentype/huerta/alegreya/Alegreya-Italic.otf><C:/Users/patr
+i/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegreya/AlegreyaSans-Bold
+.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/opentype/huerta/alegrey
+a/AlegreyaSans-Italic.otf><C:/Users/patri/AppData/Local/Programs/MiKTeX/fonts/op
+entype/huerta/alegreya/AlegreyaSans-Regular.otf>
+Output written on Thesis.pdf (34 pages, 663468 bytes).
+
+PDF statistics: 540 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 131072)
+ 208 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -77,12 +77,10 @@
   % The titles:
   %
   Titel auf Deutsch     = {
-    Vorlage für die \LaTeX-Klasse »uzl-thesis« zur Nutzung bei
-    Bachelor-~und Masterarbeiten an der  Universität~zu~Lübeck
+    Kollaboratives, cloud-basiertes Simulationstool für Schwarmrobotik
   }, 
   Titel auf Englisch    = {
-    Template for the \LaTeX\ Class “uzl-thesis” for
-    Bachelor's and Master's Theses Written at the University~of~Lübeck 
+    Collaborative cloud-based Simulation Tool for Swarm Robotics
   },
   %
   % Author and supervisor:
@@ -101,12 +99,12 @@
   % "Univ.-Prof. Dr. Dr. h.c. mult." unless your supervisor insists).  
   %
   Autor                 = {Patrick Ugwu},
-  Betreuerin            = {Prof. Dr. Javad},
+  Betreuerin            = {Dr. Javad Ghofrani},
   % 
   % Optional: Supporting persons and institutions. The text should be
   % in German, even for an English thesis.
   %
-  Mit Unterstützung von = {Harry Hilfreich},
+  %Mit Unterstützung von = {Harry Hilfreich},
   % 
   %   Weitere Unterstützung = {
   %     Die Arbeit ist im Rahmen einer Tätigkeit bei der Firma Muster GmbH
@@ -135,16 +133,28 @@
   % Date on which the thesis is turned in German, formatted the
   % traditional German way:
   %
-  Datum                 = {1. Januar 2024},
+  Datum                 = {6. Juli 2024},
   %
   % The English abstract. You must always provide abstracts in German
   % and in English. 
   %
   Abstract              = {
-    It is
+    This bachelor's thesis examines the integration of online collaborative features into robot simulation. 
+    The aim of the study is to investigate the feasibility and benefits of a collaborative online tool in the field of swarm robotics simulation. 
+    For this purpose, the online simulation tool CollabSim was developed and evaluated through a user test. 
+    The impact of using this tool on the simulation process was examined in comparison to traditional simulation methods. 
+    The results demonstrate the potential and feasibility of this approach to enhance the effectiveness in creating simulations. 
+    The thesis concludes by noting that CollabSim represents a promising prototype. 
+    However, it also highlights the need for further research to explore specific advantages and challenges in depth.
   },
   Zusammenfassung       = {
-    Es ist nicht leicht  
+    Diese Bachelorarbeit untersucht die Integration kollaborativer online Funktionen in die Robotersimulation. 
+    Ziel der Arbeit ist es, die Machbarkeit und den Nutzen eines kollaborativen, webbasierten Werkzeuges zur Simulation im Bereich der Schwarmrobotik zu untersuchen. 
+    Hierfür wurde der Simulator CollabSim entwickelt und mittels eines Nutzertests evaluiert. 
+    Dabei wurden die Auswirkungen der Nutzung dieses Werkzeugs auf den Simulationsprozess im Vergleich zu traditionellen Simulationsmethoden untersucht. 
+    Die Ergebnisse zeigen das Potenzial und die Machbarkeit dieses Ansatzes zur Verbesserung der Effektivität bei der Erstellung von Simulationen. 
+    Die Arbeit schließt mit der Feststellung, dass CollabSim einen vielversprechenden Prototypen darstellt. 
+    Dennoch wird aufgezeigt, dass weitere Forschung erforderlich ist, um spezifische Vorteile und Herausforderungen weiter zu untersuchen.
   },
   %
   % Optional: 'Danksagungen' (German) or 'Acknowledgements'
@@ -152,9 +162,9 @@
   % adding an acknowledgements text after the abstracts and before the
   % table of contents.
   %
-  Acknowledgements      = {
-    This is the place 
-  },
+  %Acknowledgements      = {
+  %  This is the place 
+  %},
   % Bibliography style: Choose between
   % 
   % 'Alphabetische Bibliographie'
@@ -329,6 +339,8 @@
 %
 %%%%%%%
 
+%\usepackage{graphicx}
+\usepackage{tcolorbox}
 
 
 
@@ -342,262 +354,220 @@
 
 
 \chapter{Einleitung}
-% In a German thesis write: \chapter{Einleitung}
+%(ca. 10/100)
+
+% - Einführung in Bedeutung von Simulationen
+Simulatoren sind bereits seit vielen Jahren ein wesentlicher Bestandteil in der Entwicklung von Hardware und Software. 
+Besonders in Bereichen wie der Robotik, in denen fehlerhafte Programmierung erhebliche Schäden an Mensch, 
+Maschine oder Umgebung verursachen kann, sind Simulationen von entscheidender Bedeutung. 
+Sie ermöglichen es Entwicklern, komplexe Systeme unter kontrollierten Bedingungen zu testen und zu optimieren, bevor diese in der realen Welt eingesetzt werden. 
+Durch den Einsatz von Simulatoren können Risiken minimiert und die Effizienz der Entwicklungsprozesse erheblich gesteigert werden.
 
 
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace with your own introduction:
-(ca. 10%)
+%essential sim qualities (ideal sim)[2]: 
+%	accurate physics, 
+%	high quality rendering, 
+%	open source, 
+%	multi platform, 
+%	easy with ros
+%[ba preprint]\\
 
 
+% Robotik
+In der heutigen Forschung spielt die Robotik eine zunehmend wichtige Rolle. 
+Unsere modernen Robotersysteme entwickeln sich ständig weiter und erschließen neue Anwendungsbereiche. 
+Dadurch werden diese Systeme immer größer und anspruchsvoller. 
+Doch mit der Entstehung neuer Anwendungsfelder stoßen einzelne Robotersysteme auch zunehmend an ihre Grenzen. 
+Versuche, diese Situation durch die Entwicklung noch komplexerer oder größerer Robotersysteme zu überwinden, erfordern immense Kosten und eine hohe Komplexität in der Umsetzung. 
+Daher werden vermehrt neue Konzepte in diesen Bereichen erforscht. Eines dieser Konzepte ist das Gebiet der Schwarmrobotik.
+
+% - Überblick über die Grundkonzepte der Schwarmrobotik und deren Anwendungen \\
+Die Schwarmrobotik bezieht sich auf den Einsatz mehrerer kleiner, einfacher Roboter, die gemeinsam komplexe Aufgaben erfüllen. 
+Diese Technologie nutzt die Vorteile der kollektiven Intelligenz und der Selbstorganisation, um Probleme zu lösen, die für einen einzelnen Roboter zu schwierig oder unmöglich wären. 
+Im Gegensatz zu herkömmlichen Robotersystemen, die oft auf zentrale Steuerung und starke Interaktion mit Menschen angewiesen sind, 
+können Schwarmroboter unabhängig arbeiten und schnell auf Änderungen in ihrer Umgebung reagieren.
+%(include HRI?? collab besoonders relevant für schwärme?)
+
+% Kollab
+Auch die Kollaboration, also das gemeinsame Arbeiten an einem Projekt, ist seit vielen Jahren ein heißes Thema in der Forschung und Entwicklung und ist auch bei Nutzern sehr beliebt. 
+Sie findet vermehrt Einzug in alle Bereiche des digitalen Lebens. 
+Das Ermöglichen kollaborativer Funktionen spielt, in einer zunehmend vernetzten und globalisierten Welt, eine entscheidende Rolle.
+Zudem erleichtert ein webbasiertes Tool den Zugang und die Wartung, da keine speziellen Installationen oder Updates auf den Endgeräten der Nutzer erforderlich sind. 
+Dies fördert eine nahtlose Integration und sofortige Verfügbarkeit für alle Beteiligten.
 
 
-  - Einführung in das Thema der Schwarmrobotik und die Bedeutung von Simulationen
-zeitlich??
-include HRI?? collab besoonders relevant für schwärme?
+% Forschungslücke (in beitrag?)
+Ich habe während meiner Recherche jedoch keinen Robotiksimulator gefunden, welcher kollaborative Funktionen zur synchronen Arbeit an einer Simulation, ermöglicht.
+Ebenso habe ich keinerlei Forschung zu diesem Thema entdecken können. Es scheint als wäre dieses Einsatzgebiet der Kollaboration bisher kaum untersucht worden.
 
-Kollaboration ist seit vielen ..
-collab überall, im herz der forschung + nutzer
-auch im kontext schwarm?
-Robotik ..
-Schwarmrobotik ..
-  - Überblick über die Grundkonzepte der Schwarmrobotik und deren Anwendungen
-  bedeutung von robos:[3](anhand von beispiel)
-      
-  prob:Modern farms are expected to produce more yields with higher quality at lower expenses in a sustainable way that is less dependent on the labor force. Implementation of digital farming and site-specific precision management are some of the possible responses to this expectation
+Aus diesem Grund habe ich für diese Bachelorarbeit CollabSim, einen kollaborativen Onlinesimulator für die Schwarmrobotik, entwickelt. 
+Er soll die genannten Technologien vereinen und bildet einen Prototyp, an dem ich den potenziellen Nutzen und die Machbarkeit webbasierter, kollaborativer Arbeit in der Schwarmrobotiksimulation untersuchen werde.
+Anhand eines Nutzertests werde ich zeigen, dass dieses Konzept für Simulationen in der Robotik realisierbar und von großem Vorteil sein kann. 
+CollabSim wird sich als vielversprechend erweisen, auch wenn weitere Untersuchungen erforderlich sind, um genauere Erkenntnisse zu gewinnen. 
 
-  For example,  instantaneous yield monitoring and estimating the required time for harvesting operation is a labor intensive task, ignored, or is carried out manually
-  Currently, there are no reports of a commercial robotic platform that can simultaneously map the yield parameters on-the-go prior to harvesting
-  ecoming a critical problem with increasing the uncertainties about the future availability of the labor force that is willing to accept tedious jobs in the harsh greenhouse condition
-  manual data sampling implies high costs and low accuracy and is significantly influenced by the interpretation of the person involved
-
-  lsg:The functionality of robots when combined with data processing, analyzing models, and artificial intelligence will assist farmers to manage their fields and plants more efficiently
+%den Simulator mithilfe verschiedener Metriken evaluieren. Die Ergebbnisse werde ich präsentieren und diskutieren. Abschließend werde ich einen Ausblick und 
 
 
-
-Simulation überall aber besonders in Robotik + aufbau von simulationen (xml,physics engin, viz, ..)
-alles zusammen-keine collab sim gefunden, nicht untersucht
-
-essential sim qualities(ideal sim)[2]:
-	accurate physics
-	high quality rendering
-	open source
-	multi platform
-	easy with ros
-[ba preprint]
+% zusammen fasssung der ergebnisse. wie in abstract
+%but also to explain all results obtained in the thesis.This means that,after having
+%read the introduction, the reader should know all major results obtained
 
 
-
-
-
-      
-      
-      pros, bedeutung von Simulatoren (gerade in robo, in 2.)):
-        preis ersparnis  testumgebung(underwater), 
-        in 2.)verhindern von schäden durch fehlerhafte software/algos
-        variationen beim testen, mit verschiedenster hardware  
-        quellen erwähnen [],[],...
-
-    
-      
-
-
-
-      \begin{Code}
-
-      warum collab mit schwarm und nicht algemein?????
-        Warum dieses thema? + problem/frage?:
-      schwarm bietet sich für collab an  (old papers [?], schhwierigkeiten der HCI -> control of swarm)
-      warum ist/könnte kollab in robosim nützlich sein -> kollab vorteile
-
-      relevanz:
-      trends: günstigere Technik -> ermöglicht Robotik -> Schwarm -> collab
-      pros von sim: ..
-      stand der Simulatoren : nicht effizent + flexibel, keine collab
-
-      [3,9,..]
-
-    
-
-
-      \end{Code}
-
-
-
-
-
+%  warum collab mit schwarm und nicht algemeine robotik??
 
 
 \section{Beiträge dieser Arbeit}
-% In a German thesis write: \section{Beiträge dieser Arbeit}
+%(auf die neuen Erkenntnisse, methodologischen Innovationen oder praktischen Implikationen der Arbeit 
+%eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemeinschaft hat.)
 
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace with a detailed account of your contributions:
+% - Formulierung der Forschungsfrage und Zielsetzung deiner Arbeit / Problemstellung und Zielsetzung
 
-- Formulierung der Forschungsfrage und Zielsetzung deiner Arbeit / Problemstellung und Zielsetzung
+Meine Arbeit soll zukünftiger Forschung als ein erster Anhaltspunkt und Inspiration dienen, um diesem Feld mehr Aufmerksamkeit zu schenken. 
+Kollaboratives Arbeiten könnte die bereits gut erforschten Vorteile solcher Editoren mit Simulatoren vereinen und dadurch zu einem neuen Standard in Simulationswerkzeugen werden. 
+Es werden Kollaboration und Robotiksimulation in einem online verfügbaren Werkzeug zur gemeinsamen Bearbeitung einer Simulationsumgebung realisiert, 
+das erste Ergebnisse zum potenziellen Nutzen eines solchen Simulators liefern soll. 
+In diesem Werkzeug wird der speziell für die Schwarmrobotik entwickelte Simulator ARGoS verwendet. 
+Dieser wurde von mir um kollaborative Funktionen erweitert und CollabSim getauft. 
+Ziel der Arbeit ist es, die Machbarkeit und den Nutzen solcher Werkzeuge zu untersuchen und ihre Konkurrenzfähigkeit gegenüber traditionellen Simulatoren in der Robotik zu bewerten.
 
-was will ich lösen/zeigen?
-tool to combine collab, flex and effi:
-argos bringt flex und effi,
-ich bringe collab
--> schwarm daher nutzung von argos naheliegend
-
-hilft colllab?
-
-      Forschungsfrage: ist collab in schwarm sim sinnvoll/potenzial ?
-
-      Ziel: frage beantworten oder zumindest tendenz zu erschließen
-        überprüfen, ob collab bei sim sinnvoll/ potenzial durch nutzertest
+\begin{tcolorbox}[colframe=black,colback=white,boxrule=0.5mm,arc=0mm]
+  \textbf{Forschungsfrage: Ist das Konzept des kollaborativen Arbeiten an webbasierten Simulationen von Schwarmrobotern realisierbar und vorteilhaft gegenüber traditionellen Simulatoren?}
+  \end{tcolorbox}
 
 
-(Beiträge Ihrer Arbeit zur Forschung oder zum Fachgebiet 
-Hier können Sie auf die neuen Erkenntnisse, methodologischen Innovationen oder praktischen Implikationen Ihrer Arbeit 
-eingehen und damit verdeutlichen, welchen Wert Ihre Forschung für die Fachgemeinschaft hat.)
+
 
 
 \section{Related Work}
-% In a German thesis write: \section{Verwandte Arbeiten}
 
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace with a detailed account of what other people have already
-% researched concerning your thesis's theme. Even when (indeed,
-% especially when) there has been only little or even no research by
-% other people, you should explain in detail that this is the case and
-% why it is the case. 
-
-Grundlagen der Schwarmrobotik und Simulation 
-- Zusammenfassung der relevanten Literatur und früheren Arbeiten zum Thema
-simulation:
-\subsection{simulatoren, stand}
-
-----relevant?-----
-- Beschreibung verschiedener Simulationsansätze und ihrer Bedeutung für die Robotik
-    ansätze: spiel -> spezific -> general -> modular ?
-      architekturen, fokus?, ..
-
-    geschichte der sim- aus spiel zu eigenen sim, aus projektspezifisch zu general
+% Even when (indeed, especially when) there has been only little or even no research by
+% other people, you should explain in detail that this is the case and why it is the case. 
 
 
-    [6]sim history:
-      its development has been tightly related to the developments in computing
-      The massification of personal computing during the 90s contributed to the development of several publicly available software tools for robotic manipulator modeling and simulation.
-      During the late 90s, the focus of attention shifted towards manipulation, grasping and mobile robots. 
-	    The list of programming libraries, simulation tools and packages can be quite long, however, among those open-source tools that have 
-      achieved some degree of sustained development it is 	possible to mention Carmen [14],ODE [19], OpenRave [22], OpenSim [23], 
-      the Player-Stage-Gazebo (PSG) project [16], UsarSim [25]. 
----------------
+%- Zusammenfassung der relevanten Literatur und früheren Arbeiten zum Thema simulation:\\
+Ich habe keine Literatur zu kollaborativen Robotiksimulatoren finden können. 
+Wie zuvor erwähnt, scheint dieses Gebiet weitestgehend unerforscht zu sein. 
+Da Simulationsumgebungen in der Robotik und kollaborative Editoren jedoch bereits seit Jahrzehnten erforscht werden, 
+stelle ich in diesem Abschnitt einige relevante Erkenntnisse vor, um einen guten Einblick in diese Bereiche zu gewähren und aufzuzeigen, 
+wieso die Kombination der beiden Ansätze für die Robotik von Vorteil sein könnte.
+
+Kollaborative webbasierte Robotiksimulationen sind besonders für die Schwarmrobotik aufgrund ihrer erhöhten Komplexität sehr relevant. 
+Dennoch ist dieser Ansatz auch für andere Disziplinen der Robotik äußerst relevant, weshalb ich in dieser Untersuchung diese Disziplinen nicht getrennt behandeln werde.
+
+\subsection{Robotiksimulatoren}
+% - sim history[6] \\
+Simulationen spielen seit den Anfängen der Robotik eine wichtige Rolle. 
+Ihre Entwicklung ist eng mit den Fortschritten in der Computertechnologie verbunden. 
+Durch den massiven Anstieg der Verbreitung personalisierter Computer, bedingt durch sinkende Hardwarekosten, wurde auch die Verbreitung von Robotern stark vorangetrieben. 
+Dies führte zur Entstehung der ersten öffentlich zugänglichen, oft projektspezifischen Simulatoren, deren großer Nutzen schnell erkannt wurde.
+Mit dem weiter steigenden Interesse an Robotern in den verschiedensten Bereichen wuchs auch der Bedarf an geeigneten und generischen Simulatoren \cite{Castillo2010}. 
+
+%[9] 
+Die Ursprünge der Technologien zur Simulation von Roboterdynamik liegen in der Computergrafik-Community. 
+Viele Simulatoren basieren auf Spielengines zur grafischen und physikalischen Simulation.
+Beispielsweise sind die Open Dynamics Engine (ODE) und Bullet die am weitesten verbreiteten Physik-Engines für Robotersimulationen, die ursprünglich für die Nutzung in Videospielen entwickelt wurden. 
+Beide Engines werden bis heute von den am weitesten verbreiteten Simulatoren genutzt, darunter Gazebo, V-REP, Webots und ARGoS \cite{Ivaldi2015}. 
+
+% - bedeutung von sim in robo\\
+Computersimulationen haben sich insbesondere für mobile autonome Roboter als unschätzbar wertvolles Werkzeug bewiesen \cite{Haber2012}. 
+Sie werden in der Lehre, Forschung und Entwicklung eingesetzt. 
+Simulatoren bieten vielfältige Vorteile, darunter die Möglichkeit, komplexe Systeme zu testen und zu entwerfen. 
+Sie unterstützen die Offline-Programmierung, ermöglichen die Entwicklung virtueller Umgebungen zum Training oder 
+zur Fernsteuerung von Robotern und bieten die Möglichkeit, umfangreiche Kontrollalgorithmen zu testen.
+
+Die wichtigsten Vorteile umfassen:
+\begin{enumerate}
+  \item Kostenersparnis und Risikominimierung: \\
+  Roboter können sehr teuer sein. Daher bieten Simulatoren eine großartige Alternative zum Experimentieren und Testen, ohne die Gefahren und Unberechenbarkeiten der realen Welt. 
+  Roboter sind oft zerbrechlich, potenziell gefährlich und aufgrund ihrer Komplexität schwer zu testen und zu entwickeln. 
+  Die Möglichkeit, Software vorher zu testen, minimiert die Gefahren und Kosten erheblich.
+  \item Erforschung von Designmöglichkeiten:\\
+    Die Entwicklung und Forschung von Software kann unabhängig von der tatsächlichen Hardware erfolgen. 
+    Dadurch können verschiedene Konfigurationen von Hardwarekomponenten wie Sensoren und Aktuatoren in Simulationen getestet werden. 
+    Dies ist besonders nützlich, da Roboter häufig aus externen Quellen zu hohen Kosten bezogen werden müssen.
+  \item Simulation unrealistischer Szenarien:\\
+  Simulatoren ermöglichen das Testen von Robotersoftware in Situationen, die in der Realität entweder nicht machbar oder schwer zu erstellen sind. 
+  Dies ist besonders wichtig für Extremsituationen oder seltene Ereignisse.
+  \item Effizientes Lernen von Roboterkontrollalgorithmen:\\
+Die Möglichkeit, Hunderte oder Tausende von Versuchen durchzuführen, ist entscheidend für das Lernen von Roboterkontrollalgorithmen. 
+Dies ist besonders wichtig, wenn die manuelle Programmierung schwierig ist oder maschinelles Lernen eingesetzt wird.
+\end{enumerate}
 
 
-bedeutung von sim in robo:
-[2]computer simulation hat sich bewiesen, anhand
-  besonders für mobile autonome robos (inkludiert schwarm)
-  1. robos sind zerbrechlich,potenziel gefährlich, schwer zu testen + entwickel (because of their complexity)
-  fähigkeit vorher software zu testen minimiert(mitigate) die gefahren und kosten
-  2. development + research of software possiable without the hardware/robots
-    + robots come from offsite, at large expense??
-  3. ability to test robotic software in situations that are not feasible to create in reality
-  4. ability to run hundreds or thousands of trials for the purposes of learning robot control algorithms, crucial if hand coding is difficult
+Im Folgenden stelle ich ein konkretes Beispiel vor, um den immensen Nutzen von Simulationen in der Robotik aufzuzeigen.
 
-[6] bedeutung von sim in robo
-    simulation has been important since the beginning of robotics,
-    essential tool in teaching, research, and development  (mit extra quellen => proven)
-    to design and test the feasibility of complex systems
-    explore design options, 
-    
-    (use cases:)
-    assist in off-line programming of robot systems ??,
-     evaluate the performance of robotic cells,
-    develop virtual environments for operator training or teleoperation, 
-    nor test advanced robot control algorithms .
-    
-    The role of simulation is also important as teaching and learning the fundamental physics and robotic fundermentals, very hard to grasp without actual experimentation and visualization. 
-    
-    can be costly => an excellent alternative of doing experiments and testing systems away from the dangers and unpredictability of the physical world.
+Das Beispiel aus \cite{Shamshiri2018} handelt von den steigenden Erwartungen an die Agrarwirtschaft, ihre Erträge ergiebiger, effizienter und nachhaltiger zu gestalten. 
+Gleichzeitig soll die Ernte qualitativ hochwertiger werden und weniger abhängig von der Anzahl und Qualität verfügbarer Arbeitskräfte sein. 
+Die Implementierung von Digital Farming und standortspezifischem Präzisionsmanagement sind einige mögliche Antworten auf diese Erwartungen. 
+Digital Farming bezeichnet den Einsatz digitaler Technologien und Datenanalysen, um landwirtschaftliche Prozesse zu optimieren und zu verbessern. 
+Der Einsatz von Robotern könnte hier erheblich zur Effizienzsteigerung beitragen.
+Die Verbesserung von Robotern für landwirtschaftliche Anwendungen erfordert jedoch Experimente und Evaluation, um die optimale Lösung zu finden. 
+Experimente mit physischen Robotern und Sensoren im tatsächlichen Feld sind aufgrund von Zeitbeschränkungen, der Verfügbarkeit von Ausrüstung und den Betriebskosten nicht immer möglich. 
+Um diesen Problemen entgegenzuwirken und den Entwicklungsprozess zu beschleunigen, können Simulationsmethoden einen kostengünstigen Rahmen bieten, um mit verschiedenen 
+Sensor- und Aktuationsmechanismen zu experimentieren und die Leistungsfähigkeit des Roboters in verschiedenen Szenarien zu überprüfen.
 
-    bedeutung von sim:[3]
-    prob:Improvement of robotics for agricultural application however requires experimenting, as well as evaluating, for finding the optimum solution. Experimenting with the physical robots and sensors in an actual field, is not always possible due to the time constraints, unavailability of equipment, and the operation costs
-    
-    lsg:To accelerate this pace, simulation methods can provide an affordable framework for experimenting with different sensing and acting mechanisms in order to verify the performance functionality of the robot in different scenarios
+% bedeutung von robotern (allgemein):
+Ein weiteres Problem ist, dass die sofortige Ertragsüberwachung und die Schätzung der erforderlichen Zeit für die Ernte, eine arbeitsintensive Aufgabe ist, die oft vernachlässigt oder manuell durchgeführt wird. 
+Derzeit gab es keine Berichte über ein kommerzielles Robotersystem, das die Ertragsparameter während der Ernte kartieren kann. 
+Dies wird zu einem kritischen Problem angesichts der zunehmenden Unsicherheiten über die zukünftige Verfügbarkeit von Arbeitskräften, die bereit sind, 
+mühsame Arbeiten unter den harten Bedingungen in Gewächshäusern zu verrichten. 
+Manuelle Datenerfassung impliziert hohe Kosten und geringe Genauigkeit und wird erheblich von der Interpretation der beteiligten Person beeinflusst.
+Eine Lösung welche Landwirten helfen würde, ihre Felder und Pflanzen effizienter zu verwalten, wäre die Funktionalität von Robotern, 
+kombiniert mit Datenverarbeitungs- und Analysetools sowie künstlicher Intelligenz einzusetzen.
 
-
-[10]example?: sim is huge in [10]:
-      Experimentation with underwater robots is normally very difficult due to the high number of resources required.
-        A water tank -high enough for the systems to be tested - is normally needed, 
-          which requires significant space and maintenance. 
-        Another possibility is to access to open environments such as lakes or the sea, but this normally involves high costs and requires special logistics. 
-        
-        very difficult for researchers (operating in the surface) to observe the evolution of the running system
-
-  daher brauch es sim, der:[10]
-    (i) develop and test the systems before they are deployed, and 
-    (ii) supervise a real underwater task where the developers do not have a direct view of the system
-  bisher meist  projekt spezifisch, obsolet oder commercial
+Für ein zweites Beispiele, welches die Wichtigkeit von Robotik und Simulationen aufzeigt, verweise ich auf \cite{Prats2012}.
+% zweites beispiel?????
+%Im zweiten Beispiel \cite{Prats2012} [10] geht es um das Experimentieren mit unterwasser-robotern, was meist durch die hohe Anzahl benötigter Ressourcen sehr schwierig ist.
+%        A water tank -high enough for the systems to be tested is normally needed, which requires significant space and maintenance. 
+%        Another possibility is to access to open environments such as lakes or the sea, but this normally involves high costs and requires special logistics. 
+%        Its very difficult for researchers (operating in the surface) to observe the evolution of the running system.
+%      Daher brauch es sim, der zum einen develop and test the systems before they are deployed, und 
+%      andererseits supervise a real underwater task where the developers do not have a direct view of the system.
 
   
-\subsection{Kollaboration, stand}
-collab trend[7]
-    The growing trend towards tools that enable collaboration [andere quellen]
+\subsection{Kollaboration}
+Kollaboratives Arbeiten ist seit langer Zeit ein großes Thema in der Forschung. 
+Auch in der Praxis haben Programme, welche Kollaboration ermöglichen, einen wachsenden Trend.
+Seit etwa 2005 ist das Interesse an kollaborativen Editoren mit dem Aufkommen von Web 2.0 stark gestiegen 
+und die ersten webbasierten Tools sind erschienen (z.B. Wikis und Blogs). 
+Kollaborative Lösungen, die gemeinsame Echtzeitbearbeitung ermöglichten und auf Webtechnologien basierten, verbreiteten sich allmählich. 
+Solche Tools wurden sehr beliebt, da viele von ihnen kostenlos nutzbar waren \cite{Kainberger2022}.
     
-    Since around 2005, interest in collaborative editors has again increased sharply with the advent of Web 2.0, and the first web-based tools appeared (e.g., Wikis and Blogs). Collaborative solutions that allowed shared editing in real-time and were based on web technologies gradually became widespread. Such tools gained a lot of popularity as many of them were free to use
-    
-    is a broad field of research
-    is a hot topic in research and in practice
 
     
-\subsection{forschungslücken und diskussion}
+\subsection{Forschungslücken und Diskussion}
 
-- Identifizierung von Forschungslücken oder Diskussionen in der Literatur in Bezug auf die direkte Vergleichbarkeit 
-von kollaborativem Arbeiten und herkömmlichen Simulatoren in der Schwarmrobotik
+%- Identifizierung von Forschungslücken oder Diskussionen in der Literatur in Bezug auf die direkte Vergleichbarkeit 
+%von kollaborativem Arbeiten und herkömmlichen Simulatoren in der Schwarmrobotik
 
-forschunglücke: (literatür über) collab in robo sim 
-
-
-
-- Diskussion über die Vor- und Nachteile von kollaborativem Arbeiten und herkömmlichen Simulatoren
-- Diskussion über die Herausforderungen und Vorteile von Simulationen in der Schwarmrobotik
-    herausforderungen : user feedback paper, accuracy, performance, ..
-    [6]sim problems/challenges:
-      Researchers, developers and educators have a hard time to decide which is the right tool for mobile robot simulation -> solved by surveys
-      some sim have this, some that -> impliziert das keiner alles hat
-
-      kann collab einige probleme lösen? (forschungsfrage?)
+%- Diskussion über die Vor- und Nachteile von kollaborativem Arbeiten und herkömmlichen Simulatoren\\
+%- Diskussion über die Herausforderungen und Vorteile von Simulationen in der Schwarmrobotik\\
 
 
-    Vorteile: ....
+    Es gibt eine deutliche Lücke in der Literatur bezüglich der Kollaboration in der Robotersimulation. 
+    Ich konnte keine wissenschaftliche Arbeit finden, welche das Konzept eines kollaborativen online Robotiksimulators untersucht.
+    Dementsprechend liegt auch keine Studie vor an der ich mich methodisch orientieren oder mit der ich meine Ergebnisse vergleichen könnte.
 
+    Bisherige Studien enthalten allerdings einige spezifischen Herausforderungen und Probleme, die mit der Nutzung von Simulationsumgebungen für Roboter verbunden sind, insbesondere hinsichtlich Genauigkeit und Leistungsfähigkeit \cite{Ivaldi2015}. 
+    Auch de Vielfalt der verfügbaren Simulationswerkzeuge macht es Forschern, Entwicklern und Lehrenden oft schwer, das richtige Tool für die Simulation von Roboter auszuwählen \cite{Castillo2010}. 
+    Eine Lösung dafür sind die gezielt durchgeführten Umfragen unter Anwendern, welche einen ersten Überblick verschaffen. 
+    Auch der Einsatz mehrerer Simulationsumgebungen durch einen schnellen Wechsel dieser, wie ihn insbesondere Online-Tools ermöglichen, 
+    könnte eine weiere Option sein, um performancebedingte Herausforderungen zu überwinden und die Auswahl zu erleichtern.
+
+    Die Vorteile beider Ansätze, der kollaborativen Arbeit und von webbasierten Werkzeugen, wurden bereits zuvor genannt.
 
 \section{Aufbau dieser Arbeit}
-% In a German thesis write: \section{Aufbau dieser Arbeit}
 
+ Die vorliegende Arbeit ist in mehrere Kapitel unterteilt, die eine systematische Herangehensweise an die Entwicklung und Evaluation eines neuen, kollaborativen Simulators für Robotersysteme darstellen. 
+ 
+ Im folgenden Kapitel \ref{chapter-sim} wird die Architektur des entwickelten Simulators ausführlich beschrieben um dessen Funktionalität zu erläutern. 
 
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace the following by one or two paragraphs describing the
-% thesis's structure.
-
-structure 
-
-1 introduction 10% 3S
-2. mein sim 25% = 7-8 seiten
-dia, erklärung der einzelnen komponenten je komponente eine section (codebeispiele??)
-3. user test 25% 7-8S
-3.1 methodik 3.2 ergebnisse 3.3 auswertung/Diskussion
-4. Ergebnisse + evaluation 30% 9S
-5 con 5-10% 2-3S
-6 bibliography
-
-
+ Kapitel \ref{chapter-test} widmet sich der Durchführung von Benutzertests, bei denen verschieden Aspekte der Usability des Simulators in realen Anwendungsszenarien überprüft werden. 
+ 
+ In Kapitel \ref{chapter-result} werden die Ergebnisse dieser Tests aufbereitet, präsentiert und evaluiert. 
+ Dies umfasst die detaillierte Analyse der gesammelten Daten sowie eine Diskussion über die Implikationen und Schlussfolgerungen der Ergebnisse. 
+ 
+ Abschließend werden in Kapitel \ref{chapter-con} die gewonnenen Erkentnisse zusammengefasst und mögliche Verbesserungsmöglichkeiten für zukünftige Arbeiten diskutiert. 
 
 
 
@@ -609,302 +579,711 @@ dia, erklärung der einzelnen komponenten je komponente eine section (codebeispi
 % Replace the whole text chapter with the main text of your thesis! 
 
 \chapter{CollabSim}%: Document Setup and Document Structure}
-\label{chapter-use}
-- Beschreibung der verwendeten Simulationen und Tools
+\label{chapter-sim}
 
-CollabSim ist das für diese Arbeit entwickelte Simulationswerkzeug, welches kollaborative Funktionen mit dem weit verbreiteten Simulator ARGoS verbindet. 
-In Fig. x ist die grundlegende Struktur von CollabSim dargestellt
+CollabSim ist das für diese Arbeit entwickelte Simulationswerkzeug, das kollaborative Funktionen mit dem weit verbreiteten Simulator ARGoS verbindet und online verfügbar macht. 
+Außerdem kommt er in einen Nutzertest zum Einsatz, um die Machbarkeit und den Nutzen des verwendeten Konzepts zu zeigen.  
+In Abbildung \vref{fig-collabsim-architecture} ist die grundlegende Struktur von CollabSim dargestellt. 
+In diesem Kapitel stelle ich alle relevanten Aspekte dieses Simulators vor um einen Einblick in dessen Funktionsweise zu bieten.
+
+\section{Überblick}
+  Traditionelle Simulatoren bestehen typischerweise aus mehreren eng miteinander verknüpften Komponenten, die eine realistische und funktionale Simulationsumgebung ermöglichen. 
+  
+  Die Szenenbeschreibung erfolgt oft mittels XML-Dateien, welche die Geometrie, Materialeigenschaften und physikalischen Parameter der Simulationsobjekte festlegen. 
+  
+  Eine zentrale Rolle spielt die Physik-Engine, die für die Berechnung von Kräften, Kollisionen und Bewegungen auf Basis physikalischer Gesetze verantwortlich ist. 
+  
+  Die Visualisierungskomponente rendert die Simulation grafisch und stellt sie für den Benutzer verständlich dar, von einfachen 2D-Darstellungen bis hin zu komplexen 3D-Grafiken. 
+  
+  Zur Steuerung und zum Scripting der Simulation werden häufig Programmiersprachen wie Python, C++ oder Lua verwendet, die das Verhalten der Simulationsobjekte und die Abläufe definieren. 
+  
+  Eine benutzerfreundliche Schnittstelle ermöglicht es den Anwendern, die Simulation zu konfigurieren, zu starten, zu stoppen und die Ergebnisse zu analysieren. 
+  
+  Diese integrierten Komponenten schaffen gemeinsam detaillierte virtuelle Umgebungen, die zur Entwicklung, Testung und Optimierung von Robotern und anderen Systemen genutzt werden können.
+  In Abbildung \vref{fig-argos-architecture} werden diese Komponenten, an dem Beispiel des verwendeten Simulators ARGoS, grafisch dargestellt.
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.9]{figures/argos_architecture.png}
+    \caption{Eine Übersicht über die Architektur von ARGoS. Übernommen aus \cite{Pinciroli2012}}
+    \label{fig-argos-architecture}
+  \end{figure}
+
+  \subsection{Einführung in CollabSim}
+    In CollabSim fungiert das Backend als zentrale Instanz für die Übertragung aller Daten und der Kommunikation. 
+    Einerseits leitet es die bearbeiteten, für die Simulation erforderlichen Dateien zu einer virtuellen Maschine weiter und koordiniert die Ausführung der dort benötigten Befehle. 
+    Andererseits sorgt es für die Echtzeitsynchronisation aller im Frontend entwickelten Dateien, um die Kollaboration zwischen allen Nutzern zu ermöglichen.
+
+    Im Frontend wurde Angular als Entwicklungsframework eingeführt. 
+    Angular wurde ausgewählt, weil es eine robuste Struktur für die Erstellung dynamischer und interaktiver Benutzeroberflächen bietet. 
+    Es basiert auf TypeScript, einer Programmiersprache, die auf JavaScript aufbaut und zusätzliche Funktionen bietet, 
+    um die Entwicklung robusterer Anwendungen zu unterstützen. 
+    HTML (Hypertext Markup Language) wird verwendet, um die Struktur der Benutzeroberfläche zu definieren, 
+    während CSS (Cascading Style Sheets) für das Design und das Aussehen der Anwendung zuständig ist. 
+    Es erleichtert die Entwicklung durch eine modulare Architektur und bietet umfangreiche Bibliotheken und Tools, 
+    die eine effiziente und skalierbare Entwicklung ermöglichen. 
+    In den folgenden Abschnitten werde ich die einzelnen Komponenten von CollabSim vorstellen. 
+    Einen Überblick über die gesamte Architektur bietet Abbildung \vref{fig-collabsim-architecture}.
+
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics{figures/test8.drawio.pdf}
+      \caption{Eine Übersicht über die Architektur von CollabSim}
+      \label{fig-collabsim-architecture}
+    \end{figure}
 
 
-\section{overview}
-backend, für die Übertragung aller daten, wobei als zentralle instanz der kommunikation fungiert. 
-einerseits leitet er die bearbeiteten, für die simulation erforderlichen dateien zu einer virtuellen Maschiene weiter und koordiniert die ausführung der dort benötigten befehle. 
-andererseits sorgt er für die Echtzeitsynchronisation aller im frontend entwickelten dateien um die kollaboration zwischen allennutzern zu ermöglichen.
 
-frontend, Angular
-Angular got introduced for a frontend development
+\section{Virtuelle Maschiene}
+  Da ARGoS nur unter Linux und Mac OSX Betriebssystemen läuft, wird ein solches System für die Simulation benötigt. 
+  Daher wurde zur Ausführung von ARGoS eine virtuelle Maschinne unter dem Ubuntu-Betriebssystem aufgesetzt.
+
+  \subsection{ARGoS}
+  ARGoS ist einer der wenigen Simulatoren, die Effizienz und Flexibilität in einem, für die Schwarmrobotik erforderlichem Maße umsetzen, 
+  um die Echtzeitsimulation von Tausenden von Robotern zu ermöglichen\cite{Pinciroli2012}.
+  Aufgrund seiner guten Performence ist er ein geeigneter Simulator im Bereich der Schwarmrobotik\cite{Shamshiri2018}. 
+  In CollabSim wird ARGoS genutzt, um alle Aspekte der Simulation zu realisieren, einschließlich der Bewegungssteuerung der Roboter, 
+  der Sensor- und Aktuator-Interaktionen sowie der Umgebungssimulation. 
+  Diese umfassende Integration macht ARGoS zu einem Schlüsselelement für die Entwicklung und das Testen von Algorithmen in CollabSim.
+
+  \subsection{Webviz}
+  \label{webviz}
+  Webviz ist ein für ARGoS entwickeltes Plugin\cite{ARGoS3-Webviz}, das die Visualisierung der simulierten Umgebung über den Browser ermöglicht. 
+  Es hostet einen Websocket, der die verfügbaren Informationen von ARGoS nutzt und eine Anwendung erstellt, um die Simulation online darzustellen und zu steuern. 
+  Dadurch können alle Benutzer, die die Website besuchen, dieselbe laufende Simulation sehen, was für die kollaborative Arbeit an dieser Simulation unerlässlich ist.
+
+  \subsection{Zusätzliche Programme}
+  Zusätzliche Programme innerhalb der virtuellen Maschiene, dienen der Synchronisation benötigter Daten und Koordination auszuführender Befehle, um die Aktuallität der Simulation zu gewährleisten.
+  Hauptsächlich kommen ein auf Python basierender Webserver zum Einsatz, welcher ein Bash-Skript zur Aktualiesierung der Simulation aufruft.
+
 
 \section{Webserver}
-THe webserver, writen in python, handles all cummunication between the Frontend, backend and the virtual machine running ARGoS. 
-The server is launched using the two python software packages Flask, a -- and socketio, a --.
-The bulk of the code provides the communication between front- and backend utilising a websocket. 
-The websocket is build using socketio and contains x events for realtime synchrionisation of all written text.
+  Der Webserver, implementiert in Python, ist verantwortlich für die Verwaltung der gesamten Kommunikation 
+  zwischen dem Frontend, Backend und der virtuellen Maschine.
+  Der Server wird mit Hilfe der Python-Softwarepakete Flask und SocketIO bereitgestellt. 
+  Flask ist ein leichtgewichtiges Webanwendungsframework, das für die schnelle Entwicklung von Webanwendungen entwickelt wurde und Werkzeuge, 
+  Bibliotheken und Technologien zur Erstellung einer Webanwendung bereitstellt. 
+  SocketIO ist eine Bibliothek, die Echtzeit-, bidirektionale und ereignisbasierte Kommunikation zwischen den Web-Clients und dem Server ermöglicht.
 
-\section{VM}
-ARGoS requires a Unix (or Macc?) operating systems only, therefor such a sytem is needed for running the simulation. To 
-Da ARGoS nur unter Unix betriebssystemen läuft, wird ein solches system für dei simulation den schwarms und der umgebung benötigt. Daher wurde eine virtuelle
-\subsection{ARGoS}
-  ARGoS ist einer der wenigen Simulatoren, die Effizienz und Flexibilität in einem, für die Schwarmrobotik erforderlichem Maße umsetzt, 
-  um die Echtzeitsimulation von Tausenden von Robotern zu ermöglichen.
- Therefore, it is a suitable and well-established simulator in the field of swarm robotics.
-  In CollabSim, Argos is utilized to simulate all aspects of the simulation, including ..
-  \subsection{webviz}
-  Webviz is a plugin devolped for argos, enabling the visualization of the simulatet environment through the web. 
-  It hosts a websocket using the available information from argos and builds a application to view and control the simulation. 
-  THis enables all users to see the same simulation running while visiting the site, which is essential for collaborative work on this simulation.
+  Der Datenaustausch aller Komponenten ist durch einen Websocket verwirklicht, um eine möglichst schnelle Kommunikation zu bieten. 
+  Im Webserver wurde der verwendetet Websocket mit SocketIO realisiert und unterstützt mehrere Ereignisse, 
+  welche die Echtzeit-Synchronisation aller geschriebenen Texte gewährleisten.
+  Andere Kommunikationsarten sind meist langsamer und damit für Echtzeitanwendungen weniger gut geeignet.
+  Im Gegensatz ermöglichen Websockets eine ständige Verbindung, wodurch Daten kontinuierlich in beide Richtungen übertragen werden können.
+  
 
-  \subsection{zusätzliches}
-  zusätzliche programme innerhalb der vm, py und bash skript
+\section{Ace}
+  Der browserbasierte Code-Editor Ace \cite{ace} wird als Grundlage für alle Codebearbeitungen der Anwendung verwendet. 
+  Ace ist ein vielseitiger Editor, der zahlreiche Funktionen bietet, darunter Syntax-Highlighting, automatische Einrückung und eine Such- und Ersetzungsfunktion. 
+  Diese Eigenschaften machen Ace zu einem beliebten Werkzeug für Entwickler. Im Rahmen dieser Arbeit wird Ace in zwei Hauptanwendungsbereichen eingesetzt. 
+  Zum einen wird die Konfigurationsdatei für ARGoS, geschrieben in XML, bearbeitet. Zum anderen wird der Kontrollalgorithmus, verfasst in C++, erstellt und modifiziert. 
+  Diese beiden Instanzen verdeutlichen die Flexibilität und Leistungsfähigkeit von Ace bei der Bearbeitung von Code in verschiedenen Programmiersprachen und Anwendungsszenarien.
 
+    \subsection{XML (Extensible Markup Language)} 
+    Die XML-Datei ist für die Konfiguration der Szene verantwortlich. 
+    In dieser Datei werden die verschiedenen Parameter und Einstellungen definiert, die für die Simulation in ARGoS notwendig sind. 
+    Dazu gehören unter anderem die Spezifikation der Roboter, die Definition der Umgebung und die Initialisierung der Simulationselemente. 
+    XML ist besonders geeignet für diese Aufgabe, da es eine strukturierte und leicht lesbare Art der Datenrepräsentation ermöglicht. 
+    Durch die Verwendung von XML können Konfigurationsänderungen effizient vorgenommen und die Szenendefinitionen klar und verständlich dokumentiert werden.
 
-
-
-\section{websocket}
-Der datenaustausch aller komponente ist durch websockets verwirklicht, eine möglichst schnelle kommunikation zu ermöglichen. 
-andere kommunikationsarten sind meist langsamer und damit für echtzeitanwendungen weniger gut geeignet
-
-der austausch wurde im webserver Mittels SocketIO umgesetzt. einem Python softwarepacket,
-\section{ace}
-The --- editor Ace is used as a base for all code editing of the application.
-There are two instances where code is being edited. Firstly the configuration file for argos, written in the -- language Xml and secondly a controller file, written in C++.   
-
-\subsection{Xml} 
-     eine xml datei ist für die konfiguration der szene verantwortlich
-\subsection{Cpp}
-      eine cpp datei sorgt zusätzlich für den kontrollalgorithmus der von den vorhandenen robotern genutzt wurde.
+    \subsection{C++}
+    Eine zusätzliche Datei dient der Implementierung des Kontrollalgorithmus, 
+    der von den vorhandenen Robotern genutzt wird und ist in der Programmiersprache C++ geschrieben. 
+    C++ ist eine häufige Wahl für die Programmierung von Robotern, da sie eine hohe Ausführungsgeschwindigkeit und 
+    präzise Speicherverwaltung bietet, die für Echtzeitanwendungen und komplexe Berechnungen unerlässlich sind.
+    Besonders relevant wird dies, wenn das in der Simulation verwendete Programm auch auf den realen Roboter übertragen werden soll.
+    Diese Datei enthält die Logik und Anweisungen, die es den Robotern ermöglichen, ihre Aufgaben autonom auszuführen. 
+    Durch den Einsatz dieses Kontrollalgorithmus wird sichergestellt, dass die Roboter effizient und korrekt arbeiten, 
+    indem sie auf verschiedene Umgebungsbedingungen und Anforderungen reagieren können. 
+    Diese Datei spielt somit eine zentrale Rolle in der Steuerung und Koordination der robotischen Aktivitäten innerhalb des Simulationssystems.
 
 
 \section{IFrame}
-Ein Iframe ist -- und ermöglicht das darstellen des inhaltes einer bestehenden internetseite. 
-Daher ist er ideal um die, durch webviz erstellte webanwendung, in CollabSim zu integrieren.
-Das erstellen eines eigenen clients wäre ebfalls eine option zur Darstellung der simulation. 
-jedoch kann dies sehr umfangreich werden und ist, für die Erforschung des möglichen einflusses von 
-kollaborativen Arbeiten im bereich der robitksimulation, von geringem interesse.
+  Ein Iframe ist ein HTML-Element, das es ermöglicht, den Inhalt einer externen Webseite in eine andere Webseite einzubetten. 
+  Dies macht es ideal, um die mit Webviz(siehe Abschnitt \ref{webviz}) erstellte Webanwendung in CollabSim zu integrieren. 
+  Alternativ wäre die Entwicklung eines eigenen Clients möglich, um die Simulation darzustellen. 
+  Diese Option erfordert jedoch erheblichen Zeitaufwand und bietet nur geringen Mehrwert für den Zweck dieser Arbeit.
 
 
 
+%-----------------------------------user test---------------------------
+\chapter{Nutzertest} 
+\label{chapter-test}
+%Wir wollen die Machbarkeit von solche Online SImulaiton tools vorstellen und auch abmessen wiefern sind wir vorangekommen.
 
+  Die vorliegende Bachelorarbeit befasst sich mit der Entwicklung und Evaluierung eines kollaborativen Online-Simulationswerkzeugs für die Robotik. 
+  Ziel der Arbeit ist es, die Machbarkeit und den Nutzen solcher Werkzeuge zu untersuchen und die Konkurenzfähigkeit gegenüber traditionellen Simulatoren in der Robotik, zu bewerten. 
+  Dazu wird der entwickelte Simulator verwendet und von Teilnehmern einer Stichprobe hinsichtlich verschiedener Aspekte der Usability (Benutzerfreundlichkeit) bewertet.
+  Dies soll auch dabei helfen einzuschätzen, inwiefern CollabSim einen erfolgreichen Prototypen des verfolgeten Ansatzes darstellt.
+  In diesem Kapitel werden die Methoden der Untersuchung vorgestellt und diskutiert.
 
-
-
-\chapter{user test} 
-- Darstellung der Funktionsweise und Merkmale beider Simulationsansätze + Bewertung der Vor- und Nachteile jedes Ansatzes
-solo vs group
 
 \section{Methodik}
+  % daten + metriken
+  In dieser Arbeit wurde zur Evaluierung des entwickelten Simulators CollabSim ein 
+  Experiment mit freiwilligen Testpersonen aus der erwarteten Zielgruppe durchgeführt. 
+  Anschließend wurde ein darauf aufbauender Fragebogen verwendet.
+
+  Qualitative Daten basierend auf den, durch den Fragebogen erhaltende, Antworten wurden erfasst und analysiert.  
+  Als Metriken zur Evaluierung des Simulationskonzepts wurden Zufriedenheit und Erlernbarkeit, Effizenz und Nützlichkeit sowie Konkurenzfähigkeit und Potenzial gewählt.
+  Diese Metriken bieten Einblicke in die Nutzererfahrung und die Leistungsfähigkeit des Simulators. Sie reflektieren die subjektiven Einschätzungen der Teilnehmer.
+  Zusätzlich wurden alle Durchläufe beobachtet, um besser nachzuvollziehen wo potenzielle Schhwierigkeiten auftreten.
+  Dabei bestand kein Kontakt zu den Probanden, um diese nicht während der Durchführung zu beeinflussen.
+  Bis auf die benötigte Zeit der einzelnen Durchgänge wurden keine weiteren quantitativen Daten aufgezeichnet. 
+  In der anschließenden Bewertung wurden die gesammelten Ergebnisse statistisch analysiert.
+
+  % - Erläuterung der Herangehensweise und Begründung der Methodenwahl \\
+  Diese Entscheidung, für die Verwendung eines Fragebogens wurde aus mehreren Gründen getroffen.
+  Erstens gibt es keine vorangegangenen Studien zu ähnlichen kollaborativen Online-Simulationswerkzeugen. 
+  Daher wurde ein explorativer Ansatz gewählt, um umfassende erste Einblicke zu gewinnen.
+  Zweitens war es schwierig eine große und diversifizierte Stichprobe zu rekrutieren. 
+  Eine Herausforderung stellten der begrenzte Zeitrahmen sowie die Erreichbarkeit und Verfügbarkeit der recht spezifischen Zielgruppe von Studierenden, Absolventen und Forschenden im Bereich der Robotik dar.
+  Ein Fragebogen stellte durch die Zeitbegrenzung eine praktikable und effiziente Methode dar, um die Forschungsfragen zu beantworten.
+  Und trotz der begrenzten Teilnehmerzahl konnte durch diesen eine ausreichende Menge an Daten gesammelt werden, um erste Tendenzen zu beobachten.
+  Zusätzlich bot diese Methode den Vorteil der Standardisierung durch Verwendung einer Skala und die Einfachheit bei der Datenerhebung und -auswertung. 
+  Standardisierte Antworten ermöglichen eine leichte quantitative Auswertung und liefern vergleichbare Daten.
+  Zusammenfassend lässt sich sagen, dass die Wahl der Methode durch verwandte Arbeiten und die spezifischen Rahmenbedingungen dieser Bachelorarbeit bestimmt wurde. 
+
+  Der Fragebogen umfasst 15 Fragen, welche meist auf einer Skala von 1 (keien Zustimmunng) bis 10 (starke Zustimmung) bewertet werden.
+  Die Fragen wurden zu großen Teilen aus den Werken von \cite{Schiller2023} und der System Usability Scale (SUS) \cite{Brooke1995} zur Bewertung der Usabillity übernommen und angepasst.
+  Allerdings wurde nur ein Teil der, des System Usability Scale zugrundliegenden Fragen verwendet, da sich die Evaluation nicht nur auf die Usability von CollabSim beschränkt.
+  Da keine einheitliche Evaluationsmethode für kollaborative online Simulatoren existiert, entstammen einige Fragen auch eher experimenteller Natur.
+  Die Auswahl einer Teilmenge der SUS-Fragen, ergänzt durch spezifische zusätzliche Fragen, war eine methodische Entscheidung, 
+  um eine präzisere und relevantere Bewertung im spezifischen Kontext dieser Studie zu ermöglichen. 
+  Diese Vorgehensweise gewährleistet, dass die wichtigsten Aspekte der Usability erfasst werden und gleichzeitig Raum für die Untersuchung weiterer relevanter Themen bleibt.
+
+\section{Experiment}
+  % - Erläuterung des experimentellen Aufbaus und der Durchführung 
+  % teilnehmer
+  Das Experiment zur Evaluation des entwickelten Simulationswerkzeugs wurde mit 6 Teilnehmern, unter Verwenung des neu entwickelte Online-Simulationswerkzeuges, durchgeführt. 
+  Die Teilnehmer waren Studierende und Absolventen der Robotik und verwandter Studiengänge, mit unterschiedlichen Vorkenntnissen in der Robotik.
+
+  Ein Versuchsdurchlauf hat meist in etwa 20 Minuten in Anspruch genommen. Eine Zeitbeschränkung wurde nicht festgelegt. 
+  Alle Probanden beantworteten identische Fragen und bearbeiteten die selben Aufgaben.
+  In allen Durchläufen wurde die Zeit parallel gemessen und aufgezeichnet. Leider war es technisch nicht sichergestellt, 
+  dass die Teilnehmer den gesamten Fragebogen ausfüllen mussten, um unvollständige Einreichungen zu vermeiden. 
+  So kam es dazu, dass die Antwort auf eine Frage von einem Teilnehmer fehlt.
+        
+  % ablauf experiment
+  Vor der Nutzung des Simulators ist es wichtig, die Qualität der Daten aus der Stichprobe zu analysieren. 
+  Zu diesem Zweck durchliefen die Teilnehmer vor dem eigentlichen Experiment eine Vorab-Umfrage. 
+  In dieser Umfrage wurden sie gebeten, ihre Fähigkeiten im Umgang mit den im Experiment verwendeten Technologien zu bewerten, 
+  wie z.B. Computerkenntnisse, allgemeine Kenntnisse in der Robotik oder Erfahrungen in der Programmierung und Simulation von Robotersystemen.
+
+  \begin{enumerate}
+    \item 
+    How many years of experience do you have in robotics?
+    \item
+    How often do you use computers? 
+    \item
+    How would you rate your knowlage about robotics? %/ = 32/6 = 5,..
+    \item
+    How would you rate your experience in programming robots or robot swarms? %/ 24/6 = 4  
+    \item
+    How would you rate your experience in simulating robots or robot swarms? %/ 25/6 = 4,..
+    \end{enumerate}        
+        
+  Daraufhin folgte ein Experiment, in dem die Teilnehmer, unter der Verwendung von CollabSim, einfache Änderungen an einer vorgegebenen Simulationsumgebung vornehmen sollten.
+  Diese Änderungen repräsentieren zwei typische Aufgaben bei der Simulation von Robotern. 
+  Einerseits das Erstellen einer editierbaren Szene, in der ein Roboter zu Trainings- oder Testzwecken agiert.
+  Andererseits das Testen, Anpassen oder Entwerfen von Kontrollalgorithmen zur Steuerung der verwendeten Roboter. 
+  Die simulierte Umgebung ist in Abbildung \vref{fig-lösung} zu sehen.
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics{figures/Lösung xml.png}
+    \caption{Die von den Teilnehmern in CollabSim bearbeitete Simulationsumgebung.}
+    \label{fig-lösung}
+  \end{figure}
+
+  Nach der Nutzung des Simulationswerkzeugs sollten die Probanden die restlichen Fragen beantworten. 
+  Diese zielten darauf ab, die Usability von CollabSim zu bewerten und eine Einschätzung des zu erforschenden Konzepts zu liefern.
+  Die Teilnehmer bewerteten ihre Erfahrungen und die daraus resultierenden quantitativen Daten wurden anschließend statistisch ausgewertet, um aussagekräftige Ergebnisse zu erzielen.
+  
+  \begin{enumerate}
+    \item 
+    I would imagine that most people would learn to use this system very quickly. %= 45/6 = 7,.. median=8
+    \item
+    I needed to learn a lot of things before I could get going with this system. %= 18/6 = 3 median=3
+    \item
+    How do you rate the clarity and usability of the simulation? %= 47/6 = 7,.. median=8
+    \item
+    I found the various functions in this system were well integrated. %= 46/6 = 7,..  median=8.5
+    \item
+    I felt very confident using the tool. %= 45/6 = 7,..  median=8
+    \item
+    I  found the system very complicated to use. %= 16/6 = 2,. median=2.5
+    \item
+    I think that collaborative online simulation tools offer an advantage over traditional simulation tools. %= 47/5 = 8,.. median=10
+    \item
+    Compared to my previous experiences with similar tools, I made more progress using this simulation tool. %= 48/6 = 8   median=8
+    \item
+    I would recommend this simulation tool for similar tasks in the future. %= 49/6 = 8,.. median=8
+    \item
+    How would u rate the simulation tool? %= 46/6 = 7,.. median=8
+    \end{enumerate}
 
 
-- Beschreibung der Methoden, die du zur Durchführung deiner Untersuchung verwendet hast 
-wer waren Versuchpersonen        
-probanden machen aufgabe allein oder im team 
-survey
-      
+  %Compared to my previous experiences with similar tools, I made more progress using this simulation tool. 
+  % (in ease weil die meisten eher anfänger sind)
+   % (in useabillity weil mehr progress) 
+    % (in collab weil sim auch mit collab func funktionieren kann)
+     % (in online weil die meisten zufriden waren mit online sim, wegen ease? einfach seite auf und los) 
+      %    = 48/6 = 8   median=8
+
+  Zusätzlich wurden weitere Fragen für den Versuchsdurchlauf mit zweier Paaren erstellt. 
+  Diese Fragen sollten einen Vergleich, zwischen Einzelpersonnen und Gruppen, bei der Bearbeitung der Aufgaben ermöglichen.
+  Außerdem ziehlten sie auf die Evaluation der integrierten kollaborativen Funktionen und ihr Zusammenspiel mit dem Gesamtsystem ab. 
+  Sie waren nur zur Beantwortung vorgesehen, wenn das Experiment in einer Gruppe durchgeführt wurde. 
+  Da nicht genügend Teilnehmer organisiert werden konnten, wurden keine Gruppen gebildet und diese Fragen damit hinfällig.
+  Dementsprechend liegen keine Ergebnisse für diese Fragen vor und lassen Raum für weiterführende Untersuchungen.
+
+\section{Hypothesentests}
+  % kein t-test oder ähnliche Hypothesentest => deskriptive Statistiken
+  Da ich nur eine Testgruppe habe und aufgrund der kleinen Stichprobengröße waren gängige Hypothesentests wie der T-Test oder der ANOVA-Test nicht anwendbar. 
+  Stattdessen können deskriptive Statistiken verwendet werden, um die jeweiligen Mittelwerte und Standardabweichungen(SD) der Fragen zu analysieren und festzustellen, 
+  ob die Teilnehmer den Simulator als benutzerfreundlich betrachten. Damit wird die Machbarkeit und der Nutzen des vorgestellten Ansatzes bewertet. 
+  Es ist jedoch wichtig zu beachten, dass die Stichprobengröße nicht groß genug ist, um robuste Erkenntnisse aus der Interpretation dieser Ergebnisse zu gewinnen.
+  Die Ergebnisse der Umfrage wird im folgenden Kapitel diskutiert.
+
+
+  %quali
+  %survey:
+    
+   %   post
+    %    (teamwork)
+     %   Wie wichtig war die Kommunikation und Koordination mit Ihrem Partner für den Erfolg der Aufgabe?
+      %  Wie leicht war es, mit Ihrem Partner an der Simulation zusammenzuarbeiten?
+       % Welche Aspekte der Simulation haben die Kollaboration unterstützt oder behindert?
+        %Konnten Sie effektiv mit der Simulationsumgebung interagieren, um die gestellten Aufgaben zu lösen?
+  %      Ich empfand die zussamenarbeit mit einem partner, bei der bearbeitung der  aufgaben, hilfreich
+   %     Sie haben viel zeit investiert, um mit Ihrem Partner zu interagieren
+%
+ %       collab -- zusätzliche fragen
+  %      2. I found the system/collab functions unnecessarily complex -> war collab unnötig
+   %     9. I felt very confident using the system - usable/easy to understand, well integrated features
+    %    10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
 
       
-- Erläuterung deiner Herangehensweise und Begründung der Methodenwahl 
-da keine voranstehende Arbeit
-da begrenzt zeit im rahmen einer ba arbeit
-      
-- Erklärung der Kriterien und Metriken, die zur Bewertung der Simulationsansätze herangezogen wurden
-metriken
-og
-        Qualitative results - based on responses received from the surveys. 
-          These give a picture of user experience and preference. 
-        Quantitative results - from robot trajectory and related information 
-          (recording task completion time, swarm trajectory, collision count, and other related data)
-          These serve as performance metrics that tell us whether there is an actual difference in how well 
-          the participants performed, between interfaces. 
+  %quanti
+   %       task completion  
+    %      task completion time
           
-      
-      
-        in ba
-        Metrics from two categories will be applied in the evaluation. 
-          The Performance category includes metrics such as effectiveness, accuracy, and response time, 
-            which have a measurable impact on the usability and performance of the respective HSI. 
-          The User Experience category includes metrics such as user-friendliness, immersion, and workload, 
-            which represent a subjective assessment by the participants and have an indirect influence on performance [12].
 
-- Erläuterung des experimentellen Aufbaus und der Durchführung 
-task: 
-platzieren von hindernissen an bestimmten stellen, -> customisible environment
-platzieren und anpassen von robos -> customisible robot models
-robo verhalten erweitern (aus verhalten einen aspekt rauslöschen?) -> testing of control algos
+\chapter{Ergebnisse und Diskussion}
+\label{chapter-result}
+%--Alternativen: Bezieht sich auf die Diskussion von alternativen Erklärungen oder Einschränkungen der Studie, um potenzielle Fehlerquellen zu identifizieren.
+%--Validierung: Beschreibt die Überprüfung der Gültigkeit der Ergebnisse, sowohl intern als auch extern, und die Diskussion potenzieller Fehlerquellen oder Verzerrungen.
+%--Interpretation: Umfasst die Diskussion und Interpretation der Ergebnisse, einschließlich möglicher Implikationen, Bedeutung und Relevanz für das Forschungsfeld.
+
+In diesem Abschnitt werden die Ergebnisse der zuvor beschriebenen Nutzertests vorgestellt und anschließend diskutiert sowie interpretiert. 
+Zudem werden die Forschungsfragen anhand der Ergebnisse diskutiert.
+
+Die vorab gestellten Fragen der Umfrage dienten der Überprüfung der Eignung der Teilnehmer und ihrer Selbsteinschätzung bezüglich ihrer Kenntnisse in der Robotik. 
+Sie stellen sicher, dass die Teilnehmer über ausreichendes Wissen und Erfahrung verfügen, um fundierte Rückmeldungen zur Simulationsumgebung zu geben.
+Die Fragen nach der Durchführung des Experiments zielen darauf ab, die entwickelte Simulationsumgebung nach den Metriken Zufriedenheit und Erlernbarkeit, 
+Effizienz und Nützlichkeit sowie Konkurenzfähigkeit und Potential zu bewerten.
+Damit werden die wichtigsten Aspekte der Benutzerfreundlichkeit und die spezifischen Stärken und Schwächen der Simulationsumgebung erfasst und analysiert, 
+was zu einer aussagekräftigen Beurteilung und möglichen Verbesserungsvorschlägen führt.
 
 
-Qualitative results - based on responses received from the surveys. 
-  These give a picture of user experience and preference. 
 
-survey:
-    
-    pre
-      How often do you use computers? 
-      How would you rate your knowlage about (swarm) robotics?
-      How would you rate your experience in programming robots or robot swarms?
-      How would you rate your experience in simulating robots or robot swarms?
+
+\section{Eignung und Selbsteinschätzung}
+  Zu Beginn wurde nach der Anzahl der Jahre an Robotikerfahrung der Probanden gefragt. 
+  Die zeitliche Erfahrung reichte dabei von 2 bis 5 oder mehr Jahren, wodurch ein breites Spektrum an Studierenden bis hin zu Masterabsolventen und 
+  Berufseinsteigern abgedeckt wurde. 
+  Es war wichtig, einen grundlegenden Wissens- und Erfahrungsstand vorauszusetzen, da für die sinnvolle und erfolgreiche Bearbeitung des Experiments grundlegende 
+  Kenntnisse in Programmierung und Simulationen entscheidend sind.
+
+  Tatsächlich lassen sich die sechs Teilnehmer basierend auf ihrer jahrelangen Erfahrung in zwei Dreiergruppen einteilen. 
+  Die erste Gruppe besteht aus Studierenden mit 2 Jahren Erfahrung, die noch eher als Einsteiger angesehen werden können. 
+  Die zweite Gruppe umfasst Teilnehmer mit über 2 Jahren Erfahrung in der Robotik und kann daher als fortgeschrittener betrachtet werden.
+  In Abbildung \vref{fig-preq1} ist diese Aufteilung gut erkennbar. Auf die Auswirkungen dieser Gruppierung gehe ich im Abschnitt \ref{erfahrung} genauer ein.
   
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics{figures/pre-question1.png}
+    \caption{How many years of experience do you have in robotics? }
+    \label{fig-preq1}
+  \end{figure}
+
+
+  Um die Vertrautheit der Probanden mit Computern einschätzen zu können, wurden sie nach ihrer täglichen Computernutzung befragt. 
+  Es sollte sichergestellt werden, dass alle Teilnehmer über ausreichende Erfahrung mit Computern verfügen, um die gestellten Aufgaben erfolgreich bewältigen zu können. 
+  Dies war insbesondere wichtig, da CollabSim als Onlinesimulator in modernen Browsern läuft und ein sicherer Umgang mit solchen Anwendungen erforderlich ist.
+  Abbildung \vref{fig-preq2} zeigt, dass die Teilnehmer durchschnittlich mehrere Stunden pro Tag am Computer verbringen und somit ausreichend Erfahrung mitbringen sollten, 
+  um den Simulator problemlos zu bedienen.
   
-    post
-      (teamwork)
-      Wie wichtig war die Kommunikation und Koordination mit Ihrem Partner für den Erfolg der Aufgabe?
-      Wie leicht war es, mit Ihrem Partner an der Simulation zusammenzuarbeiten?
-      Welche Aspekte der Simulation haben die Kollaboration unterstützt oder behindert?
-      Konnten Sie effektiv mit der Simulationsumgebung interagieren, um die gestellten Aufgaben zu lösen?
-      Ich empfand die zussamenarbeit mit einem partner, bei der bearbeitung der  aufgaben, hilfreich
-      Sie haben viel zeit investiert, um mit Ihrem Partner zu interagieren
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics{figures/pre_question2.png}
+    \caption{How often do you use computers? }
+    \label{fig-preq2}
+  \end{figure}
 
-      ease
-      1. I think that I would like to use this system frequently - usable + ease
-      7. I would imagine that most people would learn to use this system very quickly -ease
+  Die drei restlichen, vorab gestellten Fragen dienten der Selbsteinschätzung. 
+  Die Teilnehmer sollten ihre eigenen Kenntnisse in der Robotik sowie ihre Erfahrungen in der Programmierung und Simulation von Robotern oder Schwarmrobotern bewerten. 
+  Diese Fragen wurden gestellt, um ein besseres Verständnis für den Hintergrund und das Erfahrungsniveau der Teilnehmer zu erhalten. 
+  Dies ermöglicht eine differenziertere Analyse der Usability-Bewertung, indem die Ergebnisse in 
+  Zusammenhang mit den Vorkenntnissen und Erfahrungen der Benutzer gesetzt werden können. 
+  So werden eventuelle Unterschiede in der Wahrnehmung der Benutzerfreundlichkeit leichter identifiziert und besser interpretiert.
+  Die Ergebnisse sind in den Abbildungen \vref{fig-preq3} - \vref{fig-preq5} dargestellt.
+  
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/pre_question3.png}
+    \caption{How would you rate your knowlage about robotics? 1-no knowlage, 10-expert}
+    \label{fig-preq3}
+  \end{figure}
 
-      usability
-      How do you rate the clarity and usability of the simulation? - Usability
-      How do you rate the clarity and usability of the collaboration functions? - Usability, collab gut umgeetzt?
-      8. I found the system very cumbersome to use - implementation of features or just argos???
-      Were you able to form a accurate projection from your mental picture of the environment? - Accuracy
-      5. I found the various functions in this system were well integrated - woran hats gelegen (falls nicht gut)
-      
-      collab
-      2. I found the system/collab functions unnecessarily complex -> war collab unnötig
-      9. I felt very confident using the system - usable/easy to understand, well integrated features
-      10. I needed to learn a lot of things before I could get going with this system - no robo exp or not usable/understandable
-    
-      
-      How would u rate the simulation? - overall + for comparission -> success? 
-
-
-        
-        
-Quantitative results - from robot trajectory and related information 
-  These serve as performance metrics that tell us whether there is an actual difference in how well the participants performed
-
-        task completion  
-        task completion time
-        (clicks, how many clicks -> much looking around/wondering -> lacking clarity???)
-        wurden die aufgaben aufgeteilt y/n
-        wie viel zeit wurde für die kommunikation verwendet? (je mehr desto besser?)
-        wie häufig wurden kommunikationsmöglichkeiten genutzt
-        anzahl gemeinsamer interaktionen? anzahl nachrichten im chat
-
-        
-            
-            
-      
+  
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/pre_question4.png}
+    \caption{How would you rate your experience in programming robots or robot swarms? 1-no knowlage, 10-expert}
+    \label{fig-preq4}
+  \end{figure}
 
 
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/pre_question5.png}
+    \caption{How would you rate your experience in simulating robots or robot swarms? 1-no knowlage, 10-expert}
+    \label{fig-preq5}
+  \end{figure}
 
-    
-\section{Ergebnisse und Diskussion}
+  Es ist ein leichter, absehbarer Abstieg der bewerteten Kompetenz mit fallender Anzahl an Jahren im Bereich der Robotik erkennbar. 
+  Ein klarer Zusammenhang zwischen der Selbsteinschätzung und anderen erhobenen Daten konnte jedoch nicht festgestellt werden. 
+  Dies kann darauf hindeuten, dass die Selbsteinschätzung der Kompetenz möglicherweise zu stark von der subjektiven Wahrnehmung beeinflusst wird.
+
+\section{Zufriedenheit und Erlernbarkeit}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question1.png}
+    \caption{I would imagine that most people would learn to use this system very quickly. 1-strongly disagree, 10-strongly agree}
+    \label{fig-postq1}
+  \end{figure}
+
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question5.png}
+    \caption{I felt very confident using the tool. 1-strongly disagree, 10-strongly agree}
+    \label{fig-postq5}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question6.png}
+    \caption{I  found the system very complicated to use. 1-strongly disagree, 10-strongly agree }
+    \label{fig-postq6}
+  \end{figure}
+
+  \begin{table}[htpb]
+    \caption{Statistiken zur Zufriedenheit und Erlernbarkeit von CollabSim}
+    \label{fig-ease}
+    \centering
+    \begin{tabular}{lp{1cm}l}
+      \uzlhline
+      \uzlemph{Aussage} & \uzlemph{Mittelwert} & \uzlemph{SD} \\ \uzlhline
+      I would imagine that most people would learn to use this system very quickly. & 7.5 & 2.29 \\
+      I felt very confident using the tool. & 7.5 & 1.71 \\ 
+      I  found the system very complicated to use. & 2.67 & 1.7 \\ \uzlhline
+    \end{tabular}
+  \end{table}
+
+  Die intuitive Nutzung einer Anwendung spielt eine entscheidende Rolle für die User Experience, die maßgeblich über den Erfolg eines Produkts entscheidet. 
+  Um diesen Aspekt der Benutzerfreundlichkeit zu bewerten, wurden daher gezielte Fragen in den Fragebogen aufgenommen. 
+  Diese Fragen zielen darauf ab, zu erfassen, wie gut die Anwendung von den Nutzern verstanden und effektiv genutzt wird. 
+
+
+  
+
+  Abbildungen \vref{fig-postq1} - \vref{fig-postq6} und die Auswertung in Tabelle \ref{fig-ease} zeigen, dass sich die Teilnehmer recht selbstbewusst und sicher bei der Nutzung von CollabSim fühlten.
+  Die Ergebnisse zeigen, dass die Benutzer mit der Anwendung zufrieden waren und sich kompetent im Umgang mit den Funktionen fühlten.
 
 
 
-Ergebnisse
-      - Präsentation und Diskussion deiner Forschungsergebnisse
-      - Grafische Darstellung von Daten und statistische Analysen
-      - Vergleich der Leistung von kollaborativem Arbeiten und herkömmlichen Simulatoren anhand der definierten Metriken
-      - Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage(n) und Hypothesen
-   
-Diskussion 
-      - Interpretation deiner Ergebnisse im Kontext der vorhandenen Literatur 
-      - Reflexion über mögliche Einschränkungen deiner Studie / Reflexion über die Stärken und Schwächen der durchgeführten Studie und mögliche Verbesserungen
-      - Diskussion über die praktischen Implikationen der Ergebnisse für die Schwarmrobotik-Forschung und -Entwicklung
-      - Vorschläge für zukünftige Forschung
+\section{Effizenz und Nützlichkeit}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question3.png}
+    \caption{How do you rate the clarity and usability of the simulation? 1-not usable, 10-very usable }
+    \label{fig-postq3}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question4.png}
+    \caption{I found the various functions in this system were well integrated. 1-strongly disagree, 10-strongly agree }
+    \label{fig-postq4}
+  \end{figure}
+
+
+  \begin{table}[htpb]
+    \caption{Statistiken zur Effizenz und Nützlichkeit von CollabSim}
+    \label{fig-effi}
+    \centering
+    \begin{tabular}{lp{1cm}l}
+      \uzlhline
+      \uzlemph{Aussage} & \uzlemph{Mittelwert} & \uzlemph{SD} \\ \uzlhline
+      How do you rate the clarity and usability of the simulation? & 7.83 & 1.68 \\
+      I found the various functions in this system were well integrated. & 7.67 & 1.8 \\ \uzlhline
+    \end{tabular}
+  \end{table}
+
+  Natürlich sollte man mit einer Anwendung auch effizient arbeiten können. 
+  Dementsprechend ist es wichtig, dass die Funktionen klar, einfach verständlich und nutzbar sind. 
+  Auch hier konnte CollabSim überzeugen. 
+  Die zugehörigen Fragen sind in den Abbildungen \vref{fig-postq3} und \vref{fig-postq4} aufgelistet. 
+  Die Wertungen der Fragen in Tabelle \ref{fig-effi} deuten darauf hin, dass die Teilnehmer der Meinung waren, 
+  die Funktionen seien gut integriert und das System insgesamt nützlich. 
+  Die Ergebnisse bestätigen, dass CollabSim eine solide Grundlage für eine effiziente Arbeitsumgebung bietet.
+
+
+
+
+\section{Konkurenzfähigkeit und Potential}
+  Es lässt sich sagen, dass dieses Online-Simulationswerkzeug insgesamt gut von den Nutzern bewertet wurde, was in den Abbildungen \vref{fig-postq8} - \vref{fig-postq10} ersichtlich ist. 
+  Auch im Vergleich zu traditionellen Simulatoren scheint es besser abzuschneiden.
+
+  Die Probanden waren der Meinung, dass kollaborative Online-Simulatoren große Vorteile gegenüber herkömmlichen Simulatoren bieten können. 
+  Obwohl dies nur ihre Einschätzung widerspiegelt, ist ein so deutliches Ergebnis dennoch aussagekräftig (siehe Abbildung \vref{fig-postq7}). 
+  Der potenzielle Nutzen wurde intuitiv erkannt und scheint gerechtfertigt, wenn man die Vorteile und die steigende Nachfrage nach kollaborationsfähigen Werkzeugen in vielen Bereichen betrachtet.
+  Das Feedback zeigt, dass die kollaborativen Funktionen als besonders vorteilhaft angesehen wurden, 
+  was darauf hinweist, dass solche Werkzeuge das Potenzial haben, die Effizienz und Produktivität in teamorientierten Arbeitsumgebungen signifikant zu erhöhen. 
+  Dies unterstreicht die Relevanz und den Mehrwert von kollaborativen Online-Simulatoren in der modernen, vernetzten Arbeitswelt.
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question7.png}
+    \caption{I think that collaborative online simulation tools offer an advantage over traditional simulation tools. 1-strongly disagree, 10-strongly agree }
+    \label{fig-postq7}
+  \end{figure}
+  
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question8.png}
+    \caption{Compared to my previous experiences with similar tools, I made more progress using this simulation tool. 1-strongly disagree, 10-strongly agree }
+    \label{fig-postq8}
+  \end{figure}
+  
+  Im Gegensatz zu anderen Simulationen empfanden die Probanden eine deutliche Effizenzsteigerung duch den Einsatz von CollabSim, wie in Abbildung \vref{fig-postq8} und anhand der niedrigen Standardabweichungen (siehe Tabelle \ref{fig-pot}), zu sehen ist.
+  Gerade für Anfänger ist die korrekte Einrichtung vieler Simulatoren meist kompliziert und zeitintensiv, wohingegen CollabSim in jedem modernen Browser aufrufbar ist.  
+  Dadurch kann diese Zeit eingespart werden, wesshlab das Konzept eines webbasierten Simulators vermutlich wesentlich einfacher, schneller und effizienter wirkt.  
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question9.png}
+    \caption{I would recommend this simulation tool for similar tasks in the future. 1-strongly disagree, 10-strongly agree }
+    \label{fig-postq9}
+  \end{figure}
+  
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question10.png}
+    \caption{How would u rate the simulation tool? 1-very bad, 10-very good }
+    \label{fig-postq10}
+  \end{figure}
+  
+  \begin{table}[htpb]
+    \caption{Statistiken zur Konkurenzfähigkeit und Potential von CollabSim}
+    \label{fig-pot}
+    \centering
+    \begin{tabular}{lp{1cm}l}
+      \uzlhline
+      \uzlemph{Aussage} & \uzlemph{Mittelwert} & \uzlemph{SD} \\ \uzlhline
+      I think that collaborative online simulation tools offer \\an advantage over traditional simulation tools. & 9.4 & 1.2 \\\uzlhline
+      Compared to my previous experiences with similar tools, \\I made more progress using this simulation tool. & 8 & 0.57 \\\uzlhline
+      I would recommend this simulation tool for similar tasks in the future. & 8.17 & 1.46 \\\uzlhline
+      How would u rate the simulation tool? & 7.67 & 1.38 \\ \uzlhline
+    \end{tabular}
+  \end{table}
+  
+  Das Konzept und der Simulator selbst, scheinen auch überzeugt zu haben. 
+  Dies spiegelt sich in der Bewertung von CollabSim mit durchschnittlich 7,67 Punkten wieder. 
+  Die Ergebnisse werden in Abbildung \vref{fig-postq10} aufgezeigt.
+  Die statistischen Kennzahlen zu den Antworten werden in Tabelle \ref{fig-pot} angezeigt.
+
+
+\section{Erfahrung}
+\label{erfahrung}
+  Die Erfahrung der einzelnen Teilnehmer erwies sich als wesentlicher Faktor für die Bewertung des Simulators. 
+  Bei vielen Fragen wurde der Simulator von den unerfahrenen Nutzern leicht bis deutlich schlechter bewertet als von den erfahreneren Teilnehmern. 
+  Teilt man die Probanden in eine Gruppe von Anfängern, mit bis zu 2 Jahren Erfahrung, und eine Gruppe von Fortgeschrittenen, mit über 2 Jahren Erfahrung in der Robotik, wird diese Tendenz deutlich.
+
+  Beispielsweise bei der Frage, ob der Proband der Meinung sei, dass er für eine effiziente Nutzung noch viel lernen müsse, ist ein großer Unterschied feststellbar. 
+  In Abbildung \vref{fig-postq2} und in Tabelle \ref{fig-exp} sind die entsprechenden Antworten und Statistiken.
+  Die Anfänger lagen mit einer durchschnittlichen Wertung von 4 doppelt so hoch wie die fortgeschrittene Gruppe.
+  Also hatten sie den Eindruck, dass sie noch einiges dazu lernen müssten.
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.8]{figures/post_question2.png}
+    \caption{I needed to learn a lot of things before I could get going with this system. 1-strongly disagree, 10-strongly agree }
+    \label{fig-postq2}
+  \end{figure}
+
+  \begin{table}[htpb]
+    \caption{Statistiken zur Erfahrung der Probanden}
+    \label{fig-exp}
+    \centering
+    \begin{tabular}{lp{1cm}l}
+      \uzlhline
+      \uzlemph{Aussage} & \uzlemph{Mittelwert} & \uzlemph{SD} \\ \uzlhline
+      I needed to learn a lot of things before I could get going with this system. & 3 & 1.82 \\ \uzlhline
+    \end{tabular}
+  \end{table}
+
+  In diesem Fall scheint der Unterschied aufgrund der geringeren Erfahrung absehbar, jedoch beeinflusst dieser Trend die Wertung auch in anderen Bereichen. 
+  Die unerfahrenere Gruppe bewertet auch die Fragen zum schnellen Erlernen des Systems, zur Integration der Funktionen und zum Selbstbewusstsein bei der Nutzung deutlich schlechter. 
+  Auch eine leicht geringere Gesamtwertung und Empfehlung scheinen die Folge zu sein. 
+  In den Abbildungen \vref{fig-group1} - \vref{fig-group6} wurden zur Veranschaulichung die Antworten einiger Fragen nach den Gruppen aufgeteilt.
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.4]{figures/group1.png}
+    \caption{Vergleich der Bewertungen der Aussage ``I would imagine that most people would learn to use this system very quickly.'' zwischen den Teilnehmern mit unterschiedlicher Erfahrung. 
+              Jeder Punkt in der Abbildung repräsentiert einen Teilnehmer. Gelbe Punkte stehen für unerfahrenere Teilnehmer, schwarze Punkte für erfahrene Teilnehmer. }
+    \label{fig-group1}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.4]{figures/group2.png}
+    \caption{Vergleich der Bewertungen der Aussage ``I needed to learn a lot of things before I could get going with this system.'' zwischen den Teilnehmern mit unterschiedlicher Erfahrung. 
+    Jeder Punkt in der Abbildung repräsentiert einen Teilnehmer. Gelbe Punkte stehen für unerfahrenere Teilnehmer, schwarze Punkte für erfahrene Teilnehmer. }
+    \label{fig-group2}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.4]{figures/group3.png}
+    \caption{Vergleich der Bewertungen der Aussage ``I found the various functions in this system were well integrated.'' zwischen den Teilnehmern mit unterschiedlicher Erfahrung. 
+              Jeder Punkt in der Abbildung repräsentiert einen Teilnehmer. Gelbe Punkte stehen für unerfahrenere Teilnehmer, schwarze Punkte für erfahrene Teilnehmer. }
+    \label{fig-group3}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.4]{figures/group4.png}
+    \caption{Vergleich der Bewertungen der Aussage ``I felt very confident using the tool.'' zwischen den Teilnehmern mit unterschiedlicher Erfahrung. 
+              Jeder Punkt in der Abbildung repräsentiert einen Teilnehmer. Gelbe Punkte stehen für unerfahrenere Teilnehmer, schwarze Punkte für erfahrene Teilnehmer. }
+    \label{fig-group4}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.4]{figures/group5.png}
+    \caption{Vergleich der Bewertungen der Aussage ``I would recommend this simulation tool for similar tasks in the future.'' zwischen den Teilnehmern mit unterschiedlicher Erfahrung. 
+              Jeder Punkt in der Abbildung repräsentiert einen Teilnehmer. Gelbe Punkte stehen für unerfahrenere Teilnehmer, schwarze Punkte für erfahrene Teilnehmer. }
+    \label{fig-group5}
+  \end{figure}
+
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[scale=0.4]{figures/group6.png}
+    \caption{Vergleich der Bewertungen der Aussage ``How would u rate the simulation tool?'' zwischen den Teilnehmern mit unterschiedlicher Erfahrung. 
+              Jeder Punkt in der Abbildung repräsentiert einen Teilnehmer. Gelbe Punkte stehen für unerfahrenere Teilnehmer, schwarze Punkte für erfahrene Teilnehmer. }
+    \label{fig-group6}
+  \end{figure}
+
+  Diese Unterschiede in den Bewertungen unterstreichen die Bedeutung von ausreichend Erfahrung und Wissen, um die Simulation sinnvoll nutzen zu können. 
+  Sie bieten zudem wertvolle Einblicke für mögliche Optimierungen und Anpassungen des Systems an die Bedürfnisse verschiedener Benutzergruppen.
+
+
+
+
+
+\section{Limitationen und Fehlermöglichkeiten}
+  Leider konnte mit dem durchgeführten Experiment kein direkter Vergleich zwischen der Verwendung herkömmlicher Simulatoren und der kollaborativen Nutzung mit CollabSim durchgeführt werden. 
+  Da die Versuchsgruppe sehr klein ausfiel, liefern die Ergebnisse eher Indizien und Tendenzen als klare Evidenz. 
+  Zudem ist der Hintergrund für die Bewertung der Fragen nicht vollständig klar und nachvollziehbar, was Raum für Spekulationen lässt. 
+  Weitere Studien mit größeren und diversifizierteren Teilnehmergruppen wären wünschenswert, um die Validität und Aussagekraft der Ergebnisse weiter zu stärken.
+
+\section{Schlussfolgerungen}
+  %- Interpretation der Ergebnisse im Hinblick auf deine Forschungsfrage(n) und Hypothesen
+  %- Interpretation deiner Ergebnisse im Kontext der vorhandenen Literatur 
+  %- Reflexion über mögliche Einschränkungen deiner Studie / Reflexion über die Stärken und Schwächen der durchgeführten Studie und mögliche Verbesserungen
+  %- Diskussion über die praktischen Implikationen der Ergebnisse für die Schwarmrobotik-Forschung und -Entwicklung
+
+
+  
+  %online
+   %     ease => online easier
+    %    useabillity gut => online funktioniert
+
+ 
+  Die vorhandenen Ergebnisse erlauben keine eindeutigen Schlussfolgerungen hinsichtlich des kollaborativen Aspekts des Simulators. 
+  Dennoch lässt sich festhalten, dass es keinen Hinweis darauf gibt, dass die dafür notwendigen Funktionen zu Einschränkungen in der Usability für Einzelnutzer führen würden. 
+  Das sehr eindeutige Ergebnis bei der Bewertung des Potenzials kollaborativer Simulatoren deutet ebenfalls auf mögliche Vorteile gemeinsamer Nutzung und die Bereitschaft der Zielgruppe hin, dieses Konzept zu akzeptieren.
+
+  Die recht klaren Ergebnisse bezüglich der Benutzerfreundlichkeit von CollabSim lassen den Schluss zu, dass die Einfachheit der Nutzung eines Online-Simulators einen klaren 
+  Vorteil gegenüber Offline-Simulatoren bietet und den Umgang mit Simulatoren vereinfacht. 
+  Die positiv bewerteten Metriken zeigt zudem, dass der Ansatz eines Online-Simulators keine Einbußen in der Usability nach sich zieht, sondern im Gegenteil zu einer Steigerung der Effizienz führt. 
+  Dies stützt die Folgerung, dass Benutzer von der einfacheren Handhabung profitieren und die Effizienz ihrer Arbeitsprozesse steigern können.
+
+  Interpretiert man die Auswertung im Kontext der Forschungsfrage, ergibt sich die Tendenz, dass CollabSim erfolgreich die Herausforderungen der Usabillity meistert und dabei die Effizienz der Nutzung erhöht.
+  Besonders bei Nutzern mit genügend Erfahrung kann CollabSim überzeugen. 
+  Damit ist es ein erfolgreicher Prototyp und zeigt die Machbarkeit und gibt Einblicke in die Vorteile des vorgestellten Konzepts.
+  Es bleibt jedoch unklar, ob der kollaborative online Ansatz für alle Arten von Simulatoren in der Robotik gleichermaßen sinnvoll ist.
+
+
+
+
       
 
 \chapter{Zusammenfassung und Ausblick}
-% In a German thesis write: \subsection{Zusammenfassung und Ausblick}
+\label{chapter-con}
+%(5-10/100, 2-3 Seiten)
+
+Zum Abschluss dieser Arbeit werden die wichtigsten Erkenntnisse und daraus resultierenden Schlussfolgerungen aufgezeigt. 
+Außerdem werde ich auf potenzielle Anwendungen von kollaborativem Arbeiten in der Schwarmrobotik eingehen und 
+die Bedeutung der Forschungsergebnisse für die Robotik und Simulation bewerten.
+
+  Die Erkenntnisse aus der Untersuchung von CollabSim bieten wertvolle Einblicke. 
+  Die Studie zeigt, dass der Online-Simulator gegenüber traditionellen, offline basierten Simulatoren klare Vorteile bietet. 
+  Insbesondere wurde die erfolgreiche Umsetzung wichtiger Aspekte der Usability und das große Potenzial des Simulationskonzepts durch die Teilnehmer bestätigt. 
+  Erfahrene Nutzer bewerteten CollabSim tendenziell positiver, was die Relevanz entsprechender Kenntnisse unterstreicht. 
+  Diese Ergebnisse legen nahe, dass kollaborative Online-Simulatoren wie CollabSim nicht nur die Benutzerzufriedenheit steigern können, 
+  sondern auch die Effizienz in der Robotikentwicklung fördern könnten, indem sie komplexe Arbeitsprozesse vereinfachen und die Zusammenarbeit verbessern.
+
+    Weitere Untersuchungen bezüglich der kollaborativen Aspekte von CollabSim wären für eine fundierte Einschätzung notwendig. 
+    Hierfür war der Nutzertest mit einer zusätzlichen Testgruppe, welche den Simulator gemeinsam in Zweiergruppen bedient, geplant. 
+    Dies scheiterte jedoch an einem Mangel an Zeit und Probanden.
+    Zusätzliche Daten zur Erfassung der Leistungen der Probanden und ihrer Zusammenarbeit wären hier entscheidend. 
+    Beispielsweise könnte überprüft werden, inwieweit die Aufgaben unter den Gruppenmitgliedern aufgeteilt wurden. 
+    Auch die Häufigkeit und die aufgewendete Zeit für die Kommunikation könnten gemessen werden, um mögliche Zusammenhänge zu untersuchen. 
+    Durch größere Stichproben könnte die Evidenz der Studienergebnisse weiter gestärkt werden.
+    
+    Die unerforschte Natur von kollaborativen, webbasierten Robotiksimulatoren lässt viel Raum für weiterführende Arbeiten. 
+    Weitere Untersuchungen, worin genau die Vorteile solcher Werkzeuge liegen, könnten zum Besseren Verständniss dieser beitragen.
+    Ebenso ist noch Unklar in welchen spezifischen Bereichen diese Vorteile besonders zur Geltung kommen könnten.
+
+    Eine Zukunft, in der Simulationen in der Robotik kollaborativ in Onlinesimulatoren durchgeführt werden, könnte anhand der Ergebnisse als eine mögliche Konsequenz betrachtet werden. 
+    Diese Entwicklung hat das Potenzial, die Hardware- und Softwareentwicklung in der Robotik grundlegend zu verändern.
+    
 
 
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-% !!! Your action is needed here !!!
-% !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%
-% Replace the following with your conclusion
 
-5-10% 2-3S
+          
+        
+  
 
 
-   - Zusammenfassung der wichtigsten Erkenntnisse und Schlussfolgerungen
-   lässt sich tendenz erkennen?
-   was sagen die ergebnisse aus?
-
-
-   - Ausblick auf zukünftige Forschungsrichtungen, die sich aus den Ergebnissen ergeben
-   - potenzielle Anwendungen von kollaborativem Arbeiten in der Schwarmrobotik 
-   - Bewertung der Bedeutung deiner Forschungsergebnisse für die Robotik und Simulation
-
-   urprungsfrage beantwortet?
-   erweiterte funktionen?
-   in allen sim sinnvoll?
+ 
 
 
 
 
 
 
-\chapter{tex semantik}
-
-\section{Section 1}
-section 1
 
 
-\section{section2}
-section 2
-
-
-Some code:
-\begin{Code}
-print(1+1=3)
-\end{Code}
-
-Hier kommt \\ ein Zeilenumbruch
-
-   eine Aufzählung:
-
-   \begin{enumerate}
-   \item 
-     first
-   \item
-     second...
-   \end{enumerate}
-   
-   andere Aufzählung:
-   
-   \begin{description}
-   \item[Stier] 
-     ist ein tier kmfekmfkemfekfmekfmekfmekgjengjnrg gne jgnenge ngjegne geg egengen g g jegeigjeigei gj eg gjie gje igje gie geigjeig  egje g jegiejgi egi egi geigjeig
-   \item[stein]
-     ist kein tier
-   \end{description}
-   
-   noch eine aüfzählung:
-   
-   \begin{itemize}
-     \item number one....
-     \item
-       number two...
-     \end{itemize}
    
    
-   \subsection{Subsection 1}
-   ....
-   Figure
-   
-   \begin{figure}[htbp]
-     \centering
-     \textcolor{black!10}{\vrule width3cm height 3cm}
-     \caption{Figure Discription}
-     \label{fig-ode1}
-   
-   \end{figure}
-   
-   
-   \subsection{Subsection 2}
-   ...
-   
-   For tables:
-   
-   
-   \begin{table}[htpb]
-     \caption{Table description}
-     \label{fig-tab1}
-     \centering
-     \begin{tabular}{lp{5cm}}
-       \uzlhline
-       \uzlemph{Animal} & \uzlemph{Sound} \\ \uzlhline
-       Cat & Meow \\
-       Dog & Wuff or bark\\ \uzlhline
-     \end{tabular}
-   \end{table}
+
 
 
 
@@ -998,132 +1377,102 @@ Hier kommt \\ ein Zeilenumbruch
 % Replace following example entries with the ones of your thesis.
 
 \begin{bibtex-entries}
-
-@Book{Knuth1986,
-  author =       {Donald Erwin Knuth},
-  title =        {The \TeX book},
-  publisher =    {Addison-Wesley},
-  year =         {1986},
+% 2
+@Book{Haber2012,
+  author =       {Adam Haber, Matthew McGill, Claude Sammut},
+  title =        {jmeSim: An Open Source, Multi Platform Robotics Simulator},
+  institution =    {School of Computer Science and Engineering, UNSW},
+  year =         {2012},
 }
-
-@Book{Lamport1994,
-  author =       {Leslie Lamport},
-  title =        {\LaTeX: A Document Preparation System},
-  publisher =    {Addison-Wesley},
-  edition =      {Second edition},
-  year =         {1994},
+% 3
+@Book{Shamshiri2018,
+  author =       {Redmond Ramin Shamshiri},
+  title =        {Simulation software and virtual environments for acceleration of 
+                  agricultural robotics: Features highlights and performance comparison},
+  institution =    {University of Illinois at Urbana Champaign},
+  year =         {2018},
 }
-
-@TechReport{Kernighan1974,
-  author =       {Brian Kernighan},
-  title =        {Programming in C – A Tutorial},
-  institution =  {Bell Laboratories},
-  year =         {1974}
+% 5
+@Book{Pinciroli2012,
+  author =       {Carlo Pinciroli, Vito Trianni, Rehan O’Grady, Giovanni Pini, Arne Brutschy,
+                  Manuele Brambilla, Nithin Mathews, Eliseo Ferrante, Gianni Di Caro,
+                  Frederick Ducatelle, Mauro Birattari, Luca Maria Gambardella, Marco Dorigo},
+  title =        {ARGoS: a modular, parallel, multi-engine simulator for multi-robot systems},
+  publisher =    {Springer Science+Business Media New York 2012},
+  year =         {2012},
+  doi =          {10.1007/s11721-012-0072-5},
 }
-
-@Manual{Tantau2019,
-  author =       {Till Tantau},
-  title =        {The Ti\emph kZ and PGF Packages: Manual for version 3.1.3},
-  institution =  {Institut für Theoretische Informatik, Universität zu Lübeck},
-  year =         {2019},
-  url =          {https://github.com/pgf-tikz/pgf}
+% 6
+@Book{Castillo2010,
+  author =       {Patricio Castillo-Pizarro, Tom´as V. Arredondo and Miguel Torres-Torriti},
+  title =        {Introductory Survey to Open-Source Mobile Robot Simulation Software},
+  publisher =    {IEEE Latin American Robotics Symposium},
+  year =         {2010},
+  doi =          {10.1109/LARS.2010.19},
 }
-
-@Book{Alley1996,
-  author =       {Michael Alley},
-  title =        {The Craft of Scientific Writing},
-  publisher =    {Springer},
-  year =         {1996},
-  edition =      {Third Edition},
+% 7
+@Book{Kainberger2022,
+  author =       {Barbara Kainberger},
+  title =        {Collaborative Editing in Web Applications},
+  subtitle =     {Exploration and Implementation of a collaborative real-time web application
+                  with React, Yjs and modular rich-text editor frameworks.},
+  institution =    {University of Applied Sciences FH Campus Wien},
+  year =         {2022},
 }
-
-@Book{DowneyF13,
-  author =       {R. G. Downey and M. R. Fellows},
-  title =        {Fundamentals of Parameterized Complexity},
-  series =       {Texts in Computer Science},
-  publisher =    {Springer},
-  year =         2013,
-  doi =          {10.1007/978-1-4471-5559-1},
+% 9
+@Book{Ivaldi2015,
+  author =       {Serena Ivaldi, Jan Peters, Vincent Padois, Francesco Nori},
+  title =        {Tools for simulating humanoid robot dynamics: a survey
+                  based on user feedback},
+  publisher =    {IEEE-RAS International Conference on Humanoid Robots(Humanoids)},
+  year =         {2015},
 }
-
-@Manual{biblatex,
-  title =        {The \textsc{BibLaTeX} package},
-  subtitle =     {Sophisticated Bibliographies in \LaTeX},
-  author =       {Kime, Philip and Lehman, Philipp},
-  url =          {https://github.com/plk/biblatex},
-  urldate =      {2019-06-11},
-  date =         {2018-10-30},
-  version =      {3.12}
+% 10
+@Book{Prats2012,
+  author =       {Mario Prats, Javier P´ erez, J. Javier Fern´andez and Pedro J. Sanz},
+  title =        {An Open Source Tool for Simulation and Supervision of Underwater Intervention Missions},
+  publisher =    {IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year =         {2012},
+  doi =          {10.1109/IROS.2012.6385788},
 }
-
-@Manual{varioref,
-  title =        {The \textsc{varioref} package},
-  subtitle =     {Intelligent page references},
-  author =       {Mittelbach, Frank},
-  url =          {http://www.ctan.org/pkg/varioref},
-  urldate =      {2019-06-11},
-  date =         {2016-02-16},
-  version =      {1.5c}
+% sus ---------------------------------------
+@Book{Brooke1995,
+  author =       {John Brooke},
+  title =        {SUS: A quick and dirty usability scale},
+  year =         {1995},
 }
-
-@Manual{hyperref,
-  title =        {The \textsc{hyperref} package},
-  subtitle =     {Extensive support for hypertext in \LaTeX},
-  author =       {Rahtz, Sebastian and Oberdiek, Heiko},
-  url =          {https://github.com/ho-tex/hyperref},
-  urldate =      {2019-06-11},
-  date =         {2018-11-30},
-  version =      {6.88e}
+% preprint
+@Book{Schiller2023,
+  author =       {Javad Ghofrani and Vincent Schiller},
+  title =        {Application of Virtual Reality in Human-Swarm Interaction},
+  year =         {2023},
+  doi =          {10.20944/preprints202306.2110.v1},
 }
-
-@Manual{babel,
-  title =        {The \textsc{babel} package},
-  subtitle =     {Multilingual support for Plain \TeX\ or \LaTeX},
-  author =       {Braams, Johannes L. and Bezos López, Javier},
-  url =          {http://www.ctan.org/pkg/babel},
-  urldate =      {2019-06-11},
-  date =         {2019-06-03},
-  version =      {3.32}
+% von javad 
+@Book{Staranowicz2011,
+  author =       {Aaron Staranowicz and Gian Luca Mariottini},
+  title =        {A Survey and Comparison of Commercial and Open-Source Robotic Simulator Software},
+  publisher =    {Proceedings of the 4th International Conference on Pervasive Technologies Related to Assistive Environments},
+  year =         {2011},
+  doi =          {10.1145/2141622.2141689},
 }
-
-@Manual{fontspec,
-  title =        {The \textsc{fontspec} package},
-  subtitle =     {Advanced font selection in Xe\LaTeX\ and Lua\LaTeX},
-  author =       {Robertson, Will},
-  url =          {http://www.ctan.org/pkg/fontspec},
-  urldate =      {2019-06-11},
-  version =      {2.7c}
+% webviz
+@Manual{ARGoS3-Webviz,
+  title =        {ARGoS3-Webviz},
+  author =       {Prajankya Sonar},
+  url =          {https://github.com/NESTLab/argos3-webviz},
+  urldate =      {2024-06-30},
+  date =         {2020-05-18},
+  version =      {0.4.76}
 }
-
-@Manual{url,
-  title =        {The \textsc{url} package},
-  subtitle =     {Verbatim with \textsc{url}-sensitive line breaks},
-  author =       {Arseneau, Donald},
-  url =          {http://www.ctan.org/pkg/url},
-  urldate =      {2019-06-11},
-  date =         {2013-09-16},
-  version =      {3.4}
-}
-
-@Manual{amsmath,
-  title =        {The \textsc{amsmath} package},
-  subtitle =     {\AmS\ mathematical facilities for \LaTeX},
-  author =       {{The \LaTeX\ Team}},
-  url =          {http://www.ams.org/tex/amslatex.html},
-  urldate =      {2019-06-11}, 
-  date =         {2017-09-02},
-  version =      {2.17a}
-}
-
-@Book{Beutelspacher2009,
-  title =        {„Das ist o.\,B.\,d.\,A.\ trivial!“: Tipps und Tricks zur
-                  Formulierung mathematischer Gedanken (Mathematik für
-                  Studienanfänger)},
-  author =       {Albrecht Beutelspacher},
-  year =         {2009},
-  edition =      {Ninth, updated edition},
-  publisher =    {Vieweg+Teubner Verlag},
-  doi =          {10.1007/978-3-8348-9075-7},
+% ace
+@Manual{ace,
+  title =        {Ace (Ajax.org Cloud9 Editor)},
+  author =       {Alice Koreman},
+  url =          {https://github.com/ajaxorg/ace},
+  urldate =      {2024-06-30},
+  year =         {2010},
+  version =      {v1.35.2}
 }
 
 \end{bibtex-entries}
