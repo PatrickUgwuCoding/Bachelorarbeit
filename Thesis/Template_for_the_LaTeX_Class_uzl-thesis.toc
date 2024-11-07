@@ -48,8 +48,8 @@
 \contentsline {subsection}{External Graphics}{27}{section*.23}%
 \contentsline {subsection}{Inline Graphics via Ti\emph kZ}{28}{section*.24}%
 \contentsline {subsection}{Predefined Ti\emph kZ Styles}{29}{section*.25}%
-\contentsline {subsection}{Predefined Colors}{31}{section*.26}%
-\contentsline {subsection}{Designs for Ti\emph kZ Graphics}{31}{section*.27}%
+\contentsline {subsection}{Predefined Colors}{30}{section*.26}%
+\contentsline {subsection}{Designs for Ti\emph kZ Graphics}{30}{section*.27}%
 \contentsline {section}{\numberline {2.13}Creating Cross References, Citations and the~Bibliography}{33}{section.2.13}%
 \contentsline {subsection}{Citations}{33}{section*.28}%
 \contentsline {subsection}{Bibliography Entries (Bib\TeX \ Entries or Records)}{33}{section*.29}%
@@ -65,3 +65,4 @@
 \contentsline {section}{\numberline {3.7}Q\&A: Creating Figures and Tables}{48}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Q\&A: How to Cite and What to Cite}{49}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Conclusion}{52}{chapter.4}%
+\contentsline {chapter}{Bibliography}{53}{chapter*.32}%

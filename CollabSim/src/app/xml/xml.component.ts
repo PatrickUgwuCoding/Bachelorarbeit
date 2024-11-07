@@ -49,7 +49,8 @@ export class XMLComponent implements AfterViewInit{
   }
 
   reloadSim(){
-    if (this.currentXml !== this.aceXml && this.currentCpp !== this.aceCode) {
+    this.save()
+    if (this.currentXml !== this.aceXml || this.currentCpp !== this.aceCode) {
     }
       console.log("reloading..");
       this.webSocketService.reloadSim();
@@ -62,12 +63,34 @@ export class XMLComponent implements AfterViewInit{
   }
 
   save(){
+    if(this.aceXml.length !== 0){
+      console.log(this.aceXml)
+      console.log(this.currentXml)
+      this.currentXml = this.aceXml;
+      this.webSocketService.saveXml(this.aceXml);
+    }
+    if(this.aceCode.length !== 0){
+      console.log(this.aceCode)
+      console.log(this.currentCpp)
+      this.currentCpp = this.aceCode;
+      this.webSocketService.saveCpp(this.aceCode);
+      }
+    else{
+      console.log("xml/cpp 0");
+    }
+  }
+  saveXml(){
+    console.log(this.aceXml)
+    console.log(this.currentXml)
     this.currentXml = this.aceXml;
+
     this.webSocketService.saveXml(this.aceXml);
+  }
+  saveCpp(){
+
     this.currentCpp = this.aceCode;
     this.webSocketService.saveCpp(this.aceCode);
   }
-
 
   // HTTP REquest
   test(): void {
@@ -95,6 +118,7 @@ export class XMLComponent implements AfterViewInit{
           console.log("in constructor")
           this.ignoreChanges = true;
           aceEditorXML.session.setValue(msg[1]);
+          this.aceXml = msg[1]
         }
       }
       else if (msg[0]=='aceC' ){

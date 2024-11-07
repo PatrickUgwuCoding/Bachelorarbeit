@@ -1,0 +1,490 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{Brooke1995}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BJ}{%
+         family={Brooke},
+         familyi={B\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJ1}
+    \strng{fullhash}{BJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1995}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{SUS: A quick and dirty usability scale}
+    \field{year}{1995}
+  \endentry
+
+  \entry{Castillo2010}{book}{}
+    \name{author}{3}{}{%
+      {{hash=CPP}{%
+         family={Castillo-Pizarro},
+         familyi={C\bibinithyphendelim P\bibinitperiod},
+         given={Patricio},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=ATV}{%
+         family={Arredondo},
+         familyi={A\bibinitperiod},
+         given={Tom´as\bibnamedelima V.},
+         giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=TTM}{%
+         family={Torres-Torriti},
+         familyi={T\bibinithyphendelim T\bibinitperiod},
+         given={Miguel},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE Latin American Robotics Symposium}%
+    }
+    \strng{namehash}{CPPATVTTM1}
+    \strng{fullhash}{CPPATVTTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \verb{doi}
+    \verb 10.1109/LARS.2010.19
+    \endverb
+    \field{title}{Introductory Survey to Open-Source Mobile Robot Simulation
+  Software}
+    \field{year}{2010}
+  \endentry
+
+  \entry{Schiller2023}{book}{}
+    \name{author}{2}{}{%
+      {{hash=GJ}{%
+         family={Ghofrani},
+         familyi={G\bibinitperiod},
+         given={Javad},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SV}{%
+         family={Schiller},
+         familyi={S\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{GJSV1}
+    \strng{fullhash}{GJSV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2023}
+    \field{labeldatesource}{}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \verb{doi}
+    \verb 10.20944/preprints202306.2110.v1
+    \endverb
+    \field{title}{Application of Virtual Reality in Human-Swarm Interaction}
+    \field{year}{2023}
+  \endentry
+
+  \entry{Haber2012}{book}{}
+    \name{author}{3}{}{%
+      {{hash=HA}{%
+         family={Haber},
+         familyi={H\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={McGill},
+         familyi={M\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Sammut},
+         familyi={S\bibinitperiod},
+         given={Claude},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{HAMMSC1}
+    \strng{fullhash}{HAMMSC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{jmeSim: An Open Source, Multi Platform Robotics Simulator}
+    \list{institution}{2}{%
+      {School of Computer Science}%
+      {Engineering, UNSW}%
+    }
+    \field{year}{2012}
+  \endentry
+
+  \entry{Ivaldi2015}{book}{}
+    \name{author}{4}{}{%
+      {{hash=IS}{%
+         family={Ivaldi},
+         familyi={I\bibinitperiod},
+         given={Serena},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Peters},
+         familyi={P\bibinitperiod},
+         given={Jan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PV}{%
+         family={Padois},
+         familyi={P\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=NF}{%
+         family={Nori},
+         familyi={N\bibinitperiod},
+         given={Francesco},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE-RAS International Conference on Humanoid Robots(Humanoids)}%
+    }
+    \strng{namehash}{IS+1}
+    \strng{fullhash}{ISPJPVNF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{Tools for simulating humanoid robot dynamics: a survey based
+  on user feedback}
+    \field{year}{2015}
+  \endentry
+
+  \entry{Kainberger2022}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KB}{%
+         family={Kainberger},
+         familyi={K\bibinitperiod},
+         given={Barbara},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KB1}
+    \strng{fullhash}{KB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2022}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{subtitle}{Exploration and Implementation of a collaborative
+  real-time web application with React, Yjs and modular rich-text editor
+  frameworks.}
+    \field{title}{Collaborative Editing in Web Applications}
+    \list{institution}{1}{%
+      {University of Applied Sciences FH Campus Wien}%
+    }
+    \field{year}{2022}
+  \endentry
+
+  \entry{ace}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=KA}{%
+         family={Koreman},
+         familyi={K\bibinitperiod},
+         given={Alice},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KA1}
+    \strng{fullhash}{KA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Ace (Ajax.org Cloud9 Editor)}
+    \verb{url}
+    \verb https://github.com/ajaxorg/ace
+    \endverb
+    \field{version}{v1.35.2}
+    \field{year}{2010}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{Pinciroli2012}{book}{}
+    \name{author}{13}{}{%
+      {{hash=PC}{%
+         family={Pinciroli},
+         familyi={P\bibinitperiod},
+         given={Carlo},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=TV}{%
+         family={Trianni},
+         familyi={T\bibinitperiod},
+         given={Vito},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=OR}{%
+         family={O’Grady},
+         familyi={O\bibinitperiod},
+         given={Rehan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Pini},
+         familyi={P\bibinitperiod},
+         given={Giovanni},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Brutschy},
+         familyi={B\bibinitperiod},
+         given={Arne},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Brambilla},
+         familyi={B\bibinitperiod},
+         given={Manuele},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Mathews},
+         familyi={M\bibinitperiod},
+         given={Nithin},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Ferrante},
+         familyi={F\bibinitperiod},
+         given={Eliseo},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=CGD}{%
+         family={Caro},
+         familyi={C\bibinitperiod},
+         given={Gianni\bibnamedelima Di},
+         giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=DF}{%
+         family={Ducatelle},
+         familyi={D\bibinitperiod},
+         given={Frederick},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Birattari},
+         familyi={B\bibinitperiod},
+         given={Mauro},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=GLM}{%
+         family={Gambardella},
+         familyi={G\bibinitperiod},
+         given={Luca\bibnamedelima Maria},
+         giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Dorigo},
+         familyi={D\bibinitperiod},
+         given={Marco},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer Science+Business Media New York 2012}%
+    }
+    \strng{namehash}{PC+1}
+    \strng{fullhash}{PCTVORPGBABMMNFECGDDFBMGLMDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1007/s11721-012-0072-5
+    \endverb
+    \field{title}{ARGoS: a modular, parallel, multi-engine simulator for
+  multi-robot systems}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Prats2012}{book}{}
+    \name{author}{4}{}{%
+      {{hash=PM}{%
+         family={Prats},
+         familyi={P\bibinitperiod},
+         given={Mario},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=eJP}{%
+         family={erez},
+         familyi={e\bibinitperiod},
+         given={Javier\bibnamedelima P´},
+         giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=FJJ}{%
+         family={Fern´andez},
+         familyi={F\bibinitperiod},
+         given={J.\bibnamedelima Javier},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SPJ}{%
+         family={Sanz},
+         familyi={S\bibinitperiod},
+         given={Pedro\bibnamedelima J.},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{2}{%
+      {IEEE/RSJ International Conference on Intelligent Robots}%
+      {Systems}%
+    }
+    \strng{namehash}{PM+1}
+    \strng{fullhash}{PMeJPFJJSPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2012}
+    \field{labeldatesource}{}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \verb{doi}
+    \verb 10.1109/IROS.2012.6385788
+    \endverb
+    \field{title}{An Open Source Tool for Simulation and Supervision of
+  Underwater Intervention Missions}
+    \field{year}{2012}
+  \endentry
+
+  \entry{Shamshiri2018}{book}{}
+    \name{author}{8}{}{%
+      {{hash=SRR}{%
+         family={Shamshiri},
+         familyi={S\bibinitperiod},
+         given={Redmond\bibnamedelima Ramin},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=HIA}{%
+         family={Hameed},
+         familyi={H\bibinitperiod},
+         given={Ibrahim\bibnamedelima A.},
+         giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=PL}{%
+         family={Pitonakova},
+         familyi={P\bibinitperiod},
+         given={Lenka},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Weltzien},
+         familyi={W\bibinitperiod},
+         given={Cornelia},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BSK}{%
+         family={Balasundram},
+         familyi={B\bibinitperiod},
+         given={Siva\bibnamedelima K.},
+         giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=YIJ}{%
+         family={Yule},
+         familyi={Y\bibinitperiod},
+         given={Ian\bibnamedelima J.},
+         giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=GTE}{%
+         family={Grift},
+         familyi={G\bibinitperiod},
+         given={Tony\bibnamedelima E.},
+         giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=CG}{%
+         family={Chowdhary},
+         familyi={C\bibinitperiod},
+         given={Girish},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SRR+1}
+    \strng{fullhash}{SRRHIAPLWCBSKYIJGTECG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{Simulation software and virtual environments for acceleration
+  of agricultural robotics: Features highlights and performance comparison}
+    \list{institution}{1}{%
+      {University of Illinois at Urbana Champaign}%
+    }
+    \field{year}{2018}
+  \endentry
+
+  \entry{ARGoS3-Webviz}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=SP}{%
+         family={Sonar},
+         familyi={S\bibinitperiod},
+         given={Prajankya},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SP1}
+    \strng{fullhash}{SP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{title}{ARGoS3-Webviz}
+    \verb{url}
+    \verb https://github.com/NESTLab/argos3-webviz
+    \endverb
+    \field{version}{0.4.76}
+    \field{day}{18}
+    \field{month}{05}
+    \field{year}{2020}
+    \field{urlday}{30}
+    \field{urlmonth}{06}
+    \field{urlyear}{2024}
+  \endentry
+\enddatalist
+\endinput

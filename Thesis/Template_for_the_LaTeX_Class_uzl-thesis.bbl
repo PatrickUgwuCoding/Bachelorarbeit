@@ -1,0 +1,411 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{Alley1996}{book}{}
+    \name{author}{1}{}{%
+      {{hash=AM}{%
+         family={Alley},
+         familyi={A\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{AM1}
+    \strng{fullhash}{AM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{edition}{Third Edition}
+    \field{title}{The Craft of Scientific Writing}
+    \field{year}{1996}
+  \endentry
+
+  \entry{url}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=AD}{%
+         family={Arseneau},
+         familyi={A\bibinitperiod},
+         given={Donald},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{AD1}
+    \strng{fullhash}{AD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{subtitle}{Verbatim with \textsc{url}-sensitive line breaks}
+    \field{title}{The \textsc{url} package}
+    \verb{url}
+    \verb http://www.ctan.org/pkg/url
+    \endverb
+    \field{version}{3.4}
+    \field{day}{16}
+    \field{month}{09}
+    \field{year}{2013}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2019}
+  \endentry
+
+  \entry{Beutelspacher2009}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BA}{%
+         family={Beutelspacher},
+         familyi={B\bibinitperiod},
+         given={Albrecht},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Vieweg+Teubner Verlag}%
+    }
+    \strng{namehash}{BA1}
+    \strng{fullhash}{BA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \verb{doi}
+    \verb 10.1007/978-3-8348-9075-7
+    \endverb
+    \field{edition}{Ninth, updated edition}
+    \field{title}{„Das ist o.\,B.\,d.\,A.\ trivial!“: Tipps und Tricks zur
+  Formulierung mathematischer Gedanken (Mathematik für Studienanfänger)}
+    \field{year}{2009}
+  \endentry
+
+  \entry{babel}{manual}{}
+    \name{author}{2}{}{%
+      {{hash=BJL}{%
+         family={Braams},
+         familyi={B\bibinitperiod},
+         given={Johannes\bibnamedelima L.},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=BLJ}{%
+         family={Bezos\bibnamedelima López},
+         familyi={B\bibinitperiod\bibinitdelim L\bibinitperiod},
+         given={Javier},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BJLBLJ1}
+    \strng{fullhash}{BJLBLJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{subtitle}{Multilingual support for Plain \TeX\ or \LaTeX}
+    \field{title}{The \textsc{babel} package}
+    \verb{url}
+    \verb http://www.ctan.org/pkg/babel
+    \endverb
+    \field{version}{3.32}
+    \field{day}{03}
+    \field{month}{06}
+    \field{year}{2019}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2019}
+  \endentry
+
+  \entry{DowneyF13}{book}{}
+    \name{author}{2}{}{%
+      {{hash=DRG}{%
+         family={Downey},
+         familyi={D\bibinitperiod},
+         given={R.\bibnamedelima G.},
+         giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=FMR}{%
+         family={Fellows},
+         familyi={F\bibinitperiod},
+         given={M.\bibnamedelima R.},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{DRGFMR1}
+    \strng{fullhash}{DRGFMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2013}
+    \field{labeldatesource}{}
+    \field{sortinit}{D}
+    \field{sortinithash}{D}
+    \verb{doi}
+    \verb 10.1007/978-1-4471-5559-1
+    \endverb
+    \field{series}{Texts in Computer Science}
+    \field{title}{Fundamentals of Parameterized Complexity}
+    \field{year}{2013}
+  \endentry
+
+  \entry{Kernighan1974}{report}{}
+    \name{author}{1}{}{%
+      {{hash=KB}{%
+         family={Kernighan},
+         familyi={K\bibinitperiod},
+         given={Brian},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KB1}
+    \strng{fullhash}{KB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1974}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{Programming in C – A Tutorial}
+    \list{institution}{1}{%
+      {Bell Laboratories}%
+    }
+    \field{type}{techreport}
+    \field{year}{1974}
+  \endentry
+
+  \entry{biblatex}{manual}{}
+    \name{author}{2}{}{%
+      {{hash=KP}{%
+         family={Kime},
+         familyi={K\bibinitperiod},
+         given={Philip},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Lehman},
+         familyi={L\bibinitperiod},
+         given={Philipp},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KPLP1}
+    \strng{fullhash}{KPLP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{subtitle}{Sophisticated Bibliographies in \LaTeX}
+    \field{title}{The \textsc{BibLaTeX} package}
+    \verb{url}
+    \verb https://github.com/plk/biblatex
+    \endverb
+    \field{version}{3.12}
+    \field{day}{30}
+    \field{month}{10}
+    \field{year}{2018}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2019}
+  \endentry
+
+  \entry{Knuth1986}{book}{}
+    \name{author}{1}{}{%
+      {{hash=KDE}{%
+         family={Knuth},
+         familyi={K\bibinitperiod},
+         given={Donald\bibnamedelima Erwin},
+         giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Addison-Wesley}%
+    }
+    \strng{namehash}{KDE1}
+    \strng{fullhash}{KDE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1986}
+    \field{labeldatesource}{}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{title}{The \TeX book}
+    \field{year}{1986}
+  \endentry
+
+  \entry{Lamport1994}{book}{}
+    \name{author}{1}{}{%
+      {{hash=LL}{%
+         family={Lamport},
+         familyi={L\bibinitperiod},
+         given={Leslie},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Addison-Wesley}%
+    }
+    \strng{namehash}{LL1}
+    \strng{fullhash}{LL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1994}
+    \field{labeldatesource}{}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{edition}{Second edition}
+    \field{title}{\LaTeX: A Document Preparation System}
+    \field{year}{1994}
+  \endentry
+
+  \entry{varioref}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=MF}{%
+         family={Mittelbach},
+         familyi={M\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MF1}
+    \strng{fullhash}{MF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2016}
+    \field{labeldatesource}{}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{subtitle}{Intelligent page references}
+    \field{title}{The \textsc{varioref} package}
+    \verb{url}
+    \verb http://www.ctan.org/pkg/varioref
+    \endverb
+    \field{version}{1.5c}
+    \field{day}{16}
+    \field{month}{02}
+    \field{year}{2016}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2019}
+  \endentry
+
+  \entry{hyperref}{manual}{}
+    \name{author}{2}{}{%
+      {{hash=RS}{%
+         family={Rahtz},
+         familyi={R\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=OH}{%
+         family={Oberdiek},
+         familyi={O\bibinitperiod},
+         given={Heiko},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{RSOH1}
+    \strng{fullhash}{RSOH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{subtitle}{Extensive support for hypertext in \LaTeX}
+    \field{title}{The \textsc{hyperref} package}
+    \verb{url}
+    \verb https://github.com/ho-tex/hyperref
+    \endverb
+    \field{version}{6.88e}
+    \field{day}{30}
+    \field{month}{11}
+    \field{year}{2018}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2019}
+  \endentry
+
+  \entry{Tantau2019}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=TT}{%
+         family={Tantau},
+         familyi={T\bibinitperiod},
+         given={Till},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TT1}
+    \strng{fullhash}{TT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{title}{The Ti\emph kZ and PGF Packages: Manual for version 3.1.3}
+    \verb{url}
+    \verb https://github.com/pgf-tikz/pgf
+    \endverb
+    \list{institution}{1}{%
+      {Institut für Theoretische Informatik, Universität zu Lübeck}%
+    }
+    \field{year}{2019}
+  \endentry
+
+  \entry{amsmath}{manual}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={{The \LaTeX\ Team}},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2017}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{subtitle}{\AmS\ mathematical facilities for \LaTeX}
+    \field{title}{The \textsc{amsmath} package}
+    \verb{url}
+    \verb http://www.ams.org/tex/amslatex.html
+    \endverb
+    \field{version}{2.17a}
+    \field{day}{02}
+    \field{month}{09}
+    \field{year}{2017}
+    \field{urlday}{11}
+    \field{urlmonth}{06}
+    \field{urlyear}{2019}
+  \endentry
+\enddatalist
+\endinput

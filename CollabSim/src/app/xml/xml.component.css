@@ -4,14 +4,14 @@ body {
 
 .ace-xml {
     width: 45%; 
-    height: 75%;
+    height: 70%;
     position: absolute; 
     bottom: 8%;
 }
 
 .ace-cpp {
     width: 45%; 
-    height: 75%;
+    height: 70%;
     position: absolute; 
     bottom: 8%;
     left: 54%;
@@ -19,13 +19,14 @@ body {
 
 ul {
     position: absolute;
+    width: 15%;
     bottom: 1px;
     right: 2%;
 }
 
 button {
-    width: 100px;
-    height: 40px;
+    width: 50%;
+    height: 50%;
     font-size: 20px;
     font-style: inherit;
     font-weight: 700;

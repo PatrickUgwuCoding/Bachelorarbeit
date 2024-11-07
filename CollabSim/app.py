@@ -25,7 +25,7 @@ msg = 'mssi'
 aceT = "inital"
 
 with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file:    
-            aceC = file.read()
+    aceC = file.read()
 
 with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file:    
     aceX = file.read()
@@ -153,13 +153,26 @@ def init():
     socketio.emit('msg', ['aceC',aceC])
     socketio.emit('msg', ['aceX',aceX])
 
-
+@socketio.on('save') 
+def save(save):
+    global aceX
+    global aceC
+    with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/custom_experiment.argos","w") as file1:
+        file1.write(save[0])
+        print(file1)
+        aceX = save[0]
+    with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/footbot_diffusion.cpp","w") as file2:
+        file2.write(save[1])
+        print(file2)
+        aceC = save[1]
+   
 
 @socketio.on('saveXml') 
 def saveXml(xml):
     global aceX
     with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/custom_experiment.argos","w") as file:
         file.write(xml)
+        print()
         aceX = xml
 
 @socketio.on('saveCpp') 
@@ -199,10 +212,10 @@ def handle_disconnect():
         var1 = []
         msg = []
         aceT = []
-        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file:    
-            aceC = file.read()
-        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file:    
-            aceX = file.read()
+        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file1:    
+            aceC = file1.read()
+        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file2:    
+            aceX = file2.read()
 
 
 
@@ -223,6 +236,6 @@ def getData():
 
 if __name__ == '__main__':
     print("starting webservice")
-    socketio.run(app)  
+    socketio.run(app, host='0.0.0.0', port=5000)  
     
    

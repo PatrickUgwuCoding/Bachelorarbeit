@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: .\Template_for_the_LaTeX_Class_uzl-thesis.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 44 items.
+Reallocating 'name_of_file' (item size: 1) to 55 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: Template_for_the_LaTeX_Class_uzl-thesis-blx.bib
+Database file #2: Template_for_the_LaTeX_Class_uzl-thesis-bibtex-entries.bib
+Biblatex version: 3.19
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 14 entries,
+            6399 wiz_defined-function locations,
+            1291 strings with 10930 characters,
+and the built_in function-call counts, 102457 in all, are:
+= -- 5717
+> -- 6177
+< -- 754
++ -- 6040
+- -- 4622
+* -- 5695
+:= -- 12301
+add.period$ -- 0
+call.type$ -- 14
+change.case$ -- 279
+chr.to.int$ -- 478
+cite$ -- 26
+duplicate$ -- 9279
+empty$ -- 7938
+format.name$ -- 697
+if$ -- 17981
+int.to.chr$ -- 0
+int.to.str$ -- 33
+missing$ -- 0
+newline$ -- 410
+num.names$ -- 696
+pop$ -- 4461
+preamble$ -- 1
+purify$ -- 317
+quote$ -- 0
+skip$ -- 3039
+stack$ -- 0
+substring$ -- 10421
+swap$ -- 2454
+text.length$ -- 545
+text.prefix$ -- 13
+top$ -- 1
+type$ -- 463
+warning$ -- 0
+while$ -- 1208
+width$ -- 0
+write$ -- 397
