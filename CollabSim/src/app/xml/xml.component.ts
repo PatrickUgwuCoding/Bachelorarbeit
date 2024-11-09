@@ -44,9 +44,6 @@ export class XMLComponent implements AfterViewInit{
     this.webSocketService.sendMessage(id,msg);
   }
 
-  sendCommand(id:string) {
-    this.webSocketService.sendCommand(id);
-  }
 
   reloadSim(){
     this.save()
