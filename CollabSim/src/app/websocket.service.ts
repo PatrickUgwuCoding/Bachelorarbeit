@@ -4,6 +4,7 @@ import {io, Socket} from 'socket.io-client';
 @Injectable({
   providedIn: 'root'
 })
+
 export class WebSocketService {
 
   private socket: Socket;
@@ -28,10 +29,6 @@ export class WebSocketService {
     this.socket.on('msg', callback);
   }
 
-  sendCommand(id:string) {
-    this.socket.emit('cmd', id);
-  }
-
   reloadSim() {
     this.socket.emit('restart_script');
   }
@@ -46,10 +43,6 @@ export class WebSocketService {
 
   saveCpp(cpp: any) {
     this.socket.emit('saveCpp', cpp)
-  }
-
-  save(xml:any,cpp: any) {
-    this.socket.emit('save', [xml,cpp])
   }
 
    

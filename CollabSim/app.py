@@ -1,98 +1,33 @@
 from flask import Flask, jsonify
 from flask_socketio import SocketIO, emit
-import websocket
-import threading
-try:
-    import threading
-except ImportError:
-    import _thread as thread
 import requests
-import time
-import json
 
 
+# Constants
+XML_FILE_PATH = r"C:\Users\patri\Desktop\studiumkram\Robotik\BA\sharedArgosFolder\customExperiments\custom_experiment.argos"
+CPP_FILE_PATH = r"C:\Users\patri\Desktop\studiumkram\Robotik\BA\sharedArgosFolder\customExperiments\footbot_diffusion.cpp"
 
 # Flask-App erstellen
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins='*')  
 
-#CORS(app)
 
-# variables
+# Variables
 clientCount = 0
-var1 = 'vari'
-msg = 'mssi'
-aceT = "inital"
 
-with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file:    
-    aceC = file.read()
-
-with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file:    
+with open(XML_FILE_PATH, 'r') as file:    
     aceX = file.read()
 
-ws = None
-
-# WebSocket-Verbindung zu ARGoS Webviz
-def websocket_thread():
-    global ws
-    ws = websocket.WebSocketApp("ws://192.168.178.32:3000?broadcasts",
-                                on_open=on_open,
-                                on_message=on_message,
-                                on_error=on_error,
-                                on_close=on_close)
-    ws.run_forever()
-
-
-def on_message(ws, message):
-    print(message)
-    print(json.loads(message)['state'])
-
-
-def on_error(ws, error):
-    print(error)
-
-
-def on_close(ws):
-    ws.close()
-    print("### closed ###")
-
-
-def on_open(ws):
-
-    def run(*args):
-        time.sleep(1)
-        # Start playing experiment, and wait for 1 second
-        ws.send("{\"command\":\"play\"}")
-        time.sleep(1)
-
-        # # pause the experiment, and wait for 1 second
-        # ws.send("{\"command\":\"pause\"}")
-        # time.sleep(1)
-
-        # # reset the experiment, and wait for 1 second
-        # ws.send("{\"command\":\"reset\"}")
-        # time.sleep(1)
-
-        # # exit the client safely
-        # ws.close()
-        # print("thread terminating...")
-
-        print("end")
-
-    threading.Thread(target=run).start()
-    #thread.start_new_thread(run, ())
-
-# WebSocket-Verbindung starten
-#threading.Thread(target=websocket_thread).start()
-
+with open(CPP_FILE_PATH, 'r') as file:    
+    aceC = file.read()
 
 
 
 # Send Flag to reload the simulation
 @socketio.on('restart_script')
 def restart_script_on_vm():
-    print("im  server angekommen")
-    vm_api_url = 'http://192.168.178.32:7979/restart'  # URL zur Flask-Anwendung auf der VM
+    print("sending request to restart the simulation in VM")
+    vm_api_url = 'http://192.168.178.32:7979/restart'  # URL of VM webserver
     try:
         response = requests.get(vm_api_url)
         if response.status_code == 200:
@@ -103,102 +38,58 @@ def restart_script_on_vm():
         emit('script_status', {'status': 'error', 'message': str(e)})
 
 
-
+# Handle incoming message from the client
 @socketio.on('message')
 def handle_message(message):
-    # Handle incoming message from the client
-    global var1
-    global msg
-    global aceT
     global aceC
     global aceX
-    global ws
 
     emit('msg', message, broadcast=True)
-    #socketio.emit('msg', message)
-    if (message[0]=='var1'):
-        var1=message[1]
-    elif (message[0]=='msg'):
-        msg = message[1]
-    elif (message[0]=='aceT' ):
-        aceT = message[1]
-    elif (message[0]=='aceC' ):
+    if (message[0]=='aceC' ):
         aceC = message[1]
     elif (message[0]=='aceX'):
         aceX = message[1]
     
 
-@socketio.on('cmd')
-def handle_command(cmd):
-    # Handle incoming message from the client
-    global ws
-    if (cmd == 'close'):
-        ws.close()
-        print("thread terminating...")
-    elif (cmd=='play'):
-        ws.send("{\"command\":\"play\"}")
-        time.sleep(1)
-    elif (cmd=='pause'):
-        ws.send("{\"command\":\"pause\"}")
-        time.sleep(1)
-
-
+# connected clients receiving the current session
 @socketio.on('init')
 def init():
-    # connected clients gets current session
-    
-    socketio.emit('msg', ['var1',var1])
-    socketio.emit('msg', ['msg',msg])
-    socketio.emit('msg', ['aceT',aceT])
     socketio.emit('msg', ['aceC',aceC])
     socketio.emit('msg', ['aceX',aceX])
 
-@socketio.on('save') 
-def save(save):
-    global aceX
-    global aceC
-    with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/custom_experiment.argos","w") as file1:
-        file1.write(save[0])
-        print(file1)
-        aceX = save[0]
-    with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/footbot_diffusion.cpp","w") as file2:
-        file2.write(save[1])
-        print(file2)
-        aceC = save[1]
-   
 
+# saving the changed XML file
 @socketio.on('saveXml') 
 def saveXml(xml):
     global aceX
-    with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/custom_experiment.argos","w") as file:
+    with open(XML_FILE_PATH,"w") as file:
         file.write(xml)
         print()
         aceX = xml
 
+# saving the changed C++ file
 @socketio.on('saveCpp') 
 def saveCpp(cpp):
     global aceC
-    with open("C:/Users/patri/Desktop/sharedArgosFolder/customExperiments/footbot_diffusion.cpp","w") as file:
+    with open(CPP_FILE_PATH,"w") as file:
         file.write(cpp)
         aceC = cpp
 
 
+# Handle clients connecting
 @socketio.on('connect')
 def handle_connect():
-    # Handle client connection
     global clientCount
+
     clientCount += 1
     print('Client connected')
     socketio.emit('clientCount', clientCount)
 
 
+# Handle clients disconnecting
 @socketio.on('disconnect')
 def handle_disconnect():
-    # Handle client connection
     global clientCount
-    global var1
-    global msg
-    global aceT
     global aceC
     global aceX
     
@@ -209,33 +100,19 @@ def handle_disconnect():
     # clear variables if all clients left 
     if (clientCount == 0):
         print("keine Clients anwesend")
-        var1 = []
-        msg = []
-        aceT = []
-        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\footbot_diffusion.cpp', 'r') as file1:    
+        with open(CPP_FILE_PATH, 'r') as file1:    
             aceC = file1.read()
-        with open(r'C:\Users\patri\Desktop\sharedArgosFolder\customExperiments\custom_experiment.argos', 'r') as file2:    
+        with open(XML_FILE_PATH, 'r') as file2:    
             aceX = file2.read()
 
 
-
-
-# Startseite definieren
+# define homescreen
 @app.route('/')
 def start():
     return "Hallo vom Backend"
-
-
-@app.route('/klasse')
-def getData():
-    data = {'message':'Hallo, kannst du mich hören'}
-    return jsonify(data)
-
 
 
 
 if __name__ == '__main__':
     print("starting webservice")
     socketio.run(app, host='0.0.0.0', port=5000)  
-    
-   
