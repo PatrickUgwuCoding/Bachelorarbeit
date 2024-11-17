@@ -61,7 +61,6 @@ export class CPPComponent {
 
       if (msg[0]=='aceC' ){
         if (this.aceCode !== msg[1]) {
-          console.log("in constructor")
           this.ignoreChanges = true;
           aceEditorCPP.session.setValue(msg[1]);
         }

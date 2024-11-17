@@ -14,9 +14,6 @@ socketio = SocketIO(app, cors_allowed_origins='*')
 
 # Variables
 clientCount = 0
-var1 = 'vari'
-msg = 'mssi'
-aceT = "inital"
 
 with open(XML_FILE_PATH, 'r') as file:    
     aceX = file.read()
@@ -30,7 +27,7 @@ with open(CPP_FILE_PATH, 'r') as file:
 @socketio.on('restart_script')
 def restart_script_on_vm():
     print("sending request to restart the simulation in VM")
-    vm_api_url = 'http://192.168.178.32:7979/restart'  # URL zur Flask-Anwendung auf der VM
+    vm_api_url = 'http://192.168.178.32:7979/restart'  # URL of VM webserver
     try:
         response = requests.get(vm_api_url)
         if response.status_code == 200:
@@ -44,21 +41,11 @@ def restart_script_on_vm():
 # Handle incoming message from the client
 @socketio.on('message')
 def handle_message(message):
-    global var1
-    global msg
-    global aceT
     global aceC
     global aceX
 
     emit('msg', message, broadcast=True)
-    #socketio.emit('msg', message)
-    if (message[0]=='var1'):
-        var1=message[1]
-    elif (message[0]=='msg'):
-        msg = message[1]
-    elif (message[0]=='aceT' ):
-        aceT = message[1]
-    elif (message[0]=='aceC' ):
+    if (message[0]=='aceC' ):
         aceC = message[1]
     elif (message[0]=='aceX'):
         aceX = message[1]
@@ -67,9 +54,6 @@ def handle_message(message):
 # connected clients receiving the current session
 @socketio.on('init')
 def init():
-    socketio.emit('msg', ['var1',var1])
-    socketio.emit('msg', ['msg',msg])
-    socketio.emit('msg', ['aceT',aceT])
     socketio.emit('msg', ['aceC',aceC])
     socketio.emit('msg', ['aceX',aceX])
 
@@ -106,9 +90,6 @@ def handle_connect():
 @socketio.on('disconnect')
 def handle_disconnect():
     global clientCount
-    global var1
-    global msg
-    global aceT
     global aceC
     global aceX
     
@@ -119,9 +100,6 @@ def handle_disconnect():
     # clear variables if all clients left 
     if (clientCount == 0):
         print("keine Clients anwesend")
-        var1 = []
-        msg = []
-        aceT = []
         with open(CPP_FILE_PATH, 'r') as file1:    
             aceC = file1.read()
         with open(XML_FILE_PATH, 'r') as file2:    
@@ -132,12 +110,6 @@ def handle_disconnect():
 @app.route('/')
 def start():
     return "Hallo vom Backend"
-
-# experimenting with http
-@app.route('/klasse')
-def getData():
-    data = {'message':'Hallo, kannst du mich hören'}
-    return jsonify(data)
 
 
 

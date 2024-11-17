@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { XMLComponent } from './xml/xml.component';
-import { CPPComponent } from './cpp/cpp.component';
-import { SimulationComponent } from './simulation/simulation.component';
 import { FormsModule } from '@angular/forms';
 
 @Component({

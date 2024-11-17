@@ -4,6 +4,7 @@ import {io, Socket} from 'socket.io-client';
 @Injectable({
   providedIn: 'root'
 })
+
 export class WebSocketService {
 
   private socket: Socket;

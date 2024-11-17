@@ -1,25 +1,20 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from "@angular/core";
-import { HttpClient } from '@angular/common/http';
 import { WebSocketService } from "../websocket.service";
 import * as ace from "ace-builds";
 import { FormsModule } from "@angular/forms";
-import { Router, RouterLink,RouterLinkActive,RouterOutlet } from "@angular/router";
+import { Router } from "@angular/router";
 
 
 @Component({
   selector: 'app-xml',
   standalone: true,
-  imports: [FormsModule, RouterLink, RouterOutlet, RouterLinkActive],
+  imports: [FormsModule],
   templateUrl: './xml.component.html',
   styleUrl: './xml.component.css'
 })
 export class XMLComponent implements AfterViewInit{
-  //Http data
-  dataFromFlaskHttp: any = {};
   
   //websocket data
-  message: string = '';
-  aceText: string = '';
   aceCode: string = '';
   aceXml: string = '';
   
@@ -31,9 +26,9 @@ export class XMLComponent implements AfterViewInit{
 
   constructor(
     private webSocketService: WebSocketService,
-    private http: HttpClient,
+
     private route: Router 
-    
+
     ) {
 
   }
@@ -49,55 +44,26 @@ export class XMLComponent implements AfterViewInit{
     this.save()
     if (this.currentXml !== this.aceXml || this.currentCpp !== this.aceCode) {
     }
-      console.log("reloading..");
+      console.log("reloading simulation");
       this.webSocketService.reloadSim();
 
     // waiting to reload sim
     setTimeout(() => {
-      console.log('waiting');
+      console.log('waiting for reload');
       this.route.navigate(['Sim']);
     }, 1000);
   }
 
   save(){
     if(this.aceXml.length !== 0){
-      console.log(this.aceXml)
-      console.log(this.currentXml)
       this.currentXml = this.aceXml;
       this.webSocketService.saveXml(this.aceXml);
     }
     if(this.aceCode.length !== 0){
-      console.log(this.aceCode)
-      console.log(this.currentCpp)
       this.currentCpp = this.aceCode;
       this.webSocketService.saveCpp(this.aceCode);
       }
-    else{
-      console.log("xml/cpp 0");
-    }
   }
-  saveXml(){
-    console.log(this.aceXml)
-    console.log(this.currentXml)
-    this.currentXml = this.aceXml;
-
-    this.webSocketService.saveXml(this.aceXml);
-  }
-  saveCpp(){
-
-    this.currentCpp = this.aceCode;
-    this.webSocketService.saveCpp(this.aceCode);
-  }
-
-  // HTTP REquest
-  test(): void {
-    // Sende GET-Anfrage an Flask-Server
-    this.http.get<any>('http://192.168.178.32:5000/commands/play').subscribe(data => {
-      // Verarbeiten der Antwort
-      this.dataFromFlaskHttp = data;
-    });
-  }
-
   
   // ACE Editor
   @ViewChild("editorXML") public editorXML!: ElementRef<HTMLElement>;  
@@ -106,13 +72,11 @@ export class XMLComponent implements AfterViewInit{
   
   ngAfterViewInit(): void {
     
-
     this.webSocketService.getTextUpdates((msg: string) => {
       console.log(msg);
 
       if (msg[0]=='aceX' ){
         if (this.aceXml !== msg[1]) {
-          console.log("in constructor")
           this.ignoreChanges = true;
           aceEditorXML.session.setValue(msg[1]);
           this.aceXml = msg[1]
@@ -120,7 +84,6 @@ export class XMLComponent implements AfterViewInit{
       }
       else if (msg[0]=='aceC' ){
         if (this.aceCode !== msg[1]) {
-          console.log("in constructor")
           this.ignoreChanges = true;
           aceEditorCPP.session.setValue(msg[1]);
         }
@@ -142,12 +105,9 @@ export class XMLComponent implements AfterViewInit{
     aceEditorXML.session.setMode("ace/mode/xml");
     aceEditorXML.on("change", () => {
       
-      /*console.log(aceEditorXML.getSelection().isEmpty());*/
-
-      clearTimeout(this.debounceTimer); // Timer zurücksetzen
+      clearTimeout(this.debounceTimer); // reset timer
       this.debounceTimer = setTimeout(() => {
         if (this.aceXml!==aceEditorXML.session.getValue() && !this.ignoreChanges) {
-          console.log("on change");
           this.aceXml = aceEditorXML.getValue();
           this.sendMessage('aceX', this.aceXml); 
         }
@@ -162,10 +122,9 @@ export class XMLComponent implements AfterViewInit{
     aceEditorCPP.setTheme("ace/theme/monokai");
     aceEditorCPP.session.setMode("ace/mode/c_cpp");
     aceEditorCPP.on("change", () => {
-      clearTimeout(this.debounceTimer); // Timer zurücksetzen
+      clearTimeout(this.debounceTimer); // reset timer
       this.debounceTimer = setTimeout(() => {
         if (this.aceCode!==aceEditorCPP.session.getValue() && !this.ignoreChanges) {
-          console.log("on change");
           this.aceCode = aceEditorCPP.getValue();
           this.sendMessage('aceC', this.aceCode); 
         }
