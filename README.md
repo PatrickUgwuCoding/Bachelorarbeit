@@ -1,6 +1,6 @@
 # Realtime Collaborative Robotic Simulation Tool
 
-This project is part of my bachelor thesis and includes a prototype named "CollabSim". It is a web application enabling real-time collaboration on configuration and control files for the [ARGoS simulation](https://www.argos-sim.info/). It allows multiple clients to collaborate using a shared code editor and visualize simulation results immediately through an embedded web interface.
+This project is part of my bachelor thesis and includes a prototype named "CollabSim". It is a web application enabling real-time collaboration on configuration and control files for the [ARGoS simulation](https://www.argos-sim.info/). It allows multiple clients to collaborate using a shared code editor and visualize simulation results immediately through an embedded web interface. You can read my full thesis in german [here](./Thesis/Thesis.pdf).
 
 ![Demo](./Thesis/figures/demo_cut_gif.gif)
 
